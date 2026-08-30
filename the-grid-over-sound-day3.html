@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>大脑给声音画的格子 — 语言学 Day 3</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 3 · 语言学</div>
+<h1>大脑给声音画的格子</h1>
+<div class="sub">你听见的不是声音本身，是声音被塞进了哪一格——而格子在你一岁前就画好了</div>
+<div class="date">2026-08-30</div>
+<div class="pitch">英语里 pin 和 spin 的那两个 p 差了几十毫秒，这个差值正好是普通话「趴」和「八」的全部区别。英语母语者一辈子听不出来。不是耳朵不好——是他们的脑子在那个位置上没画线。</div>
+</header>
+<div class="intro">
+<p>找一位英语母语的人，让他手掌放在嘴前，念 pin，再念 spin。pin 那个 p 有一股气打在手上，spin 那个几乎没有。你问他这两个 p 一样吗，他多半会说：一样啊，都是 p。</p>
+<p>可你手上那个差别是实打实的，而且它正是普通话「趴」和「八」的全部区别。同样两个声音，在一门语言里是两个词的分界线，在另一门语言里根本不存在。</p>
+<p>反过来也一样：「西」（xī）和「诗」（shī）是两个不同的字，英语在这一带只有一个 sh，所以英语母语者学中文常把这两个音收进同一格。耳朵收到的东西一样，听见的不一样，中间隔着一步：归格。下面讲这个格子长什么样、为什么有人的格子里没有 L 和 R 那条线、以及它们是什么时候画上去的。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>你听不出来的差别，是被你自己压掉的</h2>
+<p>先把两个词分开。<b>音位（phoneme）</b>是一门语言里能拿来区分意义的最小声音单位；实际念出来的具体的音，如果换来换去不改变词的身份，就是同一个音位的不同<b>变体（allophone）</b>。判据很土：能不能只换这一个音，就换出另一个词。</p>
+<p>拿这把尺子量一下。普通话里把「八」的声母换成「趴」的声母，词就变了，所以是两个音位。英语里把 spin 那个不送气的 p 换成 pin 那个送气的 p，听着有点怪，但没人会以为你说了别的词——是一个音位的两个变体。同一对声音，在两门语言里身份完全不同。</p>
+<p>格子的存在有个很直接的证据。Liberman 和同事 1957 年合成了一串音，沿一条轴等距排开：一头是清楚的 b，另一头是清楚的 p，中间十来步，每步的物理差距完全相同（用的就是「你嘴里那些看不见的动作」那期那个量——嘴唇放开和嗓音起来之间差多少毫秒）。然后让人做两件事。</p>
+<p>第一件是一个一个听，报出这是 b 还是 p。如果耳朵老实反映物理量，答案该是一条平缓的斜坡；实际得到的是一级台阶：前面几步百分之百报 b，某一步之后突然百分之百报 p，中间几乎没有过渡带。</p>
+<p>第二件更说明问题：两两拿来比，只问「一样不一样」。相邻两步的物理差距处处相等，难度理论上该一样。实际是：两个音落在台阶同一侧，人几乎分不出，答对率接近瞎猜；一旦跨过台阶那一步，突然就听得清清楚楚。</p>
+<figure>
+<svg aria-label="范畴知觉示意图" role="img" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="300" width="640" x="0" y="0"></rect>
+<line stroke="#26314a" stroke-width="1" x1="70" x2="600" y1="250" y2="250"></line>
+<line stroke="#26314a" stroke-width="1" x1="70" x2="70" y1="50" y2="250"></line>
+<line stroke="#e0a458" stroke-dasharray="5,4" stroke-width="1.3" x1="330" x2="330" y1="42" y2="250"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="330" y="34">格子的边界</text>
+<path d="M90 70 L200 70 L280 72 L320 88 L342 200 L380 246 L470 248 L580 248" fill="none" stroke="#7fb3d5" stroke-width="2.4"></path>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="96" y="60">报成「八」的比例</text>
+<path d="M90 232 L160 230 L230 228 L290 214 L330 120 L370 214 L430 228 L500 230 L580 232" fill="none" stroke="#e0a458" stroke-dasharray="6,4" stroke-width="2.2"></path>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" x="392" y="128">听出「不一样」的比例</text>
+<circle cx="150" cy="70" fill="#101624" r="4" stroke="#7fb3d5" stroke-width="1.6"></circle>
+<circle cx="230" cy="71" fill="#101624" r="4" stroke="#7fb3d5" stroke-width="1.6"></circle>
+<circle cx="430" cy="248" fill="#101624" r="4" stroke="#7fb3d5" stroke-width="1.6"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="150" y="272">格内：分不出</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="510" y="272">同左</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="70" y="46">100%</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="160" y="245">等距的十几步 →</text>
+</svg>
+<div class="cap">一根物理上均匀的轴，被听成两块平地加一道悬崖：平地上再大的差别也报不出来，悬崖上再小的差别也躲不过。这叫范畴知觉（categorical perception）。</div>
+</figure>
+<p>这个结果被重复过无数次，稳得像地基。但它的<b>强版本</b>——「格内的差别完全听不见」——后来被更细的方法推翻了。McMurray、Tanenhaus 和 Aslin 2002 年在屏幕上放四张图，念一个词让人去点，而这个词的声母在格子内部微调。人报出来的词始终不变，但他们的眼睛会往「竞争词」那张图上瞟，而且<b>越靠近边界瞟得越多</b>，连续地变。</p>
+<p>所以更准确的说法是：被压平的是<b>你的判断</b>，不是进到你脑子里的信号。</p>
+<p class="en-brief"><b>EN</b> A physically even continuum gets heard as two flat plateaus and one cliff — but the flattening is in the decision, not the signal.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>不是耳朵不行，是那条线不在那个位置</h2>
+<p>日语母语者分不清英语的 r 和 l，这件事出名到快成刻板印象了。它值得讲，是因为有一个实验把「耳朵不行」这个解释干净利落地排除掉了。先说这两个音差在哪：声道形状会让某些频率上的能量堆起来，这些能量带叫共振峰（formant）；r 和 l 的主要差别落在从下往上第三条共振峰的起点高度上，r 起得低，l 起得高，然后各自滑向后面的元音。</p>
+<p>Miyawaki 和同事 1975 年合成了一串从 ra 到 la 的音，只改这条共振峰的起点，等距排开。日语母语者做辨别任务，曲线几乎是平的；英语母语者在边界处明显冒尖，就是上一节那条虚线。</p>
+<p>关键在第二步。他们把那条共振峰单独抽出来，其余部分全去掉，剩下的听起来像一声「啾」，完全不像语音。同样两组人，同样的物理差距，再做一遍辨别——两组曲线几乎重合，日语组和英语组一样听得出来。</p>
+<figure>
+<svg aria-label="语音条件与非语音条件的辨别曲线对比" role="img" viewbox="0 0 640 280" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="280" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="46" y="28">当成语音听</text>
+<line stroke="#26314a" x1="46" x2="300" y1="180" y2="180"></line>
+<line stroke="#26314a" x1="46" x2="46" y1="48" y2="180"></line>
+<path d="M60 168 L110 164 L150 150 L175 72 L205 152 L250 166 L288 168" fill="none" stroke="#e0a458" stroke-width="2.4"></path>
+<path d="M60 172 L110 171 L150 170 L175 166 L205 170 L250 172 L288 173" fill="none" stroke="#7fb3d5" stroke-width="2.4"></path>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11" x="196" y="66">英语母语者</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="11" x="196" y="190">日语母语者</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="346" y="28">同一段声音，剥掉语音外壳</text>
+<line stroke="#26314a" x1="346" x2="600" y1="180" y2="180"></line>
+<line stroke="#26314a" x1="346" x2="346" y1="48" y2="180"></line>
+<path d="M360 166 L410 160 L450 146 L476 74 L506 150 L550 164 L588 167" fill="none" stroke="#e0a458" stroke-width="2.4"></path>
+<path d="M360 170 L410 164 L450 150 L476 82 L506 154 L550 168 L588 170" fill="none" stroke="#7fb3d5" stroke-dasharray="5,3" stroke-width="2.4"></path>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="470" y="60">两组几乎重合</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="46" y="216">纵轴：听出「不一样」的比例</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="46" y="238">横轴：共振峰起点，等距排开</text>
+</svg>
+<div class="cap">左边是当成语言听：只有画了那条线的人分得出。右边是同一段声音剥掉语音外壳、听着像一声怪响：两组人的表现拉平了。</div>
+</figure>
+<p>这一步把话说死了：听觉系统本身没有差别，差别出现在「把它当语言处理」这一环——分不出来不是收不到，是收到之后被归进了同一格。证据强度：合成语音的对照实验，设计干净，此后被反复重做。</p>
+<p>日语那边也不是「少了一个音」。日语只有一个流音音位，念出来接近闪音——舌尖朝上齿龈轻轻一弹，像美式英语 butter 中间那个一闪而过的 tt。它落在英语 r 和 l 之间，所以英语那两个音都往它那一格里掉。韩语同样只有一个流音音位：音节末尾偏 l（달 dal，「月亮」），到了两个元音中间变成闪音（다리 dari，「腿、桥」）。</p>
+<p>方向是对称的，别只朝一边看。英语在硬腭到卷舌这一带只有一个 sh，普通话在同一带上有两条线：x（西 xī）和 sh（诗 shī）；英语母语者学中文时同样要在自己没画过线的地方补一条。每门语言都有别人听不出的对立，谁也没有「更好的耳朵」。</p>
+<p>能不能补画？能，但没那么便宜。Logan、Lively 和 Pisoni 1991 年训练日语母语者辨认英语的 r 和 l，用多个说话人、多种语境的材料，十几轮后成绩明显提高，还迁移到了没听过的说话人和新词上。证据强度分两层：训练本身有效，很稳；但「材料越多样越好」这个配方，在 2022 年一项 166 人的复制研究里没能重复出来，作者说这个优势就算存在也比原先以为的小得多。方向对，剂量没定。</p>
+<p class="en-brief"><b>EN</b> Strip the same acoustic difference of its speech clothing and the cross-language gap vanishes — the ear is fine; the sorting step isn&#39;t.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>一岁生日之前，孩子关掉了一批分辨</h2>
+<p>格子是什么时候画上去的？比大多数人猜的早，而且过程是反着来的：不是学会新的，是关掉不用的。Werker 和 Tees 1984 年测了英语环境里的婴儿。6 到 8 个月大时，他们能分开印地语的两个 t（一个舌尖抵门牙背面，一个舌尖翻上去顶硬腭前部），也能分开 Nlaka&#39;pamux 语（加拿大不列颠哥伦比亚省的一门萨利希语）的两个挤喉塞音（一个舌根抵软腭，一个更靠后、抵在小舌那一带）。这两组对立，英语成年人都分不出来。再测 10 到 12 个月大的：也分不出了。中间那几个月，网收了。</p>
+<p>但「丢掉」这个词得小心用。同一段时间里，他们对母语那些对立的分辨在<b>变好</b>。这不是退化，是重新分配——学名叫知觉重组（perceptual reorganization）：一个只需要处理英语的系统，把资源挪到了英语真正用到的那几条线上。</p>
+<p>怎么学的？没人教婴儿哪些音算一格，也没人给标签。Maye、Werker 和 Gerken 2002 年给 6 到 8 个月的婴儿放两分钟同一条连续体上的音，两组唯一的差别是<b>分布形状</b>：一组听到的两端多、中间少（双峰），另一组中间最多（单峰）。之后只有双峰组能分开两端的音。两分钟，没有反馈，光靠分布形状就够了——这也顺带解释了收窄：母语不用的那条线，在输入里根本不会冒出两个峰。</p>
+<p>反过来推，在窗口关上之前灌进一门新语言的分布，格子应该能新增。Kuhl、Tsao 和 Liu 2003 年做的正是这件事：9 个月大的美国婴儿，12 次、每次 25 分钟，由讲普通话的真人陪着念书和玩。之后他们能分开普通话的 q（七 qī）和 x（西 xī）——这对对立英语里没有。同一批材料换成电视上放，或者只放录音，房间、时长、进度表全一样：结果和从没听过普通话的对照组没有区别。证据强度：小样本实验，方向后来被更多研究支持，但条件被收窄过——2018 年一项研究发现视频加上同伴在场时能学到一部分。顺带标一句争议：收窄现象本身很稳，但 Kuhl 用来解释它的知觉磁吸效应（母语里最典型的那个音把附近的音吸过去）到今天仍有争论，1998 年 Lotto 等人指出它对任务设计相当敏感。</p>
+<p>最后一句要说清楚：格子不是牢房。上一节那些训练研究说明成年人还能动它，「你听不出来的差别，是被你自己压掉的」那节的眼动结果又说明格内信息压根没被销毁。真正的限制是<b>怎么动</b>：重画一条线靠的是改变输入分布加上外部反馈，不是更用力地听——用力听的那个「你」，正是被压平的那一层。</p>
+<p class="en-brief"><b>EN</b> Between eight and twelve months infants stop hearing contrasts their language never uses — and two minutes of the right distribution can flip it.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：故障复盘时把延迟看板往回翻，发现 P99 在「黄色」那一格里从 210 毫秒爬到 340 毫秒，爬了两周，值班群里一句话都没有；越过红线那天所有人才动。这不是没人看，是「你听不出来的差别，是被你自己压掉的」那节的机制在看板上跑：连续量一旦涂成三格，格内的变化就不再被报告为「变化」——每天都是黄的，所以每天都「一样」。可改两处：告警条件从「有没有越线」换成格内斜率（连续七天单调上升就报）；色块里把数值印出来，别只上色。</li>
+<li><b>② 育儿与教育</b>：有人问你「给小孩放外语动画片能不能启蒙发音」。Kuhl 那组数据给的答案硬得少见：同样的材料、同样的时长、同样的房间，真人讲有效，电视和纯录音等于没放。机制是「一岁生日之前，孩子关掉了一批分辨」那节：重画格子吃的是输入分布和互动里的反馈，不是暴露时长。可改的是换指标——不看每周放了几小时，看每周有几次真人来回搭话，预算跟着这个指标走。边界要说清：这批研究只测了婴儿期的音位分辨，推不出「看视频学不了外语」。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 哪些区分会被丢掉，训练之前就能算</b>：Maye 那组结果说的是，一个区分留不留得住，不取决于有没有人教，取决于输入沿那根轴的分布形状——双峰留得住，单峰留不住。于是有件本来要等评测才知道的事，训练前就能算：拿语料沿某个可测维度画张直方图，单峰还是双峰，已经预测了模型保不保得住那个区分。它还推出一个人机差异：人「丢掉」一个对立之后并没把信号扔掉，格内几毫秒的差别照样在改变竞争词的激活；而把输入量化成离散符号的系统，格内差别在量化那一步就没了。检验办法是在格内加一个不足以改变判断的扰动——人的反应时和注视比例该连续地变，模型的输出该逐位相同。<b>但这里不成立</b>的是「分布即命运」：婴儿拿到的分布是环境给的，几乎无法干预；模型的训练分布是挑出来的，想改成双峰随时能改。同一条机制，一侧是发育事实，另一侧只是可撤销的选择。</li>
+<li><b>佛学 · 名相把连续的经验切成格子</b>：这个说法在语音上有一个字面成立的版本——一根连续的轴被切成两块平地加一道悬崖，格内的差别不再被报告，跑的正是「你听不出来的差别，是被你自己压掉的」那节的机制。但语音学测得更细，能把它削准一档：被切掉的不是感知，是<b>报告</b>。你说「一样」的那两个音，你的眼睛已经不一样地动了。所以「名相遮蔽实相」若指信息被销毁，这里是反证；若指它进不了你能说出口的那一层，这里是最干净的证据——差别很实在：前者不可挽回，后者可以用不经过口头报告的测量绕过去。<b>但这里不成立</b>的是可塑性：音位的格子一岁前就从输入分布里长出来了，不受注意力调控，你再专注也听不出 pin 和 spin 那两个 p 的差别；分别心则被认为可以靠训练注意力去动。断口落在「能不能靠注意改」，而且断得有用——它预测发音矫正有效的手段不是「更用心地听自己」，而是换掉输入分布加外部反馈。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果格内的差别照样在起作用，「听不出来」还剩多少意思？</summary><p>报告说一样，眼动说不一样。那么「这个人分不出这两个音」是关于他知觉的陈述，还是关于他能报告什么的陈述？换一种不依赖口头报告的测量，很多「分不出」会不会都变成「分得出但说不出」？</p></details>
+<details><summary>一岁那次收窄，到底关掉了什么？</summary><p>如果成年人训练后还能部分补回来，被关掉的显然不是感受器。是分类那一步的输出被绑死了，还是通往报告那一层的通道被剪了？两种说法的预测不一样——后者预测非报告类的测量应该一直看得见残留。</p></details>
+<details><summary>真人有效、电视无效，差的到底是哪一样？</summary><p>候选至少三个：真人会跟着孩子的注意力调整说什么、真人给的是有回应的反馈、真人在场孩子更投入。这三样能拆开测吗？给视频加上实时应答（远程连线的真人），效果该落在哪一档？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/13481283/">Liberman, Harris, Hoffman &amp; Griffith (1957), The discrimination of speech sounds within and across phoneme boundaries, J. Exp. Psychol.</a>（范畴知觉的原始报告）</li>
+<li><a href="https://link.springer.com/article/10.3758/BF03211209">Miyawaki et al. (1975), An effect of linguistic experience: The discrimination of [r] and [l] by native speakers of Japanese and English, Perception &amp; Psychophysics</a></li>
+<li><a href="http://www.kwistuup.net/_/mss/_/WERKER_TEES_1984.pdf">Werker &amp; Tees (1984), Cross-language speech perception: Evidence for perceptual reorganization during the first year of life</a></li>
+<li><a href="https://linguistics.berkeley.edu/~kjohnson/ling290e/maye_werker_gerken_2002.pdf">Maye, Werker &amp; Gerken (2002), Infant sensitivity to distributional information can affect phonetic discrimination, Cognition</a></li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.1532872100">Kuhl, Tsao &amp; Liu (2003), Foreign-language experience in infancy, PNAS</a>（真人 / 电视 / 纯录音的对照）</li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0010027702001579">McMurray, Tanenhaus &amp; Aslin (2002), Gradient effects of within-category phonetic variation on lexical access, Cognition</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/2016438/">Logan, Lively &amp; Pisoni (1991), Training Japanese listeners to identify English /r/ and /l/, JASA</a> · <a href="https://www.sciencedirect.com/science/article/pii/S0749596X22000390">Brekelmans et al. (2022), 高变异训练的复制研究, JML</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Categorical_perception">Categorical perception — Wikipedia</a> · <a href="https://en.wikipedia.org/wiki/Nlaka%27pamuctsin">Nlaka&#39;pamuctsin — Wikipedia</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
