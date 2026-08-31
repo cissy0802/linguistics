@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>词是拼出来的 — 语言学 Day 4</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 4 · 语言学</div>
+<h1>词是拼出来的</h1>
+<div class="sub">你没学过 wug 这个词，但你知道两只该怎么叫——而且尾巴上那个音你从三个里挑对了</div>
+<div class="date">2026-08-31</div>
+<div class="pitch">给一个四岁小孩看一只从没存在过的鸟，告诉他这叫 wug，问他两只叫什么。他说 wugs。没人教过他这条规则，词典里查不到这个词。他不是想起来的，是当场算出来的。</div>
+</header>
+<div class="intro">
+<p>你现在也做得到。这里有一个词：wug。世界上没有这个东西，它是 1958 年一位语言学家为做实验编出来的。两只叫什么？你几乎不用想。</p>
+<p>更值得注意的是词尾那个音。英语复数有三种念法：cats 尾巴上是清脆的 s 音（像「思」的声母），dogs 尾巴上是带嗓音的 z 音（喉咙在振，像蜜蜂那声嗡），glasses 尾巴上多出整整一个音节。你从没背过怎么选，却没选错过，连给一个不存在的词加复数都没选错。</p>
+<p>这说明词不是从脑子里那本词典整个取出来的，是当场拼出来的。这期讲这条装配线：零件是什么、有几种拼法、以及「汉语没有形态」这句话到底说对了哪一半。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>你会给一个不存在的词加复数</h2>
+<p>先给零件起个名字。<b>语素（morpheme）</b>是还带着意义的最小那一块。unhappiness 能拆成三块：un（否定）、happy（快乐）、ness（把形容词变成名词的那个零件）。再往下拆就没意义了——un 里的那个 u 什么也不表示。</p>
+<p>拆的判据不是「看起来像」。cranberry（蔓越莓）后半截的 berry 显然是个语素，前面那个 cran 呢？它没有独立意思，也不在别的任何词里出现。这种东西多到语言学给它起了专名，叫 cranberry 语素——它存在本身就说明判据是什么：一块算不算零件，看的是它能不能在别处再用一次。</p>
+<p>现在说那个实验。Jean Berko 1958 年画了一只蓝色的小生物，告诉 4 到 7 岁的孩子「这是一只 wug」，再翻一页给他们看两只，念半句「Now there are two ___」，等孩子补上。孩子说 wugs。这张图后来成了这门学科被引用最多的一张画。</p>
+<p>妙在 wug 不存在：词典里没有，家长没教过。如果孩子脑子里装的是一张词表，他只能卡住。他没卡住，说明装的是一条能作用在任何词根上的规则。</p>
+<p>他还顺手挑对了音。三个念法有明确分工：清辅音后面用 s 音（cats），带嗓音的音后面用 z 音（dogs、wugs），而在 s、z、sh 这类嘶嘶擦擦的音后面得整个加一个音节（glasses）。没人明说过这套分工，四岁小孩照办。</p>
+<figure>
+<svg aria-label="英语复数三种念法的分流与儿童正确率" role="img" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="300" width="640" x="0" y="0"></rect>
+<rect fill="#101624" height="46" rx="6" stroke="#e0a458" stroke-width="1.6" width="150" x="30" y="128"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="105" y="150">前一个音是什么</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="105" y="166">规则在这里分岔</text>
+<path d="M180 145 L250 62" fill="none" stroke="#7fb3d5" stroke-width="1.6"></path>
+<path d="M180 151 L250 151" fill="none" stroke="#7fb3d5" stroke-width="1.6"></path>
+<path d="M180 157 L250 240" fill="none" stroke="#7fb3d5" stroke-width="1.6"></path>
+<rect fill="#161e2c" height="52" rx="5" stroke="#2c4055" width="330" x="252" y="38"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="266" y="60">清辅音后 → s 音：cats</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="266" y="80">孩子几乎全对</text>
+<rect fill="#161e2c" height="52" rx="5" stroke="#2c4055" width="330" x="252" y="125"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="266" y="147">带嗓音后 → z 音：dogs · wugs</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="266" y="167">孩子几乎全对</text>
+<rect fill="#161e2c" height="52" rx="5" stroke="#e0a458" stroke-dasharray="4,3" width="330" x="252" y="215"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="266" y="237">嘶擦音后 → 多加一个音节：glasses</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11" x="266" y="257">真词 glasses 91%，生造词只有 28%</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="30" y="286">同一条「加复数」，其实是三条子规则，学会的时间差好几年</text>
+</svg>
+<div class="cap">分岔点不在词的意思上，在前一个音的性质上。三条支路里，上面两条四岁就跑得稳，最下面那条到七岁还在漏。</div>
+</figure>
+<p>不均匀的地方最有信息。孩子在前两档接近满分，在需要多加一个音节那档掉得很惨：Berko 那个生造词 gutch 的复数（该念 gutches），4 到 5 岁只有 28% 答得出，5 岁半到 7 岁也只有 38%；而同一批孩子面对真实存在的 glasses 时是 91%。所以孩子学到的不是「一条复数规则」，是几条各管一段的子规则，见得多的先学会，见得少的拖好几年。</p>
+<p>证据强度：单个经典实验，但被重复过无数次。搬去测别的语言时有个前提容易被忽略——那门语言得先有强制的屈折范畴可测。日语名词不强制标复数，同一套材料搬过去根本没有可测的东西。这不是日语的问题，是尺子的适用范围问题。</p>
+<p class="en-brief"><b>EN</b> Four-year-olds pluralize a word invented yesterday, and pick the right one of three endings — but only two of the three are in place by then.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>一种拼法造新词，另一种只是换件衣服</h2>
+<p>把 teacher 和 teachers 摆在一起看。teach 加 er 造出了一个新词，词类都换了（动词变名词），它会被收进词典。teachers 那个 s 没造出任何新词，只是同一个词在不同句子位置上穿了不同的衣服，词典里不会单列一条。</p>
+<p>前一种叫<b>派生（derivation）</b>，后一种叫<b>屈折（inflection）</b>。区分它们不靠感觉，靠四条能查的性质。</p>
+<p>第一，换不换身份。happy 变 happiness 换了词类，是派生；变 happier 还是形容词，是屈折。第二，顺序。teach-er-s 成立，teach-s-er 不成立——屈折永远在最外面那一层。第三，有没有洞。屈折几乎没洞：英语每个动词都有过去式，包括你刚编出来的那个。派生到处是洞：arrive 能变 arrival，但 arrivement 不行，尽管 ment 明明活着（government、movement）；而 th（warm 变 warmth、wide 变 width）早就退休了。第四，意思可不可预测。teachers 一定是「不止一个 teacher」，一次例外都没有；transmission 却可以是「传输」，也可以是汽车里那个变速箱——派生出来的词会自己长出意思，长完就赖着不走。</p>
+<figure>
+<svg aria-label="同一个意思在三种语言里的三种打包方式" role="img" viewbox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="320" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="24" y="26">土耳其语 · 一颗珠子一个意思</text>
+<rect fill="#101624" height="34" rx="4" stroke="#e0a458" width="70" x="24" y="40"></rect>
+<rect fill="#101624" height="34" rx="4" stroke="#e0a458" width="70" x="98" y="40"></rect>
+<rect fill="#101624" height="34" rx="4" stroke="#e0a458" width="70" x="172" y="40"></rect>
+<rect fill="#101624" height="34" rx="4" stroke="#e0a458" width="70" x="246" y="40"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="59" y="63">ev</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="133" y="63">ler</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="207" y="63">im</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="281" y="63">den</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="59" y="90">房子</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="133" y="90">复数</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="207" y="90">我的</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="281" y="90">从</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="12" x="330" y="64">evlerimden = 从我的那些房子出来</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="24" y="140">拉丁语 · 一颗珠子干四件事</text>
+<rect fill="#101624" height="34" rx="4" stroke="#e0a458" width="60" x="24" y="154"></rect>
+<rect fill="#101624" height="34" rx="4" stroke="#7fb3d5" stroke-width="2" width="44" x="88" y="154"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="54" y="177">am</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" text-anchor="middle" x="110" y="177">ō</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="54" y="204">爱</text>
+<path d="M132 165 L190 158" fill="none" stroke="#7fb3d5" stroke-width="1.2"></path>
+<path d="M132 169 L190 176" fill="none" stroke="#7fb3d5" stroke-width="1.2"></path>
+<path d="M132 173 L190 194" fill="none" stroke="#7fb3d5" stroke-width="1.2"></path>
+<path d="M132 177 L190 212" fill="none" stroke="#7fb3d5" stroke-width="1.2"></path>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="196" y="162">第一人称</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="196" y="180">单数</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="196" y="198">现在时</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="196" y="216">主动直陈</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="12" x="330" y="180">amō = 我爱。这四件事切不开</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="24" y="256">汉语 · 珠子各自散着摆</text>
+<rect fill="#101624" height="30" rx="4" stroke="#26314a" width="48" x="24" y="268"></rect>
+<rect fill="#101624" height="30" rx="4" stroke="#26314a" width="48" x="78" y="268"></rect>
+<rect fill="#101624" height="30" rx="4" stroke="#26314a" width="48" x="132" y="268"></rect>
+<rect fill="#101624" height="30" rx="4" stroke="#26314a" width="62" x="186" y="268"></rect>
+<rect fill="#101624" height="30" rx="4" stroke="#26314a" width="48" x="254" y="268"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="48" y="289">从</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="102" y="289">我的</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="156" y="289">那些</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="217" y="289">房子</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="278" y="289">里</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="12" x="330" y="289">同样的信息，摊在几个独立的词上</text>
+</svg>
+<div class="cap">同一件事，三种打包法：串成分明的珠子、揉成一颗切不开的珠子、或者干脆不打包。三种都够用。</div>
+</figure>
+<p>这两种拼法被打包的方式，各语言差得很远。上图左边的土耳其语 evlerimden 是一个词，一颗珠子一个意思，顺序固定，像串项链，这叫<b>黏着（agglutinative）</b>；中间的拉丁语 amō 走另一条路，词尾那个 ō 一个人干四件事，你没法把它切成「人称那一小块」加「时态那一小块」，这叫<b>融合（fusional）</b>。</p>
+<p>屈折还有一个性质，比「有没有」重要得多：<b>躲不掉</b>。说英语时只要你提到一个可数名词，你就被迫在单数和复数之间选一个，哪怕在当下这个信息毫无用处，哪怕你根本不知道有几个。Jakobson 1959 年把这件事说得最干净：语言之间的根本差别，不在于它允许你表达什么，而在于它逼你表达什么。下一节整节都建在这句话上。顺带说清：黏着、融合、以及不怎么打包的那种，不是从低到高的台阶，三种都能表达同样的内容，只是把复杂度放在了不同位置——一种放在词里，一种放在语序和虚词里。</p>
+<p class="en-brief"><b>EN</b> Derivation makes new words and is full of holes; inflection makes no new words, has almost none — and above all, you cannot opt out of it.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>说汉语「没有形态」，说对的是哪一半</h2>
+<p>这句话你多半听过。它对了一半，而被漏掉的那一半更有意思。</p>
+<p>对的那一半是：屈折确实很少。「我昨天去」「他明天去」——「去」就是「去」，不变形。名词也不强制标数：「一本书」和「三本书」里的「书」长得一模一样。上一节那条「躲不掉」，在汉语这里躲得掉：说汉语时你可以整句话都不透露有几个，说英语的人做不到这件事。</p>
+<p>但「少」不是「不能」。汉语有个「们」：学生们、朋友们。它有很硬的限制——基本只挂在指人的名词上，而且不能跟数量结构一起用，「三个学生们」多数母语者觉得别扭。它不是强制屈折，是一个有条件的可选标记。</p>
+<p>被漏掉的那一半是：造词那条线极其活跃。主力是复合——电加脑造出电脑，手加机造出手机。还有一批半虚化的零件：性（可行性）、化（数字化）、员（服务员）。还有重叠——「看」变「看看」，动作被变轻变短。这些全都是「词是拼出来的」，只不过拼的是造词那一层。</p>
+<p>而汉语真正躲不掉的那个范畴在别处：<b>量词</b>。数东西的时候你逃不了，不能说「三书」，得说「三本书」，还得从一堆里挑对哪一个——本、张、条、只。这正是上一节那个「逼你说清楚」，只是落点换了地方：英语逼你交代数量，汉语逼你交代这东西是什么形状、什么类别。</p>
+<p>于是汉语儿童有自己的那道坎。他们不用学复数变位，得学量词，而观察到的路径像 wug 那个故事的反面：先用通用的「个」覆盖一切（三个鸟、三个纸），再慢慢分化。有研究报告，产出任务里约三分之一的孩子从头到尾只用「个」；个别量词的掌握到十岁都还没完成，中间还会出现先好后坏再好的 U 形。这和英语孩子说 goed（把 go 套上通则）是同一件事的两个版本：先抓住最省事的通则，例外后面才一个个补。</p>
+<p>有两处得如实标出来。第一，「了 / 着 / 过」算不算词缀，争了很久——它们像屈折（位置固定在动词后面），又像可以拆下来的独立虚词，至今没有定论。第二，「词」这个单位在汉语里清不清楚也有争论：早期几项小规模研究（Hoosain 1992，以及 Sproat 等人 1996 年做分词系统时的人工标注比较）报告母语者切词分歧不小；2017 年一项众包大样本研究得到的一致率是 0.91 到 0.93，结论正相反。证据强度：后者样本大得多，但用的是逐位置的比例一致率，而绝大多数位置显然不是边界，这个指标天生偏高。</p>
+<p>所以那句话准确的版本是：汉语的屈折形态很少。信息可以编在词的形状里（英语那个 s），也可以编在别处（汉语的量词、语序、时间词）。这是分工不是高下——每门语言都在某个位置上逼你说清楚一件事，只是逼的位置不一样。</p>
+<p class="en-brief"><b>EN</b> Mandarin is short on inflection, not on word-building — and it has its own category you cannot opt out of: the classifier.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 写作与表达</b>：代码评审上有人问「normalize() 这个函数、配置里那个 normalization 段、还有返回结构里的 normalized 字段，是一回事吗」，翻了二十分钟，发现是三件不相干的事。这不是命名随意，是「一种拼法造新词，另一种只是换件衣服」那节的机制在咬人：派生形是新词，意思会自己长歪（transmission 变成变速箱），可读的人默认同词根就同义。可改两个动作——命名规则加一条「同一词根在一个模块里只允许一个派生形承载业务含义，第二个必须换词根」；查重复命名按词根 grep，别按全名 grep，全名匹配永远查不出这类冲突。</li>
+<li><b>② 跨语言工作与生活</b>：在德语或俄语环境里待过的人都撞过这堵墙——听到一个词，查字典查不到，因为字典收的是光秃秃的词根，你听到的那个外面裹着两层。机制就是「屈折永远在最外面那一层」。可改的是换掉每天的学习动作：不再背新词条，而是拿一段真实语料练「听到一个陌生词形，报出它的词典形」，指标改成这个还原准确率；查词工具换成支持词干还原的。词条量涨得慢没关系，还原不了就一个也用不上。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 频率效应挂在规则上还是挂在词条上</b>：有人把 Berko 那套材料拿去考大模型。Weissweiler 等人 2023 年在英语、德语、泰米尔语、土耳其语上做了这件事，结论是 ChatGPT 明显不如专门做形态变化的小系统（英语尤其明显），四门语言都出现「真词偏好」——同一条规则，套在真实存在的词上比套在生造词上准得多。跑的是「你会给一个不存在的词加复数」那节的机制：规则如果挂在结构上，词根是不是真的存在就不该有影响。但这条真正有用的地方不是「模型不如人」，而是推出一个能测的差异：<b>人也有频率效应，只是位置不同</b>。Berko 那批数据里，孩子从 91% 掉到 28%，差的不是词根熟不熟，是那条子规则在语言里出现得多不多；模型掉的时候，差的是这个词形在训练语料里见过几次。检验办法很具体：造一批全新词根，一半配常见的形态模式，一半配罕见但完全规则的模式。人的成绩该跟着<b>模式</b>的频率走、跟词根无关；模型如果跟着<b>词条</b>走，两条曲线会在这里分开。<b>但这里不成立</b>的是「测出差异就等于机制不同」——足够大的模型完全可能学出对模式的敏感，那时曲线会重合，而这不证明它装的是规则。这个实验能证伪「模型只会背词条」，证明不了「模型学到了规则」。</li>
+<li><b>社会与制度 · 必填字段填得满，不等于填得准</b>：屈折最要命的性质是躲不掉——说英语时你被迫在每个可数名词上选单复数，哪怕根本不知道有几个。把这条搬到表单和工单系统上，能推出一个反直觉的结论：一个字段的<b>填充率</b>和它的<b>信息量</b>没关系，常常还反着来。必填字段的填充率天然是 100%，正因为不能不填，区分度可能接近零；选填字段一旦被人主动填了，「有人愿意填」本身就是信号。该换的指标是每个字段对你真正关心的那个结果的互信息，不是完成度。<b>但这里不成立</b>的地方最有用：语言里的强制是零成本、无意识的，没人会为了省事说一个「敷衍的复数」，语法范畴的值仍然可信；表单的强制有摩擦，人会填垃圾值绕过去。差别看得见——语法上单复数的分布跟着现实走，必填字段的取值会在某个默认选项上堆出一个不自然的尖峰。看到那个尖峰，这个字段就已经失效了。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果屈折和派生的界线这么清楚，为什么总有拆不明白的例子？</summary><p>英语的 ing 有时是屈折（he is running），有时是派生（good running shoes，甚至变成名词 the running of the race）。是同一个零件在两种用法里，还是碰巧同音的两个零件？拿哪条判据去判——顺序、有没有洞、还是意思可不可预测？三条判据给出的答案如果不一致，说明什么？</p></details>
+<details><summary>「躲不掉」到底是关于语言的，还是关于说话人的？</summary><p>英语说话人被迫标单复数，但他可以说 some，把数量含糊掉。那么强制的到底是「必须给出信息」，还是「必须走一遍这个选择流程」？如果只是后者，Jakobson 那句话的分量要减掉多少？</p></details>
+<details><summary>一门语言的构词有多「活」，能不能量出来？</summary><p>直觉的做法是数这个零件造出过多少词，但那是历史存量。th 造出的词不算少（warmth、width、depth、length），它却已经不造新词了。如果改成数最近十年的新词里它出现过几次，会不会更准？这个指标对刚被造出来的新零件公平吗？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://www.tandfonline.com/doi/pdf/10.1080/00437956.1958.11659661">Berko (1958), The Child&#39;s Learning of English Morphology, Word</a>（wug 测试的原始报告）</li>
+<li><a href="https://en.wikipedia.org/wiki/Wug_test">Wug test — Wikipedia</a> · <a href="https://en.wikipedia.org/wiki/Cranberry_morpheme">Cranberry morpheme — Wikipedia</a></li>
+<li><a href="https://aclanthology.org/2023.emnlp-main.401/">Weissweiler et al. (2023), Counting the Bugs in ChatGPT&#39;s Wugs, EMNLP</a>（四门语言的形态泛化测试）</li>
+<li><a href="https://en.wikipedia.org/wiki/Turkish_grammar">Turkish grammar — Wikipedia</a>（黏着构词与后缀顺序）</li>
+<li><a href="https://culturalstudiesnow.blogspot.com/2011/10/roman-jakobson-on-linguistic-aspects-of.html">Jakobson (1959), On Linguistic Aspects of Translation</a>（「逼你表达什么」那句话的出处）</li>
+<li><a href="https://aclanthology.org/J96-3004/">Sproat, Shih, Gale &amp; Chang (1996), A Stochastic Finite-State Word-Segmentation Algorithm for Chinese</a> · <a href="https://link.springer.com/article/10.1186/s40655-017-0032-5">Word intuition agreement among Chinese speakers (2017), Lingua Sinica</a>（分词分歧的两种结论）</li>
+<li><a href="https://link.springer.com/article/10.1007/s10831-010-9060-1">Li, Barner &amp; Huang (2008), Mandarin-speaking children&#39;s acquisition of sortal and mensural classifiers, JEAL</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Morphology_(linguistics)">Morphology — Wikipedia</a> · <a href="https://en.wikipedia.org/wiki/Agglutinative_language">Agglutinative language — Wikipedia</a></li>
+</ul>
+</div>
+</div>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></html>
