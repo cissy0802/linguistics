@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Sentences Have Skeletons — Linguistics Day 5</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 5 · Linguistics</div>
+<h1>Sentences Have Skeletons</h1>
+<div class="sub">Same seven characters, same order, two different events — the difference is not in the words</div>
+<div class="date">2026-09-01</div>
+<div class="pitch">The meaning of a sentence is not the meanings of its words added up. Group the same string of words two ways and you get two different events. Nobody taught you how to group them. You get it right thousands of times a day, and you cannot say how.</div>
+</header>
+<div class="intro">
+<p>Take the Mandarin string 咬死了猎人的狗 (yǎo sǐ le liè rén de gǒu), roughly bite-dead-hunter-of-dog. Read it once and you probably get: something bit the hunter's dog to death. Now read it the other way — the dog that bit the hunter to death — and the star of the sentence becomes a dog that killed a man.</p>
+<p>Not one character added, not one moved. All that changed is where you drew the line: after 咬死了 (yǎo sǐ le, bit to death), or after 猎人的 (liè rén de, the hunter's). Chinese grammar textbooks have used this example for decades, because it forces something normally invisible into the open: a sentence is not a string of words. Words come in gangs, and gangs nest inside gangs.</p>
+<p>This issue is about that skeleton: what it looks like, why one string can take two shapes, and its prettiest property — a word can be bound to a slot very far away, but there are places it cannot reach.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>Words in a sentence come in gangs</h2>
+<p>First, how to tell which words belong to the same gang. Three tests, all of which you can run on the spot.</p>
+<p>One: can the stretch be swapped for a single word? 猎人的狗 (liè rén de gǒu, the hunter's dog) can be replaced by 它 (tā, it). 咬死了猎人 (yǎo sǐ le liè rén, bit the hunter to death) cannot be replaced by anything. Two: can it be moved as a block? Fronting 猎人的狗 (liè rén de gǒu, the hunter's dog) gives a fine sentence; fronting the other stretch gives a broken one. Three: can it be coordinated with something of the same kind? The hunter's dog and the neighbour's cat is fine; the other stretch has no partner.</p>
+<p>A stretch that can be swapped, moved and coordinated is a gang, and linguistics calls it a <b>constituent</b>. The three tests are three ways of asking one question: is this stretch being treated as a single thing?</p>
+<figure>
+<svg aria-label="One string of characters, two ways of grouping it" role="img" viewbox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="260" width="640" x="0" y="0"></rect>
+<rect fill="#101624" height="52" rx="5" stroke="#26314a" width="106" x="30" y="20"></rect>
+<rect fill="#101624" height="52" rx="5" stroke="#26314a" width="82" x="146" y="20"></rect>
+<rect fill="#101624" height="52" rx="5" stroke="#26314a" width="52" x="238" y="20"></rect>
+<rect fill="#101624" height="52" rx="5" stroke="#26314a" width="52" x="300" y="20"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="17" text-anchor="middle" x="83" y="43">咬死了</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="10" text-anchor="middle" x="83" y="62">(yao si le, bit dead)</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="17" text-anchor="middle" x="187" y="43">猎人</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="10" text-anchor="middle" x="187" y="62">(lie ren, hunter)</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="17" text-anchor="middle" x="264" y="43">的</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="10" text-anchor="middle" x="264" y="62">(de, linker)</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="17" text-anchor="middle" x="326" y="43">狗</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="10" text-anchor="middle" x="326" y="62">(gou, dog)</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="12" x="374" y="50">Four bricks, one order</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="30" y="116">Reading one · line after the first brick</text>
+<rect fill="none" height="26" rx="5" stroke="#e0a458" stroke-width="2" width="106" x="30" y="128"></rect>
+<rect fill="none" height="26" rx="5" stroke="#e0a458" stroke-width="2" width="206" x="146" y="128"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="83" y="170">the action</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="249" y="170">the one bitten</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="374" y="147">The hunter's dog got bitten dead</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="30" y="206">Reading two · line before the last brick</text>
+<rect fill="none" height="26" rx="5" stroke="#7fb3d5" stroke-width="2" width="260" x="30" y="218"></rect>
+<rect fill="none" height="26" rx="5" stroke="#7fb3d5" stroke-width="2" width="52" x="300" y="218"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="374" y="237">The dog that bit the hunter dead</text>
+</svg>
+<div class="cap">Same bricks, same order; only the dividing line moved one slot. In a real conversation you get one reading and need someone else to point out the other.</div>
+</figure>
+<p>The awkward part is that you cannot say what you are doing. The dividing line is not pronounced and is not written down. Is there any way to see it?</p>
+<p>In 2016 Nai Ding and colleagues ran a very clean experiment. They built four-word sentences out of equal-length monosyllables, synthesised them, and played the syllables at a steady four per second with no pauses between words and no rise or fall in pitch — the only rhythm physically present in the sound was the syllable, four times a second. The Mandarin and English materials had the same structure.</p>
+<p>Then they recorded listeners' brain activity. It followed three rhythms at once: four per second (syllables), two per second (two-word phrases), one per second (four-word sentences). The last two are not in the acoustic signal at all; the listener builds them. Play the same materials to someone who does not know the language and those two rhythms disappear. Strength of evidence: replicated many times, but there is still an argument over whether it reflects grammatical assembly or the predictability of the next word.</p>
+<p>The issue called Words Are Assembled was about assembly inside the word; this is assembly above the word. The same trick, used at two levels.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>You follow the cheapest reading straight into a ditch</h2>
+<p>English has a famous sentence: <i>The horse raced past the barn fell.</i> Native speakers stall on that final <i>fell</i>, and most conclude the sentence is broken. It is not.</p>
+<p>When you reach <i>raced</i> you naturally take it as the main verb — the horse ran past the barn. That reading survives until <i>fell</i>, where it collapses, because a sentence cannot have two main verbs. The right shape is: <i>raced past the barn</i> is only a small stretch modifying <i>horse</i>, the main verb is <i>fell</i>, and the whole thing means the horse that was raced past the barn fell over. Sentences like this are called <b>garden path sentences</b>: you are led down a side path and only discover the mistake at the end, then have to walk back to the fork.</p>
+<p>This is not just introspection. Frazier and Rayner in 1982 watched people read such sentences with an eye tracker, and saw it: at the word that forces the reversal, fixations get noticeably longer and the eyes jump back to re-read the earlier stretch. Backing up costs something, and the cost can be timed.</p>
+<p>Why go wrong at all? Because people commit to a structure before the sentence is over. Every incoming word gets hung on the skeleton built so far, and if it will not hang, the skeleton is taken apart. The benefit is speed — you can finish someone's sentence for them. The cost is the occasional teardown.</p>
+<p>Speakers are quietly helping, without either side noticing. Snedeker and Trueswell in 2003 used a sentence you can actually act out: <i>Tap the frog with the flower</i> — either use the flower to tap the frog, or tap the frog that is holding a flower. Asked to say it in front of real objects, speakers put the break in different places: for the use-the-flower meaning they stretch out <i>frog</i> and leave a gap after it; for the frog-holding-a-flower meaning they stretch out <i>tap</i> instead. Listeners' eyes land on the right object before the ambiguous phrase has even arrived. And when the speaker does not know an ambiguity is present, the cues get much weaker — so this is cooperation, mostly unconscious, not a by-product of the mouth.</p>
+<p>One last distinction. The Mandarin sentence 鸡不吃了 (jī bù chī le) also has two meanings — the chicken is not eating any more, or we are not eating chicken any more — but it is a different animal from the hunter's dog. There is no second grouping; what changes is the role 鸡 (jī, chicken) plays. Ambiguity has several sources, and structure is only one of them.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>A word can hold onto somewhere far away, but it hits walls</h2>
+<p>To ask what Lily bought, English says <i>What did Lily buy?</i> — <i>what</i> stands at the front, yet it is really the object of <i>buy</i>, and the object slot sits empty. The word is at one end, its real position at the other, and an invisible line runs between them.</p>
+<p>That line can be very long. <i>What did you say that Lily thought that John bought?</i> has two layers of who-said-who-thought stuffed in the middle, and native speakers get it in a second. Add as many layers as you like; the sentence gets wordy, not broken.</p>
+<p>But some regions cannot be entered. <i>What did you meet the man who bought?</i> — intended as asking about the thing the man you met had bought — is shorter than the previous one, and speakers agree it is broken. In 1967 Ross named these unreachable regions <b>islands</b>: once the far end of the line lands inside something like a relative clause, the line cannot be pulled out.</p>
+<figure>
+<svg aria-label="A long-distance link crosses many clauses but is blocked by an island" role="img" viewbox="0 0 640 230" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="230" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="26" y="24">The line can be any length</text>
+<path d="M46 46 Q 300 4 546 46" fill="none" stroke="#e0a458" stroke-width="1.8"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="26" y="66">What did you say that Lily thought that John bought</text>
+<rect fill="none" height="20" rx="3" stroke="#e0a458" stroke-dasharray="3,3" width="26" x="534" y="50"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="26" y="88">The fronted word belongs in the empty object slot in the dashed box</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="26" y="130">Same line, into a wall</text>
+<path d="M46 152 Q 170 118 262 148" fill="none" stroke="#8d95a8" stroke-width="1.8"></path>
+<rect fill="#161e2c" height="30" rx="4" stroke="#e0a458" stroke-width="2" width="230" x="268" y="140"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="26" y="160">What did you meet</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="280" y="160">the man who bought ▯</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="20" x="252" y="162">✕</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="26" y="190">The empty slot sits inside a relative clause, so the line will not come out</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="26" y="212">Mandarin takes another route: 什么 (shenme, what) never moves at all</text>
+</svg>
+<div class="cap">The upper sentence is far longer than the lower one and perfectly easy. So what blocks the second is not distance; it is what the line passes through on the way.</div>
+</figure>
+<p>Mandarin takes the other route: the question word does not move. In 你觉得他说小李买了什么 (nǐ juéde tā shuō Xiǎo Lǐ mǎi le shénme) — what do you think he said Lily bought — the word 什么 (shénme, what) sits quietly in the object slot and never goes to the front, so asking how far it can travel does not apply. The strange part is that the islands are still there. Lu, Thompson and Yoshida ran a formal acceptability-rating study in 2020 and found that Mandarin question words inside a relative clause become hard to accept too — for both argument and adjunct question words, which is the opposite of the textbook generalisation that Mandarin argument question words ignore islands. Strength of evidence: one large-sample rating study, in conflict with a long-standing claim, still under discussion.</p>
+<p>Islands are also not identical everywhere. In Swedish and the other Mainland Scandinavian languages, pulling a phrase out of a relative clause is accepted by native speakers and shows up in real corpora at a non-trivial rate; neighbouring Icelandic does not accept it. Nobody has settled how to explain the difference.</p>
+<p>The bigger argument is whether an island is a ban written into the grammar or simply a sentence that costs too much to process. Sprouse, Wagers and Phillips tested this directly in 2012: measure each person's working-memory capacity, then see whether it predicts how strongly that person rejects island sentences. It does not. They took this as evidence that processing load does not explain islands away; the other camp (Hofmeister, Sag and colleagues) replies that load has many sources and one memory measure will not capture them. Strength of evidence: one well-designed large-sample study plus an unfinished conversation. Both sides agree on one thing: nobody teaches this constraint.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Context · BigCat</h3>
+<ol>
+<li><b>① Engineering and system design</b>: an alerting rule written as one line — alert if failures exceed ten or latency exceeds one second within five minutes. A month after launch you find two people implemented it differently: one scoped within five minutes to the failure count only, the other to the whole clause. Nobody was careless; this is the mechanism from the section on words coming in gangs. One string, two legal groupings, each reader picks one and neither feels like they are guessing. Two things to change: ban and/or chains of three or more items in rules and acceptance criteria, rewrite them as numbered lists so the layout carries the grouping; and at review, swap the question is this clear for does this have a second reading — the first only ever collects nods.</li>
+<li><b>② Leading teams</b>: in a one-on-one someone opens with I have been wondering whether to change direction, and you have spent three minutes on the reading he wants to quit — reassuring, asking why, working out how to keep him — before finding out he meant the project's direction. This is the section on following the cheapest reading into a ditch: people hang a structure before the sentence is finished, backing up takes time, and the things you said under the old reading do not retract themselves. What to change: move so what I hear you saying is to the first minute instead of saving it for the end; and when you catch yourself on the wrong path, say out loud that you misread and that the last few minutes are void, or your wrong inferences stay with the other person and keep fermenting.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Links to Other Fields</h3>
+<ul>
+<li><b>Distributed systems and AI · what holds the far end is pairing, not distance</b>: people have put islands to language models. What Wilcox and colleagues measured in 2018 is whether a model, having read a fronted question word, starts expecting an empty slot somewhere later. It does, and that expectation is damped inside several island structures. The result is cited as often as it is questioned — whether it reflects structural sensitivity or some length effect is still unsettled. The mechanism is the one from the section on holding onto somewhere far away: human judgements track structure, not distance (Sprouse's group finding no effect of memory capacity points the same way). That yields an experiment someone could actually run: build two sets of sentences with the linear distance inside and outside the island matched exactly, varying only what the line passes through. Human rejection should survive intact; a model effect that comes from length would collapse here. <b>Where this breaks down</b> is treating it as request-and-response pairing in a protocol: there the far end carries an explicit identifier and you look it up on arrival, whereas the slot in a sentence is silent, unpronounced and unmarked, so the parser has to bet on whether it exists at all. Which is why distributed systems never show the guess-then-reverse cost of a garden path, and cannot be used to predict human reading times.</li>
+<li><b>Society and institutions · two readings of one statute, worth five million dollars</b>: Maine's overtime law listed exempt activities ending in packing for shipment or distribution. The dairy company Oakhurst argued that was two things — packing, and distribution — so distribution earned no overtime; the drivers argued it was one thing, packing done for shipment or for distribution, leaving distribution unexempt. In 2017 the First Circuit sided with the drivers and the company settled for five million dollars. The mechanism is the one from the section on words coming in gangs: change the grouping and you change the truth conditions. The useful conclusion for people who draft rules is that the fix is not an added clause or qualifier — that just piles more groupable material onto the same string — but a change to the constituent structure itself: break it into a numbered list and let the layout carry the grouping. The interpretive canons lawyers reach for (last antecedent, series qualifier) cannot save it precisely because they conflict, which amounts to legislating two default groupings for one string. <b>Where this breaks down</b> is the rule of thumb that context will disambiguate, which holds up well in speech: in Snedeker's experiment the speaker adds a pause and the listener can ask on the spot, while a statute is read years later by opposed parties who actively want the other reading. The difference is visible — nearly all structural ambiguity in conversation is gone within half a second, and the kind in a statute survives to trial.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>If the grouping is psychologically real, why can no native speaker describe it?</summary><p>You can judge in a second that the hunter's dog is one gang and bit the hunter to death is not, yet you cannot state the grounds. Perhaps being able to state it was never the test of reality — you recognise a face instantly without being able to say which features you compared. If so, what do the substitution and movement tests measure: the ability itself, or the traces it leaves?</p></details>
+<details><summary>If Swedish can extract from a relative clause, what is left of islands being universal?</summary><p>One answer is that islands hold, and the Swedish structures that look like relative clauses simply are not relative clauses. That sounds a lot like redrawing a boundary to save a conclusion. What evidence could separate it from the claim that islands genuinely vary by language? If none exists, is the disagreement still an empirical one?</p></details>
+<details><summary>Why has ambiguity not been weeded out?</summary><p>If communicative efficiency were pressure enough, structures like the hunter's dog should have worn away. They are everywhere instead. Perhaps ambiguity is barely a cost, because context nearly always removes it and the listener does the removing for free. If that is the story, in what settings does the cost become visible again?</p></details>
+<details><summary>Does Mandarin's motionless question word mean it does one job less?</summary><p>English moves the question word to the front, which publicly announces that an empty slot is coming and lets the listener prepare. Mandarin does not move it, so what tells a listener this is a question, and which part is being asked about? If the work is done by intonation and a sentence-final particle, are the two routes doing the same job with the marker placed at opposite ends of the sentence?</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://www.nature.com/articles/nn.4186">Ding, Melloni, Zhang, Tian &amp; Poeppel (2016), Cortical tracking of hierarchical linguistic structures in connected speech, Nature Neuroscience</a></li>
+<li><a href="https://www.coli.uni-saarland.de/masta/WS15/FrazierRayner1982.pdf">Frazier &amp; Rayner (1982), Making and correcting errors during sentence comprehension, Cognitive Psychology</a> (the eye-tracking data on garden paths)</li>
+<li><a href="https://www.researchgate.net/publication/222708286_Using_prosody_to_avoid_ambiguity_Effects_of_speaker_awareness_and_referential_context">Snedeker &amp; Trueswell (2003), Using prosody to avoid ambiguity</a> (where speakers put the pause)</li>
+<li><a href="https://www.jonsprouse.com/papers/Sprouse%20et%20al.%202012b.pdf">Sprouse, Wagers &amp; Phillips (2012), Working-memory capacity and island effects</a> · <a href="https://en.wikipedia.org/wiki/Syntactic_island">Syntactic island — Wikipedia</a></li>
+<li><a href="https://people.ucsc.edu/~mwagers/LuThompsonYoshida20.pdf">Lu, Thompson &amp; Yoshida (2020), Chinese Wh-in-Situ and Islands: A Formal Judgment Study, Linguistic Inquiry</a></li>
+<li><a href="https://www.mdpi.com/2226-471X/7/3/163">Extraction from Relative Clauses in Icelandic and Swedish (2022), Languages</a></li>
+<li><a href="https://aclanthology.org/W18-5423/">Wilcox, Levy, Morita &amp; Futrell (2018), What do RNN Language Models Learn about Filler–Gap Dependencies?</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/think-commas-don-t-matter-omitting-one-cost-maine-dairy-n847151">The Oakhurst Dairy comma case and its five-million-dollar settlement — NBC News</a> · <a href="https://en.wikipedia.org/wiki/Garden-path_sentence">Garden-path sentence — Wikipedia</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>

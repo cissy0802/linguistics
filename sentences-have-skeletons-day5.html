@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>句子有骨架 — 语言学 Day 5</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 5 · 语言学</div>
+<h1>句子有骨架</h1>
+<div class="sub">「咬死了猎人的狗」——七个字一个没多、顺序一个没动，意思却有两个</div>
+<div class="date">2026-09-01</div>
+<div class="pitch">一句话的意思不是把词的意思加起来。同一串词按两种方式分组，得到的是两件不同的事。没人教过你怎么分组，你每天分对成千上万次，而且说不出自己是怎么分的。</div>
+</header>
+<div class="intro">
+<p>「咬死了猎人的狗」。读一遍，你多半读成：有个东西把猎人养的那条狗咬死了。现在换一种读法——「那条咬死了猎人的狗」，主角变成一条杀了人的狗。</p>
+<p>七个字一个没多，顺序也没动。变的只是你在哪儿画那道分界：是「咬死了 / 猎人的狗」，还是「咬死了猎人的 / 狗」。这个例子在汉语语法教材里讲了几十年，因为它把一件平时看不见的事顶上了台面：句子不是一串词，词是一伙一伙的，一伙里还套着更小的伙。</p>
+<p>这期讲这副骨架：它长什么样、为什么会有两种搭法、以及它最漂亮的那个性质——一个词能跟很远的地方发生关系，但有些地方它进不去。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>句子里的词是一伙一伙的</h2>
+<p>先说怎么知道哪些词是一伙的。判据有三条，都能当场试。</p>
+<p>第一，能不能整个换成一个词。「猎人的狗」可以换成「它」——「它被咬死了」。「咬死了猎人」换不成任何一个词。第二，能不能整个搬走。「猎人的狗，被咬死了」说得通；「咬死了猎人，的狗」是坏的。第三，能不能跟同类并列。「猎人的狗和邻居的猫」顺，「咬死了猎人和邻居的」不成句。</p>
+<p>能被替换、能被搬动、能被并列的那一段就是一伙，语言学管它叫<b>成分（constituent）</b>。这三条测试其实是同一个问题的三种问法：这一段有没有被当成一个整体对待。</p>
+<figure>
+<svg aria-label="同一串字的两种分组方式" role="img" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="250" width="640" x="0" y="0"></rect>
+<rect fill="#101624" height="40" rx="5" stroke="#26314a" width="106" x="30" y="24"></rect>
+<rect fill="#101624" height="40" rx="5" stroke="#26314a" width="82" x="146" y="24"></rect>
+<rect fill="#101624" height="40" rx="5" stroke="#26314a" width="52" x="238" y="24"></rect>
+<rect fill="#101624" height="40" rx="5" stroke="#26314a" width="52" x="300" y="24"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="83" y="51">咬死了</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="187" y="51">猎人</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="264" y="51">的</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="326" y="51">狗</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="12" x="374" y="50">四块砖，摆法只有一种</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="30" y="110">读法一 · 分界在第一块之后</text>
+<rect fill="none" height="26" rx="5" stroke="#e0a458" stroke-width="2" width="106" x="30" y="122"></rect>
+<rect fill="none" height="26" rx="5" stroke="#e0a458" stroke-width="2" width="206" x="146" y="122"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="83" y="162">动作</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="249" y="162">挨咬的那个</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="374" y="141">猎人的狗被咬死了</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="30" y="196">读法二 · 分界在最后一块之前</text>
+<rect fill="none" height="26" rx="5" stroke="#7fb3d5" stroke-width="2" width="260" x="30" y="208"></rect>
+<rect fill="none" height="26" rx="5" stroke="#7fb3d5" stroke-width="2" width="52" x="300" y="208"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="374" y="227">那条狗把猎人咬死了</text>
+</svg>
+<div class="cap">砖一样、顺序一样，只有那道分界挪了一格。真实对话里你只会先拿到一个读法，另一个得靠别人提醒。</div>
+</figure>
+<p>麻烦的是，你说不出自己在分组。分界线不发音，纸上也没有标记。有没有办法看见它？</p>
+<p>2016 年 Ding Nai 和几位合作者做了一个很干净的实验。他们把等长的单音节词拼成四字句，机器合成，每秒匀速播放四个音节，词间没有停顿、没有语调起伏——声音里唯一存在的节奏就是音节，每秒四次。中英文材料结构相同。</p>
+<p>然后他们记录听者的脑活动。结果是脑活动同时在三个节奏上跟着走：每秒四次（音节）、每秒两次（两字短语）、每秒一次（四字句）。后面两个节奏在声音信号里根本不存在，是听懂的人自己搭出来的——把材料换成听不懂的语言，那两个节奏就消失了。证据强度：结果被多次重复，但对它反映的到底是句法组装还是「下一个词的可预测性」，至今有争论。</p>
+<p>「词是拼出来的」那期讲的是词内部的装配，这里讲的是词之上的装配：同一个套路用了两层。</p>
+<p class="en-brief"><b>EN</b> Three quick tests show which words form a unit; a 2016 experiment shows the brain tracking phrase- and sentence-sized beats that are simply not in the sound.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>你会顺着最省事的搭法一路走进沟里</h2>
+<p>英语里有个著名的句子：<i>The horse raced past the barn fell.</i> 母语者读到最后那个 fell 会当场卡住，多数人第一反应是这句话坏了。它没坏。</p>
+<p>读到 raced，你自然把它当成主要动词——「那匹马跑过了谷仓」。这个搭法一路顺到 fell 就崩了，因为一句话不能有两个主要动词。正确的搭法是：raced past the barn 整段只是修饰 horse 的一小块，主要动词是 fell，整句意思是「那匹被牵着跑过谷仓的马摔倒了」。这类句子叫<b>花园幽径句（garden path sentence）</b>：你被领上一条小路，走到头才发现走错，得倒回岔口重来。</p>
+<p>这不只是内省。Frazier 和 Rayner 1982 年用眼动仪盯着人读这类句子，看见的是：读到触发倒车的那个词时，注视时间明显变长，眼睛还会往回跳去重读前面那一段。倒车是有代价的，代价能被秒表量出来。</p>
+<p>为什么会走错？因为人不等句子说完就先搭上一个结构。这叫增量解析——每来一个词就往现有骨架上挂，挂不上再拆。好处是快，你能在别人还没说完时就接话；代价就是偶尔要拆。</p>
+<p>说话的人其实一直在帮忙，只是双方都没意识到。Snedeker 和 Trueswell 2003 年用了一个可以真的动手做的句子：<i>Tap the frog with the flower</i>——可以是「用那朵花去敲青蛙」，也可以是「敲那只拿着花的青蛙」。他们让人对着实物说这句话，发现说话人会把停顿放在不同位置：要表达「用花敲」，就把 frog 拖长，在它后面留一道缝；要表达「拿花的那只青蛙」，改成把 tap 拖长。听话人的眼睛在有歧义的那半句还没出来之前就已经看向了正确的东西。而说话人不知道现场存在歧义时，这些线索会弱很多——所以它是一种多半无意识的配合，不是嘴部机械的副产品。</p>
+<p>最后区分一件容易混的事。汉语的「鸡不吃了」也有两个意思，但它跟「咬死了猎人的狗」不是一回事：分组没有第二种可能，变的是「鸡」担任的角色——是它不吃了，还是我们不吃它了。歧义有好几种来源，结构只是其中一种。</p>
+<p class="en-brief"><b>EN</b> Readers commit to a structure before the sentence ends, pay for it in eye-tracking data, and speakers quietly help out with pauses they do not know they are making.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>一个词能牵住很远的地方，但撞得到墙</h2>
+<p>英语问「Lily 买了什么」是 <i>What did Lily buy?</i>——what 站在句首，可它其实是 buy 的宾语，而宾语那个位置空着。一个词在这头，它真正的位置在那头，中间靠一根看不见的线牵着。</p>
+<p>这根线可以很长。<i>What did you say that Lily thought that John bought?</i> 中间塞了两层「谁说谁想」，母语者照样一秒钟就懂。想塞多少层都行，句子只是变啰嗦，不会变坏。</p>
+<p>但有些区域进不去。<i>What did you meet the man who bought?</i>（意思本该是「你遇到了那个买了什么的人」）——这句比上一句还短，母语者却一致觉得它坏了。1967 年 Ross 把这些进不去的区域叫作<b>岛（island）</b>：一旦那根线的另一头落在关系从句这类结构里面，线就拉不出来。</p>
+<figure>
+<svg aria-label="长距离依存可以穿过多层从句，但会被岛挡住" role="img" viewbox="0 0 640 230" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="230" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="26" y="24">线可以任意长</text>
+<path d="M46 46 Q 300 4 546 46" fill="none" stroke="#e0a458" stroke-width="1.8"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="26" y="66">What did you say that Lily thought that John bought</text>
+<rect fill="none" height="20" rx="3" stroke="#e0a458" stroke-dasharray="3,3" width="26" x="534" y="50"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="26" y="88">句首这个词，真正的位置是虚线框那个空着的宾语</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="26" y="130">同样一根线，撞墙</text>
+<path d="M46 152 Q 170 118 262 148" fill="none" stroke="#8d95a8" stroke-width="1.8"></path>
+<rect fill="#161e2c" height="30" rx="4" stroke="#e0a458" stroke-width="2" width="230" x="268" y="140"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="26" y="160">What did you meet</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="280" y="160">the man who bought ▯</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="20" x="252" y="162">✕</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="26" y="190">空位落在关系从句里面，线就拉不出来——这块区域叫「岛」</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="26" y="212">汉语走另一条路：疑问词不动，「你觉得他买了什么」里的「什么」原地不动</text>
+</svg>
+<div class="cap">上面那句比下面那句长得多，却完全好懂。所以拦住第二句的不是距离，是那根线中途穿过了什么。</div>
+</figure>
+<p>汉语走的是另一条路：疑问词根本不动。「你觉得他说小李买了什么？」里的「什么」老实待在宾语位置上，没跑到句首去，所以「能跑多远」这个问法对汉语不直接成立。奇怪的是即便不跑，岛还在。Lu、Thompson 和 Yoshida 2020 年做了一次正式的接受度评分实验，发现汉语疑问词落在关系从句里同样变得难以接受，论元和状语两类都受影响——这跟教科书讲了几十年的「汉语论元疑问词不受岛屿限制」正好相反。证据强度：单项大样本评分实验，与经典概括冲突，仍在讨论。</p>
+<p>岛也不是全世界一个样。瑞典语这类大陆斯堪的纳维亚语里，从关系从句里提取成分被母语者接受，真实语料里也以不低的频率出现；隔壁的冰岛语则不接受，怎么解释还没定论。</p>
+<p>更大的争论是：岛是语法里的一条禁令，还是单纯因为那种句子太耗脑力？Sprouse、Wagers 和 Phillips 2012 年直接测了——量每个人的工作记忆容量，再看它能不能预测此人对岛屿句的排斥有多强。答案是预测不了，他们据此认为处理负担解释不掉岛；另一派（Hofmeister、Sag 一路）回应说负担来源多，一个记忆量表测不全。证据强度：一项设计明确的大样本实验，加一场没收尾的对话。两边都同意的是：这条限制不是任何人教的。</p>
+<p class="en-brief"><b>EN</b> A word can be bound to a slot arbitrarily far away, yet certain regions block the link — and nobody was ever taught where those regions are.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：告警规则写成一行字——「五分钟内失败超过十次或延迟超过一秒就告警」。上线一个月后发现两个人实现得不一样：一个把「五分钟内」只管到「失败超过十次」，另一个管到整句。这不是谁粗心，是「句子里的词是一伙一伙的」那节的机制：同一串词有两种合法分组，读者各拿到一个，都不觉得自己在猜。可改两件事——规则里禁止用「和 / 或」串三项以上，改写成编号列表，把分组交给排版；评审时把问句从「这条清楚吗」换成「这条有没有第二种搭法」，前一个问法只能收到点头。</li>
+<li><b>② 带团队与组织</b>：一对一里对方开口「我最近在想要不要换个方向」，你已经按「他想离职」这个搭法往下走了三分钟——安抚、问原因、盘算怎么留——才发现他说的是项目方向。这是「你会顺着最省事的搭法一路走进沟里」那节：人不等话说完就先挂上一个结构，倒车要花时间，且旧搭法下说出去的话不会自动收回。可改的动作是把「我理解你是说……」提到第一分钟，别留到结尾；以及发现走错时显式声明「我刚才理解岔了，前面那几句作废」，否则你的错误推论会留在对方那儿发酵。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 牵住远处的是配对，不是距离</b>：有人把「岛」拿去考语言模型。Wilcox 等人 2018 年测的是：模型读到句首那个疑问词后，会不会开始期待后面某处有个空着的位置。结果是会，而且这份期待在几类岛结构里会被压低。这条结果被反复引用也被反复质疑——它反映的是结构敏感还是某种长度效应，至今没有共识。跑的是「一个词能牵住很远的地方」那节的机制：人的判断随结构变，不随距离变（Sprouse 那组测不出记忆容量的影响，是同一个方向的证据）。由此能推出一个真能做的实验：造两套句子，把岛内与岛外的线性距离配平到完全一样，只让「中途穿过什么」不同。人的排斥应当原样保留；模型的效应若是长度带来的，就会在这里塌掉。<b>但这里不成立</b>的是把它想成协议里的请求—响应配对：那边被牵住的一端带着显式编号，收到就能查表；语言里那个位置是沉默的，不发音也没有标记，解析器得先赌它存不存在。所以分布式那边不会有花园幽径句那种「先猜后倒车」的开销，也就没法拿它预测人的阅读时间。</li>
+<li><b>社会与制度 · 一条法条的两种搭法值五百万美元</b>：美国缅因州的加班费法规列了一串豁免作业，末尾是 packing for shipment or distribution（为运输或配送而包装）。奶制品公司 Oakhurst 主张这是两件事——包装，以及配送，配送因此不用付加班费；司机们主张这是一件事——为运输或配送而做的包装，配送本身没被豁免。2017 年联邦第一巡回上诉法院支持了司机，公司随后以五百万美元和解。跑的是「句子里的词是一伙一伙的」那节的机制：分组不同，真值条件就不同。由此推出的结论对写规则的人有用——补救不该是加解释句或加限定词，那只是往同一串词上再堆可分组的材料；该换掉的是成分结构本身，拆成编号列表，让分组由排版承担。法律界那些解释规范（末位先行词规则、系列限定规则）救不了场，正因为它们彼此冲突，等于给同一串词规定了两个默认切分。<b>但这里不成立</b>的是「语境自然会消歧」这条在口语里很硬的经验：Snedeker 那个实验里说话人会主动加停顿、听话人当场能追问，而法条的读者是若干年后的对立双方，他们恰恰想要另一个切分。差别是可见的——口语的结构歧义绝大多数在半秒内消失，法条里的能活到开庭。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果分组是心理上真实的，为什么母语者说不出自己怎么分的？</summary><p>你能一秒判断「猎人的狗」是一伙、「咬死了猎人」不是，却讲不出依据。会不会「说得出」本来就不是判断真实性的标准——就像你能一眼看出一张脸是谁，但说不出你比对了哪些特征？如果是这样，语言学的那些替换和搬动测试，测的到底是能力本身，还是能力留下的痕迹？</p></details>
+<details><summary>瑞典语能从关系从句里提取，那「岛是普遍的」还剩下什么？</summary><p>一种回答是：岛还在，只是瑞典语里那些看着像关系从句的结构其实不是关系从句。这个回答听上去很像是为了保住结论而重新划定边界。什么样的证据能把它和「岛本来就因语言而异」区分开？如果找不出这样的证据，这个分歧还算不算经验问题？</p></details>
+<details><summary>歧义为什么没被淘汰掉？</summary><p>如果沟通效率是压力，「咬死了猎人的狗」这类结构该被磨掉才对。但它到处都是。会不会歧义根本不算成本——因为语境几乎总能消掉它，而消歧的活儿由听话人免费承担？如果是这样，什么场合会让这笔成本重新变得可见？</p></details>
+<details><summary>汉语的疑问词不动，是不是意味着它少做了一件事？</summary><p>英语把疑问词搬到句首，等于用位置公开宣告「后面有个空位」，听话人可以提前准备。汉语不搬，听话人靠什么知道这是个问句、问的是哪一部分？如果靠语调和句末的语气词，那这两条路是不是在做同一件事，只是把标记放在了句子的两端？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://www.nature.com/articles/nn.4186">Ding, Melloni, Zhang, Tian &amp; Poeppel (2016), Cortical tracking of hierarchical linguistic structures in connected speech, Nature Neuroscience</a></li>
+<li><a href="https://www.coli.uni-saarland.de/masta/WS15/FrazierRayner1982.pdf">Frazier &amp; Rayner (1982), Making and correcting errors during sentence comprehension, Cognitive Psychology</a>（花园幽径句的眼动数据）</li>
+<li><a href="https://www.researchgate.net/publication/222708286_Using_prosody_to_avoid_ambiguity_Effects_of_speaker_awareness_and_referential_context">Snedeker &amp; Trueswell (2003), Using prosody to avoid ambiguity</a>（说话人的停顿放在哪里）</li>
+<li><a href="https://www.jonsprouse.com/papers/Sprouse%20et%20al.%202012b.pdf">Sprouse, Wagers &amp; Phillips (2012), Working-memory capacity and island effects</a> · <a href="https://en.wikipedia.org/wiki/Syntactic_island">Syntactic island — Wikipedia</a></li>
+<li><a href="https://people.ucsc.edu/~mwagers/LuThompsonYoshida20.pdf">Lu, Thompson &amp; Yoshida (2020), Chinese Wh-in-Situ and Islands: A Formal Judgment Study, Linguistic Inquiry</a></li>
+<li><a href="https://www.mdpi.com/2226-471X/7/3/163">Extraction from Relative Clauses in Icelandic and Swedish (2022), Languages</a></li>
+<li><a href="https://aclanthology.org/W18-5423/">Wilcox, Levy, Morita &amp; Futrell (2018), What do RNN Language Models Learn about Filler–Gap Dependencies?</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/think-commas-don-t-matter-omitting-one-cost-maine-dairy-n847151">Oakhurst Dairy 的逗号案与五百万美元和解 — NBC News</a> · <a href="https://en.wikipedia.org/wiki/Garden-path_sentence">Garden-path sentence — Wikipedia</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
