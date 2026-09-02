@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Can Meaning Be Computed? — Linguistics Day 6</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 6 · Linguistics</div>
+<h1>Can Meaning Be Computed?</h1>
+<div class="sub">A fake gun is not a kind of gun — yet you know both of those words perfectly well</div>
+<div class="date">2026-09-02</div>
+<div class="pitch">You can understand a sentence nobody has ever said, which means sentence meaning is computed on the spot. But the same procedure crashes immediately on a fake gun. If the procedure is real, it cannot consist of a single rule.</div>
+</header>
+<div class="intro">
+<p>The otter in the straw hat swallowed the stapler. Nobody has ever said that sentence, and you understood it in a second — you can even see it. You did not memorise it. You worked it out as you read.</p>
+<p>The procedure sounds humble: know each word, then put the meanings together the way the words are put together. That humble idea has a name, the <b>principle of compositionality</b> — the meaning of a sentence is fixed by the meanings of its parts plus the way they are combined. The reason regrouping changes meaning, as in the issue on sentence skeletons, is that the second half of that formula is doing work.</p>
+<p>And yet a fake gun is not a kind of gun. A red apple is red and is an apple; both conditions hold. A fake gun cancels the second one outright. Same shape — adjective plus noun — and two completely different results.</p>
+<p>This issue follows that crack: how meaning gets computed, what the result of the computation even is, and why one class of words has no determinate answer at all.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>The sentence you have never seen, you worked out on the spot</h2>
+<p>First, let us turn that into an experiment somebody can actually run.</p>
+<p>Lake, Linzen and Baroni in 2019 asked people to learn a small invented language: a few nonsense words standing for coloured dots — one word means a single red dot, say. A few other nonsense words do not stand for anything; they are operations, like repeat the previous thing three times, or swap the order of the two sides. Each word came with only a handful of examples, and then people were tested on combinations they had never seen. Most did it quickly and accurately, and applied the newly learned operations to words they had never been paired with. People really are computing, and a few examples are enough.</p>
+<p>The procedure has exceptions, the famous ones being idioms. <i>Kick the bucket</i> means to die and has nothing to do with buckets; passivise it or add a modifier and the figurative reading evaporates. But not every idiom is one solid lump. Gibbs and Nayak in 1989 compared a batch of them and found that the more an idiom's figurative meaning can be parcelled out to its individual words, the more syntactically flexible it is. In <i>pop the question</i>, the question roughly corresponds to the proposal, so <i>the question was finally popped</i> is still understood; <i>kick the bucket</i> cannot be parcelled out, and so it cannot be moved either. Mandarin 拍马屁 (pāi mǎ pì) — literally "pat the horse's rump", meaning to flatter someone — belongs to the flexible type, and the variant 马屁拍到马腿上 (mǎ pì pāi dào mǎ tuǐ shàng) — "the flattery landed on the horse's leg", said of flattery that backfires — works precisely because the rump part still carries a role inside. So idioms are not one big counterexample to compositionality; they are a scale running from fully assembled to not assembled at all.</p>
+<p>The real trouble lies with the pairings that look most well behaved.</p>
+<figure>
+<svg aria-label="Three adjective-noun pairs, three different combining operations" role="img" viewbox="0 0 640 210" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="210" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="108" y="28">red apple · both conditions hold</text>
+<circle cx="86" cy="100" fill="none" r="40" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<circle cx="130" cy="100" fill="none" r="40" stroke="#e0a458" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="26" y="104">red things</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="150" y="104">apples</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="108" y="170">the overlap</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="320" y="28">skilful surgeon · picked from inside</text>
+<circle cx="320" cy="100" fill="none" r="46" stroke="#e0a458" stroke-width="1.8"></circle>
+<circle cx="320" cy="108" fill="none" r="22" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="66">surgeons</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="170">skilful only at operating</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="534" y="28">fake gun · the condition is cancelled</text>
+<circle cx="486" cy="100" fill="none" r="36" stroke="#e0a458" stroke-width="1.8"></circle>
+<circle cx="586" cy="100" fill="none" r="36" stroke="#8d95a8" stroke-dasharray="4,4" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="486" y="104">guns</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="586" y="104">fake guns</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="536" y="106">✕</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="534" y="170">two sets that never touch</text>
+</svg>
+<div class="cap">One surface shape — adjective plus noun — with three different procedures running underneath. The third is the strangest: adding a word subtracts the thing.</div>
+</figure>
+<p>A red apple is the overlap of two conditions. A skilful surgeon is not — he need not be good at tennis. Skilful is measured only against operating, so the adjective has to climb inside the noun first and use the noun's own scale as its yardstick. A fake gun is more extreme still: it is not in the gun pile at all, because the adjective cancelled the noun's condition outright.</p>
+<p>So combining is not one operation but a family of them. A word carries not only a meaning but its own way of attaching. When a word enters a sentence, its attachment method comes along with it.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>To understand a sentence is to know when it would be true</h2>
+<p>We have been saying meaning gets computed, but what is the thing that comes out? There is a wonderfully plain test: if you claim to have understood a sentence, then tell me what the world would have to be like for it to hold. If you can, you understood it; if you cannot, you merely recognised the words. This is what semantics calls <b>truth conditions</b>.</p>
+<p>It turns understanding into something you can check on the spot. Developmental psychology has leaned on this for decades in the truth-value judgement task: act out a small scene in front of a child, then ask whether some sentence about it is right. Four-year-olds can do it, and the line between what they accept and what they reject draws out the meaning the sentence has for them.</p>
+<p>The method reveals something introspection misses. <i>Every student read a book</i> describes two quite different scenes: three students each reading a different book, or three students reading one and the same book. Both make the sentence true. A sentence does not correspond to a picture; it corresponds to a set of pictures.</p>
+<figure>
+<svg aria-label="One sentence, two different situations that both make it true" role="img" viewbox="0 0 640 210" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="210" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="26" y="28">Situation one · each their own</text>
+<circle cx="60" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="130" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="200" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<line stroke="#8d95a8" stroke-width="1.4" x1="60" x2="60" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="130" x2="130" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="200" x2="200" y1="83" y2="118"></line>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="48" y="118"></rect>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="118" y="118"></rect>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="188" y="118"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="26" y="176">three readers, three different books</text>
+<line stroke="#26314a" stroke-width="1" x1="320" x2="320" y1="20" y2="190"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="360" y="28">Situation two · one and the same</text>
+<circle cx="394" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="464" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="534" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<line stroke="#8d95a8" stroke-width="1.4" x1="394" x2="458" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="464" x2="464" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="534" x2="470" y1="83" y2="118"></line>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="452" y="118"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="360" y="176">three readers, one shared book</text>
+</svg>
+<div class="cap">The English sentence holds in both worlds. Its meaning is therefore not a picture but a boundary: which worlds it lets through.</div>
+</figure>
+<p>That boundary shifts from language to language. Scontras and colleagues compared English and Mandarin with truth-value judgement tasks. English speakers accept the inverse reading of sentences where the indefinite comes first and the universal second — letting the later word take wide scope over the earlier one. In the crucial Mandarin materials, not a single participant accepted it: 一个学生读了每本书 (yī gè xuéshēng dú le měi běn shū), "a student read every book", can only mean that one and the same student got through all the books. Strength of evidence: several experiments point the same way, but later work found inverse readings available in Mandarin inside relative clauses and adverbial clauses, so a blanket ban is too strong — it now looks structure-by-structure.</p>
+<p>There is one more layer: truth conditions are not all of meaning. The morning star and the evening star are the same planet, Venus. Yet the morning star is the morning star is empty, while the morning star is the evening star was an astronomical discovery. The two sentences point at exactly the same objects and are worth wildly different amounts. That is why Frege split <b>reference</b> (which thing you point at) from <b>sense</b> (the route by which you point at it). Meaning contains both the destination and the road.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>How tall is tall has no answer, and should not have one</h2>
+<p>Two metres is tall. Someone a millimetre shorter than a tall person is still tall. A millimetre less again, still tall. Run it all the way down to a metre and a half and the reasoning says he is tall too, which is plainly absurd. Somebody laid out this chain more than two thousand years ago; it is called the <b>sorites paradox</b>. It is not word-play: every step is right and the conclusion is wrong, which means the word tall is not built the way we assume.</p>
+<p>Alxatib and Pelletier brought it into the lab in 2011. They showed people a police line-up of five suspects of different heights and asked them to mark a set of sentences true, false, or can't tell. For the man whose height fell right in the middle, most participants would not call he is tall true, and would not call he is not tall true either — yet a substantial number accepted he is tall and not tall, which sounds like a flat contradiction. Their reading is that the sentence was taken to say he is a borderline case. Strength of evidence: a single clean experiment, but one that has been redone and modelled many times since, with a stable direction.</p>
+<p>Why does this happen? Because tall carries no threshold of its own; the threshold is borrowed on the spot. A tall third-grader is far shorter than a short professional centre, and neither description is wrong — tall is always relative to a comparison class. So hesitation over borderline cases is not imprecise measurement. There is simply no fact there to measure.</p>
+<p>Languages differ in the machinery they use for this. Washo — an Indigenous language of the area straddling the California–Nevada border — has no counterpart to the English comparative <i>-er</i> or <i>more</i>; comparison is expressed by juxtaposing two clauses, roughly this one is big, that one is small. Bochnak argued in 2015 that gradable words in the language therefore do not introduce a degree at all, and Beck and colleagues reached a similar conclusion for Motu, spoken in Papua New Guinea. Strength of evidence: careful fieldwork plus a cross-linguistic parameter hypothesis, with other languages that fit neither side of the split. The thing not to conclude is that its speakers do not compare — they compare perfectly well, with different equipment: no dedicated part in the syntax, and the job done by putting two clauses side by side.</p>
+<p>Looking back, vagueness is no counterexample to compositionality. Tall combines by the rules like everything else; the piece it contributes simply has a blank in it, waiting for context to fill in. The three adjective types earlier were about how things attach. This is about a piece that arrives unfinished.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Context · BigCat</h3>
+<ol>
+<li><b>① Writing and expression</b>: you finish a paragraph, look back and ask yourself is this clear, and the answer is always yes, pretty clear. Change the question and everything changes: under what circumstances would this sentence be false? If you cannot name a concrete situation that breaks it, it has no content. This is the mechanism from the section on knowing when a sentence would be true — meaning is the line that splits possible worlds into two piles, and if you cannot draw the line you have not said anything. What to change: give every key sentence a counterexample slot and write in one scenario that would flip it; if you cannot, cut the sentence, or rewrite until you can.</li>
+<li><b>② Investing and position sizing</b>: in a review you jot down this position feels heavy. Heavy has no absolute scale; it hangs on a comparison class — heavy against your average holding last year, against peers, or against the drawdown you can actually sit through? This is the mechanism from the section on how tall is tall: the boundary of a vague word is filled by whatever comparison class is in play, and swapping the class flips the verdict on the same number. Two things to change: ban heavy and light on their own in the trade log, and require the phrase relative to what; and replace is it heavy with a question that has truth conditions — if this halves overnight, will I be forced to sell something else — which has a definite answer.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Links to Other Fields</h3>
+<ul>
+<li><b>Distributed systems and AI · on composition, the hard part is not the same for people and models</b>: Lake and Baroni built a toy language called SCAN in 2018 — instruction words mapped onto action sequences, where a model is trained on jump and on walk twice and then asked for jump twice. Models trained from scratch got these splits almost entirely wrong at the time; on Kim and Linzen's COGS, some structural splits were reported at zero accuracy. The mechanism is the one from the section on working out sentences you have never seen: give a person a handful of examples of a new word and they can slot it into every frame they already command — which is exactly what the nonsense-word experiment tested. Saying models lack compositionality is too blunt today; large models score well on many of these, and the argument has moved to whether that is real generalisation or coverage in the training data. The way to separate them is to control exposure: introduce one genuinely new primitive exactly once, to person and model alike, then test only its combination with old structures. One exposure suffices for people, and their errors cluster into a few predictable biases; if a model needs hundreds of exposures to stabilise, what it lacks is not the combining rule but the speed of hooking a new entry into old structure. <b>Where this breaks down</b> is treating composition as a function consuming an argument: an operator in a formal system never cancels the identity of its argument, and fake cancels gun. Every operator in SCAN-style tasks is benign and identity-preserving, so those benchmarks cannot reach the hardest part of natural language.</li>
+<li><b>Eastern and Western philosophy · behaviour alone cannot fix what a word points at</b>: Quine imagined a field scene — a rabbit runs past, a local says a word, and you write down rabbit. But the same behavioural evidence equally supports undetached rabbit parts, provided you adjust the words for identity and number in their language to match; every observable judgement of right and wrong stays the same. The mechanism is the one from the section on knowing when a sentence would be true: truth conditions pin meaning to states of the world, but one set of truth conditions can be produced by more than one assignment of reference. The conclusion that follows is empirical — a child learning words must arrive with a bias, or the first lesson would be unpassable. And the bias is measurable: Markman and Wachtel found in 1988 that three-year-olds default to taking a new word as naming the whole object, and only when the object already has a name do they hand the new word to a part or a substance. Quine's indeterminacy, in humans, is held down by an empirical prior rather than dissolved by logic. <b>Where this breaks down</b> is the premise itself: a real child has more than behavioural evidence — pointing, gaze-following, and adult correction give a far wider channel than the imagined field linguist enjoys. The testable consequence is that weakening joint attention, by introducing new words only when the adult is not looking at the thing, should visibly slow word learning down, which is the direction experiments report.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>If fake can cancel gun, what is left of compositionality?</summary><p>One answer is that the rule is intact and each word simply carries its own way of attaching, and fake attaches by cancelling. But then any counterexample can be met by declaring that this word has a special attachment method — so what could ever falsify the principle? What discovery would make you say this one really was not composed?</p></details>
+<details><summary>Happy birthday is neither true nor false — what happens to truth conditions?</summary><p>Commands, questions and good wishes do not describe the world and cannot be true or false, yet you obviously understand them. Is knowing when it would be true just the recipe for one kind of sentence, with another kind needing knowing what would count as satisfying it? If there are two systems, how do they coexist in one head?</p></details>
+<details><summary>Is he is tall and not tall, said of a borderline case, actually a contradiction?</summary><p>If it is, why do so many people accept it and feel they have expressed themselves precisely? If it is not, has not tall already shifted its meaning from what it means standing alone? Is there an experiment that could pull those two explanations apart?</p></details>
+<details><summary>What does a language with no dedicated comparative let you conclude, and what does it not?</summary><p>Not that its speakers do not compare — two juxtaposed clauses say the comparison perfectly well. But something does change: if comparison requires two full clauses, how do you express a fine gradation like just slightly taller than him? Which constructions would you have to look at to tell whether the difference lies in the language's equipment or only in habits of phrasing?</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://plato.stanford.edu/entries/compositionality/">Compositionality — Stanford Encyclopedia of Philosophy</a> · <a href="https://plato.stanford.edu/entries/frege/">Frege on sense and reference — SEP</a></li>
+<li><a href="https://arxiv.org/abs/1901.04587">Lake, Linzen &amp; Baroni (2019), Human few-shot learning of compositional instructions</a></li>
+<li><a href="https://arxiv.org/abs/1711.00350">Lake &amp; Baroni (2018), Generalization without systematicity (SCAN)</a> · <a href="https://aclanthology.org/2020.emnlp-main.731/">Kim &amp; Linzen (2020), COGS</a></li>
+<li><a href="https://link.springer.com/content/pdf/10.3758/BF03199557.pdf">Gibbs &amp; Nayak (1989), Speakers' assumptions about the lexical flexibility of idioms, Memory &amp; Cognition</a></li>
+<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0017.2011.01419.x">Alxatib &amp; Pelletier (2011), The Psychology of Vagueness: Borderline Cases and Contradictions, Mind &amp; Language</a> · <a href="https://plato.stanford.edu/entries/sorites-paradox/">Sorites Paradox — SEP</a></li>
+<li><a href="https://semanticsarchive.net/sub2013/SeparateArticles/Scontrasetal.pdf">Scontras et al., Chinese Scope: an experimental investigation</a> · <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1128616/full">Follow-up: scope rigidity in written Mandarin (2023)</a></li>
+<li><a href="https://semprag.org/article/view/sp.8.6">Bochnak (2015), The Degree Semantics Parameter and cross-linguistic variation, Semantics &amp; Pragmatics</a></li>
+<li><a href="https://eric.ed.gov/?id=EJ378292">Markman &amp; Wachtel (1988), Children's use of mutual exclusivity to constrain the meaning of words</a> · <a href="https://plato.stanford.edu/entries/quine/">Quine on indeterminacy of translation — SEP</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>

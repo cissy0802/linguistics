@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>意思能算出来吗 — 语言学 Day 6</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 6 · 语言学</div>
+<h1>意思能算出来吗</h1>
+<div class="sub">「假枪」不是一种枪，可「假」和「枪」这两个词你都认识</div>
+<div class="date">2026-09-02</div>
+<div class="pitch">你能听懂一句从来没人说过的话，说明句子的意思是现算出来的。但同一套算法在「假枪」上立刻翻车。如果这套算法真的存在，它就不可能只有一条规则。</div>
+</header>
+<div class="intro">
+<p>「那只戴草帽的水獭把订书机吞了。」这句话大概率没人说过，你却一秒就懂，还能看见画面。你不是背下来的，是现算的。</p>
+<p>算法听上去很朴素：认识每个词，再按它们的搭法把意思拼起来。这个朴素想法有个名字，叫<b>组合性原则（principle of compositionality）</b>——一句话的意思，由各部分的意思加上组合方式共同决定。「句子有骨架」那期讲的分组之所以能改变意思，正是「组合方式」这一半在起作用。</p>
+<p>可是「假枪」不是一种枪。「红苹果」既是红的又是苹果，两个条件都成立；「假枪」把「是枪」这条直接取消了。同样是形容词加名词，两次算出来的东西根本不是一回事。</p>
+<p>这期就沿着这条裂缝走：意思到底怎么算、算出来的是什么东西、以及有一类词天生就没有确定答案。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>你没见过的句子，是你当场算出来的</h2>
+<p>先把这件事变成一个能做的实验。</p>
+<p>Lake、Linzen 和 Baroni 2019 年请人学一门临时编的小语言：几个假词对应几个彩色圆点，比如某个假词就是「一个红点」。另外几个假词不指任何东西，它们是操作——把前面那个东西重复三遍，或者把两边的顺序调过来。每个假词只给几个例子，然后考没考过的组合。多数人做得又快又对，还能把新学的操作套到从没搭配过的词上去。人真的在算，而且几个例子就够。</p>
+<p>算法当然有例外，最有名的是习语。英语的 <i>kick the bucket</i> 是「死了」，跟桶没关系，你把它改成被动、加个修饰语，比喻义立刻散掉。但不是所有习语都这么铁板一块。Gibbs 和 Nayak 1989 年比较了一批习语，发现越是能把比喻义分给内部各个词的习语，句法上越灵活：<i>pop the question</i>（求婚）里 question 大致对应「那个问题」，所以说成 <i>the question was finally popped</i> 照样能懂；<i>kick the bucket</i> 拆不开，也就动不了。汉语的「拍马屁」属于能拆的那类——「马屁拍到马腿上」这种说法成立，正因为「马屁」在里面还担着一个角色。所以习语不是组合性的整块反例，而是一条从「完全拼得出」到「完全拼不出」的连续谱。</p>
+<p>更麻烦的其实是那些看起来最规矩的搭配。</p>
+<figure>
+<svg aria-label="三种形容词加名词，三种不同的组合方式" role="img" viewbox="0 0 640 210" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="210" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="108" y="28">红苹果 · 两个条件都要满足</text>
+<circle cx="86" cy="100" fill="none" r="40" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<circle cx="130" cy="100" fill="none" r="40" stroke="#e0a458" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="34" y="104">红的</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="146" y="104">苹果</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="108" y="170">重叠的那一块</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="320" y="28">熟练的外科医生 · 只在里面挑</text>
+<circle cx="320" cy="100" fill="none" r="46" stroke="#e0a458" stroke-width="1.8"></circle>
+<circle cx="320" cy="108" fill="none" r="22" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="66">外科医生</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="170">熟练不熟练，只按开刀算</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" text-anchor="middle" x="534" y="28">假枪 · 把那个条件取消掉</text>
+<circle cx="486" cy="100" fill="none" r="36" stroke="#e0a458" stroke-width="1.8"></circle>
+<circle cx="586" cy="100" fill="none" r="36" stroke="#8d95a8" stroke-dasharray="4,4" stroke-width="1.8"></circle>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="486" y="104">枪</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="586" y="104">假枪</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="18" text-anchor="middle" x="536" y="106">✕</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="534" y="170">两堆完全不沾边</text>
+</svg>
+<div class="cap">同一个「形容词 + 名词」的外形，底下跑的是三种不同的算法。第三种最反直觉：加一个词，结果被减没了。</div>
+</figure>
+<p>「红苹果」是两个条件取重叠。「熟练的外科医生」不是——他不必擅长打网球，熟练只按开刀这件事算，所以那个词得先钻进名词里、拿名词划定的范围当尺子。「假枪」更极端：它不在「枪」那一堆里，那个词把名词的条件整个否掉了。</p>
+<p>所以「组合」不是一个动作，是一族动作。词不光带着意思，还带着自己的接法。一个词进入句子时，它的接法也一起进来了。</p>
+<p class="en-brief"><b>EN</b> People compose meanings on the fly from a handful of examples; idioms sit on a scale of decomposability, and even ordinary adjective–noun pairs run at least three different combining operations.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>懂一句话，就是知道它在什么情况下算真</h2>
+<p>前面一直在说「算出意思」，可算出来的到底是什么东西？有个检验办法特别朴素：你说你懂了这句话，那就说说，世界得是什么样，这句话才成立。说得出，你就是懂了；说不出，你只是认得那些字。这套东西叫<b>真值条件（truth conditions）</b>。</p>
+<p>它把「懂没懂」变成了能当场验的事。发展心理学里有一个用了几十年的方法就建在这上面：真值判断任务——当着孩子的面演一小段情节，然后让他判断某句话对不对。四岁孩子做得下来，他接受和拒绝的分界正好画出了他脑子里那句话的意思。</p>
+<p>用它能看见一件光靠内省看不见的事。英语的 <i>Every student read a book</i> 对应两种完全不同的场面：三个学生各读各的三本书，或者三个人读的是同一本。两种场面都能让这句话成立。一句话对应的不是一个画面，是一组画面。</p>
+<figure>
+<svg aria-label="同一句话对应两种不同的场面" role="img" viewbox="0 0 640 210" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="210" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="26" y="28">场面一 · 各读各的</text>
+<circle cx="60" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="130" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="200" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<line stroke="#8d95a8" stroke-width="1.4" x1="60" x2="60" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="130" x2="130" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="200" x2="200" y1="83" y2="118"></line>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="48" y="118"></rect>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="118" y="118"></rect>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="188" y="118"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="26" y="176">三个人，三本不同的书</text>
+<line stroke="#26314a" stroke-width="1" x1="320" x2="320" y1="20" y2="190"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="360" y="28">场面二 · 同一本</text>
+<circle cx="394" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="464" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<circle cx="534" cy="70" fill="none" r="13" stroke="#e4e8f2" stroke-width="1.6"></circle>
+<line stroke="#8d95a8" stroke-width="1.4" x1="394" x2="458" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="464" x2="464" y1="83" y2="118"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="534" x2="470" y1="83" y2="118"></line>
+<rect fill="none" height="32" rx="3" stroke="#e0a458" stroke-width="1.6" width="24" x="452" y="118"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="360" y="176">三个人，共用一本</text>
+</svg>
+<div class="cap">英语那句话在左右两种世界里都成立。所以它的意思不是一张图，是「哪些世界能让它成立」这条界线。</div>
+</figure>
+<p>这条界线还会随语言而变。Scontras 和合作者用真值判断任务比过英语和汉语：英语被试接受「数量词在前、每在后」这类句子的逆向读法，也就是让后面那个词管到前面那个；汉语被试在关键的那组材料里一个人都没接受，「一个学生读了每本书」只能是同一个学生读完了所有书。证据强度：多组实验方向一致，但后来有研究发现汉语在关系从句和状语从句的环境里能出现逆向读法，所以「汉语一律不许逆向」这个概括太强了，眼下更像是「看结构、分环境」。</p>
+<p>还有一层，真值条件也不是意思的全部。「晨星」和「暮星」指的是同一颗金星。可是说「晨星就是晨星」是句废话，说「晨星就是暮星」是一项天文发现——两句话指到的东西一模一样，价值天差地别。Frege 由此把<b>指称（reference，指到哪个东西）</b>和<b>涵义（sense，通过什么方式指到它）</b>分开。用一句话说：意思里既有「指到哪」，也有「怎么指到的」。</p>
+<p class="en-brief"><b>EN</b> Knowing a sentence means knowing which situations make it true — a testable notion that four-year-olds can be probed with, and one that varies across languages.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>「高」到底多高，没有答案，而且不该有</h2>
+<p>两米算高。比一个高的人矮一毫米，还是高。再矮一毫米，仍然高。一路减到一米五——按这条推理他还是高的，而这显然荒唐。这个连环套两千多年前就有人摆出来了，叫<b>连锁悖论（sorites paradox）</b>。它不是文字游戏：每一步都对，结论却错，说明「高」这个词身上有件事跟我们默认的不一样。</p>
+<p>Alxatib 和 Pelletier 2011 年把它搬进了实验室。他们给人看一张警察列队照片，五个身高不同的嫌疑人，然后让人判断一组句子是真、是假、还是说不好。对那个身高刚好卡在中间的人，多数被试既不肯说「他高」为真，也不肯说「他不高」为真——但相当一部分人接受「他又高又不高」这句听上去自相矛盾的话。他们的解释是：这句话被当成了「他在边界上」的说法。证据强度：单个设计清楚的实验，后来被反复重做和建模，方向稳定。</p>
+<p>为什么会这样？因为「高」根本不自带阈值，阈值是当场借来的。一个高的三年级学生比一个矮的职业中锋矮得多，两句话都没说错——「高」永远相对一个对照类。所以边界情形上的犹豫不是你没测准，是那儿本来就没有事实可测。</p>
+<p>不同语言处理这件事的家伙什也不一样。华秀语（Washo，美国加州与内华达州交界一带的原住民语言）里没有对应英语 <i>-er</i> 或 <i>more</i> 的比较成分，要比较就把两句话并在一起说，大意是「这个大，那个小」。Bochnak 2015 年据此提出，这门语言的形容词不引入「程度」这个东西；Beck 等人对巴布亚新几内亚的 Motu 语有类似结论。证据强度：田野描写加一个跨语言参数假说，同一框架下也有语言两边都不靠。要紧的是别把它读成「他们不做比较」——比较照做，只是装备不同：句法上没有那个专用零件，活儿由两个句子的并置来干。</p>
+<p>回头看，模糊不是组合性的反例。「高」照样老老实实按规矩组合，只不过它拼进去的那块料自带一个空格，等着语境来填。前面那三种形容词接法讲的是「怎么接」，这里讲的是「接上来的东西本身就没画完」。</p>
+<p class="en-brief"><b>EN</b> Vague predicates have no built-in threshold: people hedge on borderline cases and even accept apparent contradictions there, and languages differ in the machinery they use for comparison.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 写作与表达</b>：写完一段结论，你回头问自己「这句话清楚吗」，得到的答案永远是「挺清楚的」。换个问法就不一样了：这句话在什么情况下是假的？如果你举不出一个具体情形能让它不成立，那它就没有内容。这是「懂一句话，就是知道它在什么情况下算真」那节的机制——意思等于把可能的世界分成两堆的那条线，划不出线就等于什么也没说。可改的动作：给每段的核心句配一格「反例」，写下一个会让它翻掉的场景；写不出来就删掉这句，或者一直改到写得出为止。</li>
+<li><b>② 投资与仓位</b>：复盘时随手写下「这个仓位有点重」。重不重没有绝对刻度，它挂在一个对照类上——相对你去年的平均持仓？相对同行？还是相对你扛得住的回撤？这是「『高』到底多高」那节的机制：模糊词的边界由当场的对照类填，对照类一换，同一个数字的判断就翻面。可改两件事：交易记录里禁止只写「重 / 轻」，必须补一句相对什么；再把「重不重」换成一个有真值条件的问题——「如果它明天腰斩，我会不会被迫卖掉别的仓位」，这句话有明确的对错。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 组合这道题，人和模型难的地方不一样</b>：Lake 和 Baroni 2018 年造了一个玩具语言 SCAN：一堆指令词映射成动作序列，训练时让模型见过「跳」，也见过「走两次」，测试时问「跳两次」。当年从头训练的序列模型在这类题上几乎全错；Kim 和 Linzen 的 COGS 里，有的结构切分甚至报出过零正确率。跑的是「你没见过的句子，是你当场算出来的」那节的机制：人拿到一个新词的几个例子，就能把它塞进所有已经掌握的框架里——那个用假词做的人类实验考的正是同一批题。今天再说「模型没有组合性」已经太粗，大模型在很多这类题上分数很高，争议变成了「是真泛化还是训练里见过」。能把两者分开的做法是控制曝光：给人和模型同样只引入一次全新的原语，再只考它跟旧结构的组合。人这边一次就够，且错误集中在少数几种可预测的偏好上；模型若要几百上千次才稳，差的就不是组合规则，是把新条目挂进旧结构的速度。<b>但这里不成立</b>的是把组合想成「函数吃掉参数」：形式系统里的算子不会把参数的身份取消掉，而「假」恰恰取消了「枪」。SCAN 这类题里的算子全是良性的、不改变参数身份的，所以它测不到自然语言最难的那一段。</li>
+<li><b>东西方哲学 · 指到哪个东西，光看行为定不下来</b>：Quine 设想过一个田野场景：一只兔子跑过，当地人说了个词，你记下「兔子」。可同样的行为证据也支持「未分离的兔子部件」这种解读——只要相应改动他语言里管同一性和数量的那些词，所有能观察到的对错判断都不变。跑的是「懂一句话，就是知道它在什么情况下算真」那节的机制：真值条件把意思钉在世界的状态上，但同一组真值条件可以由不止一种指称分配得到。由此推出的结论是经验性的：学词的孩子必须自带偏好，否则第一课就迈不动步。而这个偏好可测——Markman 和 Wachtel 1988 年发现三岁孩子默认新词指整个物体；当那个物体已经有名字了，他们才把新词分给它的部件或材质。也就是说 Quine 的不确定性在人这里是被一条经验性的先验按住的，不是被逻辑消掉的。<b>但这里不成立</b>的是那个前提：真实的孩子不止有行为证据，还有指点、目光跟随和大人的纠正，通道比设想中的田野语言学家宽得多。可检验的后果是：把共同注意这条通道削弱——新词只在大人没看着那个东西时出现——学词效率应当明显掉下来，这也正是实验里看到的方向。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果「假」能把「枪」取消掉，组合性还剩下什么？</summary><p>一种回答是：规则没坏，只是每个词自带的接法不同，「假」的接法本来就是取消。可这样一来，只要遇到反例就说「那个词自带一种特殊接法」，这条原则还能被什么证伤？什么样的发现会让你说「这次真的不是组合出来的」？</p></details>
+<details><summary>「祝你生日快乐」没有真假，真值条件那套怎么办？</summary><p>命令、提问、祝福都不描述世界，谈不上真假，但你显然懂它们。会不会「知道在什么情况下算真」只是一类句子的做法，另一类得换成「知道满足了它算什么」？如果是两套，它们在同一个脑子里是怎么共存的？</p></details>
+<details><summary>边界上的人被说成「又高又不高」，这到底是不是矛盾？</summary><p>如果是矛盾，为什么那么多人接受它、而且觉得自己表达得很准？如果不是矛盾，那「不高」在这句话里的意思，是不是已经跟它单独出现时不一样了？有没有办法在实验里把这两种解释分开？</p></details>
+<details><summary>一门语言没有专门的比较成分，能推出什么、不能推出什么？</summary><p>不能推出使用者不做比较——两句并置照样把比较说清楚了。但也不是什么都没变：如果比较必须借助两个完整的句子，那「比他高一点点」这种精细的量该怎么表达？该去看哪一类句子，才能判断差别是在语言的装备上，还是只在说法的习惯上？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://plato.stanford.edu/entries/compositionality/">Compositionality — Stanford Encyclopedia of Philosophy</a> · <a href="https://plato.stanford.edu/entries/frege/">Frege 的涵义与指称 — SEP</a></li>
+<li><a href="https://arxiv.org/abs/1901.04587">Lake, Linzen &amp; Baroni (2019), Human few-shot learning of compositional instructions</a>（人学假词做组合的那个实验）</li>
+<li><a href="https://arxiv.org/abs/1711.00350">Lake &amp; Baroni (2018), Generalization without systematicity（SCAN）</a> · <a href="https://aclanthology.org/2020.emnlp-main.731/">Kim &amp; Linzen (2020), COGS</a></li>
+<li><a href="https://link.springer.com/content/pdf/10.3758/BF03199557.pdf">Gibbs &amp; Nayak (1989), Speakers' assumptions about the lexical flexibility of idioms, Memory &amp; Cognition</a></li>
+<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0017.2011.01419.x">Alxatib &amp; Pelletier (2011), The Psychology of Vagueness: Borderline Cases and Contradictions, Mind &amp; Language</a> · <a href="https://plato.stanford.edu/entries/sorites-paradox/">Sorites Paradox — SEP</a></li>
+<li><a href="https://semanticsarchive.net/sub2013/SeparateArticles/Scontrasetal.pdf">Scontras et al., Chinese Scope: an experimental investigation</a> · <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1128616/full">后续：书面汉语辖域刚性的实验检验 (2023)</a></li>
+<li><a href="https://semprag.org/article/view/sp.8.6">Bochnak (2015), The Degree Semantics Parameter and cross-linguistic variation, Semantics &amp; Pragmatics</a></li>
+<li><a href="https://eric.ed.gov/?id=EJ378292">Markman &amp; Wachtel (1988), Children's use of mutual exclusivity to constrain the meaning of words</a> · <a href="https://plato.stanford.edu/entries/quine/">Quine 的翻译不确定性 — SEP</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
