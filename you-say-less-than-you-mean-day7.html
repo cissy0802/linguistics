@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>说出来的比说的少 — 语言学 Day 7</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 7 · 语言学</div>
+<h1>说出来的比说的少</h1>
+<div class="sub">「能把盐递给我吗」不是问句，那到底是什么</div>
+<div class="date">2026-09-03</div>
+<div class="pitch">你从来不逐字回应任何一句话——真那样做反而没法跟人相处。可你也不是通灵。这中间那道由字面滑向言下之意的滑坡，是一台每天工作千次却几乎从不出错的机器。</div>
+</header>
+<div class="intro">
+<p>饭桌上有人问你：「能把盐递给我吗？」你不会回「能」，你会把盐递过去。可这句话的字面明明是问你手臂功能，你却完全跳过了那一层。</p>
+<p>「意思能算出来吗」那期讲过字面意思怎么被组合出来。这期讲的是另一半：把字面意思算出来只是第一步，你紧接着还得算出说话的人凭什么这么说，才能落到他真正想让你做的那件事。</p>
+<p>这台机器有个名字，Grice 1975 年把它叫做<b>合作原则（cooperative principle）</b>。它的公理很朴素——说的话要真、要够、要相关、要清楚。这些公理不是命令，是你默认对方在守的一套规则。正因为默认对方在守，一旦他表面上违反了，你会自动去补一句能让他重新守规矩的话。那句补出来的话，就是<b>会话含义（conversational implicature）</b>。</p>
+<p>这期沿着三个例子走：为什么问句常常不是问句，为什么「有些」这个词自带一句「不是全部」，以及反话为什么明明字面完全颠倒还能被听懂。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>「能把盐递给我吗」为什么没人真的回答「能」</h2>
+<p>Searle 1975 年给这种话起了个名字——<b>间接言语行为（indirect speech act）</b>：一句话的语法是问句、陈述句或祈使句，它真正在做的事却是另一件。听懂它要跨一步：先看字面在问什么，再问「他这时候问这个能干什么」，然后落到那个能干的事上。</p>
+<p>它跨得有多干脆，Clark 和 Schunk 1980 年做过一个漂亮的验证。他们比较人们对不同礼貌度问句的回答。当问「Can you tell me where Jordan Hall is?」时，回答里既有「Yes, I can」又给方向的，被判断得比只给方向的更礼貌。这看着好像是废话——多说一句当然更客气——但它证明的是：听的人把字面那一层（你有没有能力告诉我）和实际请求（告诉我）两层都算了，才有可能主动去回应第一层。所以这不是先算字面、算不通再算含义那种「兜底」结构，是两层同时在跑。证据强度：多组材料重复出结果，方向清楚，之后被反复引用。</p>
+<figure>
+<svg aria-label="一句问句进来，两条意思同时被算出" role="img" viewbox="0 0 640 200" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="200" width="640" x="0" y="0"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" text-anchor="middle" x="320" y="32">「能把盐递给我吗？」</text>
+<line stroke="#8d95a8" stroke-width="1.4" x1="320" x2="180" y1="46" y2="88"></line>
+<line stroke="#8d95a8" stroke-width="1.4" x1="320" x2="460" y1="46" y2="88"></line>
+<rect fill="none" height="46" rx="4" stroke="#7fb3d5" stroke-width="1.6" width="220" x="70" y="90"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="180" y="110">字面</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="180" y="128">你手臂功能正常吗</text>
+<rect fill="none" height="46" rx="4" stroke="#e0a458" stroke-width="1.6" width="220" x="350" y="90"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="460" y="110">实际请求</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="460" y="128">把盐递过来</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="170">回答「好的，给你」两层都答了；</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="188">回答「能，喏」是把「能」这一层也补上，所以更客气</text>
+</svg>
+<div class="cap">同一句话在头脑里被拆成两条并跑的路：字面上到底问了什么，以及此刻问这个能达成什么。回话时选补哪一层，就成了礼貌的旋钮。</div>
+</figure>
+<p>不同的语言把这道弯给你留的空间不一样。日语里，直接祈使句在多数成人日常场合几乎不能用，请求默认走「〜てもらえますか」（能不能帮我〜）这类外壳；孩子从两岁半起就在被反复纠正到这条轨道上。汉语里，「你倒是说话啊」的字面是催他开口，功能是抱怨他态度冷淡；英语里「Would you mind closing the window?」字面是问他会不会介意，字面成立的回答「Yes, I would」反而是拒绝，而不接受这层习惯的二语学习者常常在这里出错。<b>不是所有间接请求都靠约定成俗</b>：Gibbs 1986 年发现，新造的、从未听过的间接问句（比如「你会不会碰巧知道厕所在哪」）人也能秒懂，说明这条推理路径是通用的，不只是背熟了固定套话。</p>
+<p class="en-brief"><b>EN</b> Indirect requests run two layers of meaning at once, and evidence from politeness experiments shows people compute the literal layer even when they act on the intended one.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>说「有些」，就是在说「不是全部」</h2>
+<p>「我有些同学去过日本」——听到这句你几乎立刻推出「不是全部同学都去过」。可这个推论从哪来？「有些」的字面只承诺「至少一个」，一直到「全部」都不违反它。可我们默认对方在守 Grice 的量的准则：知道多的就说多的。他要是知道全部都去过，就该说「都去过」；他说了较弱的「有些」，等于间接告诉你他不能说更强的那个。这类推论叫<b>标量含义（scalar implicature）</b>。</p>
+<p>Bott 和 Noveck 2004 年拿这类推论做过一件事：请人快速判断「Some elephants are mammals」（有些大象是哺乳动物）这种字面上真、含意上假的句子。字面派会秒答「真」；含义派会答「假」，因为若他知道「所有大象都是」，就该那样说。两种答案本身没有对错——但含义派花的时间显著更长。它证明：从字面滑到含意，不是自动免费的，要多绕一步，那一步在毫秒级别可测。这颠覆了之前的默认——大家原以为这种推论几乎是即时的。证据强度：几十项后续实验反复复制过这一效应；晚近的复制研究进一步分离出，慢下来的那部分主要发生在"读到对方意图"这一环，而不在"知道语义规则"那一环。</p>
+<figure>
+<svg aria-label="一句「有些」自带一层「不是全部」" role="img" viewbox="0 0 640 190" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="190" width="640" x="0" y="0"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="60" y="34">语义（字面）</text>
+<rect fill="none" height="26" rx="4" stroke="#7fb3d5" stroke-width="1.5" width="440" x="60" y="44"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="280" y="62">至少一个（可能全部）</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="60" y="104">语用（含意补上）</text>
+<rect fill="none" height="26" rx="4" stroke="#e0a458" stroke-width="1.5" width="290" x="60" y="114"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="205" y="132">至少一个，但不是全部</text>
+<line stroke="#8d95a8" stroke-dasharray="3,3" stroke-width="1.2" x1="350" x2="500" y1="127" y2="127"></line>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="360" y="124">被含意砍掉</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="60" y="176">从上一格到下一格要多花几十到几百毫秒，可测；不是免费的</text>
+</svg>
+<div class="cap">「有些」的语义里包含「全部」的情形，但用它就等于在说「我没用『全部』」——含意反过来把那部分砍掉。这一层不是识字带的，是推的。</div>
+</figure>
+<p>跨语言看，标量在不同语言里长得不一样，含意的力度也就不一样。英语的 <i>or</i> 既可以是排他的（要么这个要么那个，不能都）也可以是相容的（或者，两者都行）；日语的 <i>ka</i> 更偏排他一侧；拉丁语的 <i>aut</i> 和 <i>vel</i> 干脆用不同的词把这两种意思分开。含意在两种或多种表达之间形成对照才成立；对照池长什么样，含意就长什么样。所以「知道对方少说了什么」的推论，是本地语言的表达清单在给你打底。</p>
+<p class="en-brief"><b>EN</b> Scalar implicatures like <i>some → not all</i> are computed on top of the literal meaning and cost measurable milliseconds; the strength of the inference depends on what alternative wordings the language actually makes available.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>反话为什么明明说反了还能被听懂</h2>
+<p>大雨天你被淋成落汤鸡，同事迎上来说「今天天气真好」。字面把好天气说给了坏天气，可你不会误会他在报天气。传统看法是反话把字面颠倒过来听，你就懂了。Sperber 和 Wilson 1981 年提出一个不一样的<b>回声提及理论（echoic mention theory）</b>：反话不是把字面反过来，而是在<b>引用</b>某一个先前的期望——天气预报说的、大家默认的、你自己昨天讲过的——然后加一层「你看它多不靠谱」的态度。所以听懂反话不是做数学取反，是识别出他在借用一个期望并加以嘲弄。</p>
+<p>Winner 和 Leekam 1991 年设计过一个能把反话跟撒谎分开的实验。他们给孩子演小故事：故事里某人说了跟事实相反的话。关键分两种版本——一种情境让人一看就知道说话人明知事实是别的（这时字面反着说属于反话），另一种情境让人以为说话人相信自己说的（这时是撒谎）。五岁前的孩子经常把这两种当成同一件事，六岁上下开始能稳定分开。分界不在于识字或识音，在于孩子能不能表征「说话人相信的事」和「说话人希望我识别的意图」这两层——反话要求你追一个<b>二阶意图</b>：他不仅相信真相与他所说相反，还希望你识别他相信真相与他所说相反。二阶意图掉线，反话就塌回撒谎。证据强度：这个方向被多个语言、多个团队反复复制；细节上是「几岁上手」有波动，也和实验里用不用语调线索有关。</p>
+<p>反话还挑语调和上下文。同一句「你真行」，一种读法带升调加拖长，是明显的反话；另一种平读加真诚上下文，就是夸奖。汉语的语气词也在这条链条里挂着——「你可真行啊」的「可…啊」组合几乎强制反话解，而「你真行」中性得多。Bryant 和 Fox Tree 2005 年测过英语讲话人对反话的语音线索，发现有可靠的降调、放慢、拖长这些"反话嗓门"，但没有一个单一线索是必要条件，是几个线索堆在一起给听者一个概率信号。所以理解反话是三件事一起：识别期望被打脸、听出"反话嗓门"、判断说话人的二阶意图。少了任何一件，脚就会踏空。</p>
+<p class="en-brief"><b>EN</b> Irony is not the literal reversal of a sentence but the echoing of a prior expectation with a mocking attitude; it depends on a second-order intention that children only handle reliably around age six.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 带团队与组织</b>：会上有人说「有些接口的错误处理还不太完善」。你听成「一小部分还差点」就放过——但按「说『有些』就是在说『不是全部』」那节的机制，他挑「有些」这个词就是间接告诉你他知道更强的说法（例如「大部分」或指名道姓）而选择不说，多半是不想公开点。可改的动作：会议记录里给「有些／有点／还行」这类量词全上一句必答的追问——「具体是哪几个」；答不出就当成「他还没到愿意具体化的阶段」，先不推决策，别把这条含义静悄悄错过。</li>
+<li><b>② 修行与心性</b>：你跟人说「今晚有点忙」的那种时刻——你其实是在拒绝，可你没直说。「『能把盐递给我吗』为什么没人真的回答『能』」那节的机制在你自己身上跑：你用间接请求代直说，字面留给对方去推。它省一次正面冲突，但把关系推向「猜」。可改：注意到自己在用含蓄代直说时，追加一句「直说的话是……」把两层都摆出来，让对方选是接你含蓄那层还是直说那层——多数时候你会发现，直说完根本没有你怕的那种代价。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 大模型学「言下之意」这件事到底学到了什么</b>：Ruis 等 2023 年做过一个 600 多条的会话含义题库：给模型一段对话，问某句"是"还是"否"的言下之意——比如「你想去看电影吗？」「我明天要交论文」，第二句是拒绝。他们发现在还没做过任务微调的模型上，即便到 GPT-3 那一代，准确率也远不到人类基线；进入指令微调后（RLHF 之后）分数才逼近人类。跑的是「『能把盐递给我吗』为什么没人真的回答『能』」那节的机制：字面和实际请求两层同时算，再挑一层回。你要判断模型是真在算含意还是在做模式匹配，方法是给它标量含意的对抗题——「有些学生通过了考试」后面接一句「所有学生都通过了」，问是否一致；人在这里毫不犹豫说不一致，模型的表现按题干措辞抖得厉害，说明它的"含意"至少有一部分是句面相似度而不是数量准则的推理。<b>但这里不成立</b>的是把语用当作可以被覆盖率补齐的一列题——含意的核心是"对方特意没说的那部分"，覆盖率再高也测不到"没说什么"这条负空间，除非你能在没见过的话语情境里维持它，而这类跨情境的稳定性目前是模型最薄弱的一环。</li>
+<li><b>神经科学与意识 · 一半大脑管字面，另一半管字面之外</b>：右半脑受损的病人（RHD）在多数标准语言测试上得分正常——他们能读、能说、能理解简单陈述——但拿间接请求、反话、隐喻去考，就明显掉队。Kaplan 等 1990 年做过一个经典对比：给右半脑受损者念一段短故事，末尾出现反话，他们经常把反话解读成撒谎或误解——正是 Winner 那节的六岁前状态。跑的是「反话为什么明明说反了还能被听懂」那节的机制：识别二阶意图这一层被拆下来了，字面那一层完好。推得出的可检验差异是：同一位病人对直接请求（「把窗户关上」）的反应准确率与常人相当，对等价的间接请求（「屋里有点冷」）的反应率显著更低——这一点被多组研究复制。<b>但这里不成立</b>的是「右半脑 = 语用模块」这个简单归因：晚近的磁共振研究发现，左额叶损伤也会带来相当程度的语用受损，语用不像韦尼克区那样能被指到某一小块——它更像是几个系统合作的产物，右半脑只是合作里更容易掉链子的一环。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果日常几乎每句话都要靠含意补足，为什么误解并不比你预想的多？</summary><p>合作原则的公理靠"双方都默认对方在守"起效。可这套默认凭什么建立？陌生人之间的第一句话是怎么试出这套默认的？如果对方是新手（小孩、二语学习者、AI），你的默认是不是也在被悄悄下调？</p></details>
+<details><summary>「有些」和「不是全部」不是同一回事——含意能被取消，语义不能。你能想出哪些方式让「有些」的含意合法地被取消？</summary><p>「有些同学去过日本——事实上，全班都去过」这话不别扭。可如果把「有些」换成语义上明确的「不是全部」，再补「事实上，全班都去过」就直接矛盾了。这类可撤销性是含意的护身符，那语义边界该画在这条线上吗？</p></details>
+<details><summary>反话如果不是字面颠倒，而是回声引用，那么"新造的反话"也应当能被理解——听者是从哪找到被引用的期望的？</summary><p>回声理论要求听者在心里迅速调出一个先前的期望（天气预报、常识、大家都这么说）。可有些反话没有明确的先例，你还是能听懂。这时候你调出来的是什么？期望本身也可以是即时构造的吗？</p></details>
+<details><summary>如果一个人用言下之意的能力强于用直说的能力，他到底是善于沟通还是不擅长沟通？</summary><p>含意省了直说的一次冲突，但也把理解成本转给了对方。什么时候「多说一层字面」是更负责任的沟通，什么时候「留一层含意」反而更尊重对方？你能想出一条判据吗？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://plato.stanford.edu/entries/implicature/">Implicature — Stanford Encyclopedia of Philosophy</a> · <a href="https://plato.stanford.edu/entries/pragmatics/">Pragmatics — SEP</a></li>
+<li><a href="https://web.stanford.edu/~clark/1980s/Clark,%20H.H.%20_%20Schunk,%20D.H.%20_Polite%20responses%20to%20polite%20requests_%201980.pdf">Clark &amp; Schunk (1980), Polite responses to polite requests, Cognition</a>（间接请求的两层同算证据）</li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0749596X04000373">Bott &amp; Noveck (2004), Some utterances are underinformative, JML</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/37210877/">后续复制：慢下来的部分主要在"读意图"这一环 (2023)</a></li>
+<li><a href="https://www.dan.sperber.fr/wp-content/uploads/1984_verbal-irony-pretense-or-echoic-mention.pdf">Sperber (1984), Verbal Irony: Pretense or Echoic Mention?</a>（回声提及理论的经典表述）</li>
+<li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.2044-835X.1991.tb00874.x">Winner &amp; Leekam (1991), Distinguishing irony from deception, British Journal of Developmental Psychology</a></li>
+<li><a href="https://arxiv.org/abs/2210.14986">Ruis et al. (2023), The goldilocks of pragmatic understanding: implicature resolution by LLMs, NeurIPS</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/0093934X9090127Z">Kaplan et al. (1990), The effects of right hemisphere damage on the pragmatic interpretation of conversational remarks, Brain and Language</a></li>
+<li><a href="https://link.springer.com/article/10.3758/BF03193006">Bryant &amp; Fox Tree (2005), Is there an ironic tone of voice?, Language and Speech</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
