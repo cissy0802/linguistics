@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>手语是完整的语言 — 语言学 Day 11</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 11 · 语言学</div>
+<h1>手语是完整的语言</h1>
+<div class="sub">不是把话比划出来的替代品——它有自己的最小对立、自己的语法，也有自己的失语症</div>
+<div class="date">2026-09-07</div>
+<div class="pitch">一个中风的聋人手语使用者，可能画不全一个立方体、看不见左半边的东西，手语的语法却一点没坏；另一个空间能力好得很，手语却打得语无伦次。坏掉的从来不是「空间」，是「语言」。</div>
+</header>
+<div class="intro">
+<p>在机场看见两个人打手语，很快、很省，你大概会默认他们在把嘴里的话一个词一个词地比划出来。这个默认有个很直接的检验：让一个美国的手语使用者和一个英国的手语使用者聊天。两国的听人说同一种口语，两边的手语却互相看不懂。</p>
+<p>所以手语不是任何一门口语的手势版，也不是一种全球通用的比划。这期看三件事：手语是用什么零件拼出来的、空间怎么被拿去当语法用、以及手语使用者中风之后坏掉的是哪一块——最后那件事推翻了一个曾经写进教科书第一页的假设。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>同样说英语的两个国家，手语互相看不懂</h2>
+<p>美国手语和英国手语是两门不同的语言，互相看不懂。原因在历史里：1816 年 Gallaudet 想去英国学他们的方法被拒，转去了巴黎。今天的美国手语大约有一半多的词跟十九世纪的法国手语同源——这个比例低于通常用来判定「同一门语言的两种方言」的门槛。被记录下来的手语有一百多门，各自在各自的聋人社群里长出来，有各自的亲缘关系。</p>
+<p>既然是语言，就该能被拆成零件。1960 年 Stokoe 做的正是这件事：他把一个手语词拆成手形、位置、运动三样（后来又补上手掌朝向和脸上的动作）。拆得对不对，看有没有最小对立——两个词只差一样零件，意思就变了。美国手语里「夏天」和「干」是这样一对：食指弯成钩，横着从一侧抹过去，动作和手形完全一样，只有位置不同。抹过额头是「夏天」，抹过下巴是「干」。就像英语里 pat 和 bat 只差一个音。</p>
+<p>这正是「语言不是一本词典」那期讲的双重分节：一小把本身没有意义的零件，拼出多到没上限的有意义的词。手语照样成立，只是零件不是声音，是手形和位置。</p>
+<p>还有一个更贴身的证据。说话的人卡在话到嘴边的时候，浮上来的往往是首字母、几个音节。手语使用者也会卡，Thompson、Emmorey 和 Gollan 收集过这种状态：浮上来的是手形、位置和手掌朝向，最容易丢的反倒是运动。手语的词也是按形式存的，取词一样分两步，一样会卡在第二步。</p>
+<p class="en-brief"><b>EN</b> ASL and BSL are mutually unintelligible; ASL descends largely from 19th-century French Sign Language. Signs decompose into handshape, location and movement, with minimal pairs (SUMMER vs DRY differ only in location), and signers get tip-of-the-fingers states in which form parameters surface first.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>空间不是背景，空间就是语法</h2>
+<p>手语使用者说话时会先把人「放」在空间里。提到小李，往右前方指一下，小李就立在那个点上；提到老王，立在左前方另一个点上。之后再说到这两个人，不必重复名字，指回那两个点就够了。</p>
+<p>动词跟着这两个点走。美国手语里「给」这个词从一个点出发、落到另一个点上：从小李那个点划到老王那个点，是「小李给老王」；同一个手形、同一个词，反过来划，就是「老王给小李」。方向承担了谁对谁这件事，而这在英语里要靠词序、在别的语言里要靠词尾变形。</p>
+<figure>
+<svg aria-label="左右两图：同一个手语动词在两个空间点之间反向移动，谁给谁就反过来" role="img" viewbox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="220" width="640" x="0" y="0"></rect>
+<circle cx="70" cy="70" fill="none" r="20" stroke="#e0a458" stroke-width="1.8"></circle>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="70" y="74">小李</text>
+<circle cx="230" cy="140" fill="none" r="20" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="230" y="144">老王</text>
+<line stroke="#8d95a8" stroke-width="2.4" x1="90" x2="204" y1="82" y2="130"></line>
+<polygon fill="#8d95a8" points="212,134 197,133 203,122"></polygon>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12.5" text-anchor="middle" x="150" y="188">小李给老王</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="10.5" text-anchor="middle" x="150" y="206">手形不变，方向从左上到右下</text>
+<line stroke="#26314a" stroke-width="1" x1="320" x2="320" y1="24" y2="196"></line>
+<circle cx="390" cy="70" fill="none" r="20" stroke="#e0a458" stroke-width="1.8"></circle>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="390" y="74">小李</text>
+<circle cx="550" cy="140" fill="none" r="20" stroke="#7fb3d5" stroke-width="1.8"></circle>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="550" y="144">老王</text>
+<line stroke="#e0a458" stroke-width="2.4" x1="530" x2="416" y1="128" y2="80"></line>
+<polygon fill="#e0a458" points="408,76 423,77 417,88"></polygon>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12.5" text-anchor="middle" x="470" y="188">老王给小李</text>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="10.5" text-anchor="middle" x="470" y="206">同一个词，只把方向倒过来</text>
+</svg>
+<div class="cap">两个人被立在空间的两个点上之后，动词在点之间移动的方向就决定了谁是施事、谁是受事。词本身一个字母都没换。</div>
+</figure>
+<p>你可能会说，这不就是比划吗。Petitto 的一项跟踪研究把这个想法挡住了。美国手语里「你」就是指着对方，「我」就是指着自己，透明到不能再透明——照理说聋童该秒会。她跟踪两个聋人父母的聋童，看到的是：一岁前后他们本来会指人指物，之后有一段时间干脆回避指人，再往后开始指反——指着对方，意思却是「我」。这跟听力儿童把「你」和「我」说反是同一种错。一个看起来就是手势的东西，被孩子当成要从头学的符号。</p>
+<p>争议也得说清。这套方向性动词算不算严格意义上的「一致」（像动词随主语变形那样），至今有分歧。Liddell 认为指向的方向是连续的、能落在空间任何一点，不像离散的语法标记，更像嵌在语言里的手势。稳的是「方向承担了施受关系」，不稳的是「它是不是一个离散的语法范畴」。</p>
+<p>空间还买到了一样东西：并行。Bellugi 和 Fischer 让人用手语和口语各讲一遍同一个故事，量到一件反直觉的事——单个手语词做出来比说一个词慢，同样时间里出口的词明显多于打出的手语；可两边讲完的时间差不多，讲出的命题数也差不多。因为手形、位置、运动和脸上的动作能在同一时刻各带一份信息，而嘴只有一条串行的通道。</p>
+<p class="en-brief"><b>EN</b> Referents are placed at points in signing space and directional verbs move between them, so reversing the trajectory reverses who did what to whom. Deaf toddlers still make you/me reversal errors on the maximally transparent pointing sign, and signs are slower than words while propositions per second are equal.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>中风之后坏掉的不是空间，是语言</h2>
+<p>如果手语只是把空间用得好，那它该跟脑子里管空间的那一侧绑在一起。Poizner、Klima 和 Bellugi 跟踪了一批单侧中风的聋人手语使用者，看到的是反过来的画面。</p>
+<p>左脑受损的人出现失语，而且分成和口语失语一样的两型：有的打得极费力、语法零件掉光；有的打得流利，手形却选错、内容对不上。同时，他们的非语言空间能力可以基本正常——照着画一个立体图形、拼积木都没问题。其中最严重的那位手语失语者，空间能力好得出人意料。</p>
+<p>右脑受损的人反过来。空间能力垮掉：画画丢掉左半边，图形拼不起来。可手语的语法没坏，包括那套用空间做的语法——把人立在点上、动词在点之间走，都对。</p>
+<p>这就是一个双重分离：两件事各自能单独坏掉，说明它们不是同一套系统。脑子分的不是「这是不是空间任务」，而是「这是不是语言」。同一批空间坐标，被当语法用的时候归左边管，被当图形用的时候归右边管。还有一条独立的证据：给要做手术的手语使用者做左半球短时麻醉，麻的那几分钟里出现手语失语。</p>
+<p>证据强度要标：这是单病例和小样本的神经心理学，总数在几十例的量级。后来的影像研究大体支持左侧化，但也发现手语处理空间性成分时右半球参与得比口语多——不是把口语那套原样复制一遍。同是右脑受损，有人空间能力坏得很惨却能讲完一个连贯的故事，也有人空间问题不重却撑不住叙事的空间框架。「右脑管空间」这种粗糙说法在这里不够用。</p>
+<p class="en-brief"><b>EN</b> Left-hemisphere lesions produce sign aphasia in signers whose non-linguistic spatial skills stay intact; right-hemisphere lesions wreck spatial cognition while leaving spatial grammar sound. The brain sorts by "is this language," not by "is this spatial" — on small case-study numbers.</p>
+</section>
+<section>
+<span class="num">// 04</span>
+<h2>被推翻的那条假设写在教科书第一页</h2>
+<p>1960 年 Hockett 列过一张「语言的设计特征」清单，说的是人类语言区别于动物通讯的那些性质。清单被引用了几十年，而排在最前面的一条是：语言走的是声音—听觉这条通道。</p>
+<p>手语把这一条打掉了。今天的共识是：语言系统跟它跑在哪条物理通道上是两回事——最小对立、形态、句法、习得顺序、失语症，换到手上一样成立。2025 年还有综述在重修那张清单，把「声-听通道」和「任意性」列为过时条目。</p>
+<p>更硬的一击是：手语能从零长出来。以色列南部一个村子里，因为一种遗传性耳聋，七十来年间长出了一门当地的贝都因手语。Sandler 等人发现，到第二代使用者身上，一个稳定的词序已经出现了——施事在前，受事居中，动词收尾——而周围的口语并不是这个顺序，所以它不是抄来的。语法不需要几千年，一代人的时间够用。</p>
+<p>这条假设也不只是学术上的。十九世纪末之后，很多国家的聋校长期以口语教学为主，手语在课堂上被限制，理由正是「那不是真正的语言」。所以「手语是完整的语言」不是一句客气话，它是一串可以被证伪的断言：有最小对立对、有固定的习得顺序和固定的错误、有自己的失语症。每一条都被单独检验过，每一条都站住了。</p>
+<p class="en-brief"><b>EN</b> Hockett's 1960 design-feature list opened with the vocal-auditory channel; sign languages removed it. New sign languages also grow grammar from scratch — Al-Sayyid Bedouin Sign Language settled into a stable word order by its second generation.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：评审会上大家围着同一张架构图，发言里全是「这个」「那边那个」，手往屏幕上一指，当场人人都懂；两周后翻纪要，没人说得出改的是哪几个框。「空间不是背景，空间就是语法」那节的机制指出了差在哪：手语把一个指称立在空间某个点上之后，后面所有回指都必须回到那个点，指错就是错句——那套点是规定死的、可回查的；会议室里的手指没有这套规矩，散会就没了。可改的动作：开会前给图上每个框编号命名，规定发言必须念名字，「这个」作废。判断依据也换掉——不问「大家听懂了吗」，而是会后让一个没参会的人读纪要，看他能不能在图上圈出改动的位置。</li>
+<li><b>② 写作与表达</b>：你写一段说明，要讲清楚三件事同时在发生——谁在等谁、哪一路先超时、这时候另一头在干什么。写着写着满段都是「与此同时」「另一方面」，读的人还是拼不回那张图。手语那份速度数据说明了原因：单个手语词更慢，讲完同一个故事的时间却和口语一样，因为手形、位置、运动、表情能在同一时刻各带一份信息；文字只有一条串行通道，碰上并行的内容只能靠连词硬接。可改的动作：数一下这段里「同时」「另一方面」出现几次，超过两次就把并行那部分挪进一张图或一张表，文字只留图上表达不了的东西。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 换一条物理通道，被重写的不是编码而是结构</b>：把同一个协议搬到另一种链路上跑，直觉是上层内容原封不动，只有底下的编码换了；顺着这个直觉，手语就成了「口语换个链路层」。「空间不是背景，空间就是语法」那节量到的数据不支持这个读法：手语的单个词比口语词慢，可讲完同一个故事的时间和命题数都一样，因为语法本身重组成了并行的——多个零件在同一时刻各带一份信息，而不是排成一列。于是能推出一个可检验的差异：把手语当成「手势识别 + 翻成词序列」来做的系统，失败不该均匀分布，而该聚在靠并行承载的结构上——空间里的指代、动词的方向、脸上承担语法的动作。错误真这样聚堆，说明丢的是通道特有的结构，不是词汇量不够。<b>但这里不成立</b>的是分层协议那个前提：分层成立是因为同一个包能跨层原样交接；手语的语法却不是口语语法换了套编码——美国手语和英国手语互相看不懂，跟法国手语反而更近。找不到那个交接的层界，「换链路层」就只是个比方。</li>
+<li><b>佛学 · 一个长得就像所指的名字，仍然得走符号那条路</b>：佛学里反复处理名与实的关系——名相是被切出来的，不等于所指的那个东西。顺着这个说法容易生出一个中间假设：如果名字长得就像它指的东西，这层隔阂总该薄一点。手语是个罕见的检验场，因为它的象似性比口语多得多。跑的是「同样说英语的两个国家，手语互相看不懂」和 Petitto 那项跟踪研究的机制：取词卡住时浮上来的是手形和位置这些形式参数，不是「它像什么」；而美国手语里指着对方就是「你」，透明到极点，聋童照样先回避、再指反。于是能推出一个原本看不出的结论——形似不给你一条绕过符号系统的近路，它顶多是个记忆的把手。证据强度要说明：象似性在成人学第二门手语和某些记忆任务里确实帮得上忙，在母语习得顺序上帮助很小，这一块还在积累。<b>但这里不成立</b>的是把它读成对「名相遮蔽实相」的支持或反驳：那套说法的落点在修行上如何对待分别，这里的机制只谈符号形式和所指之间的通道。手语能取消的只是「越像就越少隔一层」这个中间假设。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果指向的方向是连续的、能落在空间任何一点，它还能算语法吗？</summary><p>语法零件通常被认为是离散的、数得清的，而空间指向是一条连续的量。你会用什么办法判定一个系统里的连续量是语法还是手势——看它在失语症里是不是跟别的语法零件一起坏掉，看孩子学它的时候有没有固定的错误期，还是看它能不能被别的规则引用？</p></details>
+<details><summary>手语失语的病例总数只有几十例，却撑着「语言不挑通道」这么大的结论。</summary><p>要把这个结论加固，你会先做哪一步：更多病例、脑成像、还是像左半球短时麻醉那样的可控干预？每一种能补上哪一块，又有哪一块是它天生补不上的？</p></details>
+<details><summary>聋盲人用的触觉手语是把手放在对方手上接收——通道又换了一次。</summary><p>视觉那条也被拿掉之后，哪些结构应该原样保留，哪些一定得重组？空间里那些指称点还能用吗，脸上承担语法的动作要挪到哪儿去？如果观察到的重组正好落在「并行信息」这一块，那对本期的结论意味着什么？</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/American_Sign_Language">American Sign Language — Wikipedia</a>（与法国手语的同源比例、与英国手语的关系）· <a href="https://en.wikipedia.org/wiki/British_Sign_Language">British Sign Language — Wikipedia</a></li>
+<li><a href="https://academic.oup.com/jdsde/article/10/1/3/361306">Stokoe (1960/2005), Sign Language Structure: An Outline of the Visual Communication Systems of the American Deaf</a> · <a href="https://www.handspeak.com/topic/109/">Minimal pairs in sign language phonology</a></li>
+<li><a href="https://journals.sagepub.com/doi/abs/10.1111/j.1467-9280.2005.01626.x">Thompson, Emmorey &amp; Gollan (2005), "Tip of the Fingers" Experiences by Deaf Signers, Psychological Science</a></li>
+<li><a href="https://www.academia.edu/332985/Petitto_L_A_1987_On_the_autonomy_of_language_and_gesture_Evidence_from_the_acquisition_of_personal_pronouns_in_American_Sign_Language">Petitto (1987), On the autonomy of language and gesture: personal pronouns in ASL, Cognition</a></li>
+<li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.808493/full">Directional verbs in ASL: a usage-based proposal (含 Liddell 一方的争论)</a></li>
+<li><a href="https://link.springer.com/content/pdf/10.3758/BF03199708.pdf">Bellugi &amp; Fischer 的手语／口语速率对比（在 Grosjean 1977 中被复述与检验）</a></li>
+<li><a href="https://archive.org/details/whathandsreveala0000poiz">Poizner, Klima &amp; Bellugi (1987), What the Hands Reveal About the Brain, MIT Press</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/0278262684900228">Poizner et al. (1984), Visual-spatial processing in deaf brain-damaged signers</a></li>
+<li><a href="https://www.nature.com/articles/322363a0">Damasio et al. (1986), Sign language aphasia during left-hemisphere Amytal injection, Nature</a> · <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3534395/">用户为手语者的语言神经表征综述</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hockett%27s_design_features">Hockett's design features — Wikipedia</a> · <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(25)00279-7">The "design features" of language revisited (2025), Trends in Cognitive Sciences</a></li>
+<li><a href="https://www.pnas.org/doi/abs/10.1073/pnas.0405448102">Sandler, Meir, Padden &amp; Aronoff (2005), The emergence of grammar: systematic structure in a new language, PNAS</a> · <a href="https://en.wikipedia.org/wiki/Al-Sayyid_Bedouin_Sign_Language">Al-Sayyid Bedouin Sign Language — Wikipedia</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
