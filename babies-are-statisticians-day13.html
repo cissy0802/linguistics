@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>婴儿是统计学家 — 语言学 Day 13</title>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>婴儿是统计学家 — 语言学 Day 13</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
@@ -45,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 13 · 语言学</div>
-<h1>婴儿是统计学家</h1>
+<h1 data-tts="84e778d2a69abc04">婴儿是统计学家</h1>
 <div class="sub">两分钟的胡话里，八个月大的孩子找出了没人教过的「词」——靠的是数哪个音后面跟着哪个音</div>
 <div class="date">2026-09-09</div>
 <div class="pitch">你听母语时，词和词之间好像有缝。把同一段话录下来看波形，那些缝大多不存在——真正的静音常常落在词的中间，而词与词之间一片连绵。你听见的停顿，是你自己补上去的。</div>
@@ -56,39 +57,39 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>两分钟的胡话，八个月大的孩子从里面找出了词</h2>
+<h2 data-tts="b126b07de9f0a0cb">两分钟的胡话，八个月大的孩子从里面找出了词</h2>
 <p>1996 年 Saffran、Aslin 和 Newport 编了一门只有四个词的假语言：bidaku、padoti、golabu、tupiro，每个词三个音节，都是瞎编的。然后用合成器把这四个词随机接成一条连续的音节流——没有停顿，没有轻重，没有升降调，语速平得像机器念表。整整两分钟，一个八个月大的婴儿坐在那里听。</p>
 <p>这条流里唯一的线索是概率。在词的内部，bi 后面一定是 da，da 后面一定是 ku——听见前一个，后一个是它的可能性是百分之百。可到了词与词的接缝上，ku 后面接哪个词的头都行，四个词随机排，可能性只有三分之一。</p>
 <p>两分钟之后开始测。用的是「转头偏好」：婴儿朝哪边的喇叭多看一会儿，那边就继续放声音；她走神，声音就停。于是「听了多久」成了一个能量的数。一边放 bidaku 这样的完整词，另一边放 kupado 这种跨了接缝截出来的三音节块——两类的音她都听过，只是后者从没整块出现过。两边的时长不一样。差别本身就是答案：她把这两类分开了。</p>
 <figure>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-label="一条无停顿的音节流，词内衔接概率为一，接缝处掉到三分之一">
-<rect x="0" y="0" width="640" height="240" fill="#19202f"/>
-<text x="24" y="30" fill="#7fb3d5" font-family="Georgia, serif" font-size="12.5">一条听不出缝的音节流</text>
-<text x="40" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">bi</text>
-<text x="102" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">da</text>
-<text x="164" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">ku</text>
-<text x="226" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">pa</text>
-<text x="288" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">do</text>
-<text x="350" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">ti</text>
-<text x="412" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">go</text>
-<text x="474" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">la</text>
-<text x="536" y="66" fill="#e4e8f2" font-family="Georgia, serif" font-size="19">bu</text>
-<text x="24" y="106" fill="#8d95a8" font-family="Georgia, serif" font-size="11.5">下一个音是它的可能性</text>
-<text x="83" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<text x="145" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<text x="207" y="132" fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle">0.33</text>
-<text x="269" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<text x="331" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<text x="393" y="132" fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle">0.33</text>
-<text x="455" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<text x="517" y="132" fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle">1.0</text>
-<polyline points="83,152 145,152 207,196 269,152 331,152 393,196 455,152 517,152" fill="none" stroke="#7fb3d5" stroke-width="2"/>
-<circle cx="207" cy="196" r="4.5" fill="#e0a458"/>
-<circle cx="393" cy="196" r="4.5" fill="#e0a458"/>
-<line x1="207" y1="196" x2="207" y2="52" stroke="#e0a458" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="393" y1="196" x2="393" y2="52" stroke="#e0a458" stroke-width="1" stroke-dasharray="3,3"/>
-<text x="207" y="220" fill="#e0a458" font-family="Georgia, serif" font-size="11.5" text-anchor="middle">切在这里</text>
-<text x="393" y="220" fill="#e0a458" font-family="Georgia, serif" font-size="11.5" text-anchor="middle">切在这里</text>
+<svg aria-label="一条无停顿的音节流，词内衔接概率为一，接缝处掉到三分之一" role="img" viewbox="0 0 640 240" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="240" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12.5" x="24" y="30">一条听不出缝的音节流</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="40" y="66">bi</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="102" y="66">da</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="164" y="66">ku</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="226" y="66">pa</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="288" y="66">do</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="350" y="66">ti</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="412" y="66">go</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="474" y="66">la</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="19" x="536" y="66">bu</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11.5" x="24" y="106">下一个音是它的可能性</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="83" y="132">1.0</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="145" y="132">1.0</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="207" y="132">0.33</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="269" y="132">1.0</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="331" y="132">1.0</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="393" y="132">0.33</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="455" y="132">1.0</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="517" y="132">1.0</text>
+<polyline fill="none" points="83,152 145,152 207,196 269,152 331,152 393,196 455,152 517,152" stroke="#7fb3d5" stroke-width="2"></polyline>
+<circle cx="207" cy="196" fill="#e0a458" r="4.5"></circle>
+<circle cx="393" cy="196" fill="#e0a458" r="4.5"></circle>
+<line stroke="#e0a458" stroke-dasharray="3,3" stroke-width="1" x1="207" x2="207" y1="196" y2="52"></line>
+<line stroke="#e0a458" stroke-dasharray="3,3" stroke-width="1" x1="393" x2="393" y1="196" y2="52"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11.5" text-anchor="middle" x="207" y="220">切在这里</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11.5" text-anchor="middle" x="393" y="220">切在这里</text>
 </svg>
 <div class="cap">整条流里没有一处静音。唯一起伏的是「听见前一个、下一个是它的可能性」：词内不掉，接缝处掉到三分之一。切点就落在预测最不准的地方。</div>
 </figure>
@@ -99,7 +100,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>光靠数数不够，节奏在旁边当路标</h2>
+<h2 data-tts="b4fcbea947072ea4">光靠数数不够，节奏在旁边当路标</h2>
 <p>真实的话不是那条平得像机器的流。它有轻重、有长短、有高低，而这些恰好可以当路标——不同语言给的路标还不是同一种。</p>
 <p>英语给的路标是重音。Cutler 和 Carter 1987 年翻了两本电子词典又数了一大堆真实对话，得到一个很有用的比例：日常对话里大约九成的实词（名词动词形容词这类，不算「的」「了」这种）都以重读音节开头。那么一条粗暴的规则就很划算：听见一个重音，就假设一个新词从这里开始。</p>
 <p>怎么知道英语环境里的婴儿真在用这条规则？看它出错的时候。英语里 guitar（吉他）是少数的「轻—重」词，重音在后。Jusczyk 等人 1999 年发现，七个半月大的婴儿听到「guiTAR is…」这样的句子，切出来的是 TARis——把 tar 当成词头，又把后面那个轻读的 is 收了进来，拼成一个根本不存在的词。规则用错了地方，反过来证明规则在被用。</p>
@@ -110,7 +111,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>切出来的还只是一块声音，离词还差一步</h2>
+<h2 data-tts="9a76712885fcbe0a">切出来的还只是一块声音，离词还差一步</h2>
 <p>就算全切对了，孩子手里也只有一堆反复出现的声音块。「词」还要求这块声音是某个东西的名字。这一步是白送的吗？</p>
 <p>Graf Estes 等人 2007 年把两件事接在了一起。先让十七个月大的孩子听一段统计切分的音流，紧接着教她物体的名字。名字分三种：一种是刚才流里的完整词，一种是跨接缝截出来的块，还有一种是全新的音节串。只有第一种学得会。关键在于第二种——它在流里出现的次数一点不少，只是从来没有作为一个整块站住过。</p>
 <p>所以切分不是词汇学习的附属品，是它的前置工序：被切出来的那块声音才有资格当候选名字。这也解释了一件本来很怪的事——为什么孩子在完全听不懂的时候，仍然值得听。她在攒的是候选清单。</p>
@@ -119,27 +120,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> Segmentation yields sound chunks, not words. Graf Estes et al. (2007) showed 17-month-olds could attach object labels only to previously segmented sequences, not to equally frequent part-words. Pelucchi et al. (2009) extended statistical segmentation to naturally produced Italian heard by English-learning 8-month-olds. Yet tamarins segment and no one reports them treating a chunk as a name — the step that needs explaining is what follows segmentation, not segmentation itself.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="d48840bce9d4b994">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 工程与系统设计</b>：值班看告警，一串消息滚过来，你眼睛自动把其中几条归成「一件事」——因为它们过去总是一起出现。事后复盘常发现，真正独立的新故障被并进了那个熟悉的模式里，报告里写成了老问题的又一次发作。「两分钟的胡话」那节的机制说明这个归并是怎么做的：判据不是「这几条一起出现过几次」，是「出现了 A 之后、下一条是 B 的比例有多高」。1998 年那个把频次配平的对照实验说的正是这两者不是一回事。可改的动作也就明确了：别按共现次数聚合，按转移比例聚合——统计每条告警之后紧跟着的是哪几条、各占多少，比例低于某个线就在那里切开，不管它们一起出现过多少次。切完之后再看，一个「老问题」常常会裂成两件事。</li>
 <li><b>② 跨语言工作与生活</b>：开非母语的会，你觉得对方语速快得离谱，一句话糊成一片；散会后把录音同一段听三遍，第三遍突然清楚了。你会归到「静下心来了」。「光靠数数不够」那节的机制给的解释不一样：你缺的不是注意力是统计——切分点要靠转移概率攒出来，而且路标本身是语言特有的，英语靠重音、法语靠音节、日语靠拍，你的母语那套在这里不管用。可改的有两件事。一是把「多听不同材料」换成「同一段听三遍」，重复提供的正是样本。二是优先固定说话人和话题——同一个人、同一个领域的转移统计更稳，换人换题等于重新攒。至于「请对方说慢点」值得降级：它拉长了每个音，却没把缝补上。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="461428770f3e40ce">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>分布式系统与 AI · 一条没有分隔符的流，边界只能从预测里长出来</b>：网络协议要从连续的比特流里认出一帧的起止，工程上的办法是明写一个同步头，再用填充位保证这个头在数据里绝不会偶然出现——边界是插进去的。语音没有这个东西：真正的静音常落在词中间，而词与词之间连绵不断。「两分钟的胡话」那节的机制给的是另一条路：边界不靠标记，靠预测什么时候变差——词内下一个音几乎必然，接缝上掉到三分之一，切点就在掉下去的地方。由此能推出一个可检验的差异：这条路子的能力上限由单元长度的整齐程度决定，而不是由数据量决定。Johnson 和 Tyler 只把词改成长短不一，八个月大的婴儿就失败了；同理，一个纯靠相邻转移概率切分的算法，在定长记录上会很准，一遇到变长记录就该系统性地把短的并进长的，加多少数据都补不上——想修就必须换成能同时假设多个候选长度的做法。<b>但这里不成立</b>的是「流里有冗余」这个前提。协议的载荷通常已经压过，压缩干的事恰恰是把可预测的部分挤干净，让每一位的下一位都尽量不可预测。也就是说，一条压得足够好的流在原则上是切不开的——不是算法不够聪明，是被切的东西里已经没有起伏了。所以工程上非用同步头不可不是懒；而语言之所以可切，正因为它保留着大量冗余——在信道效率上是浪费，在可学性上是全部本钱。</li>
 <li><b>演化生物学 · 同一台机器长在很多物种身上，那语言到底加了什么</b>：绒顶柽柳猴能从和婴儿一模一样的合成音流里切出块，大鼠也能，人类婴儿对纯音的音高序列同样能做。跑的是「两分钟的胡话」那节的同一条机制：追踪相邻单元的转移概率。顺手的读法是「所以语言能力是通用学习能力」，但更硬的结论在另一头——正因为这台机器分布得这么广，它就不可能是语言的分水岭；真正需要解释的是紧接着的那一步。「切出来的还只是一块声音」那节给了它的形状：十七个月大的孩子能把切出来的块当成物体的名字，而同样频次的跨界块不行。这就推出一个可做的对照：给猴子做完同一套切分训练，再测它会不会自发把某个块当成某个物体的标签——按现有证据该失败，而这个失败点比「猴子不会说话」精确得多。<b>但这里不成立</b>的是「多物种共有 = 同源」这层默认。灵长类和啮齿类的这条能力隔着很远的分支，可能是各自长出来的，也可能只是任何一个带短期记忆的序列系统都会附带的性质。共有本身不构成演化连续性的证据——要立这个论，得先说清它在这几个物种里是不是同一套神经实现，目前没有定论。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="1dd13800794dffe5">深入思考</h3>
 <details><summary>如果没有词边界这回事，只有「有多容易预测」这条连续的曲线，「词」还是一个真东西吗？</summary><p>成年人对什么算一个词的判断相当一致，可判据往往说不清——「上班」是一个词还是两个？统计切分给的不是边界，是一条起伏的曲线，边界是你在上面划的一道线。那么问题是：这条线上有没有一个天然的落点，还是它由书写系统、由印刷习惯、由你识字那年老师怎么教而定？想想日语和泰语的书写里本来就不打词间空格。</p></details>
 <details><summary>猴子和大鼠都能切，那这台机器为什么没让它们走到语言？</summary><p>可能的答案至少有三种：切出来的块在它们那里存不久、块没法被当成任意事物的名字、或者块与块之间没法再组合成更大的结构。这三种缺陷会留下不同的行为痕迹。你会设计什么任务，让这三种解释各自给出不同的预测，而不是笼统地测「它会不会学词」？</p></details>
 <details><summary>那份 2017 年的汇总分析说整体效应不显著，这该怎么读？</summary><p>一种读法是这个现象本身被高估了；另一种是各研究的做法差异太大（合成语音还是真人、多长的暴露、多大月龄），把它们平均在一起本身就没多少意义。这两种读法要用不同的下一步来分：前者要预注册的大样本直接复制，后者要按变量分层再看。手上有一份异质性很高的汇总结果时，你怎么判断该走哪条？</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="ea4bc04e9bff7a66">延伸阅读</h3>
 <ul>
 <li><a href="https://www.science.org/doi/10.1126/science.274.5294.1926">Saffran, Aslin &amp; Newport (1996), Statistical Learning by 8-Month-Old Infants, Science</a></li>
 <li><a href="https://journals.sagepub.com/doi/10.1111/1467-9280.00063">Aslin, Saffran &amp; Newport (1998), Computation of Conditional Probability Statistics by 8-Month-Old Infants, Psychological Science</a>（配平频次的对照）</li>
@@ -155,8 +156,8 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 </div>
-<script src="https://hub.cissychen.com/comments.js" defer></script>
-<script src="https://hub.cissychen.com/search.js" defer></script>
-<script src="https://hub.cissychen.com/index-button.js" defer></script>
-<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
 </body></html>
