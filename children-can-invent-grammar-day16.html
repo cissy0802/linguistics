@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>孩子能凭空造出语法 — 语言学 Day 16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 16 · 语言学</div>
+<h1>孩子能凭空造出语法</h1>
+<div class="sub">造出这门语言的那批孩子，不是给它装上语法的那批——语法出现在下一批身上</div>
+<div class="date">2026-09-12</div>
+<div class="pitch">「凭空」这两个字得改。这些孩子手上不是什么都没有，是有一堆各自为政、互相打架的零碎。真正稀罕的事不是有人把零碎凑了起来，是零碎传到下一批孩子手里之后自己变规整了——规整发生在接收的那一端，不在发明的那一端。</div>
+</header>
+<div class="intro">
+<p>1977 年之前，尼加拉瓜的聋童大多各自待在家里。学校没有手语课，社群也没有形成，很多孩子一辈子没见过第二个聋人。他们和家里人靠自己发明的一套手势沟通——这种东西有个名字，家庭手语（home sign）。</p>
+<p>那年首都马那瓜开了一所聋人学校，1979 年学生涨到一百人；1980 年又在城郊的 Villa Libertad 开了一所职业学校，1983 年两校加起来四百多人。学校教读唇和说西班牙语，这条路走得不顺；但没人安排的那部分成了——在校车上、在操场上，几十套互不相同的家庭手势第一次被丢进同一个池子。</p>
+<p>1986 年语言学家 Judy Kegl 被请去看看这些孩子在比划什么。她看到的不是一堆手势，是一门语言。</p>
+<p>这期看三件事：语法是在哪一批孩子身上出现的（不是造它的那批）、怎么把「练得更久」和「接得更早」这两件事分开算、以及同一件事在以色列内盖夫的一个村子里又发生了一次，还拐向了一个周围没人用的语序。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>他们进学校那天，手上不是空的</h2>
+<p>先把起点说准。一个从没接触过手语的聋童，在听人家庭里长大，父母也不打手语——他不会什么都不做。Goldin-Meadow 和合作者跟了这样的孩子很多年，发现他们自己发明的手势系统里有一致的语序：谁对谁做了什么，该先打哪个、后打哪个，同一个孩子会稳定地照同一种顺序来。</p>
+<p>关键的对照在这儿：他们妈妈比划的手势里没有这些性质。妈妈是一边说话一边挥手，松散、随场景变。所以孩子手上那点结构不是抄来的。更硬的一条是跨文化：土耳其和美国的这类孩子，在「怎么把一件事打包成一个动作短语」上给出了同样的模式——两个社会的成年人手势习惯差得很远，孩子这边反而对上了。</p>
+<p>但家庭手语有个天花板：它是一个人的系统，只在一个家里用，没有第二个使用者把它当成要学的东西——它不会长出社群语言里那些层层叠叠的机关。</p>
+<p>所以 1977 年那所学校里发生的事，是几十个这样的系统第一次互相碰上。碰出来的东西长什么样？Senghas、Kita 和 Özyürek 2004 年放了一段卡通：一个球一边打转一边滚下坡。请人描述。</p>
+<p>说西班牙语的听人比划的时候，手一边打旋一边往下走——「转」和「下坡」揉在一个手势里。第一批聋人 signers 大体也是这样。第二批、第三批不是：他们拆成两个，先在原地打一个「转」，再打一个「往下」，按顺序来。</p>
+<figure>
+<svg aria-label="左边一个手势把打转和下坡揉在一起，右边拆成两个按顺序打的手势" role="img" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="250" width="640" x="0" y="0"></rect>
+<text fill="#c0736a" font-family="Georgia, serif" font-size="12.5" x="24" y="28">听人比划 · 第一批 signers</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11.5" x="24" y="46">转 + 下坡 揉成一个手势</text>
+<line stroke="#40536e" stroke-width="1.2" x1="40" x2="250" y1="80" y2="200"></line>
+<path d="M48,84 q22,-16 32,12 q10,26 32,10 q22,-16 32,12 q10,26 32,10 q22,-16 32,12" fill="none" stroke="#c0736a" stroke-width="2.2"></path>
+<circle cx="212" cy="180" fill="#c0736a" r="5"></circle>
+<text fill="#c0736a" font-family="Georgia, serif" font-size="11.5" x="60" y="228">一个手势，转和位移同时发生</text>
+<line stroke="#26314a" stroke-width="1" x1="310" x2="310" y1="20" y2="230"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12.5" x="336" y="28">第二批 · 第三批 signers</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11.5" x="336" y="46">切成两个零件，排成顺序</text>
+<rect fill="#161e2c" height="70" rx="6" stroke="#2c4055" width="112" x="336" y="70"></rect>
+<path d="M368,96 a14,14 0 1,1 -9,13" fill="none" stroke="#7fb3d5" stroke-width="2.2"></path>
+<path d="M356,103 l3,8 l8,-3" fill="none" stroke="#7fb3d5" stroke-width="2.2"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="398" y="110">转</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="352" y="158">手不移动</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="18" x="464" y="112">→</text>
+<rect fill="#161e2c" height="70" rx="6" stroke="#2c4055" width="112" x="496" y="70"></rect>
+<line stroke="#7fb3d5" stroke-width="2.2" x1="524" x2="548" y1="88" y2="122"></line>
+<path d="M541,114 l7,9 l-11,2" fill="#7fb3d5" stroke="#7fb3d5" stroke-width="2"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="560" y="110">往下</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="510" y="158">手不打转</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11.5" x="336" y="228">两个零件可以各自换掉、重新组合</text>
+</svg>
+<div class="cap">同一段卡通的两种说法。左边不是「说得不好」，信息一样全，差别在有没有零件。右边一旦拆开，「转」能配到别的路径上、「往下」也能配到别的方式上——能拆才能重组，这是离散结构进场的那一刻。</div>
+</figure>
+<p class="en-brief"><b>EN</b> The starting point was not zero. Deaf children of hearing, non-signing parents invent home-sign systems with consistent ordering for who-did-what-to-whom, while their mothers' co-speech gestures show no such properties, and Turkish and American home-signers converge on the same packaging patterns (Goldin-Meadow and colleagues). But home sign has a ceiling: one user, one household, nobody learning it. When dozens of such systems met in the Managua schools after 1977, something new appeared. Senghas, Kita &amp; Özyürek (2004) showed signers a cartoon of a ball rolling down a slope. Hearing Spanish speakers, and first-cohort signers, gestured manner and path fused into one movement; second- and third-cohort signers split them into two sequenced signs. Parts that can be separated can be recombined.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>第二批不是练得更久，是接得更早</h2>
+<p>再看一件更细的机关。手语可以把一个动词朝空间里某个位置打过去，那个位置临时代表某个人：把「付钱」这个动作朝「收钱的人」占的空位推出去，后面再提到他还朝那儿指。同一个位置反复指同一个人，句子里谁是谁就不必另外交代。</p>
+<p>Senghas 和 Coppola 2001 年去查这套装置是什么时候出现的。结果是：所有批次的人都会把手朝空间里的某处打，但只有第二批把这件事用成了系统——同一个位置稳定地绑同一个人。第一批朝空间里打，打的是方向，不是同指。</p>
+<p>方法上的那一手才是重点。「第二批更强」有个无聊的解释：他们年纪小、学得快。所以研究者把「进这个社群时几岁」和「打了多少年手语」拆开算——每批内部按入学年龄分组，只在相同入学年龄组之间跨批比。结果是第一批里很早接触的人手语年头更长，可第二批里同样很早接触的人用得更多、更成系统。多打的那些年没有把第一批推过去。</p>
+<p>驱动的不是熟练度，是在还小的时候接到了什么东西。Senghas 后来追踪同一批人若干年，发现每个人过了童年就基本定住，各自带着自己那一版继续用——变化住在小孩身上，不住在成年使用者身上。</p>
+<p>证据强度：这是一个社群里的横断队列比较，做不出随机对照，也没法重来一次。批次之间除了年龄还差着别的：第二批进校时社群已经大了几倍，能对话的人多得多，这些和年龄捆在一起，拆不干净。这是这类研究绕不过去的限制。</p>
+<p>它和「孩子说错的地方最有信息」那期是一条线：那期是一个孩子把「加 -ed」溢到了背熟的 went 上，输出比输入更规整；这里是一整批孩子把上一批的零碎溢成了系统。同一个方向，放大到社群尺度。</p>
+<p class="en-brief"><b>EN</b> Sign languages can direct a verb toward a location in space that temporarily stands for a person, and point back to that location later — one location, one referent, so who-did-what-to-whom needs no separate marking. Senghas &amp; Coppola (2001) found all cohorts move signs through space, but only the second cohort used it systematically for coreference. The methodological move matters: they split each cohort by age at entry and compared across cohorts within matched age-at-exposure groups. Early-exposed first-cohort signers had more years of signing; early-exposed second-cohort signers used spatial modulation more, and more systematically. Follow-up work found individuals stabilise after childhood. Evidence strength: a cross-sectional cohort comparison in one community, with cohort confounded by community size. This is the same direction as overregularization — output more systematic than input — scaled up to a community.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>同一件事在内盖夫又发生了一次，还拐向了别的语序</h2>
+<p>以色列南部内盖夫有一个贝都因村落，约四千人，其中一百三十多位聋人——一种隐性遗传的先天耳聋，能追到早期的几个家庭。大约七八十年前，村里自己长出了一门手语，听人村民里也有相当多的人会用。</p>
+<p>Sandler、Meir、Padden 和 Aronoff 2005 年报告：到第二代 signers，语序稳定下来了，是主语—宾语—动词。要说「女人喂孩子」，顺序打成「女人 孩子 喂」，动词垫在最后。</p>
+<p>这条为什么重要：周围没有一门语言是这个顺序。村里听人说的阿拉伯语方言和希伯来语都是主—动—宾，古典阿拉伯语是动—主—宾，区域里已有的以色列手语也不是这个。所以它不是借来的，是在这门语言内部定下来的——而定下来的时间点又是第二代。</p>
+<p>拉进另一条线：克里奥尔语。种植园时代把说不同母语的成年人凑到一起，他们之间会拼出一种临时的交际用语——皮钦语（pidgin），词有，稳定语法少。Bickerton 的语言生物程序假说（language bioprogram hypothesis）说：这些成年人的孩子把皮钦语变成了有完整语法的克里奥尔语（creole），而各地克里奥尔语像得可疑的那部分，来自人身上自带的一套程序。他押的关键案例是夏威夷。</p>
+<p>反方按着这个案例回击。Siegel 2007 年重查这段历史，指出三件事：形成跨了不止一代；孩子接到的输入不是粗糙的皮钦语，而是已经相当稳定的一种；不少特征能追到移民带来的语言，粤语、葡萄牙语这些。DeGraff 走得更远：把克里奥尔语当成一类在成因上特殊的语言，这个前提本身就站不住。</p>
+<p>要说清楚：这些都是完整的语言，只是年轻——克里奥尔语不是谁的简化版，内盖夫那门手语也不是以色列手语的土产变体。</p>
+<p>所以「一代人的时间够用」这句话得收窄。站得住的是：经过学习者的一次传递，系统会变规整——这一点在两个独立的地方各被看到一次，都落在第二批 / 第二代身上。站不住的是：一代孩子能从无到有搭出语法。一代不够，需要的是有人把上一代手里那堆东西当成要学的东西接下来。</p>
+<p class="en-brief"><b>EN</b> In a Bedouin village in the Negev of about 4,000 people, over 130 of them deaf from a recessive congenital condition, a sign language arose on its own some seventy to eighty years ago. Sandler, Meir, Padden &amp; Aronoff (2005) report that by the second generation of signers word order had settled on subject–object–verb: "woman child feed". No surrounding language has that order — the local Arabic dialect and Hebrew are subject–verb–object, Classical Arabic verb–subject–object, and regional Israeli Sign Language differs too. Bickerton's language bioprogram hypothesis made a parallel claim for creoles, with Hawai'i as the pivotal case; Siegel (2007) re-examined it and found formation spanning more than one generation, a stabilised rather than rudimentary pidgin as input, and substrate sources for many features, while DeGraff rejects creole exceptionalism outright. These are all full languages, merely young. What survives is narrower: transmission through learners systematises a system, and it landed on the second cohort both times. One generation, with no one to hand it to, is not enough.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 带团队与组织</b>：你建了一个系统，自己写它的上手文档。写出来是一堆特例：这里要注意、那种情况例外、上次试过所以别那么干。半年后来了个人照它摸进去，一个月后贴了一版重写的——短了一半，而且真能照着走。「第二批不是练得更久，是接得更早」那节的机制说这不是偶然：只有接收的人被迫从残缺的输入里补出规则来，你手上有全部个例，用不着补。可改的是分工，不是文档。别再排「作者抽时间重写一遍」——他重写出来还是特例表；改成让第二个读完并真跑通的人重写，作者只核对事实。指标也换掉：不看文档长度和覆盖率，看第三个新人照它走到第一次跑通要问几个问题。</li>
+<li><b>② 投资与仓位</b>：你跟了某个人的公开持仓变动一年，整理出一张四条规则的表，照着做。可回去翻他的原话，其中两条他从没说过，是你从几次调仓里补出来的。同一条机制给的正是这个警告：接收端的输出比输入更规整，而这个规整化在你这边看不见，它披着「我记得他是这么说的」这层皮。表越干净，越说明填空的人是你。可改的是记法：每条规则后面记上你亲眼见过它成立的独立次数——不是它让你多确信，是次数；只出现过一两次的标明「这是我补的」。该停掉的动作是拿他的名字给这几条背书——一旦背了书，它们就不再接受被推翻。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 自己训自己是塌还是长，取决于中间那道闸</b>：现在有一批工作在担心「模型塌缩」——拿模型自己的输出训下一代，几轮之后输出越来越单调。Kirby、Cornish 和 Smith 2008 年把人串成一条链做同一件事，结果是反的：每代只学一门人造语言的一部分，再教给下一代，语言越传越有结构，最后自己长出了零件可重组这种性质，没有任何一代打算设计它。跑的是「第二批不是练得更久，是接得更早」那节的机制：规整化发生在接收端，动力是接收端看到的比整套少——被迫补空，补出来的就是规则。由此推出一个能直接跑的对照：同一条自训链，一支喂全量输出、一支只喂严格子采样并滤掉沟通失败的样本，测每代输出的描述长度和组合性。若机制成立，塌缩只属于前一支——那它就不是「自训」的性质，是喂法的性质。<b>但这里不成立</b>的是瓶颈的来源。实验室的瓶颈是数据少，马那瓜不是：第二批进校时学生已涨到四百多，能对话的人比第一批多得多。人这边的窄口是年龄窗，而模型没有年龄窗——所以这条链跑出什么，都不能当「人身上那个效应需要关键期」的证据。</li>
+<li><b>复杂性科学 · 「凑出一套词」和「凑出一套语法」不是同一台机器</b>：Centola 和 Baronchelli 2015 年让近百人在网上两两配对玩命名游戏：看同一张脸各写一个名字，写一样就得钱。人人都能互相碰上时，全局共识自己就冒出来了，没有中心协调；换成只跟邻居碰的网络，局部约定形成得很顺，全局那个名字却再也定不下来。这一头是纯协商，参与者全是成年人，谁也没在学，产物是共同词汇；Kirby 那条学习者链没有任何协商，产物偏偏是组合结构。对着本期的收窄看，两台机器就分开了：内盖夫那门手语要成，词汇那半靠一个村子反复互相碰，语法那半靠第二代把上一代当输入接下来。由此能预注册一条判据：命名游戏这个范式再放大也长不出语法，因为它把意义空间直接发下来了，一张脸一个名，里头没有可切分的部件。<b>但这里不成立</b>的是反过来那半：学习者链也长不出「空间里那个位置代表哪个人」这类装置——它要在一段话里追踪谁是谁，需要一个当场在听的人，不是一个安静地学的人。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果语法总是出现在第二批身上，第一批到底贡献了什么？</summary><p>他们贡献的东西没法靠「有没有语法」衡量：一个有人在用、值得被学的公共系统。家庭手语缺的正是这个——不缺结构，缺第二个人。那问题就变成：要多少使用者才够？马那瓜头几十个学生够了，一个家里的一个孩子不够，中间那条线在哪两个案例都答不了。</p></details>
+<details><summary>「不是借来的」这句话，靠什么证？</summary><p>它的语序和周围每一门语言都不一样，看着很硬。但「周围」要划到哪为止——邻村、电视、去城里打过工的人？排除法的力度取决于候选清单列得全不全，而清单是人列的。反过来想：如果它恰好和阿拉伯语方言一样，是不是就判成借的？那这条证据只能证伪借用，不能证实自发。</p></details>
+<details><summary>把「输出比输入规整」当成学习者的一般性质，会不会太顺手？</summary><p>它在两个地方看见了：一个孩子的过度规则化、一整批孩子的系统化。可两者的时间尺度差了两个数量级，中间那些层次（一个家庭、一个班级、一个村子）几乎没被测过。跨尺度的同形可能是同一条机制，也可能是几条机制留下的相似痕迹。要分开，得先说出一个只在其中一个尺度上成立的预测。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/15375269/">Senghas, Kita &amp; Özyürek (2004), Children Creating Core Properties of Language, Science</a>（滚下坡：方式与路径的切分）</li>
+<li><a href="https://doi.org/10.1111/1467-9280.00359">Senghas &amp; Coppola (2001), Children Creating Language, Psychological Science</a> · <a href="https://siegler.tc.columbia.edu/wp-content/uploads/2020/08/Children_Creating_Language_How_Nicaraguan_Sign_Lan.pdf">全文 PDF</a>（把入学年龄和手语年头拆开算）</li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0885201403000625">Senghas (2003), Intergenerational influence and ontogenetic development, Cognitive Development</a>（个人过了童年就定住）</li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.0405448102">Sandler, Meir, Padden &amp; Aronoff (2005), The Emergence of Grammar in a New Sign Language, PNAS</a> · <a href="https://en.wikipedia.org/wiki/Al-Sayyid_Bedouin_Sign_Language">语言概况</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4316383/">Goldin-Meadow 等 (2015), The resilience of structure built around the predicate</a>（土耳其与美国的家庭手语给出同样的打包模式）</li>
+<li><a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/language-bioprogram-hypothesis/8E3812383ED990C3F0ECC874D9C73D97">Bickerton (1984), The language bioprogram hypothesis, BBS</a>（正方最强表述）</li>
+<li><a href="https://www.jbe-platform.com/content/journals/10.1075/sl.31.1.03sie">Siegel (2007), Recent evidence against the Language Bioprogram Hypothesis, Studies in Language</a>（重查夏威夷这个关键案例）· <a href="https://mufwene.uchicago.edu/publications/23.%20EMERGENCE%20OF%20CREOLES%20AND%20LANGUAGE%20CHANGE%20-%20HDBK%20OF%20LINGUISTIC%20ANTHROPOLOGY.pdf">Mufwene 论克里奥尔语的成因</a></li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.0707835105">Kirby, Cornish &amp; Smith (2008), Cumulative cultural evolution in the laboratory, PNAS</a>（传递瓶颈长出组合结构）</li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.1418838112">Centola &amp; Baronchelli (2015), The spontaneous emergence of conventions, PNAS</a>（命名游戏里的约定形成）</li>
+</ul>
+</div>
+</div>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></html>
