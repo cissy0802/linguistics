@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>给语言认亲戚 — 语言学 Day 23</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 23 · 语言学</div>
+<h1>给语言认亲戚</h1>
+<div class="sub">相似不算证据，对得上才算。一套十九世纪的手艺能推出没人听过的词，还能被后来出土的语言验证</div>
+<div class="date">2026-09-19</div>
+<div class="pitch">波斯语里有个词读作 bad，意思就是"坏"。英语的 bad 读音一样、意思也一样。这两个词没有任何亲缘关系——往回追，波斯语那个词的早期形式是 wat。反过来，西班牙语的 hijo 和法语的 fils 听上去毫不相干，却是同一个词的两个后代。认亲戚这件事，靠的根本不是像不像。</div>
+</header>
+<div class="intro">
+<p>"英语和德语是亲戚""汉语和藏语是亲戚"——这类说法你大概听过。问题是凭什么。世界上有七千多种语言，任取两种，词表里总能翻出几对听着像的。可这套说法又硬到能拿去推古代人往哪迁徙、什么时候动身。中间那步怎么走的？</p>
+<p>走这一步的办法叫比较法（comparative method，用现存的后代语言反推一个没有记录的祖先）。下面三件事：它拿什么当证据、它怎么推出一个谁都没听见过的词、它在哪里失效。最后一件最要紧——一套知道自己边界在哪的方法，才敢说前面那些话。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>像不像不算数，对得上才算数</h2>
+<p>先把"像"这条线索废掉。除了波斯语那个 bad，课堂上还必讲另一对：希腊语的 theos 和拉丁语的 deus 都表示"神"，长得像、意思同，却不是亲戚，两个词各有各的来源。拉丁语 deus 真正的亲戚是希腊语里的 Zeus（宙斯）——那个一点也不像的。长得像的不一定是一家，一家的不一定长得像。</p>
+<p>算数的是成批的、能重复的对应。拉丁语词首的 f，在西班牙语里变成了一个写出来但不发音的 h：filius 对 hijo（儿子）、facere 对 hacer（做）、ferrum 对 hierro（铁）。不是这三个词凑巧，是这个位置上的 f 整批走了同一条路，而意大利语和法语没走（figlio、fils）。判据因此不是"两个词像不像"，是"同一个音在同一个位置上，是不是稳定对着另一个音"。</p>
+<p>更漂亮的是连例外都守规矩。拉丁语 focus（炉火）到西班牙语是 fuego，f 好端端留着；可同一个词根派生出的 focaria 到西班牙语是 hoguera（篝火），f 变成了 h。差别在后面跟着什么：f 后面接 ue 这个双元音时不变，别的位置才变。看起来被打破的规律，往往只是条件还没写全。</p>
+<p>这条判据还顺手把借来的词踢了出去。西班牙语的 fiesta（节日）、febrero（二月）开头的 f 都没变，因为它们不是一路传下来的，是后来从书面拉丁语借回去的，错过了那场变化。英语里更显眼：本土词是 father、fish、foot，从拉丁语一侧借来的同源词是 paternal、piscine、pedal，同一个位置一边 f 一边 p。一个词开头的辅音就能告诉你它从哪扇门进来——对应关系不只是证据，还是筛子。</p>
+<p class="en-brief"><b>EN</b> Similarity is the first thing to throw out. Persian bad means "bad" and sounds like English bad, yet the two are unrelated: the Persian word goes back to an earlier wat. Greek theos and Latin deus both mean "god" and look alike, but they descend from different roots; the real relative of deus is Greek Zeus, which looks nothing like it. What counts instead is a repeatable correspondence across many words. Latin initial f shows up in Spanish as a written but silent h: filius/hijo, facere/hacer, ferrum/hierro, while Italian and French keep the f (figlio, fils). Even the exceptions obey conditions: Latin focus gives Spanish fuego with f intact, but the derived focaria gives hoguera with h, because f stayed put before the diphthong ue. An apparent exception usually just means the conditioning has not been written out yet. The same test throws out loans. Spanish fiesta and febrero keep their f because they were re-borrowed from written Latin after the change had run. English shows it more starkly: native father, fish, foot against borrowed paternal, piscine, pedal — f on one side, p on the other. The first consonant of a word tells you which door it came in through.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>拿几种后代语言，推一个没人听见过的词</h2>
+<p>手艺本身不神秘。先把同源词（cognate，来自同一个祖先形式的一组词）成组排好：几种语言里"儿子"各怎么说，"做"各怎么说。再把每组对得上的音抽出来，看它在别的组里是不是照样对。最后挑一个祖先形式：从它出发，用最少、最自然的几步能走到所有后代。方向也有讲究——夹在元音之间的塞音容易变软，反过来很少见。</p>
+<p>凭什么信这套推理？因为有一个家族可以对答案：罗曼语这一支的祖先留下了大量文字。你可以假装不知道拉丁语，只拿西班牙语、意大利语、法语、葡萄牙语、罗马尼亚语反推一遍，再翻书核对。结果对得上，但有个很说明问题的偏差：推出来的不是教科书上那个古典拉丁语，更接近当时人嘴里说的那一版。比较法给你的永远是"这些后代的最近共同祖先"，不是同时代的书面标准。</p>
+<figure>
+<svg aria-label="示意图：同源词表要竖着读" role="img" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="300" width="640" x="0" y="0"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="60" y="44">拉丁语</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="215" y="44">西班牙语</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="375" y="44">意大利语</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="505" y="44">法语</text>
+<rect fill="none" height="128" rx="6" stroke="#e0a458" stroke-dasharray="5 4" stroke-width="1.4" width="110" x="48" y="56"></rect>
+<rect fill="none" height="128" rx="6" stroke="#e0a458" stroke-dasharray="5 4" stroke-width="1.4" width="110" x="205" y="56"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="60" y="86">filius</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="215" y="86">hijo</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="375" y="86">figlio</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="505" y="86">fils</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="60" y="126">facere</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="215" y="126">hacer</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="375" y="126">fare</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="505" y="126">faire</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="60" y="166">ferrum</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="14" x="215" y="166">hierro</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="375" y="166">ferro</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="14" x="505" y="166">fer</text>
+<path d="M103 196 C 103 218 160 218 160 232" fill="none" stroke="#7fb3d5" stroke-width="1.5"></path>
+<path d="M260 196 C 260 218 200 218 200 232" fill="none" stroke="#7fb3d5" stroke-width="1.5"></path>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="120" y="252">f 稳定地对着 h，三组都成立</text>
+<text fill="#c0724f" font-family="Georgia, serif" font-size="12" x="60" y="282">横着读：filius 和 hijo 一点都不像——而这不影响任何结论</text>
+</svg>
+<div class="cap">同源词表要竖着读。横着看，filius 和 hijo 毫无相似之处；竖着看，拉丁语词首的 f 稳定对着西班牙语的 h，三组如此，成百上千组也如此。对应成不成立，和这两个词像不像无关。</div>
+</figure>
+<p>这套手艺也不是只能用在欧洲。中古汉语的读音同样是被重建出来的：601 年的《切韵》用两个字拼出第三个字的音，把字归了类，却没说那些类到底念什么。高本汉（Bernhard Karlgren）把三份证据对起来——《切韵》的分类、各地现代方言的读法、日语韩语越南语当年整批借走的汉字读音——才把音值填进那张表。方案至今仍在修订，做法是同一套。</p>
+<p>最硬的一次检验发生在 1879 年。索绪尔（Ferdinand de Saussure）处理印欧语里元音长短的交替时提出：得假设有一类当时任何已知语言里都找不到的音，这些交替才解释得通。这个主张在半个世纪里被当成外行人的怪念头。二十世纪初，赫梯语（Hittite，小亚细亚出土的一门古代语言）的泥板被解读出来；1927 年 Kuryłowicz 指出，赫梯语里有个辅音正好出现在索绪尔预言的那些位置上。重建不是把旧材料换种写法，它是一个承诺：哪天挖出一门新的亲戚语言，它必须长成这样。</p>
+<p class="en-brief"><b>EN</b> The craft itself is plain. Line up cognates — words descended from one ancestral form — in sets: how each language says "son", how each says "do". Pull out the sounds that line up, then check whether they line up the same way in other sets. Finally pick the ancestral form from which the fewest and most natural steps reach every descendant; direction matters too, since stops between vowels tend to soften rather than harden. Why trust this? Because one family lets you check the answer. Reconstruct from Spanish, Italian, French, Portuguese and Romanian, then open a Latin grammar. It works — with one telling offset: what comes out is not the classical literary language but something closer to what people actually spoke. The method always yields the latest common ancestor of the daughters, not the written standard of the same era. Nor is it a European tool. Middle Chinese pronunciation was likewise reconstructed: the Qieyun (切韻, a rime dictionary of 601) sorted characters into classes without saying how the classes sounded, and Bernhard Karlgren filled in sound values by triangulating three sources — those classes, modern regional pronunciations, and the Chinese readings borrowed wholesale into Japanese, Korean and Vietnamese. The hardest test came in 1879, when Ferdinand de Saussure argued that a class of sounds found in no known language had to be posited for Indo-European vowel alternations to make sense. For half a century this was treated as an eccentricity. Then Hittite tablets were deciphered, and in 1927 Kuryłowicz pointed out that a Hittite consonant turns up exactly where Saussure had predicted. A reconstruction is not a restatement; it is a commitment about what a newly unearthed relative would have to look like.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>往回推大约八千年就推不动了</h2>
+<p>既然这么有力，为什么没人把全世界的语言接成一棵大树？因为信号会耗光。每过一千年，一批同源词被别的词替换掉，音变再叠几层，对应越来越难辨认；与此同时，碰巧相似的词一直按固定概率存在。到某个深度，真信号降到噪声以下——不是找不到相似，是相似不再能说明任何事。</p>
+<p>噪声有多大是可以算的。Ringe 1992 年做的就是这件事：按纯概率估算两门语言的词表之间能撞出多少对"音近义近"，结果比多数人的直觉高得多。他针对的是把上百种语言的词表摆在一起、靠眼睛找相似的做法。争论至今没完全平息，但有一头是清楚的：没有系统对应撑着的相似，数量上和偶然区别不开。</p>
+<p>于是天花板大致落在八千年上下——常被引的说法是 8000 加减 2000 年，上限不超过一万年，依据之一是已知最老的那些语系大概就是这个岁数。再往前的方案，比如把印欧语、乌拉尔语接成更大的"诺斯特拉语系"，处境不是被证伪，是证据强度够不着：那个深度上，能支持它的和偶然产生的长得一样。</p>
+<p>今天的前沿是把生物学那套统计建树的工具搬过来，拿同源词的有无当性状，跑出带年代的树。印欧语的起源因此吵了二十多年：一派把根扎在安纳托利亚、跟着农业扩散走，一派扎在东欧草原、跟着古人骨 DNA 的迁徙证据走。2023 年 Heggarty 等人在 Science 上给出约 8120 年的根年代，提了个混合方案，两边各占一段。证据强度得标清楚：这是模型给的后验区间，换一套同源词判定或速率假设，年代会跟着动。</p>
+<p>动多少？看汉藏语系。2019 年有两组人用同类方法做同一个语系，地理结论接近，年代一组约 7200 年、另一组约 5900 年，差了一千多年。方法是真的，误差棒也是真的。天花板同理：不是手艺不够，是信息被时间吃掉了，再精巧的算法也读不出不存在的信号。</p>
+<p class="en-brief"><b>EN</b> Why has nobody joined all the world's languages into one tree? Because the signal runs out. Every millennium, some cognates are replaced and further sound changes pile up, making correspondences harder to see, while chance look-alikes keep occurring at a fixed rate. Past some depth the real signal drops below the noise: the problem is not that resemblances are missing, but that they no longer show anything. The size of that noise can be computed, and Ringe did exactly that in 1992, estimating how many sound-and-meaning matches two wordlists should throw up by chance alone — far more than most people's intuition. His target was mass comparison, the practice of laying out wordlists from a hundred languages and looking for similarities by eye. The dispute has never fully settled, but one side of it is clear: resemblance unsupported by systematic correspondence cannot be told apart from accident. The ceiling therefore sits around eight thousand years — often quoted as 8000 plus or minus 2000, with an upper bound near ten thousand, partly because the oldest securely established families are about that old. Deeper proposals such as Nostratic or a reconstructed single ancestor for all languages are not refuted; they simply cannot reach the evidential bar. The current frontier borrows statistical tree-building from biology, coding cognates as characters and producing dated trees. Indo-European origins have been argued over for two decades on this basis: an Anatolian homeland tracking the spread of farming against a steppe homeland tracking ancient DNA. In 2023 Heggarty and colleagues published a root age of about 8120 years in Science and proposed a hybrid of the two. Strength: that is a model posterior, and it moves when cognate judgements or rate assumptions change. How much? In 2019 two teams used comparable methods on Sino-Tibetan and landed on about 7200 and about 5900 years, with similar geography and over a millennium between the dates. The method is real and so are the error bars. So is the ceiling — not a failure of craft but information eaten by time.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：两个服务里有两份长得很像的工具类，你要判断是不是同一份东西被复制出去的。多数人去 diff 功能，可功能一样说明不了什么：正确的写法只有那么几种。有信息量的是共享的任意选择：同一个拼错的常量名、同一句措辞古怪的日志、同一个没人解释得清的 37 秒超时。这正是「像不像不算数，对得上才算数」那节的机制：判据落在任意性上，因为任意的写法有无数种，撞在一起的概率极低。可改的动作：这类溯源别 diff 行为，grep 那几样任意的东西。验收标准是去找对方之前，你手上有没有一条"除了共同来源没别的解释"的证据。</li>
+<li><b>② 跨语言工作与生活</b>：读日文材料时靠"汉字长得一样"猜意思，大半蒙对，然后在手紙（tegami，意思是信，不是手纸）这种词上栽一次，还不知道自己栽了。「拿几种后代语言，推一个没人听见过的词」那节的机制反过来用就是解法：稳的不是词义相似，是读音的系统对应。汉语里收 -k 尾的那批字，日语音读普遍收 -ku / -ki（学 xué 对 gaku，石 shí 对 seki，客 kè 对 kyaku）；收 -t 尾的那批收 -tsu / -chi（一 yī 对 ichi，日 rì 对 nichi）。可改的动作：背词时记这条对应，而不是记"看着眼熟"；碰到陌生的汉字词，先按对应预测读音再去查。验收指标是命中率——连记二十个词不往上走，说明你还在靠相似猜。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>演化生物学 · 语系树和物种树用的是同一条推理，但语言这边的钟必须按词频分档</b>：生物学家建树也不认"共同保留"，只认共同的新变化——两个物种都有脊椎说明不了亲疏，都有某个别处没有的特化才说明，这跟「像不像不算数，对得上才算数」那节是同一条逻辑。分子钟能给树装上年代，靠的是每个位点的突变率大致恒定，而这个恒定有物理基础，和"这个基因被用得多不多"无关。语言没有这个基础：Pagel 等人 2007 年拿四种语料库配上 87 种印欧语的 200 个基本词，发现用得越频繁的词被替换得越慢，这一条就解释了历史替换速率里约一半的差异。于是能推出一个原本看不出的结论——语言树的时间轴必须按词频分档，一根统一的钟会系统性地算错某些节点；这也是本期那个天花板软得厉害的原因：不同的词半衰期差着量级。<b>但这里不成立</b>的是树这个形状本身。生物学里跨物种搬基因主要是细菌的事，多数类群可以当噪声；语言里"借"是常态，还能同时向好几个邻居借。所以"属于哪个语系"和"这批数据有多像一棵树"在语言学里是两个分开的问题，后者被做成了能直接算的量（Gray、Bryant 和 Greenhill 2010 年推的那类指标），物种树里没有非做不可的对应步骤。</li>
+<li><b>分布式系统与 AI · 神经网络能把拉丁语猜回来，却猜不出一个在所有后代里都不存在的音</b>：Meloni、Ravfogel 和 Goldberg 2021 年训了个序列模型做这件事：喂进罗曼语各语言的同源词、让它输出拉丁语形式，八千多组数据，效果好过此前的自动方法，学到的内部表示还对得上有记载的音变。看起来这门手艺被自动化了。但「拿几种后代语言，推一个没人听见过的词」那节指出一处结构性差别：比较法要的不是最像的形式，是能把所有后代都推导出来的形式，哪怕它在任何一个后代里都没留下直接痕迹。而这类模型的输出字母表就是训练数据里见过的那些音，训练目标是让预测形式和目标形式尽量接近。于是可检验的差异很干脆：把赫梯语从数据里抽掉，看模型会不会在某些位置主动多吐一个谁都没见过的成分——它不会，那样只会让损失变大。索绪尔当年做的恰恰是这件事，代价是被当了五十年怪人。<b>但这里不成立</b>的是人的这点优势的适用范围：它依赖变化有条件、可穷举。一旦残余找不到任何语音条件（「语言像河流一样变」那期说的那种），"最经济的祖先"这条判据就没得用，人和模型一样只能去数频率。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>用"基本词"做比较，是不是循环论证——凭什么假定它们不容易被借走？</summary><p>不是循环，但也不是保险。身体部位、数词、代词这类词被借走的概率经验上更低，可这只是概率：英语的 they、them、their 就是从古诺斯语借来的，而代词通常被认为最难借。词表只降低噪声，真正兜底的仍是对应关系——借词往往在音的对应上露馅，就像西班牙语那个没变成 h 的 f。</p></details>
+<details><summary>重建出来的祖先语言，内部有没有方言？</summary><p>比较法默认祖先是一个均质的点，可现实里没有哪门语言是均质的。如果分化发生时祖先自己就已经分了方言，重建会把这些差异压平，压出一个自相矛盾的系统；实际操作里，这种矛盾常被写成"原始语里并存的几个变体"。近年那种允许把有文献的古语言当成树上取样点的统计模型，想处理的正是这一层。</p></details>
+<details><summary>巴斯克语这种"孤立语言"，是没有亲戚，还是亲戚都死光了？</summary><p>几乎肯定是后者。任何语言都有祖先，也几乎都曾有过同源的邻居。"孤立"是关于我们手上证据的陈述，不是关于这门语言本身的陈述——它的表亲要么消失了，要么分开得太久，越过了本期那个天花板。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Comparative_method">比较法（维基词条）</a> · <a href="https://lx.berkeley.edu/sites/default/files/rankin_comparative_method.pdf">Rankin, The Comparative Method（教科书章节 PDF）</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Evolution_of_Latin_/f/_in_Spanish">拉丁语 f 在西班牙语里的演变（含 fuego / hoguera 那个条件）</a> · <a href="https://en.wikipedia.org/wiki/Proto-Romance_language">原始罗曼语：拿有答案的家族检验比较法</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Laryngeal_theory">喉音理论：索绪尔 1879 年的预言与赫梯语的验证</a> · <a href="https://en.wikipedia.org/wiki/Jerzy_Kury%C5%82owicz">Kuryłowicz 1927 年那篇的背景</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Karlgren%E2%80%93Li_reconstruction_of_Middle_Chinese">高本汉—李方桂的中古汉语重建</a> · <a href="https://en.wikipedia.org/wiki/Rime_dictionary">韵书与反切</a> · <a href="https://en.wikipedia.org/wiki/Sino-Xenic_pronunciations">日韩越的汉字音（Sino-Xenic）</a></li>
+<li><a href="https://www.pennpress.org/9798893984293/on-calculating-the-factor-of-chance-in-language-comparison/">Ringe (1992), On Calculating the Factor of Chance in Language Comparison</a> · <a href="https://arxiv.org/pdf/1309.5883">把这场争论重算一遍的一篇组合数学论文</a></li>
+<li><a href="https://www.science.org/doi/10.1126/science.abg0818">Heggarty 等 (2023), 印欧语起源的混合方案, Science</a> · <a href="https://www.pnas.org/doi/10.1073/pnas.1817972116">Sagart 等 (2019), 汉藏语系的年代树, PNAS</a> · <a href="https://www.nature.com/articles/s41586-019-1153-z">Zhang 等 (2019), 汉藏语系起源于中国北方, Nature</a></li>
+<li><a href="https://www.nature.com/articles/nature06176">Pagel, Atkinson &amp; Meade (2007), 词频预测词汇替换速率, Nature</a> · <a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2010.0162">Gray, Bryant &amp; Greenhill (2010), 人类历史有多像一棵树</a></li>
+<li><a href="https://aclanthology.org/2021.naacl-main.353/">Meloni, Ravfogel &amp; Goldberg (2021), Ab Antiquo: 用神经网络重建原始语</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
