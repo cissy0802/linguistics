@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>From Rules to Statistics — Linguistics Day 28</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<div class="container">
+<header>
+<div class="kicker">Day 28 · Linguistics</div>
+<h1>From Rules to Statistics</h1>
+<div class="sub">Hand-written grammars did not lose because the rules were wrong — they lost because a rule table has no column for "probably"</div>
+<div class="date">2026-09-24</div>
+<div class="pitch">The 1954 machine held 250 words and six grammar rules, and after the demonstration the press announced that translation would be solved in three to five years. The method that actually moved the problem did not arrive until around 1990, and at the time it looked like cheating: it makes no attempt to understand a sentence, it only counts which words keep turning up together. Two changes of mind in sixty years, and neither of them was about understanding language better. Both were about admitting you don't.</div>
+</header>
+<div class="intro">
+<p>You have probably had this happen: a machine translation reads perfectly smoothly, yet something feels off, and when you check the original you find a negation has quietly moved. Smooth, and wrong — that is the failure mode peculiar to machine translation today.</p>
+<p>Sixty years ago it failed differently. Output was stiff and wrong, and you could see at a glance where. What happened in between is rarely told as one story: people spent thirty years hand-writing grammar rules and lost to people who ignored grammar and counted instead — and those counters were then driven for fifteen years by a scoring script that understands nothing.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>"The box was in the pen" — a sentence no five-year-old misreads, and no rule ever gets right</h2>
+<p>Start with how small the machine was. On 7 January 1954, Georgetown University and IBM gave a public demonstration in New York: sixty-odd Russian sentences translated automatically into English, on a vocabulary of 250 words and six grammar rules. Coverage was enormous, and the general expectation was that the job would be finished within three to five years.</p>
+<p>For the next thirty years the real difficulty was not vocabulary. Every new rule had to fight the rules already written — you add one saying that Russian пол (pol) means "floor" rather than "sex" in this context, and it fires in twenty other sentences that were already correct. The longer the table, the more expensive each edit.</p>
+<p>In 1960 Yehoshua Bar-Hillel, the first person in the world employed full-time on machine translation, pushed this to the wall. He offered a short passage: <em>Little John was looking for his toy box. Finally he found it. The box was in the pen.</em> English "pen" has two senses, a writing implement and an enclosure a small child plays in. Choosing between them is not a matter of grammar or of dictionaries; it depends on your knowing that a writing pen is smaller than a toy box and a playpen is larger. His conclusion was blunt: fully automatic high-quality translation would require the machine to hold not a dictionary but an encyclopedia — which he considered utterly chimerical.</p>
+<p>There is a more everyday difficulty too: two languages need not line up at the level of the sentence. English says <em>She swam across the river</em>, with manner of motion (swimming) inside the verb and direction handed to the small word "across". The habitual Spanish is <em>Cruzó el río nadando</em>, literally "she crossed the river swimming" — direction moves into the verb and manner is squeezed into a participle. Leonard Talmy sorted languages into these two packaging strategies. It is a tendency rather than a law, and Spanish permits the English pattern in some contexts — which for a rule writer is worse news than a law: you must hand-write the rewriting rule and also hand-write when it does not apply.</p>
+<p>In 1966 a United States review committee published the report now known as ALPAC. Its conclusion was not that the approach was wrong but that it was not worth the money: machine output still had to be reworked by a person from scratch, which cost no less than hiring a translator outright. In the report's own words, there was no useful machine translation and no near-term prospect of any. Funding stopped for close to twenty years.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>The record of the Canadian Parliament turned translation into a counting problem</h2>
+<p>Around 1990 a group at IBM's Watson Research Center changed the question. Instead of asking what an English sentence means, they asked which French sentence is most likely to be its translation. Meaning is stepped around, and what remains can be counted.</p>
+<p>Counted from what? From text already paired up. The proceedings of the Canadian Parliament must by law be published in English and French at once, sentence by sentence, and there is a great deal of it: the version later put to use holds 3,603,971 sentence pairs, close to a hundred million words on each side. Nobody assembled it for research. It is what a country's bilingual policy leaves lying around.</p>
+<p>What alignment looks like is visible in one thoroughly ordinary pair. English <em>I do not speak French</em>, French <em>Je ne parle pas français</em>. Three words map cleanly; the trouble is the other two. English has one "not" answering to two French words, "ne" and "pas", with the verb sitting between them, and English "do" answers to nothing at all. A rule writer must handle each case explicitly. A counting system writes nothing — after a few hundred thousand sentences containing "not", the fact that "ne" and "pas" co-occur implausibly often is simply there to be read off. To book-keep the one-to-many case, the IBM models gave every word a number called its fertility: not a concept borrowed from linguistics, but an accounting device invented so the counting could continue.</p>
+<figure>
+<svg aria-label="Diagram: word alignment between an English and a French sentence, where one word may map to none or to two" role="img" viewbox="0 0 640 230" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="230" width="640" x="0" y="0"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="48" y="54">I</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="110" y="54">do</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="188" y="54">not</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="288" y="54">speak</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="420" y="54">French</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="42" y="182">Je</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="108" y="182">ne</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="180" y="182">parle</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="278" y="182">pas</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="380" y="182">français</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="52" x2="50" y1="66" y2="166"></line>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="308" x2="198" y1="66" y2="166"></line>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="446" x2="410" y1="66" y2="166"></line>
+<line stroke="#e0a458" stroke-width="1.6" x1="198" x2="118" y1="66" y2="166"></line>
+<line stroke="#e0a458" stroke-width="1.6" x1="200" x2="292" y1="66" y2="166"></line>
+<line stroke="#5b6478" stroke-dasharray="4 4" stroke-width="1.4" x1="120" x2="120" y1="66" y2="112"></line>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="132" y="112">maps to nothing</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11" x="330" y="112">one word maps to two, split by the verb</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="320" y="216">exactly where hand-written rules cost most and counting costs least</text>
+</svg>
+<div class="cap">The lines are word-to-word correspondences. The blue ones behave; the amber ones are the trouble — one word split in two, and one word vanishing.</div>
+</figure>
+<p>The shift was later compressed into a widely repeated quip: every time I fire a linguist, the system's recognition rate goes up. It came from Frederick Jelinek on the speech-recognition side; he disputed the wording himself, and decades of digging have never fixed the exact version. What the line obscures is that the knowledge was not removed — what was removed was certainty written down by hand. A statistical system still has to align, still has to segment; those judgements simply moved from "someone decided it should be this way" to "this occurred so many times in the data". Nor did it win quickly: through the 1990s and 2000s rule-based systems such as Systran stayed competitive on some language pairs.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>A scoring script that understands nothing changed the field more than any rule did</h2>
+<p>In 2002 another group at IBM proposed a scoring method called BLEU, and its method is almost comically blunt: put a machine translation beside several human reference translations and count how many word sequences overlap — single words, pairs, triples — with a penalty to stop a system scoring well by keeping its output short. It understands nothing at all. It also runs in a second.</p>
+<p>The consequence mattered more than the metric. Evaluating quality had meant days of human reading; afterwards you could change a parameter and know in half a minute whether it helped. How fast a field moves depends less on its supply of ideas than on how long verifying one takes, and this script cut that wait from days to seconds, so for fifteen years everyone climbed the same hill.</p>
+<p>The cost surfaced quickly. In 2006 a group examined whether the score could be trusted: a BLEU gain does not mean real improvement, and real improvement does not guarantee a BLEU gain. Their telling comparison was that the rule-based Systran scored low on BLEU while holding its own on human ratings of adequacy and fluency — it chose different words that meant the same thing, and the score only recognises literal overlap. Something else has been confirmed repeatedly: the better the translation, the looser the correlation with human judgement. The metric is good at spotting bad output and poor at ranking good output.</p>
+<p>Neural networks arrived from 2014, and in September 2016 Google replaced its production phrase-based system outright — at the time about eighteen million Chinese-to-English translations a day. What improved is real: sentences read smoothly, and long-distance ordering problems, such as a German subordinate clause driving its verb to the end, largely eased.</p>
+<p>Three things did not improve. First, low resource: the method eats sentence pairs, and the overwhelming majority of the world's roughly seven thousand languages have almost none, so a 2022 model covering two hundred languages counted as a milestone. Second, hallucination: in 2018 people typed the word <em>dog</em> a dozen times over, asked for Maori into English, and received an apocalyptic prophecy — much of the available parallel text for such languages is scripture, and when the input is noise the model is still trained to emit something that sounds like a person, so it invents a passage. Third, the gap between two grammars: Turkish has one third-person pronoun, o, with no gender, but English forces a choice, and systems long rendered <em>o bir doktor</em> as "he is a doctor" and <em>o bir hemşire</em> as "she is a nurse" — the source never carried that information, the target demands the slot be filled, and the system can only guess the corpus majority. A rule-based system breaks into visible gibberish; a neural one breaks into fluent falsehood. That is where the smooth-and-wrong feeling from the opening comes from.</p>
+<p>So why did hand-written grammars lose? Not because grammar is wrong. A rule can state that something is permissible; it cannot state that something is probable — a rule table has no column for "probably", and probability is exactly what every step of translation needs. Bar-Hillel's sentence is handled correctly most of the time today, not because the machine acquired an encyclopedia but because it has seen enough contexts in which boxes and enclosures occur together. Whether that counts as understanding depends on where you set the bar: if you want world knowledge that can be queried, questioned and corrected, it has none; if you want the same output on this sentence as from someone who understands, it delivers.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Practice · BigCat</h3>
+<ol>
+<li><b>① Investing and position sizing</b>: you once set yourself rules — halve the position at −20%, close it after three weekly closes below the line. Two years in, every occasion the rule fired when it shouldn't have has added an exception, the table now contradicts itself, and when the moment actually arrives you go by feel anyway. This is the difficulty from the "box was in the pen" section: a rule table has no column for "probably", so each exception can only become another rule, and that rule fires somewhere you are not watching. The change: rewrite every rule as something countable — how many times has this condition occurred before, and what happened over the following sixty days — and demote any rule with fewer than ten instances to a reminder that never executes on its own.</li>
+<li><b>② Working across languages</b>: you drop a message into a translator and send it to a colleague abroad; the output is flawlessly fluent and the reply answers a different question. The mechanism from the "scoring script that understands nothing" section says this is not bad luck: neural translation decoupled fluency from correctness, and fluency happens to be the only cue you have for judging correctness. Back-translation will not help either — it smooths the error over with the same guess. The change: before sending, replace pronouns in the crucial sentence with explicit names and restore any subject you dropped, because dropped subjects and bare pronouns are precisely the slot one language omits by default and the other requires, which is where the system is reduced to guessing. Measure it by how often you get asked "do you mean X or Y".</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Connections Beyond the Field</h3>
+<ul>
+<li><b>Evolutionary biology · How large a variant must be to be "seen", and how often a construction must occur to be learned, are the same threshold</b>: natural selection is also a machine that does not understand what it is doing and filters purely on outcomes. Population genetics has computed its resolution: if a mutation's advantage or disadvantage is smaller than roughly 1/(2Ne), where Ne is the effective population size, selection cannot see it and its fate is handed to random drift — the drift barrier. That is the mechanism running in "the record of the Canadian Parliament" section: a counted difference must exceed the noise or it does not exist. Which yields a conclusion one does not usually reach: when machine translation handles a construction badly, it is usually not because the construction is complex but because it is rare in the corpus, and conversely a syntactically awkward construction that appears every day is learned well. That is directly checkable — rank by corpus frequency, not by grammatical difficulty. <b>Where it does not hold</b> is whether you can add samples. In evolution Ne is set by a species' ecology and no researcher can move it, so the drift barrier is a hard floor; in translation the sample size is a budget question, and you can crawl more or manufacture data by back-translation.</li>
+<li><b>Society and institutions · A cheap metric will steer a whole field, and the direction depends on how easy the gap between metric and goal is to work</b>: New York State has published risk-adjusted mortality for individual cardiac surgeons since 1991. Two things followed at once: risk-adjusted mortality did fall, and there is evidence that high-risk patients were discouraged or referred out of state. The mechanism is the one in "a scoring script that understands nothing": a metric cheap enough to run daily takes the wheel, and the gap between it and the actual goal gets optimised on its own. Which gives something more specific than "any metric will be gamed" — the form of the gaming is set by the shape of the gap, not by anyone's character. BLEU's gap is on the output side: it recognises only literal overlap, so systems were pushed toward safer, more common wording. <b>Where it does not hold</b> is the intake. A surgeon can choose which patients to accept, so that gap opens on the input side; a translation system cannot alter the test set and must translate whatever it is handed. Declining the high-risk case has no counterpart in machine translation — which is why fifteen years of working BLEU produced blandness rather than fraud.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>If the funding had not stopped, could thirty more years of rule-writing have succeeded?</summary><p>Bar-Hillel's argument does not depend on computing power: these judgements require world knowledge, and world knowledge cannot be enumerated as rules, so the purely rule-based route would most likely have stalled in the same place. One counterexample is worth remembering, though — where the domain is narrow and the sentence patterns fixed, as in weather bulletins, rule-based systems were usable at the time, and the Canadian English-French weather translation system ran for many years. The condition is that the world in question be small enough to finish writing down.</p></details>
+<details><summary>If a system can translate correctly without understanding, does meaning not matter?</summary><p>A safer reading is that meaning is still doing the work, only hidden inside someone else's behaviour. Those three and a half million sentence pairs were translated by people, and every pair has already passed through an act of understanding. The statistical system consumes the results of other people's understanding — which is also why it degrades immediately in domains nobody has translated.</p></details>
+<details><summary>If a language lacks parallel text, is that a fact about the language?</summary><p>No. Abundant parallel text usually means there was an administrative, religious or commercial demand for translation behind that language, which says nothing about its structure or expressive power. The Canadian parliamentary record exists as a by-product of a bilingual statute. Reading "machines translate it well" as "this language is somehow better" mistakes institutional history for a linguistic fact.</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://aclanthology.org/2004.amta-papers.12/">Hutchins on the 1954 Georgetown–IBM demonstration</a></li>
+<li><a href="https://aclanthology.org/www.mt-archive.info/Bar-Hillel-1960-App3.pdf">Bar-Hillel (1960), the nonfeasibility of fully automatic high-quality translation</a></li>
+<li><a href="https://direct.mit.edu/books/book/3127/chapter/85723/The-1966-ALPAC-Report-and-its-Consequences">The 1966 ALPAC report and its consequences</a></li>
+<li><a href="https://aclanthology.org/J93-2003.pdf">Brown et al. (1993), the mathematics of statistical machine translation</a> · <a href="https://thewalrus.ca/how-canada-accidentally-helped-crack-computer-translation/">How the Hansard became a corpus</a></li>
+<li><a href="https://en.wikiquote.org/wiki/Fred_Jelinek">Versions of the Jelinek quip</a></li>
+<li><a href="https://aclanthology.org/E06-1032/">Callison-Burch et al. (2006), re-evaluating the role of BLEU</a></li>
+<li><a href="https://blog.research.google/2016/09/a-neural-network-for-machine.html">Google's 2016 switch to neural translation</a> · <a href="https://www.nature.com/articles/s41586-024-07335-x">Scaling neural translation to 200 languages</a></li>
+<li><a href="https://www.vice.com/en/article/why-is-google-translate-spitting-out-sinister-religious-prophecies/">Hallucination and low-resource corpora</a> · <a href="https://research.google/blog/providing-gender-specific-translations-in-google-translate/">Dual renderings for gender-ambiguous sentences</a></li>
+<li><a href="https://www.acsu.buffalo.edu/~talmy/talmyweb/Recent/verb.html.bak">Talmy on two ways of packaging motion events</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13050581/">Empirical tests of nearly neutral theory and the drift barrier</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S073510971201217X">History and limits of New York's public cardiac surgery reporting</a></li>
+</ul>
+</div>
+</div>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></html>

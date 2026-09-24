@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>从规则到统计 — 语言学 Day 28</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<div class="container">
+<header>
+<div class="kicker">Day 28 · 语言学</div>
+<h1>从规则到统计</h1>
+<div class="sub">手写语法输掉的原因不是规则写错了，是规则这种东西里没有「多半」这一栏</div>
+<div class="date">2026-09-24</div>
+<div class="pitch">1954 年那台机器只有 250 个词、6 条语法规则，演示完媒体就说翻译问题三五年内解决。真正把它推动起来的办法 1990 年前后才出现，而那办法在当年看来近乎耍赖：它不试图弄懂句子的意思，只数哪些词总是一起出现。六十年换过两次思路，每次换掉的都不是「更懂语言」，是承认自己不懂。</div>
+</header>
+<div class="intro">
+<p>你大概遇到过这种事：一段机器译文读起来完全通顺，你却总觉得哪里不对；回头一对原文，它把一个「不」字的位置悄悄挪了。顺，而且错——这是今天的机器翻译特有的失败方式。</p>
+<p>六十年前它不这么失败——那时译文又生硬又错，错在哪一眼看得见。中间这段很少被讲成一个连贯的故事：一批人花三十年手写语法规则，输给了一批不看语法、只数数的人；而那批数数的人后来又被一个读不懂意思的评分脚本推着跑了十五年。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>「盒子在笔里」——幼儿园孩子都不会误解的一句话，规则永远算不对</h2>
+<p>先看那台机器有多小。1954 年 1 月 7 日，乔治城大学和 IBM 在纽约公开演示：六十多句俄语自动译成英语，词表 250 个词，语法规则 6 条。报道铺天盖地，当时的普遍预期是三五年内这件事就做完了。</p>
+<p>接下来三十年，写规则的人遇到的真实困境不是词不够，是每加一条新规则都要跟已经写好的那些打架——你为「пол 在这个上下文里译成 floor 不译成 sex」加一条，它就在另外二十个句子里生效了，而那二十句原本是对的。规则表越长，改一处的代价越大。</p>
+<p>1960 年，全世界第一个全职做机器翻译的研究者巴希勒尔（Yehoshua Bar-Hillel）把这件事顶到了墙上。他给了一小段话：<em>Little John was looking for his toy box. Finally he found it. The box was in the pen.</em>（小约翰在找他的玩具盒，终于找到了，盒子在 pen 里。）英语 pen 有两个意思：钢笔，和小孩玩的围栏。选哪个靠的不是语法也不是词典，是你知道钢笔比玩具盒小、围栏比玩具盒大。他的结论很硬：要做全自动的高质量翻译，机器不光要有词典，还得先有一部百科全书——而这在他看来纯属幻想。</p>
+<p>还有一层更日常的麻烦：两门语言在句子层面就对不齐。英语 <em>She swam across the river</em>，「怎么动」（游）在动词里，「往哪动」交给 across 这个小词；西班牙语惯常说 <em>Cruzó el río nadando</em>，字面「她横渡了那条河、游着」——「往哪动」进了动词，「怎么动」被挤成一个分词。语言学家塔尔米（Leonard Talmy）把这两种打包方式分成两类。这是倾向不是铁律，西班牙语某些场合也走得通英语那种说法——倾向比铁律更难办：你得手写改写规则，还得手写它什么时候不适用。</p>
+<p>1966 年，美国一个评估委员会发布了后来简称 ALPAC 的报告。结论不是「这条路错了」，是「现在不值这个钱」：机器译完还得请人从头返工，算下来不比直接请人翻便宜。报告原话是，我们没有可用的机器翻译，也看不到近期会有。经费断了将近二十年。</p>
+<p class="en-brief"><b>EN</b> On 7 January 1954, Georgetown and IBM publicly demonstrated automatic Russian-to-English translation of sixty-odd sentences, using a 250-word vocabulary and six grammar rules; the press concluded translation would be solved in three to five years. The rule-writers' real problem over the next thirty years was not vocabulary but interaction: every rule added to disambiguate one context silently fired in twenty others that had been correct. In 1960 Yehoshua Bar-Hillel, the first full-time machine-translation researcher, drove this home with a short passage — "Little John was looking for his toy box. Finally he found it. The box was in the pen." Choosing "playpen" over "writing pen" requires knowing the relative sizes of pens, boxes and enclosures; a machine, he argued, would need not a dictionary but an encyclopedia, a requirement he called utterly chimerical. A second, more everyday difficulty is that sentences do not line up. English "She swam across the river" puts manner in the verb and path in a satellite; the habitual Spanish is "Cruzó el río nadando", literally "she crossed the river swimming", with path in the verb and manner pushed into a gerund. Talmy sorted languages into these two packaging strategies — a tendency, not a law, since Spanish permits the other pattern in some contexts, which for a rule writer is worse news than a law would be. The 1966 ALPAC report concluded not that the approach was wrong but that it was not worth the money: post-editing machine output cost more than translating from scratch, and there was "no immediate or predictable prospect of useful machine translation." United States funding stopped for roughly two decades.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>加拿大国会的会议记录，把翻译变成了一道数数题</h2>
+<p>1990 年前后，IBM 沃森研究中心一组人换了个问题：不问「这句英语是什么意思」，只问在所有法语句子里哪一句最可能是它的译文。意思那一层被绕开了，留下的是一道可以数出来的题。</p>
+<p>数什么？数一批已经配好对的句子。加拿大国会的会议记录按法律必须英法双语同时出版，逐句对应，量还特别大：后来常用的那份语料有 3,603,971 对句子，两边各接近一亿个词。这不是谁为研究准备的，是一个国家的双语制度顺手攒下来的。</p>
+<p>对齐长什么样，拿一对最普通的句子就看得见。英语 <em>I do not speak French</em>，法语 <em>Je ne parle pas français</em>。三个词规规矩矩对上，麻烦在另外两个：英语一个 <em>not</em> 对上 <em>ne</em> 和 <em>pas</em> 两个词，中间还隔着动词；英语的 <em>do</em> 什么也不对应。规则派得为这两件事各写一条规则；统计派什么也不写——看过几十万个带 <em>not</em> 的句子，法语那边 <em>ne</em> 和 <em>pas</em> 同时出现的次数高得不像话，这条对应自己就浮出来。为了把「一个词对两个词」记进账，那组模型给每个词配了个数叫「生育率」——不是语言学概念，是为了让数数进行下去临时造的记账项。</p>
+<figure>
+<svg aria-label="示意图：英语和法语句子的词对齐，一个词可以对上零个或两个词" role="img" viewbox="0 0 640 230" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="230" width="640" x="0" y="0"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="48" y="54">I</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="110" y="54">do</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="188" y="54">not</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="288" y="54">speak</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="420" y="54">French</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="42" y="182">Je</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="108" y="182">ne</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="180" y="182">parle</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="15" x="278" y="182">pas</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="15" x="380" y="182">français</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="52" x2="50" y1="66" y2="166"></line>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="308" x2="198" y1="66" y2="166"></line>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="446" x2="410" y1="66" y2="166"></line>
+<line stroke="#e0a458" stroke-width="1.6" x1="198" x2="118" y1="66" y2="166"></line>
+<line stroke="#e0a458" stroke-width="1.6" x1="200" x2="292" y1="66" y2="166"></line>
+<line stroke="#5b6478" stroke-dasharray="4 4" stroke-width="1.4" x1="120" x2="120" y1="66" y2="112"></line>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="132" y="112">对不上任何词</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="11" x="330" y="112">一个词对上两个，中间还隔着动词</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="320" y="216">这两处正是手写规则最贵、而数数最便宜的地方</text>
+</svg>
+<div class="cap">连线是词与词的对应。青蓝线规规矩矩，琥珀线是麻烦：一个词分成两处，还有一个词凭空消失。</div>
+</figure>
+<p>这个转向后来被浓缩成一句流传极广的俏皮话：每开掉一个语言学家，系统的识别率就上升一点。说这话的是语音识别那边的耶利内克（Frederick Jelinek），他本人对措辞有异议，考据几十年也没定下确切版本。那句话最容易被读歪的地方是：被换掉的不是语言学知识，是「由人手写下来的确定性」。统计系统照样要对齐、要切词，只是这些判断从「某人认为应该这样」变成了「在这批数据里出现过多少次」。它也并没有赢得很快——整个九十年代到两千年代，Systran 这类规则系统在一些语言对上长期有竞争力。</p>
+<p class="en-brief"><b>EN</b> Around 1990 a group at IBM's Watson Research Center changed the question. Instead of asking what an English sentence means, they asked which French sentence is most likely to be its translation — a question you can answer by counting. What they counted was pre-aligned text: the Canadian Hansard, which by law publishes parliamentary proceedings in English and French sentence by sentence. The commonly used version holds 3,603,971 sentence pairs, close to a hundred million words on each side, assembled not for research but as a by-product of a national bilingual policy. The alignment problem is visible in one ordinary pair: "I do not speak French" and "Je ne parle pas français". Three words map cleanly, but English "not" corresponds to two French words, "ne" and "pas", with the verb sitting between them, and English "do" corresponds to nothing at all. A rule writer must handle each case explicitly; a counting system needs only to notice that "ne" and "pas" co-occur implausibly often whenever "not" appears. To book-keep one-to-many mappings, the IBM models gave each word a "fertility" — how many words it produces on the other side — not a concept borrowed from linguistics but an accounting device invented to keep the counting going. The shift is often summarised by Frederick Jelinek's quip that firing a linguist improves the system, a remark whose exact wording he himself disputed and which scholars have never pinned down. What it obscures is that the knowledge was not removed: alignment, segmentation and morphology still had to be handled, but the judgements moved from "someone decided this" to "this occurred so many times". Nor did statistics win quickly — rule-based systems such as Systran stayed competitive on some language pairs throughout the 1990s and 2000s, and hybrid systems later bolted statistical post-editing onto rule-based output.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>一个读不懂意思的评分脚本，比任何一条规则都更改变了这个领域</h2>
+<p>2002 年，IBM 另一组人提出一个打分办法叫 BLEU，做法粗暴得近乎可笑：把机器译文和几份人工参考译文放在一起，数连续词串的重合率——有多少单词、两词组合、三词组合是参考译文里也有的；再加一条惩罚，防止系统靠输出很短的句子骗分。它完全不懂意思，但一秒钟就能跑完。</p>
+<p>后果比它本身重要得多。在此之前评一次质量要请人读几天；之后改一个参数，半分钟就知道好没好。一个领域跑多快，不取决于点子多不多，取决于验证一个点子要等多久——这个脚本把等待从几天压到几十秒，于是十五年里所有人都在同一个坡上爬。</p>
+<p>代价也很快现形。2006 年有人专门去查这个分数靠不靠谱：BLEU 涨了不等于真变好，真变好了也不一定 BLEU 涨。他们给的对照很说明问题——规则系统 Systran 的 BLEU 偏低，请人评忠实度和流利度却不落下风，因为它选的词跟参考译文不一样、意思是对的，而分数只认字面重合。后来反复被验证的还有一条：译文质量越高，分数和人的判断相关得越松。它擅长认出很差的译文，认不出很好的译文。</p>
+<p>2014 年起神经网络进场，2016 年 9 月谷歌把线上的短语统计系统整个换掉（当时中译英每天约一千八百万次）。修好的部分是真的：句子读起来顺了，长距离的语序问题——比如动词在德语从句里要跑到最后——大面积缓解了。</p>
+<p>没修好的有三件。一是低资源：这套办法吃成对的句子，而约七千门语言里绝大多数没有这种材料，2022 年一个覆盖 200 门语言的模型就算里程碑了。二是幻觉：2018 年有人把 <em>dog</em> 连打十几遍、指定按毛利语译成英语，出来一段世界末日预言——那些语言的平行文本很大一部分是圣经译本，而输入是噪声时模型仍被训练成「必须输出像人话的东西」，于是它就编一段。三是两边语法的缝：土耳其语第三人称只有一个 o，不分他她，译成英语却必须选，系统长期把 <em>o bir doktor</em> 译成 he is a doctor、<em>o bir hemşire</em> 译成 she is a nurse——原文没有这个信息，目标语言强制要填，系统只能按语料里的多数猜。规则系统坏掉时吐的是看得出来的乱码，神经系统坏掉时吐的是很顺的假话。开头那种「顺而错」，根源在这里。</p>
+<p>所以手写语法为什么输了？不是因为语法是错的。规则能说清「这样说合法」，说不清「多半是这个意思」——规则表里没有「多半」这一栏，而翻译每一步要的正是这一栏。巴希勒尔那句话今天多半能译对，不是因为机器有了百科全书，是因为它见过足够多「盒子」和「围栏」同时出现的场合。这算不算懂要看标准：要一部可查、可问、可纠错的世界知识，它没有；要在这句话上给出跟懂的人一样的输出，它做到了。</p>
+<p class="en-brief"><b>EN</b> In 2002 a group at IBM proposed BLEU, a scoring method that is almost comically blunt: count how many word sequences in a machine translation also occur in several human reference translations, with a penalty to stop systems scoring well by staying short. It understands nothing, and it runs in a second. That mattered more than the metric itself. Evaluating a system had meant days of human reading; now a parameter change could be judged in half a minute. How fast a field moves depends less on its supply of ideas than on how long verifying one takes, and for fifteen years everyone climbed the same hill. The cost surfaced quickly. Callison-Burch, Osborne and Koehn (2006) showed that a BLEU gain is neither necessary nor sufficient for a real improvement, with a telling case: the rule-based Systran scored low on BLEU while holding its own on human ratings of adequacy and fluency, because it chose different words that meant the same thing. A repeatedly confirmed pattern is that the correlation with human judgement weakens as translation quality rises — the metric is good at spotting bad output, poor at ranking good output. Neural systems arrived from 2014, and in September 2016 Google replaced its phrase-based production system outright, at the time about eighteen million Chinese-to-English translations a day. Fluency and long-distance reordering genuinely improved. Two things did not. Parallel sentences are what the method eats, and most of the world's roughly seven thousand languages have almost none; a 2022 model covering two hundred languages counted as a milestone. And a new failure mode appeared: in 2018 people typed the word "dog" a dozen times, asked for Maori-to-English, and received an apocalyptic prophecy, because much of the available parallel text for such languages is scripture and the model is trained to emit something human-sounding whatever comes in. A rule-based system breaks into visible gibberish; a neural one breaks into fluent falsehood. A further class of error leaks from the gap between two grammars. Turkish has a single third-person pronoun, "o", with no gender; English forces a choice. Systems long rendered "o bir doktor" as "he is a doctor" and "o bir hemşire" as "she is a nurse" — not simply a biased model, but a slot the source language never filled and the target language demands, filled by whatever the corpus majority was. Google began returning both readings for such sentences in late 2018. So why did hand-written grammars lose? Not because grammar is wrong. A rule states what is permissible; it cannot state what is probable, and translation needs the second at every step. Bar-Hillel's sentence is mostly handled correctly today, not because a machine acquired an encyclopedia but because it has seen enough contexts where boxes and enclosures co-occur.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 投资与仓位</b>：你给自己定过规则——「跌到 -20% 就减半」「连续三根周线破位就清掉」。执行两年，每碰到一次不该触发的情况就补一条例外，现在这张表自相矛盾，真到了当口还是靠临场感觉。这正是「盒子在笔里」那节的困境：规则表里没有「多半」这一栏，每个例外只能变成一条新规则，而新规则会在你没看的地方生效。可改的动作：把每条规则改写成一句可数的话——「过去这条件出现过几次，之后 60 天里怎么样了」；样本凑不满 10 次的降级成提醒，不许自动执行。</li>
+<li><b>② 跨语言工作与生活</b>：你把一段中文消息丢进翻译器发给外国同事，译文流畅得挑不出毛病，对方回过来却答非所问。「读不懂意思的评分脚本」那节的机制说明这不是运气差：神经翻译把流畅和正确解耦了，而流畅恰好是你唯一能用来判断对错的线索。回译也没用，它会用同样的猜测把错误抹平。可改的动作：发之前把关键那句里的代词换成具体名词、把省略的主语补回去再翻——代词和省略正是中文默认省掉、英文强制要填的格子，也就是系统只能靠猜的地方。验收数对方反问「你是说 X 还是 Y」的次数。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>演化生物学 · 一个变异要多大才「被看见」，和一个句式要出现多少次才学得会，是同一道门槛</b>：自然选择也是一台不理解自己在做什么的机器，只按结果筛。群体遗传学算出了它的分辨率：一个突变的优劣幅度若小于大约 1/(2Ne)（Ne 是有效群体大小），选择就看不见它，命运交给随机漂变——这就是漂变屏障。跑的是「加拿大国会的会议记录」那节同一条机制：数出来的差异必须大过噪声，否则等于不存在。由此能推出一个平时不会这么想的结论：机器翻译译不好某个句式，多半不是因为它「复杂」，而是因为它在语料里太少；反过来，语法上刁钻却天天出现的句式会被学得很好。这可以直接去查——按语料频率排，不按语法难度排。<b>但这里不成立</b>的是能不能加样本：演化那边 Ne 由物种的生态决定，研究者动不了，漂变屏障是硬地板；翻译这边样本量只是预算问题，可以去爬、可以回译造数据。</li>
+<li><b>社会与制度 · 一个便宜的指标会把整个行业的方向掰过去，掰成什么样取决于指标和目标之间那条缝有多好钻</b>：纽约州从 1991 年起公开每位心脏外科医生的风险调整死亡率。后来两件事同时发生：死亡率确实降了，也出现了高风险病人被劝退、被转去外州的证据。跑的是「读不懂意思的评分脚本」那节的机制：一个便宜到可以天天跑的指标会接管方向盘，而它和真正目标之间那条缝会被单独优化。由此能推出比「有指标就会被钻」更具体的判断：钻法由缝的形状决定，不由人的品性决定。BLEU 的缝开在输出端——它只认字面重合，于是系统被推向更保守、更常见的用词。<b>但这里不成立</b>的是入口：外科医生能选择收谁，缝开在输入端；翻译系统改不了测试集，别人给什么就译什么。「拒收高风险病人」这一招在机器翻译里没有对应物——这也解释了为什么 BLEU 被钻了十五年，钻出来的是平庸而不是造假。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果当年经费没断，规则派再写三十年，能写成吗？</summary><p>巴希勒尔的论证不依赖算力：这类判断需要世界知识，而世界知识没法穷举成规则，纯规则那条路多半还是卡在同一处。但有个反例值得记住——领域极窄、句式极固定的场合，比如天气预报，规则系统当年就做到了可用，加拿大的英法天气预报翻译系统跑了很多年。条件是那个世界小到可以被写完。</p></details>
+<details><summary>「不理解意思也能译对」，说明意思不重要吗？</summary><p>更稳妥的读法是：意思仍然在起作用，只是被藏进了别人的行为里。那三百多万对句子是人译的，每一对都过了一遍理解。统计系统吃的是别人理解的结果——这也解释了它为什么在没人译过的领域上立刻变差。</p></details>
+<details><summary>一门语言缺少平行语料，是它的问题吗？</summary><p>不是。平行语料多，通常意味着那门语言背后有行政、宗教或商业上的翻译需求，跟语言本身的结构和表达力无关。加拿大国会记录是一部双语法律的副产品。把「机器译得好不好」读成「这门语言怎么样」，是把制度史误读成了语言事实。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://aclanthology.org/2004.amta-papers.12/">Hutchins，乔治城–IBM 1954 年演示回顾</a></li>
+<li><a href="https://aclanthology.org/www.mt-archive.info/Bar-Hillel-1960-App3.pdf">Bar-Hillel (1960)，全自动高质量翻译的不可行性</a></li>
+<li><a href="https://direct.mit.edu/books/book/3127/chapter/85723/The-1966-ALPAC-Report-and-its-Consequences">ALPAC 报告及其后果</a></li>
+<li><a href="https://aclanthology.org/J93-2003.pdf">Brown 等 (1993)，统计机器翻译的数学</a> · <a href="https://thewalrus.ca/how-canada-accidentally-helped-crack-computer-translation/">加拿大国会记录怎么成了语料</a></li>
+<li><a href="https://en.wikiquote.org/wiki/Fred_Jelinek">耶利内克那句话的版本考据</a></li>
+<li><a href="https://aclanthology.org/E06-1032/">Callison-Burch 等 (2006)，重新评估 BLEU 的角色</a></li>
+<li><a href="https://blog.research.google/2016/09/a-neural-network-for-machine.html">谷歌 2016 年换用神经翻译</a> · <a href="https://www.nature.com/articles/s41586-024-07335-x">把神经翻译扩到 200 门语言</a></li>
+<li><a href="https://www.vice.com/en/article/why-is-google-translate-spitting-out-sinister-religious-prophecies/">译文幻觉与低资源语料</a> · <a href="https://research.google/blog/providing-gender-specific-translations-in-google-translate/">性别歧义句的双译法</a></li>
+<li><a href="https://www.acsu.buffalo.edu/~talmy/talmyweb/Recent/verb.html.bak">Talmy，运动事件的两种打包方式</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13050581/">近中性理论与漂变屏障的实证检验</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S073510971201217X">纽约州心脏手术公开评级的历史与局限</a></li>
+</ul>
+</div>
+</div>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></html>
