@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>词的意思由它的邻居决定 — 语言学 Day 29</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -45,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 29 · 语言学</div>
-<h1>词的意思由它的邻居决定</h1>
+<h1 data-tts="a30854022ad2e932">词的意思由它的邻居决定</h1>
 <div class="sub">一个 1954 年就写下来的懒办法，今天几乎所有语言技术都还建在它上面</div>
 <div class="date">2026-09-25</div>
 <div class="pitch">四句话，里面有个你肯定没见过的词：桌上有一瓶 tezgüino。人人都喜欢 tezgüino。tezgüino 会让你喝醉。我们用玉米做 tezgüino。你现在大致知道它是什么了——没查词典，没人给过定义，也没人拿一瓶出来给你看。你刚才用的办法，恰好是机器唯一会用的那个；而它最诚实的地方在于，连「热」和「冷」都分不开。</div>
@@ -56,7 +57,7 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>你没查过 tezgüino，却知道它能喝、还会醉人</h2>
+<h2 data-tts="174ad1940b529270">你没查过 tezgüino，却知道它能喝、还会醉人</h2>
 <p>把那四句话拆开，线索一条条都在：「一瓶」说明它是液体、有容量；「桌上」把它放进吃饭的场合；「人人都喜欢」说明是消费品不是工具；「会让你喝醉」一句就推进了含酒精那一类；「用玉米做」给了原料。五条合起来圈出一小块位置，而啤酒、米酒也在那块位置上。你知道的其实是「它跟谁站在一起」。</p>
 <p>1954 年，语言学家哈里斯（Zellig Harris）把这件事写成一条主张：两个词的意思差多远，可以从它们出现的环境差多远看出来。三年后，英国语言学家弗斯（J. R. Firth）留下了那句被引用无数次的话——你要认识一个词，看它跟谁来往。两句都在说：别问这个词指向世界上的什么，去看它的邻居。这在当时只是个操作技巧，却有个六十年后才显出分量的副作用——邻居可以数，「指向世界上的什么」不可以。</p>
 <p>现在看盲点。把这句补完：「杯子里的水是＿＿的。」热、冷都填得进去。英文同样：<em>the coffee is hot</em> 和 <em>the coffee is cold</em> 一样自然。「这件衣服很＿＿」，贵、便宜都行；「他往＿＿开了两小时」，东西南北随便挑。意思正相反的一对词，偏偏最能互相替换——因为它们要求的邻居几乎完全一样。</p>
@@ -65,7 +66,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>把一张几万乘几万、格子大多是零的表，压成每个词三百个数</h2>
+<h2 data-tts="4cc85ba7c9026a85">把一张几万乘几万、格子大多是零的表，压成每个词三百个数</h2>
 <p>怎么把「邻居」变成机器能算的东西？最笨的办法就是最早的办法：开一张大表，每行一个词、每列也一个词，格子里填这两个词在同一小段文字里一起出现过多少次。tezgüino 那行在「瓶」「醉」「玉米」几列上有数，在「螺丝刀」那列是零；酒那行长得跟它很像。相似度就是两行有多像。</p>
 <p>问题是这张表既巨大又几乎全空：绝大多数词很少出现，绝大多数词对从没一起出现过，一张五万乘五万的表有用的格子可能不到百分之一。</p>
 <p>所以要压。1990 年一组做文献检索的人提出潜在语义分析（latent semantic analysis）：把那张又大又空的表挤成每个词几百个数，挤的时候「汽车」和「轿车」这种总跟同一批词做邻居的行会被合并到相近位置，哪怕它俩从没同句出现过。1997 年兰道尔（Thomas Landauer）和杜迈（Susan Dumais）拿它去考试：用一套百科全书的三万多篇文章（约四百六十万词）训练，做托福同义词选择题，八十道四选一。它答对 64.4%，而同一份题目当年来自非英语国家的申请者平均约 65%。这个数要读得小心：它说明只数共现能在某个特定题型上达到某个人群的平均分，不说明程序「懂英语」——同义词选择题恰好是分布法的主场。</p>
@@ -124,7 +125,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>它学到的是词的意思，还是人用词的习惯</h2>
+<h2 data-tts="b2b062fc3b4f7927">它学到的是词的意思，还是人用词的习惯</h2>
 <p>2017 年，卡利斯坎（Aylin Caliskan）和同事在《科学》上把心理学测内隐联想的那套题目原样搬到从网络文本训练的词向量上。结果一条条对上——花类词离愉快的词更近、昆虫类词离不愉快的词更近，这是人身上测过很多次的老结果；而职业词跟女性称谓的接近程度，和该职业实际的女性比例正相关。</p>
 <p>关键的读法不是「向量有偏见」，而是它只有共现，所以分不开两件事：「护士跟女性一起出现得多」里，一半是劳动统计上的事实，一半是叙述上的惯性，共现次数对两者一视同仁。要分开，需要的恰好是这套办法从设计上就没有的——词表之外的世界。</p>
 <p>还有个更基础的限制：一个词只给一串数，而这串数只能是它所有用法的平均。汉语的「打」就很难办——打电话（dǎ diànhuà，通话）、打水（dǎ shuǐ，取水）、打毛衣（dǎ máoyī，织毛衣）、打车（dǎ chē，叫出租车），邻居分成好几簇，平均到一个位置上谁也不像。英语 bank 同理，河岸和银行共用一个位置。后来的模型改成每次出现单算一个位置，同一个「打」在不同句子里落在不同地方。</p>
@@ -133,27 +134,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> In 2017 Aylin Caliskan and colleagues did something clean in Science: they took the standard psychological test for implicit association and ran it, unchanged, on word vectors trained from web text. The results lined up one by one — flower words sit closer to pleasant words and insect words closer to unpleasant ones, a much-replicated human finding; and the closeness of occupation words to female terms correlates positively with the actual share of women in those occupations. The right reading is not "vectors are biased" but that co-occurrence is all they have, so they cannot separate two things. "Nurse occurs near female terms" is half a fact about the labour force and half an inertia of how people write, and counting treats both alike. Telling them apart requires exactly what the method lacks by design: a world outside the word list. A more basic limit: one word gets one string of numbers, and that string can only be the average of all its uses. Mandarin 打 (dǎ) is a hard case — 打电话 (dǎ diànhuà, "make a phone call"), 打水 (dǎ shuǐ, "fetch water"), 打毛衣 (dǎ máoyī, "knit a sweater"), 打车 (dǎ chē, "hail a taxi"). The neighbours fall into several clusters and one averaged position resembles none of them. English "bank" has the same problem, the riverside and the institution sharing a spot. Later models give every occurrence its own position instead, which is where context begins. What about people? People use distribution too: pre-verbal infants already track which syllables keep each other's company, as the statistical-learning story described. The difference lies elsewhere, and it is concrete enough to test. In 1978 Susan Carey and Elsa Bartlett told three- and four-year-olds "bring me the chromium tray, not the blue one, the chromium one"; the children brought the olive one, and a week later still linked the word to that colour. This is fast mapping, and it does not run on counts — it runs on the child seeing two trays and ruling out the one that already has a name. So the testable difference: a word needs dozens to hundreds of occurrences before it has a decent position in a co-occurrence space, and a child needs one. The reverse holds too — no person will ever read the millions of documents a count can cover. On replication: a single exposure yields partial knowledge, and how long it lasts is still disputed, with reports both of a month's retention and of rapid loss. In 2020 Emily Bender and Alexander Koller drew the line harder with a fable: an octopus taps an undersea cable, eavesdrops on two people ashore, and eventually holds up its end of the conversation seamlessly — having never seen anything on land. Asked one day how to fend off a bear with a few sticks, it has nothing. Their claim is that meaning cannot be learned from form alone. The counter is not weak either: plenty of words that people share are learned purely from how others use them — most speakers of "inflation" or "justice" have never seen what those point at. The argument is unsettled. What is certain is narrower: the distributional hypothesis gives a word's position inside language, and says nothing about where that position is pinned to the world.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="8edc2c126a514f69">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 写作与表达</b>：你那份设计文档里，「任务」第 3 页指用户提交的一次作业，第 9 页指调度器里的一个执行单元。你心里分得清，读者只有「你没查过 tezgüino」那节的办法可用，而两处的邻居恰好都是「提交 / 队列 / 失败重试」，分布重合就区分不了。可改的动作：定稿前把每个关键术语搜出来、按出现的句子排成一列看，同一个词的邻居分成两簇就拆成两个词，两个词的邻居完全重合就删掉一个。验收数评审会上「你这儿说的是哪个意思」这类打断。</li>
 <li><b>② 带团队与组织</b>：新人来三周，开会已经跟着说「这个先走灰度」「顺手埋个点」，听着很顺，直到某次用在明显不适用的场合。他学的路径就是共现，而分布只给「像什么」不给「不是什么」——反义词分不开那条盲点，在这里就表现为边界学不到。可改的动作：黑话表里每条别写定义，写一句「它不是什么」加一个最容易混的近邻（「灰度不是 A/B 实验，区别在于前者是为了控制爆炸半径」）。验收数新人第一次独立用这个词时被纠正的次数。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="03dc5fb89b2f08f5">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>佛学 · 「牛」的意思是「不是非牛」——一套公元六世纪就写下来的、纯靠差别定义意思的理论</b>：印度佛教因明有个主张叫遮诠（apoha，字面就是「排除」）：陈那（Dignāga，约公元五到六世纪）提出，「牛」并不正面指向一类实有的东西，它是靠排除掉所有非牛而成立的。跑的机制和本期同一条：一个词的位置由它跟谁不同确定，不由它自己装着什么确定。由此推出一个原本看不出的结论——「热」「冷」分不开不是工程没做好，而是这套理论自己的推论：若意思纯粹是差别，两个对比集合完全重合的词就必然不可区分。这还给出一个可做的检验：按「对比集合的重合度」给词排序，它应该能预测向量距离，而且在反义词上预测得最准。<b>但这里不成立</b>的是排除的依据：因明里的排除是有目的的，后来的论师把它落在「能不能达成某个实际效果」上——挤奶、耕地，所以牛才被划成一类；共现计数没有目的，它能排除的只是「没一起出现过的词」。遮诠说得出为什么牛和马是两类，分布法只能报告这两个词很像。</li>
 <li><b>心理学 · 同样是把词摆进一个空间，坐标从人嘴里来还是从文本里来，结果在反义词上必然打架</b>：1957 年奥斯古德（Charles Osgood）做过语义微分：让人给一个词在「好—坏」「强—弱」「快—慢」这类两端刻度上打分，再做因子分析，反复只析出三个维度——评价、力量、活动，且在许多语言的社群里都重复出来。机制对照很清楚：两边都在给词算位置，但一边的坐标来自人的反应，另一边来自文本共现。由此推出一个方向确定、可检验的差异：两套坐标在反义词上必然最不一致——「好」和「坏」在共现空间里几乎重合，在评价那一维上却是最远的一对。反义词不是测不出来，是得换一种量具去测。<b>但这里不成立</b>的是覆盖面：语义微分只有三维且全是情绪色彩，它分不开「猫」和「狗」（两边都偏好、偏活跃），共现空间轻松分开。谁的信息多，取决于你问的是哪种区别。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="2f9bdf254b47ec42">深入思考</h3>
 <details><summary>用邻居定义意思，邻居也是词——这会不会转圈？</summary><p>会，这正是批评者最常指的地方：整个系统内部自洽，却没有一个点钉在世界上。一种回应是转圈不等于没用，一张只有相对位置的地图照样能指路，只要你站在地图上某处。另一种更老实：共现统计本来就不打算给出意思，它给的是相似度，而相似度本来就是相对的。</p></details>
 <details><summary>一门语言没什么文本，是不是注定做不出好的词向量？</summary><p>材料少确实做不出，但要分清这是什么的问题。文本量反映的是这门语言背后有没有出版、行政、宗教上的书写需求，跟它的结构和表达力无关。把「模型在这门语言上表现差」读成「这门语言怎么样」，是把制度史误当成语言事实。</p></details>
 <details><summary>章鱼那个寓言，换成一个天生看不见的人还成立吗？</summary><p>这是对它最有力的反驳之一：从没见过颜色的人照样能正确使用颜色词、能讨论红比粉深，没人说他不懂这些词。可反方也有话说——他仍生活在物体、温度、重量、他人反应之中，语言并非唯一输入。焦点因此不是「要不要有眼睛」，而是「除了词还需要多少别的」，这个量至今没人给得出。</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="8dddfc2fbb1fc40c">延伸阅读</h3>
 <ul>
 <li><a href="https://link.springer.com/chapter/10.1007/978-94-009-8467-7_1">Harris (1954)，分布结构</a> · <a href="https://en.wikipedia.org/wiki/John_Rupert_Firth">弗斯与「看它跟谁来往」那句话</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Distributional_semantics">分布语义学总览</a></li>
@@ -169,8 +170,8 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 </div>
-<script src="https://hub.cissychen.com/comments.js" defer></script>
-<script src="https://hub.cissychen.com/search.js" defer></script>
-<script src="https://hub.cissychen.com/index-button.js" defer></script>
-<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
-</body></html>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></head></html>
