@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Where Does a Word End — Linguistics Day 30</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<div class="container">
+<header>
+<div class="kicker">Day 30 · Linguistics</div>
+<h1>Where Does a Word End</h1>
+<div class="sub">Nobody ever taught you where Chinese word boundaries fall, and you have never once got one wrong; what a machine needs is precisely the rule you cannot write down</div>
+<div class="date">2026-09-26</div>
+<div class="pitch">In 1996 six native speakers of Chinese were asked to mark the word boundaries in the same hundred sentences. Compared pair by pair, they agreed on only about 76 percent. Nobody's Chinese was deficient — the unit "word" simply has no shared answer in Chinese. And the first processing step in every large language model today handles this by declining to answer it.</div>
+</header>
+<div class="intro">
+<p>乒乓球拍卖完了 (pīngpāngqiú pāimài wán le) — how did you just read that? It can be cut as 乒乓球拍 / 卖完了, "the ping-pong paddles are sold out", or as 乒乓球 / 拍卖 / 完了, "the ping-pong balls have been auctioned off". Seven characters, two places to cut, both readings perfectly ordinary Chinese, and two completely different pieces of news.</p>
+<p>Sentences like that look like party tricks. What they expose is something that happens tens of thousands of times a day in front of your eyes without your noticing: when you read Chinese you are constantly cutting, and the cut is not printed on the page. You do it fast and you do it right, but if someone asked you to write down the rule you use, you could not. And the surprise is that this is not a Chinese problem. Languages with spaces have merely hidden the same question inside the spaces, hidden it so well that everyone assumes it isn't there.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>Six native speakers marked word boundaries in the same hundred sentences, and pairs of them agreed on 76 percent</h2>
+<p>Ambiguous sentences are actually rare, and context usually settles them. The hard cases are ordinary sentences.</p>
+<p>In 1996 Sproat, Shih, Gale and Chang did something very plain: they took 100 Chinese sentences at random, 4372 characters in all, asked six native speakers (three from the mainland, three from Taiwan) to mark the word boundaries, and then compared every pair of answers. Average agreement between pairs was only about 76 percent.</p>
+<p>Where does the disagreement come from? Not from comprehension, but from how far up the unit "word" reaches. Is 北京大学 (Běijīng Dàxué, "Peking University") one word or two? Does the aspect marker 了 (le) in 吃饭了 (chīfàn le, "has eaten") belong inside the word or not? There is no right answer here, only convention — and the consequences of unshared convention are directly visible. At the first international Chinese word segmentation bakeoff in 2003, the annotated corpora came from several institutions — Peking University, Academia Sinica, City University of Hong Kong and others — each with its own way of cutting, so systems could only be scored against each standard separately. Move the same system to a different standard and its score moves visibly. A number like "98 percent segmentation accuracy" is always stated relative to one convention.</p>
+<figure>
+<svg role="img" aria-label="Diagram: one string of seven Chinese characters, cut in two different places, both readings valid" viewbox="0 0 640 275" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="275" width="640" x="0" y="0"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="110" y="130">乒</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="180" y="130">乓</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="250" y="130">球</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="320" y="130">拍</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="390" y="130">卖</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="460" y="130">完</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="530" y="130">了</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="228">(pīngpāngqiú pāimài wán le)</text>
+<line stroke="#e0a458" stroke-width="2" x1="355" x2="355" y1="76" y2="106"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="64">One cut: 乒乓球拍 / 卖完了 — "paddles sold out"</text>
+<line stroke="#7fb3d5" stroke-width="2" x1="285" x2="285" y1="144" y2="174"></line>
+<line stroke="#7fb3d5" stroke-width="2" x1="425" x2="425" y1="144" y2="174"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="320" y="194">Two cuts: 乒乓球 / 拍卖 / 完了 — "balls auctioned off"</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="320" y="254">Seven characters, no boundary marked; both cuts are grammatical and both mean something</text>
+</svg>
+<div class="cap">The amber cut and the two blue cuts fall in different places, and the meaning changes. The point is that nowhere in those seven characters is it written that the cut goes here.</div>
+</figure>
+<p>What is easiest to overlook is that none of this is peculiar to Chinese. English has spaces, yet <em>don't</em> packs two words into one space-delimited block and <em>New York</em> spreads one word across two. Vietnamese is blunter: it writes spaces, but the spaces separate syllables rather than words — <em>thuế thu nhập cá nhân</em> is five syllables and two words, <em>thuế thu nhập</em> (income tax) plus <em>cá nhân</em> (individual). Thai writes no spaces between words at all, reserving them for clauses and sentences, so <em>ข้าวเย็น</em> (romanised khâao yen, literally "rice" plus "cool/evening") is either the single word for dinner or the phrase "rice that has gone cold".</p>
+<p>So a space is a typographic convention, not a linguistic fact: it outsources the boundary question to whoever fixed the writing habits some centuries ago. Languages without spaces simply leave the question where it was, and whoever wants to process them has to answer it.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>An algorithm written in 1994 to shrink files became the first processing step in every large language model</h2>
+<p>In 1994 Philip Gage published a very short piece in a magazine for C programmers, describing a crude way of compressing files, later known as byte pair encoding, or BPE. The rule fits in one sentence: find the pair of adjacent bytes that occurs most often in the file, replace it with a symbol not yet in use, write the substitution down, and repeat. High-frequency combinations get merged into longer and longer units, and the file shrinks.</p>
+<p>Take a small pile of words. Suppose all you have is low, lower, newer, wider, split into single letters to begin with. Count the adjacent letter pairs: "e" followed by "r" occurs three times, more than anything else, so "er" is merged into one unit; count again, merge again. After a few thousand rounds, common words are in the table whole and rarer ones survive as fragments. The whole process uses one piece of information: what tends to sit next to what.</p>
+<figure>
+<svg role="img" aria-label="Diagram: the first byte-pair-encoding merge, joining the e and r that occur three times" viewbox="0 0 640 205" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="205" width="640" x="0" y="0"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="30" y="34">Start: every letter is its own unit</text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="30" y="62">l o w e r</text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="190" y="62">n e w e r</text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="350" y="62">w i d e r</text>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" x="30" y="98">Count once: adjacent e r occurs three times, the most → merge it</text>
+<line stroke="#e0a458" stroke-dasharray="3 3" stroke-width="1.4" x1="90" x2="130" y1="70" y2="86"></line>
+<line stroke="#e0a458" stroke-dasharray="3 3" stroke-width="1.4" x1="250" x2="215" y1="70" y2="86"></line>
+<line stroke="#e0a458" stroke-dasharray="3 3" stroke-width="1.4" x1="410" x2="300" y1="70" y2="86"></line>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="30" y="136">After the merge</text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="30" y="164">l o w <tspan fill="#e0a458">er</tspan></text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="190" y="164">n e w <tspan fill="#e0a458">er</tspan></text>
+<text fill="#e4e8f2" font-family="monospace" font-size="15" x="350" y="164">w i d <tspan fill="#e0a458">er</tspan></text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="30" y="194">Repeat a few thousand times. It knows only what adjoins what, not that er is a suffix</text>
+</svg>
+<div class="cap">What the first merge looks like. The only reason this step happens is that the pair e r came out on top of the count; it has nothing to do with the notion of a suffix.</div>
+</figure>
+<p>In 2016 Sennrich, Haddow and Birch moved this compression algorithm into machine translation, to cure the rare-word problem: with a fixed vocabulary, a word outside it left the old systems nothing to emit but "unknown", whereas once words are cut into fragments there is no outside.</p>
+<p>One thing here is easy to slide past: what BPE produces is not morphemes (a morpheme being the smallest unit that still carries meaning, like un- or -ing). It has no notion that un- is a prefix; it knows only which pieces sit together often. Sometimes the pieces happen to line up with meaningful units, sometimes they do not at all, and an unusual proper name may come out as six fragments that individually denote nothing. The meaningful parts discussed in the topic on how words are assembled coincide with these fragments only occasionally.</p>
+<p>And its sharpest, most misread move is this: it never answers the question "what is a word". The question that had six native speakers disagreeing in the section above is one BPE does not touch. It substitutes a question that needs no answer — which character strings habitually occur together. This is the same kind of victory as in the topic where hand-written grammars lost to counting: the winning move was not understanding language better, it was admitting you don't and going around.</p>
+<p>Later models went further and cut from raw bytes, so that no script is ever outside the table. The cost is conspicuous for Chinese: UTF-8 encodes each character in three bytes, so an uncommon character becomes three tokens that individually denote nothing. The same string 乒乓球拍卖完了 (pīngpāngqiú pāimài wán le), "the ping-pong balls have been auctioned off", is three units by word, seven by character, twenty-one by byte. Which of those is the natural unit? None of them.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>Put thousands separators in the numbers and the model's arithmetic improves</h2>
+<p>How the cutting is done is settled before training begins, and then frozen. Those frozen cuts grow into the model's abilities and its defects.</p>
+<p>The easiest thing to measure is length. In 2023 Petrov and colleagues took one passage translated into many languages and counted the tokens under standard tokenizers: longest to shortest differed by as much as fifteen times. That converts directly into the per-token price, the latency of generation, and how much a context window of fixed size can hold. What matters is not to read this as a ranking of languages: a token vocabulary is fitted to a corpus, and whoever's text dominates that corpus gets the cheap encoding. It is a fact about corpora, not about languages.</p>
+<p>Numbers are subtler. The GPT-3.5 and GPT-4 vocabulary holds entries for digit strings of one, two and three digits, and cuts them greedily from left to right: 12345 becomes 123 and 45. So the very same chunk "123" sits in the thousands place in one number and the units place in another — chunk boundaries follow the total length of the number rather than place value. In 2024 Singh and Strouse tried one thing: write the numbers with thousands separators, as 1,234,567. The comma is a hard boundary, so every chunk lines up with a fixed place value. With the commas in, both models' accuracy on addition rose measurably — same model, same problem, only the cutting changed.</p>
+<p>Then the example that has been worn out: ask a model how many r's are in "strawberry". It cannot answer, not because it cannot count, but because what it sees is not ten letters but two or three whole blocks, with the letters sealed inside. This is not flatly impossible either — work in 2025 found that character-level ability does emerge during training, just late and abruptly. The two findings differ in evidential strength: the comma result is a controlled intervention, so the causal claim is firm, whereas "the letters are sealed in" is a plausible and well-supported explanation rather than the only one.</p>
+<p>The strangest class is glitch tokens. The tokenizer and the model are trained in two separate steps, so some strings are frequent enough in the tokenizer's data to earn a slot in the table while the model's own training data has been cleaned of them. In 2023 people fed GPT the string "SolidGoldMagikarp" and its responses went entirely off the rails — a slot in the table, nothing in experience.</p>
+<p>People have a grid of their own, of course. As the topic on the grid the brain draws over sound described, the distinctions squeezed out of that grid become inaudible to you. But there is a difference here that runs in a clear direction and can be tested: a human grid can be reopened. An adult who cannot hear the difference between English "l" and "r" can raise their discrimination score with targeted training, and you can spell any word out letter by letter whenever you like. A model's token vocabulary is fixed before it sees its first training example; after that it can only work around the cuts, and where it cannot, you get the errors that look absurdly stupid.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Practice · BigCat</h3>
+<ol>
+<li><b>① Engineering and system design</b>: You built retrieval over a pile of internal documents, chunking them every 500 characters. After launch the same complaint keeps coming back: the answer is plainly in the document and simply cannot be found — and when you look, the crucial sentence has been cut across the seam between two chunks, half on each side. This is the mechanism from the section on six native speakers marking boundaries, moved over unchanged: take a ruler that has nothing to do with the content and you will cut through the very unit you needed whole. What to change: chunk on heading and paragraph boundaries instead of fixed length, with an overlap between neighbours; and change the acceptance metric from "how many chunks came back" to "does the sentence the answer needs sit whole inside one chunk", using the questions people complained about as a regression set.</li>
+<li><b>② Practice and inner life</b>: Anyone who has done labelling of emotions has probably run into this: something arises, you tag it "anxiety", "irritation", "dullness", and after a long time you notice you are circling the same three or four tags, while the state that actually keeps recurring is only half-covered by any of them. This is the other face of the glitch-token passage — the label table was fixed before the experience arrived, so a distinction with no slot in it is one you cannot retain, and it gets forced into the nearest box. What to change: on the occasion when a tag is only half right, stop tagging and record two observable things instead — where in the body it sits and roughly how long it lasts; keep that for two or three weeks and then see whether it deserves a new name. The check is whether a new name appears.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Connections Beyond the Field</h3>
+<ul>
+<li><b>Complexity science · No vocabulary is ever large enough, and the distribution itself guarantees that; it is not a shortfall of engineering</b>: Word frequencies in a corpus follow Zipf's law: ranked by number of occurrences, the second is about half the first and the third about a third, with a long, thin tail. Its companion, Heaps' law, says that the larger the corpus, the more distinct word forms you have seen, at an ever slower rate but never reaching a ceiling. How thin the tail is can be measured: in one Twitter corpus of 1.8 billion words, about 62 percent of the 13.26 million distinct forms occur exactly once. The mechanism at work is the one from the section on the 1994 compression algorithm: BPE merges from high frequency down, and there is always something further out on that tail. From this follows a conclusion that is not otherwise visible — subword splitting is not a convenient approximation but the only available route under this distribution: any vocabulary of fixed size must miss infinitely many word forms. It also yields a prediction you can check: the more inflectional morphology a language has, the heavier its tail of word forms, and the more tokens each word costs at a given vocabulary size — which is roughly the ordering in Petrov's figures. <b>Where it does not hold</b>: Zipf's law is computed over units that have already been cut. To say that word frequencies follow a power law, you must first decide what counts as a word, and that is exactly what the section on marking boundaries has been arguing about for thirty years. The law tells you how long the tail is; it is no help whatsoever in finding where the boundaries are.</li>
+<li><b>Genetics and molecular biology · The ribosome also has to cut a long string with no delimiters in it, and its solution is one language cannot use</b>: When the information in DNA is turned into protein, the sequence is read three bases at a time, yet nothing on the strand marks the groups. In 1961 Crick, Barnett, Brenner and Watts-Tobin ran a beautiful experiment on a bacteriophage: insert one base into a gene and the gene is ruined; insert two and it is still ruined; insert three and function largely returns — which proves the reading goes in threes, since three insertions shift the whole thing by exactly one group and everything downstream realigns. The mechanism is this topic's own: units have to be cut out of a continuous string, and the cut is not in the signal. From this follows a conclusion one does not normally reach: life really did solve this problem, and the solution was to put a delimiter into the signal — the start codon pins the reading frame once, and everything after it is determined. Language has nothing of the kind, so the shape of the errors differs on the two sides, measurably: get the frame wrong by one and everything downstream is destroyed, whereas a mis-cut word usually ruins only that spot and reading continues. <b>Where it does not hold</b>: at the level of ambiguity. Once the frame is set, each triplet corresponds to exactly one amino acid, and the ribosome never has to choose between two readings that both work; whereas both cuts of 乒乓球拍卖完了 (pīngpāngqiú pāimài wán le) — "paddles sold out" or "balls auctioned off" — are grammatical and both mean something. So "just add a delimiter" is not a road language can take — Chinese is not short of a start codon; even given a starting point, every step after it is still genuinely two-way.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>If segmentation standards disagree in the first place, what is "98 percent segmentation accuracy" measuring?</summary><p>Agreement with one set of annotations, not agreement with a fact; move to another standard and the same system loses a good many points. This is not gaming a metric — the metric's definition is bound to a convention by construction. To compare across standards you have to switch to downstream tasks instead: does retrieval find the right thing, do the pauses in speech synthesis fall in the right places.</p></details>
+<details><summary>Large models work without segmenting words, so does Chinese word segmentation still matter?</summary><p>It does; it has only moved. A model can decline to answer "what is a word"; someone building a product cannot. Search indexing needs word boundaries, the pauses in speech synthesis need them, and so do braille transcription, spacing in children's books and dictionary-making. The question the model walked around has been handed to the people downstream.</p></details>
+<details><summary>If a language costs unusually many tokens under some tokenizer, does that mean the language is inefficient?</summary><p>No. The token vocabulary is fitted, and whoever's text dominates the fitting corpus gets the shorter encoding; give the same language a tokenizer trained for it and the token count drops noticeably. Reading "expensive under this tokenizer" as "this language is inefficient" mistakes the composition of a corpus for a property of a language.</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://aclanthology.org/J96-3004/">Sproat et al. (1996), Chinese segmentation and the agreement of six native speakers</a> · <a href="https://link.springer.com/article/10.1186/s40655-017-0032-5">A later survey of word intuitions among Chinese speakers</a></li>
+<li><a href="https://aclanthology.org/W03-1719/">The first international Chinese word segmentation bakeoff (2003)</a></li>
+<li><a href="https://arxiv.org/abs/1709.06307">Vietnamese segmentation: the spaces separate syllables</a> · <a href="https://www.cambridge.org/core/journals/language-and-cognition/article/effects-of-interword-spacing-and-morphological-complexity-in-reading-thai-an-eyetracking-study/C0CB923E9C0F8BA6AB0D0BBEF8A80775">Reading Thai, which has no interword spaces</a></li>
+<li><a href="https://www.semanticscholar.org/paper/A-new-algorithm-for-data-compression-Gage/1aa9c0045f1fe8c79cce03c7c14ef4b4643a21f8">Gage (1994), a new algorithm for data compression</a> · <a href="https://aclanthology.org/P16-1162/">Sennrich et al. (2016), rare words and subword units</a></li>
+<li><a href="https://arxiv.org/abs/2305.15425">Petrov et al. (2023), tokenizers and unfairness between languages</a> · <a href="https://direct.mit.edu/coli/article/49/4/943/116635/Languages-Through-the-Looking-Glass-of-BPE">BPE compression seen across languages</a></li>
+<li><a href="https://arxiv.org/abs/2402.14903">Singh &amp; Strouse (2024), how tokenization affects arithmetic</a> · <a href="https://aclanthology.org/2025.emnlp-main.1434/">Late emergence of character-level ability</a></li>
+<li><a href="https://arxiv.org/abs/2405.05417">Automatically finding under-trained tokens (glitch tokens)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zipf%27s_law">Zipf's law</a> · <a href="https://en.wikipedia.org/wiki/Heaps%27_law">Heaps' law</a> · <a href="https://en.wikipedia.org/wiki/Hapax_legomenon">Words that occur exactly once</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Crick,_Brenner_et_al._experiment">Crick, Brenner et al., the 1961 triplet-code experiment</a> · <a href="https://en.wikipedia.org/wiki/Reading_frame">Reading frames and frameshifts</a></li>
+</ul>
+</div>
+</div>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></head></html>
