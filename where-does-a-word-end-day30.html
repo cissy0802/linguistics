@@ -46,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 30 · 语言学</div>
-<h1>切词这件小事</h1>
+<h1 data-tts="acdde0b2d67d234d">切词这件小事</h1>
 <div class="sub">你从没学过汉语的词边界在哪，却一次也没读错；机器要的恰恰是这条你写不出来的规则</div>
 <div class="date">2026-09-26</div>
 <div class="pitch">1996 年有人找来六位中文母语者，给同一百句话划词边界，两两比对只有约七成六对得上。不是谁的中文差——「词」这个单位在汉语里本来就没有一份公共答案。而今天每个大模型开工前的第一道工序，处理这件事的办法是：不回答它。</div>
@@ -57,12 +57,12 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>六个母语者给同一百句中文划词，两两之间只对上七成六</h2>
+<h2 data-tts="bb1cdaff391fbfeb">六个母语者给同一百句中文划词，两两之间只对上七成六</h2>
 <p>歧义句其实少，上下文通常也能定。难的是普通句子。</p>
 <p>1996 年，Sproat、Shih、Gale、Chang 四个人做了件很朴素的事：从语料里随机抽 100 句中文、共 4372 个字，请六位母语者（三位来自大陆、三位来自台湾）各自划出词的边界，再把每两个人的答案对一遍。两两之间的一致度平均只有约 76%。</p>
 <p>分歧不在读懂没读懂，在「词」这个单位算到哪一层。「北京大学」是一个词还是两个？「吃饭了」里那个「了」算不算进去？这些地方没有对错，只有约定。约定不统一的后果直接可见：2003 年第一届国际中文分词评测，参评的标注语料来自北京大学、台湾中研院、香港城市大学等好几家，划法互不相同，评测只能按不同标准分别算分——同一个系统换一份标准，分数明显变化。「分词准确率 98%」这种数字，从来都是对着某一份约定说的。</p>
 <figure>
-<svg role="img" aria-label="示意图：同一串七个汉字的两种切法，两种读法都成立" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
+<svg aria-label="示意图：同一串七个汉字的两种切法，两种读法都成立" role="img" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#19202f" height="250" width="640" x="0" y="0"></rect>
 <text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="110" y="130">乒</text>
 <text fill="#e4e8f2" font-family="Georgia, serif" font-size="26" text-anchor="middle" x="180" y="130">乓</text>
@@ -86,11 +86,11 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>一个 1994 年为了压缩文件写的算法，成了今天每个大模型的第一道工序</h2>
+<h2 data-tts="f71d4c3c3c61b0ec">一个 1994 年为了压缩文件写的算法，成了今天每个大模型的第一道工序</h2>
 <p>1994 年，Philip Gage 在一本面向 C 语言程序员的杂志上发了篇很短的文章，讲一个压缩文件的土办法，后来叫字节对编码（byte pair encoding，常简称 BPE）。做法一句话讲完：找出文件里出现最多的那一对相邻字节，换成一个没用过的新符号，记一笔账，然后重复。高频组合越并越长，文件就短了。</p>
 <p>拿一小堆词演示。假设手上只有 low、lower、newer、wider，先全拆成单个字母。数一遍相邻字母对：e 后面跟 r 出现三次，最多，于是把 er 并成一块；再数，再并。几千次之后，常见的词整块进了表，罕见的词留成碎片。整个过程只用一件信息：谁和谁常挨着。</p>
 <figure>
-<svg role="img" aria-label="示意图：字节对编码的第一次合并，把出现三次的 e r 并成一块" viewbox="0 0 640 205" xmlns="http://www.w3.org/2000/svg">
+<svg aria-label="示意图：字节对编码的第一次合并，把出现三次的 e r 并成一块" role="img" viewbox="0 0 640 205" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#19202f" height="205" width="640" x="0" y="0"></rect>
 <text fill="#8d95a8" font-family="Georgia, serif" font-size="12" x="30" y="34">开始：每个字母各自一块</text>
 <text fill="#e4e8f2" font-family="monospace" font-size="15" x="30" y="62">l o w e r</text>
@@ -116,7 +116,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>给数字加上千分位逗号，模型的算术就准了一截</h2>
+<h2 data-tts="e5499c7a2d8d3694">给数字加上千分位逗号，模型的算术就准了一截</h2>
 <p>切法在训练开始之前就定下来，定完冻住。冻住的那几刀，会一路长成模型的能力和缺陷。</p>
 <p>最好量的是长度。2023 年 Petrov 等人把同一段文本翻成很多种语言，量各家切法下的 token 数：最长和最短差到 15 倍。这直接换算成按 token 计费的价钱、生成的延迟、和同样的上下文窗口能装多少内容。别把这读成语言的高下：token 表是在一批语料上拟合出来的，那批语料里谁的文本多，谁的切法就便宜——这是语料构成的事实，不是语言的事实。</p>
 <p>更精巧的是数字。GPT-3.5 和 GPT-4 那套 token 表给一位到三位的数字串都留了位置，切的时候从左往右贪心地切：12345 被切成 123 和 45。于是同样是「123」这一块，在一个数里站千位、在另一个数里站个位——块边界跟着数字总长度走，不跟着位值走。2024 年 Singh 和 Strouse 试了一招：给数字加上千分位逗号，写成 1,234,567。逗号是硬边界，每一块就都对齐到固定位值上了。加了逗号，这两个模型做加法的正确率明显上升——同一个模型、同一道题，只改了怎么切。</p>
@@ -126,27 +126,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> Segmentation is decided before training starts and then frozen; those cuts grow into the model's abilities and its defects. The easiest thing to measure is length. Petrov and colleagues (2023) took one passage translated into many languages and counted tokens under standard tokenizers: longest to shortest differed by up to fifteen times, which converts directly into per-token price, latency, and how much fits in a fixed context window. This is not a ranking of languages: a token vocabulary is fitted to a corpus, and whoever's text dominates that corpus gets the cheap encoding. It is a fact about corpora, not about languages. Numbers are subtler. The GPT-3.5 and GPT-4 vocabulary holds entries for one-, two- and three-digit strings and cuts digit runs greedily left to right, so 12345 becomes 123 and 45 — the same chunk "123" therefore sits in the thousands place in one number and the units place in another, because chunk boundaries follow total length rather than place value. Singh and Strouse (2024) inserted thousands separators, writing 1,234,567: the comma is a hard boundary, so every chunk aligns to a fixed place value, and addition accuracy rose measurably for both models. Same model, same problem, only the cutting changed. Then the worn-out example: asked how many r's are in "strawberry", the model sees not ten letters but two or three blocks, with the letters sealed inside. This is not flatly impossible — work in 2025 found that character-level ability does emerge during training, but late and abruptly. The evidence differs in strength: the comma result is a controlled intervention, so the causal claim is firm, whereas "the letters are sealed in" is a plausible, well-supported explanation rather than the only one. The strangest class is glitch tokens. In 2023 people found that feeding GPT the string "SolidGoldMagikarp" derailed it completely, because tokenizer and model are trained in two separate steps: the string was frequent enough in the tokenizer's data to earn a vocabulary slot, but the model's training data had been cleaned of it, so the model had almost never seen it. A slot in the table, nothing in experience. People have a grid too — as the topic on the grid the brain draws over sound described, the distinctions squeezed out of it become inaudible to you. But there is a clear, testable difference in one direction: a human grid can be reopened. An adult who cannot hear the difference between English "l" and "r" can raise their discrimination score with targeted training, and you can spell any word letter by letter on demand. A model's token vocabulary is fixed before it sees its first training example; after that it can only work around the cuts, and where it cannot, you get the errors that look absurdly stupid.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="cf30ad622bad3999">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 工程与系统设计</b>：你给内部文档做了检索，切块用的是「每 500 字一段」。上线后反复出现同一类投诉：答案明明在文档里就是搜不出来——一查，那句关键的话正好切在两块的接缝上，两边各半句。这是「六个母语者划词」那节的机制：拿一把跟内容无关的尺子下刀，就会切断你最需要完整的那个单位。可改的动作：切块改成按标题和段落边界切、相邻块留重叠；验收指标从「召回了几块」改成「答案需要的那句有没有整句落在一块里」，拿投诉过的问题当回归集。</li>
 <li><b>② 修行与心性</b>：练过给情绪起名字的人大概都撞见过：一升起就标「焦虑」「烦躁」「昏沉」，标了很久发现总在同三四个标签里转，而真正反复出现的那个状态哪个标签都只对一半。这是故障 token 那段的另一面——标签表在经验进来之前就定好了，表里没位置的区分你记不住，还会被硬塞进最近的格子。可改的动作：遇到「只对一半」那次，停掉贴标签，改成记两件可观察的事——它在身体哪个位置、大约持续多久；连记两三周再看要不要给它一个新名字。验收看新名字有没有出现。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="b4619d300c60e992">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>复杂性科学 · 词表定多大都不够用，这是分布自己保证的，不是工程没做到位</b>：语料里的词频服从齐夫定律（Zipf's law）——按出现次数排名，第二名约是第一名的一半、第三名约三分之一，尾巴又长又薄；配套的希普斯定律（Heaps' law）说：语料越大，见过的不同词形一直在增加，增速越来越慢，但从不封顶。尾巴有多薄可以量：一份 18 亿词的推特语料里，1326 万个不同词形里有约 62% 只出现过一次。跑的正是「1994 年那个压缩算法」那节的机制：BPE 从高频往低频合并，而这条分布的尾巴上永远还有东西。由此能推出一个原本看不出的结论——子词切分不是图省事的近似，而是这条分布下唯一的出路：任何固定大小的词表都必然漏掉无穷多词形。还能推出一个可查的预测：形态变化越丰富的语言词形尾巴越重，同样大的词表下每个词花更多 token——Petrov 那组数据的排序基本如此。<b>但这里不成立</b>的是：齐夫定律是在已经切好的单位上统计出来的——要说「词频服从幂律」，你得先决定什么算一个词，而这恰好是划词边界那节吵了三十年的事。它说得出尾巴有多长，帮不上忙去找边界在哪。</li>
 <li><b>遗传与分子生物学 · 核糖体也得在一条没有分隔符的长串上切，可它的解法语言用不了</b>：DNA 转成蛋白质时，序列是三个碱基一组读的，可链上并没有画格子。1961 年 Crick、Barnett、Brenner、Watts-Tobin 在噬菌体上做过一个很漂亮的实验：往基因里插一个碱基，基因废了；插两个，还是废的；插三个，功能大体回来了——这就证明读取是三个一组，插三个等于整整挪过一格，后面重新对齐。跑的机制和本期同一条：连续串上要切出单位，而切点不在信号里。由此能推出一个平时不会这么想的结论：生命这边真解决了这个问题，办法是往信号里塞一个分隔符——起始密码子把读框钉死一次，后面就全定了。语言里没有这种东西，于是两边错误的形状完全不同，而且能直接量：读框错一位，下游整段全废；分词错一刀，通常只毁那一处，后面照读。<b>但这里不成立</b>的是歧义那一层：读框一旦定下，每个三联体对应哪个氨基酸是唯一的，核糖体从不必在两个都讲得通的读法之间挑一个；而「乒乓球拍卖完了」两种切法都合语法、都有意思。所以「加个分隔符就完事」在语言里走不通——中文不是缺一个起始密码子，是就算给了起点，后面每一步仍然真的两可。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="6feffe62545a0f44">深入思考</h3>
 <details><summary>既然分词标准本来就不统一，「分词准确率 98%」在测什么？</summary><p>测的是跟某一份标注的一致程度，不是跟事实的一致程度；换一份标准，同一个系统会掉不少分。这不是刷分，是这个指标的定义天生绑在约定上。真要跨标准比，只能改成测下游任务——检索准不准、语音合成的停顿对不对。</p></details>
 <details><summary>大模型不分词也能用，那中文分词还有意义吗？</summary><p>有，只是位置换了。模型可以拒答「词是什么」，做产品的人不能：搜索建索引要词边界，语音合成的停顿要词边界，盲文转写、儿童读物加空格、词典编纂也都要。模型绕开的那道题，被推给了下游的人。</p></details>
 <details><summary>一门语言在某套切法下特别费 token，说明这门语言效率低吗？</summary><p>不说明。token 表是拟合出来的，语料里谁的文本多，谁的编码就短；同一门语言换一套专为它训的切法，token 数会明显下降。把「在这套切法下贵」读成「这门语言效率低」，是把语料构成当成了语言属性。</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="da397064dc721d02">延伸阅读</h3>
 <ul>
 <li><a href="https://aclanthology.org/J96-3004/">Sproat 等 (1996)，中文分词与六位母语者的一致度</a> · <a href="https://link.springer.com/article/10.1186/s40655-017-0032-5">母语者「词感」一致性的后续调查</a></li>
 <li><a href="https://aclanthology.org/W03-1719/">第一届国际中文分词评测（2003）</a></li>
