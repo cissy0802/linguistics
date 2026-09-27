@@ -46,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 31 · 语言学</div>
-<h1>大模型学到语法了吗</h1>
+<h1 data-tts="185511ac4da11180">大模型学到语法了吗</h1>
 <div class="sub">它把主语和动词配对配得几乎不出错；难的是判断这靠的是句子的骨架，还是「什么词常跟什么词一起出现」</div>
 <div class="date">2026-09-27</div>
 <div class="pitch">探针这套方法本来是用来证明模型内部藏着句子结构的。2019 年有人给它加了个对照组：把每个词随机配一个毫无意义的标签，再拿同样的探针去读——探针照样学得很好。「读出来了」这四个字于是得重新定义。</div>
@@ -58,7 +58,7 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>把句子里的实词全换成胡编的词，模型照样挑得对动词的单复数</h2>
+<h2 data-tts="f0c57c63fc677614">把句子里的实词全换成胡编的词，模型照样挑得对动词的单复数</h2>
 <p>中间那个捣乱的名词叫吸引项（attractor，「吸引的东西」）。Bock 和 Miller 让人边看材料边说话，发现一个很稳的不对称：主语单数、后面跟一个复数名词时，说错的比例明显上升；反过来错得少得多。这个不对称三十多年里在好几门语言上被反复复制过。</p>
 <p>2016 年，Linzen、Dupoux、Goldberg 把同一道题端给机器：从维基百科捞真实句子，训一个循环网络（recurrent network，按顺序一个词一个词往后读的网络）判断动词该用单数还是复数。中间没有干扰名词时它几乎不错；干扰名词一个个加进去，错误率一层层往上抬——形状和人那边像得让人意外。</p>
 <p>但他们真正想说的是另一句：把训练目标从「专门判断单复数」换成「只预测下一个词」——今天所有大模型唯一在做的那件事——同一个网络明显退步。结论写得很直接：只靠语言模型这一个信号，不够。</p>
@@ -86,7 +86,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>探针能从模型内部读出句子的骨架 —— 可给它随机标签，它照样学得会</h2>
+<h2 data-tts="ba949f0e12a7afab">探针能从模型内部读出句子的骨架 —— 可给它随机标签，它照样学得会</h2>
 <p>行为测试只看得到进去什么、出来什么。想看里面，办法叫探针（probe，探测器的意思）：拿模型内部状态当原料，在上面训一个很小的读出器，看某种信息能不能被读出来。2019 年 Hewitt 和 Manning 做了个很漂亮的版本。句子结构可以理解成一组距离：任意两个词之间隔着几步，直接搭在一起的近，绕好几层才挂上的远。他们找了一个线性变换（对所有向量做同一次拉伸和旋转），让两个词的向量距离对应上这个步数。在 BERT、ELMo（两个当时常用的模型的名字）上，句子层级能还原出相当一部分，对照的表示上还原不出来。同年 Tenney 等人发现层与层像条流水线：靠前的管词类，中间管句子结构，指代更靠后才出来。</p>
 <p>同一年，Hewitt 和 Liang 给这套方法装了个照妖镜，叫对照任务（control task）：给每个词型随机指派一个标签。这种标签没有任何语言信息，能学会只可能是探针自己硬背下来的。结果当时流行的几种探针在随机标签上也拿到了很高的准确率。于是「探针准确率高」本身什么都不说明——要看差值：真任务减掉对照任务，他们管这叫选择性（selectivity）。</p>
 <figure>
@@ -119,7 +119,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>把英语改造成一门人学不会的语言，再训一遍，模型学得明显更费劲</h2>
+<h2 data-tts="c1a237383a479aaf">把英语改造成一门人学不会的语言，再训一遍，模型学得明显更费劲</h2>
 <p>有一种很有力的主张：大模型对「人能学的语言」和「人学不会的语言」一视同仁，所以它学到的跟人的语言能力无关。这句话的好处是能直接做实验。2024 年 Kallini 等人拿英语造了 15 门「不可能的语言」，分三类：按固定规则打乱词序；把句子整段或部分倒过来；把动词的单复数标记改成「往后数几个词」的规则。每门都用同一套 GPT-2 架构从头训，和正常英语作对照。结果这些语言都学得更费劲——衡量用困惑度（perplexity，粗略说是模型对下一个词猜得有多准，越低越准）。</p>
 <p>结论立刻被两头夹击。一头说对照组不公平：2025 年有篇文章专门论证它没拿真正按成分结构造出来的语言来比。另一头指出表现最差的那门其实是句内完全随机打乱，那门「语言」几乎没有规律可学，赢它不算赢；也有工作直接主张概率、困惑度这类指标根本分不开可能与不可能。现在的状态是：范式站得住，具体结论还在打。</p>
 <p>两边在一件事上不吵：模型不是白板，它有偏好；至于是不是人的那种偏好，还没被测出来。要测干净得让两边吃差不多的东西——BabyLM 挑战就是这个思路，把训练数据卡在一亿词以内，那大致是一个孩子长到十三岁听过的量级。今天的大模型见过的是这个数目的几千倍。</p>
@@ -127,27 +127,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> One forceful claim is that large models treat learnable and humanly unlearnable languages alike, so whatever they acquire has nothing to do with the human language capacity. Its virtue is that it can be tested. In 2024 Kallini and colleagues built 15 "impossible languages" out of English, in three classes: words shuffled within sentences by fixed rules, sentences reversed in whole or part, and verb number marking rewired into a rule that counts a few words ahead. Each was trained from scratch on the same GPT-2 architecture and compared against unmodified English as a control. All of them came out harder to learn, measured by perplexity — roughly, how well the model guesses the next word, lower being better. The conclusion was immediately squeezed from two sides. One argues the comparison is unfair: a 2025 paper makes the case that no genuinely constituency-based language was among the comparisons, so the gap cannot support the claim. The other points out that the worst-performing case was full within-sentence shuffling, a "language" with almost no regularity to learn, so beating it proves little; and other work argues that probability and perplexity metrics cannot separate possible from impossible at all. The paradigm stands; the specific conclusion is still being fought over. Notably, both sides agree on one thing: the model is not a blank slate, it has a bias — and whether that bias is the human one has not been measured. Measuring it cleanly requires feeding both sides comparable input, which is what the BabyLM challenge does by capping training data at 100 million words, roughly the order of what a child has heard by thirteen. Today's large models have seen thousands of times that. One last line often collapsed into the others: batteries of minimal pairs, sentence pairs differing in one place where one is grammatical and one is not. BLiMP has 67 sets of a thousand pairs each, with overall human agreement with the labels around 96 percent. The shape of the results is consistent: models are solid on items involving morphological agreement and visibly weaker on finer phenomena — for instance that English "any" is licensed only in certain negative or interrogative environments ("I didn't see any" works, "I saw any" does not), or whether a phrase can be extracted out of certain structures. Which is exactly why "did it learn grammar" is not a question one number can answer; it is dozens of separate curves.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="cbb08234025b8efb">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 工程与系统设计</b>：排查线上故障时你在监控面板上撞见一个指标——每次故障前它都先涨，相关得漂亮。团队花一个季度把它压下去，压住了，故障率没动。这正是「探针照样学得会」那节的机制：能从系统状态里读出某个信息，不等于决策路径在用它。可改的动作：投人之前先在预发环境做一次真干预——把这个量人为拉高或钉死，看故障率动不动；验收从「相关系数」换成「干预前后的故障率差」。</li>
 <li><b>② 带团队与组织</b>：交接给新人的第一批活儿，他照着模板或上一个相似的工单做，交出来是对的；换一个模板没覆盖的变体就错，而你验收时看不出来——因为你用的例子和模板长得一样。这是「胡编的词」那节的机制：表层线索不切断，分不出学到的是规则还是「跟模板像不像」。可改的动作：验收集里固定塞一道改过表层的题——换掉命名、把步骤顺序倒过来、给一个模板没覆盖的边界情况；判据从「做完了」换成「变体那道过了没」。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="6a5e9398779ad65c">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>物理与数学 · 信息能换成功，但得有个东西真的接在它上面——这一条物理学有公式</b>：热力学里有个老思想实验：盒子里一个分子，知道它在左半边还是右半边的人能靠这点知识从热运动里榨出功，不知道就榨不出。后来它被做成了定量的：Sagawa 和 Ueda 的广义第二定律里，多榨出来的功有个上限，上限正是「记忆」和「气体状态」之间的互信息；2010 年 Toyabe 等人在一个布朗粒子上真把这个转换做了出来。跑的是「探针照样学得会」那节的机制：探针测的就是信息能不能从内部状态里被读出来，也就是有没有互信息。由此能推出一个原本看不出的方法论结论：探针准确率该当上界读——「这条计算路径最多可能用到这么多」，从来不是「它在用」。配套是个可检验的要求：每个探针结果都该配一个同题的关掉实验，关掉的数字必须小于等于探针的数字；差得远就说明探针读到的东西模型自己的路上并不经过。<b>但这里不成立</b>的是：物理那边的上界是个定理、带单位，而且量具没法凭空造出互信息。探针可以——随机标签上它也拿高分。所以探针准确率连干净的上界都算不上，这里没有守恒律可靠。</li>
 <li><b>神经科学与意识 · 同一招用在人脑上，得到的是相反的定位答案</b>：把实词换成生造词这件事神经科学那边也在做，材料叫 Jabberwocky 句（名字来自 Carroll 的一首诗，语法正常、实词全是造的）。Fedorenko 那一系列研究发现：语言网络对这种句子的反应明显强于一串无意义词，说明它确实吃结构；但同一批脑区也同时对词义敏感，两种敏感性散在整个额-颞网络里，没有一块专管结构的地方。跑的是「胡编的词」那节同一条机制：切断词义只留骨架，看还剩什么反应。由此能推出一个原本看不出的结论：「学到语法了吗」和「语法在不在某个具体位置」是两个独立的问题——模型这边能点名几个单元、关掉就塌，人脑那边同样的操作找不到对应的一小块。可检验的差异也就出来了：靠少数单元的可解释性结果不该预期在脑上有对应物；哪天真在脑里找到一对关掉就废的「数」神经元，那是关于脑的新闻，不是对模型的印证。<b>但这里不成立</b>的是最关键的对照做不了：人不能被换一门不可能的语言重训一遍，也没有随机标签的对照组；而且 Jabberwocky 的生造词仍带着词尾和语调线索，模型那边连语调都没有。「同一招」只在纸面上是同一招。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="53559197971b09bd">深入思考</h3>
 <details><summary>「学到语法」这句话有没有一个能测的意思？</summary><p>可以拆成三个各自能单独测的问题：能不能判断一句话合不合语法（行为）、内部读不读得出结构（相关）、这个结构它自己在不在用（因果）。三个答案可能不一致，含混几乎都出在把三个当成一个。</p></details>
 <details><summary>如果一个模型在所有语法测试上都满分，还剩什么可问的？</summary><p>还能问它在不可能的语言上是不是同样满分。全能反而是坏消息：一个学什么都一样快的学习器，解释不了人类语言为什么只长成观察到的那几种样子。</p></details>
 <details><summary>汉语没有主谓一致可测，这类测试怎么搬过来？</summary><p>换成同样得看骨架的关系：量词与名词的搭配（「一张纸」行、「一条纸」不行）、「自己」在复句里能指向谁。靠邻近的词蒙不对。代价是每换一门语言测试都得重做，这也是现有结论压在少数几门语言上的原因。</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="623fc5cfe934e092">延伸阅读</h3>
 <ul>
 <li><a href="https://www.sciencedirect.com/science/article/abs/pii/0010028591900037">Bock &amp; Miller (1991)，Broken agreement</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8746120/">一致性吸引在阅读中的痕迹</a></li>
 <li><a href="https://aclanthology.org/Q16-1037/">Linzen 等 (2016)，循环网络学不学得到依赖结构的规律</a></li>
@@ -162,8 +162,8 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 </div>
-<script src="https://hub.cissychen.com/comments.js" defer></script>
-<script src="https://hub.cissychen.com/search.js" defer></script>
-<script src="https://hub.cissychen.com/index-button.js" defer></script>
-<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
-</body></html>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
+</body></head></html>
