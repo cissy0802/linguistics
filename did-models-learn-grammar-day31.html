@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>大模型学到语法了吗 — 语言学 Day 31</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<div class="container">
+<header>
+<div class="kicker">Day 31 · 语言学</div>
+<h1>大模型学到语法了吗</h1>
+<div class="sub">它把主语和动词配对配得几乎不出错；难的是判断这靠的是句子的骨架，还是「什么词常跟什么词一起出现」</div>
+<div class="date">2026-09-27</div>
+<div class="pitch">探针这套方法本来是用来证明模型内部藏着句子结构的。2019 年有人给它加了个对照组：把每个词随机配一个毫无意义的标签，再拿同样的探针去读——探针照样学得很好。「读出来了」这四个字于是得重新定义。</div>
+</header>
+<div class="intro">
+<p>「The key to the cabinets ___ on the table」——这个空该填 is 还是 are？</p>
+<p>正确答案是 is。英语的动词要跟主语在「一个还是多个」上对齐，而主语是 key（钥匙，单数），不是离动词最近的 cabinets（柜子，复数）。汉语里没有这道题——动词不随主语变形，「他走」和「他们走」里那个「走」长得一样。但正因为英语有，这道题成了检验机器最好用的尺子：要填对，你必须知道哪个名词是主语，也就是必须看见句子的骨架；只看谁挨动词最近，会被带跑。</p>
+<p>反直觉的是：机器会在这儿犯错，人也会，错的方向还一模一样。1991 年 Bock 和 Miller 记下的真实口误就长这样——「The cost of the improvements have not yet been estimated」，动词被中间那个复数名词拽了过去。所以「会不会出错」划不开人和机器。真正在吵的是：它答对的时候靠的是什么。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>把句子里的实词全换成胡编的词，模型照样挑得对动词的单复数</h2>
+<p>中间那个捣乱的名词叫吸引项（attractor，「吸引的东西」）。Bock 和 Miller 让人边看材料边说话，发现一个很稳的不对称：主语单数、后面跟一个复数名词时，说错的比例明显上升；反过来错得少得多。这个不对称三十多年里在好几门语言上被反复复制过。</p>
+<p>2016 年，Linzen、Dupoux、Goldberg 把同一道题端给机器：从维基百科捞真实句子，训一个循环网络（recurrent network，按顺序一个词一个词往后读的网络）判断动词该用单数还是复数。中间没有干扰名词时它几乎不错；干扰名词一个个加进去，错误率一层层往上抬——形状和人那边像得让人意外。</p>
+<p>但他们真正想说的是另一句：把训练目标从「专门判断单复数」换成「只预测下一个词」——今天所有大模型唯一在做的那件事——同一个网络明显退步。结论写得很直接：只靠语言模型这一个信号，不够。</p>
+<p>两年后这句话被顶了回去。2018 年 Gulordava 等人训的就是普通语言模型，四门语言：英语、意大利语、希伯来语、俄语。关键在测试句——实词全换成同类的胡编词，像「The colorless green ideas I ate with the chair sleep furiously」这种，意思全毁，只剩骨架和词尾。模型还是能可靠地挑对动词的数，意大利语上跟人的直觉差得不多。</p>
+<figure>
+<svg aria-label="示意图：主语和动词的配对越过中间的干扰名词，以及把实词换成胡编词之后骨架仍在" role="img" viewbox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="260" width="640" x="0" y="0"></rect>
+<path d="M 68 96 Q 210 40 352 96" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="210" y="34">动词跟这个词配对</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="16" x="30" y="114">The key to the cabinets is on the table</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="68" y="134">主语 · 单数</text>
+<line stroke="#a86b6b" stroke-dasharray="4 3" stroke-width="1.6" x1="232" x2="352" y1="122" y2="108"></line>
+<text fill="#a86b6b" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="222" y="152">吸引项：离得最近，不管配对</text>
+<line stroke="#26314a" stroke-width="1" x1="30" x2="610" y1="176" y2="176"></line>
+<path d="M 128 218 Q 260 190 424 218" fill="none" stroke="#7fb3d5" stroke-width="2"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="16" x="30" y="236">The colorless green ideas I ate with the chair sleep furiously</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="270" y="206">实词换成胡编的词，配对还在</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="30" y="254">意思全毁，只剩骨架</text>
+</svg>
+<div class="cap">上半：琥珀那道弧是真正的配对，红色虚线是离得最近却不管事的名词。下半：实词换成生造词，共现统计断掉，配对关系还在。</div>
+</figure>
+<p>换词是整件事的枢纽：不换的话，模型不懂结构也能答对——「钥匙……是」这类搭配在语料里本来就常一起出现，词的意思由它的邻居决定那期讲的那套统计能替它蒙掉一大半。生造词一上，共现统计就断了。意大利语的例子长这样：le chiavi dell'armadio sono sul tavolo（字面「钥匙 的-柜子 是 在桌上」），动词 sono（是，复数）跟 chiavi（钥匙，复数）配，不跟紧挨着它的 armadio（柜子，单数）配。</p>
+<p>证据强度得说清楚：四门语言都带着丰富的词形变化，谈不上跨语言类型的样本；两组结论的张力也没被「谁对」解决——数据量、网络大小、测试句来源都不同。今天公允的说法是：模型越大这类测试做得越稳，分歧于是整体挪了位置，从「做不做得到」挪到「做到了意味着什么」。</p>
+<p class="en-brief"><b>EN</b> The troublemaker in the middle has a name: an attractor. Bock and Miller (1991) had people produce sentences and found a stable asymmetry — a singular subject followed by a plural noun draws far more errors than a plural subject followed by a singular one. The asymmetry has been replicated across several languages over three decades. In 2016 Linzen, Dupoux and Goldberg handed the same problem to a machine: a recurrent network, trained on real Wikipedia sentences, asked to say whether the verb should be singular or plural. With no intervening noun it almost never erred; errors climbed step by step as attractors were added, in a shape strikingly like the human one. Their real point, though, was different: swap the training objective from "predict the number" to "predict the next word" — the only thing today's large models do — and the same network gets visibly worse. Their conclusion was blunt: the language-modelling signal alone is not enough. Two years later that was pushed back on. Gulordava and colleagues (2018) trained plain language models in four languages — English, Italian, Hebrew, Russian — and tested them on nonce sentences, with content words replaced by invented words of the same class, as in "The colorless green ideas I ate with the chair sleep furiously". Meaning is destroyed; only the skeleton and the endings remain. The models still picked the right number reliably, and in Italian came close to human intuitions. That substitution is the hinge of the whole enterprise: without it a model can answer correctly while knowing nothing about structure, since a pairing like "key … is" co-occurs often in the corpus, and the distributional statistics discussed in the issue on a word being known by the company it keeps would carry much of the load. Replace the words with invented ones and the co-occurrence crutch is gone. The Italian case looks like this: "le chiavi dell'armadio sono sul tavolo" — the verb "sono" (are) agrees with "chiavi" (keys, plural), not with the adjacent "armadio" (wardrobe, singular). Evidence strength matters here: four languages, but all four richly inflected, so this is no typological sample. And the tension between the 2016 and 2018 results was never resolved by one side being right — data volume, network size and test material all differed. The fair summary today is that larger models do these agreement tests reliably, and the disagreement has moved from whether they can to what it means that they can.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>探针能从模型内部读出句子的骨架 —— 可给它随机标签，它照样学得会</h2>
+<p>行为测试只看得到进去什么、出来什么。想看里面，办法叫探针（probe，探测器的意思）：拿模型内部状态当原料，在上面训一个很小的读出器，看某种信息能不能被读出来。2019 年 Hewitt 和 Manning 做了个很漂亮的版本。句子结构可以理解成一组距离：任意两个词之间隔着几步，直接搭在一起的近，绕好几层才挂上的远。他们找了一个线性变换（对所有向量做同一次拉伸和旋转），让两个词的向量距离对应上这个步数。在 BERT、ELMo（两个当时常用的模型的名字）上，句子层级能还原出相当一部分，对照的表示上还原不出来。同年 Tenney 等人发现层与层像条流水线：靠前的管词类，中间管句子结构，指代更靠后才出来。</p>
+<p>同一年，Hewitt 和 Liang 给这套方法装了个照妖镜，叫对照任务（control task）：给每个词型随机指派一个标签。这种标签没有任何语言信息，能学会只可能是探针自己硬背下来的。结果当时流行的几种探针在随机标签上也拿到了很高的准确率。于是「探针准确率高」本身什么都不说明——要看差值：真任务减掉对照任务，他们管这叫选择性（selectivity）。</p>
+<figure>
+<svg aria-label="示意图：探针读出结构与随机标签对照，以及关掉少数单元后一致性崩掉" role="img" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="250" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="30" y="30">读得出来</text>
+<rect fill="none" height="44" rx="4" stroke="#40536e" width="120" x="30" y="44"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="90" y="71">模型内部状态</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="150" x2="208" y1="66" y2="66"></line>
+<rect fill="none" height="44" rx="4" stroke="#40536e" width="86" x="208" y="44"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="251" y="71">小读出器</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="294" x2="352" y1="66" y2="66"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="360" y="62">句子层级能还原</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="360" y="82">看着像证据</text>
+<line stroke="#7fb3d5" stroke-dasharray="4 3" stroke-width="1.4" x1="251" x2="251" y1="88" y2="118"></line>
+<text fill="#a86b6b" font-family="Georgia, serif" font-size="12" x="208" y="134">换成随机标签也照样学得会 → 高分不说明什么</text>
+<line stroke="#26314a" stroke-width="1" x1="30" x2="610" y1="158" y2="158"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="30" y="182">在用没在用</text>
+<rect fill="none" height="40" rx="4" stroke="#40536e" width="120" x="30" y="194"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="90" y="219">关掉那几个单元</text>
+<line stroke="#e0a458" stroke-width="1.6" x1="150" x2="208" y1="214" y2="214"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="216" y="211">长距离一致性掉下来</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="216" y="231">这一步是因果证据</text>
+</svg>
+<div class="cap">上半是「读得出来」，它有个便宜的假阳性：随机标签也能读出高分。下半是「在用」，得关掉再看坏不坏。</div>
+</figure>
+<p>更要紧的一层是：读得出来不等于模型自己在用。2019 年 Lakretz 等人把一个循环语言模型拆到单个神经元去看，发现跨长距离的单复数信息主要压在极少数几个单元上，这几个单元又受另一批跟结构相关的单元管着；把它们关掉，长距离一致性就塌了。关掉就坏是因果证据，比「能读出来」硬一个档次。证据强度：单个模型、单个架构，搬不到别的模型上。</p>
+<p>差别有多大值得掂量：一份内部状态里能读出来的东西，远多于模型那条路上真正用到的。体温里读得出季节，可体温不是你决定穿什么的线路。</p>
+<p class="en-brief"><b>EN</b> Behavioural tests see only what goes in and what comes out. To look inside, the method is probing: take the model's internal states as raw material, train a very small readout on top, and see whether some kind of information can be recovered. In 2019 Hewitt and Manning built an elegant version. Think of sentence structure as a set of distances: any two words are some number of steps apart, close if they attach directly, far if the link runs through several layers. They found a single linear transformation — one uniform stretch and rotation applied to every vector — under which the distance between two word vectors matches that number of steps. On BERT and ELMo (names of two models common at the time) a substantial part of the hierarchy could be recovered, and on the control representations it could not. The same year, Tenney and colleagues found the layers behaving like a pipeline: earlier layers handle word classes, middle layers sentence structure, and coreference surfaces later still. Also in 2019, Hewitt and Liang fitted the method with a mirror that exposes fakes: the control task, which assigns every word type a random label. Such labels carry no linguistic information, so the only way to learn them is for the probe itself to memorise them. Several popular probes scored high on the random labels too. High probe accuracy therefore says nothing on its own; what counts is the gap — real-task score minus control-task score — which they call selectivity. And there is a deeper layer: decodable is not the same as used. In 2019 Lakretz and colleagues opened up a recurrent language model at the level of single neurons and found that long-distance number information is carried mostly by a very small number of units, themselves governed by another set of units that track structure; switch those units off and long-distance agreement collapses. Breaking it by switching it off is causal evidence, a notch stronger than mere decodability — though this is one model and one architecture, and does not transfer automatically. The size of the distinction is worth weighing: far more can be read out of an internal state than the system's own pathway ever consults. Your body temperature is enough to read off the season, but body temperature is not the circuit deciding what you wear today.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>把英语改造成一门人学不会的语言，再训一遍，模型学得明显更费劲</h2>
+<p>有一种很有力的主张：大模型对「人能学的语言」和「人学不会的语言」一视同仁，所以它学到的跟人的语言能力无关。这句话的好处是能直接做实验。2024 年 Kallini 等人拿英语造了 15 门「不可能的语言」，分三类：按固定规则打乱词序；把句子整段或部分倒过来；把动词的单复数标记改成「往后数几个词」的规则。每门都用同一套 GPT-2 架构从头训，和正常英语作对照。结果这些语言都学得更费劲——衡量用困惑度（perplexity，粗略说是模型对下一个词猜得有多准，越低越准）。</p>
+<p>结论立刻被两头夹击。一头说对照组不公平：2025 年有篇文章专门论证它没拿真正按成分结构造出来的语言来比。另一头指出表现最差的那门其实是句内完全随机打乱，那门「语言」几乎没有规律可学，赢它不算赢；也有工作直接主张概率、困惑度这类指标根本分不开可能与不可能。现在的状态是：范式站得住，具体结论还在打。</p>
+<p>两边在一件事上不吵：模型不是白板，它有偏好；至于是不是人的那种偏好，还没被测出来。要测干净得让两边吃差不多的东西——BabyLM 挑战就是这个思路，把训练数据卡在一亿词以内，那大致是一个孩子长到十三岁听过的量级。今天的大模型见过的是这个数目的几千倍。</p>
+<p>最后一条常被混掉的线：成套的最小对（minimal pair，一对只差一处的句子，一个合语法一个不合）测试。BLiMP 有 67 组、每组一千对，人对这些标签的整体认同率约 96%。结果形状很一致：跟词形一致性有关的题模型很稳，更细的现象明显差——比如英语的 any 只能出现在某些否定或疑问环境里（「I didn't see any」行，「I saw any」不行）。所以「学到语法了吗」不是一个数能回答的问题，是几十条各自独立的曲线。</p>
+<p class="en-brief"><b>EN</b> One forceful claim is that large models treat learnable and humanly unlearnable languages alike, so whatever they acquire has nothing to do with the human language capacity. Its virtue is that it can be tested. In 2024 Kallini and colleagues built 15 "impossible languages" out of English, in three classes: words shuffled within sentences by fixed rules, sentences reversed in whole or part, and verb number marking rewired into a rule that counts a few words ahead. Each was trained from scratch on the same GPT-2 architecture and compared against unmodified English as a control. All of them came out harder to learn, measured by perplexity — roughly, how well the model guesses the next word, lower being better. The conclusion was immediately squeezed from two sides. One argues the comparison is unfair: a 2025 paper makes the case that no genuinely constituency-based language was among the comparisons, so the gap cannot support the claim. The other points out that the worst-performing case was full within-sentence shuffling, a "language" with almost no regularity to learn, so beating it proves little; and other work argues that probability and perplexity metrics cannot separate possible from impossible at all. The paradigm stands; the specific conclusion is still being fought over. Notably, both sides agree on one thing: the model is not a blank slate, it has a bias — and whether that bias is the human one has not been measured. Measuring it cleanly requires feeding both sides comparable input, which is what the BabyLM challenge does by capping training data at 100 million words, roughly the order of what a child has heard by thirteen. Today's large models have seen thousands of times that. One last line often collapsed into the others: batteries of minimal pairs, sentence pairs differing in one place where one is grammatical and one is not. BLiMP has 67 sets of a thousand pairs each, with overall human agreement with the labels around 96 percent. The shape of the results is consistent: models are solid on items involving morphological agreement and visibly weaker on finer phenomena — for instance that English "any" is licensed only in certain negative or interrogative environments ("I didn't see any" works, "I saw any" does not), or whether a phrase can be extracted out of certain structures. Which is exactly why "did it learn grammar" is not a question one number can answer; it is dozens of separate curves.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：排查线上故障时你在监控面板上撞见一个指标——每次故障前它都先涨，相关得漂亮。团队花一个季度把它压下去，压住了，故障率没动。这正是「探针照样学得会」那节的机制：能从系统状态里读出某个信息，不等于决策路径在用它。可改的动作：投人之前先在预发环境做一次真干预——把这个量人为拉高或钉死，看故障率动不动；验收从「相关系数」换成「干预前后的故障率差」。</li>
+<li><b>② 带团队与组织</b>：交接给新人的第一批活儿，他照着模板或上一个相似的工单做，交出来是对的；换一个模板没覆盖的变体就错，而你验收时看不出来——因为你用的例子和模板长得一样。这是「胡编的词」那节的机制：表层线索不切断，分不出学到的是规则还是「跟模板像不像」。可改的动作：验收集里固定塞一道改过表层的题——换掉命名、把步骤顺序倒过来、给一个模板没覆盖的边界情况；判据从「做完了」换成「变体那道过了没」。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>物理与数学 · 信息能换成功，但得有个东西真的接在它上面——这一条物理学有公式</b>：热力学里有个老思想实验：盒子里一个分子，知道它在左半边还是右半边的人能靠这点知识从热运动里榨出功，不知道就榨不出。后来它被做成了定量的：Sagawa 和 Ueda 的广义第二定律里，多榨出来的功有个上限，上限正是「记忆」和「气体状态」之间的互信息；2010 年 Toyabe 等人在一个布朗粒子上真把这个转换做了出来。跑的是「探针照样学得会」那节的机制：探针测的就是信息能不能从内部状态里被读出来，也就是有没有互信息。由此能推出一个原本看不出的方法论结论：探针准确率该当上界读——「这条计算路径最多可能用到这么多」，从来不是「它在用」。配套是个可检验的要求：每个探针结果都该配一个同题的关掉实验，关掉的数字必须小于等于探针的数字；差得远就说明探针读到的东西模型自己的路上并不经过。<b>但这里不成立</b>的是：物理那边的上界是个定理、带单位，而且量具没法凭空造出互信息。探针可以——随机标签上它也拿高分。所以探针准确率连干净的上界都算不上，这里没有守恒律可靠。</li>
+<li><b>神经科学与意识 · 同一招用在人脑上，得到的是相反的定位答案</b>：把实词换成生造词这件事神经科学那边也在做，材料叫 Jabberwocky 句（名字来自 Carroll 的一首诗，语法正常、实词全是造的）。Fedorenko 那一系列研究发现：语言网络对这种句子的反应明显强于一串无意义词，说明它确实吃结构；但同一批脑区也同时对词义敏感，两种敏感性散在整个额-颞网络里，没有一块专管结构的地方。跑的是「胡编的词」那节同一条机制：切断词义只留骨架，看还剩什么反应。由此能推出一个原本看不出的结论：「学到语法了吗」和「语法在不在某个具体位置」是两个独立的问题——模型这边能点名几个单元、关掉就塌，人脑那边同样的操作找不到对应的一小块。可检验的差异也就出来了：靠少数单元的可解释性结果不该预期在脑上有对应物；哪天真在脑里找到一对关掉就废的「数」神经元，那是关于脑的新闻，不是对模型的印证。<b>但这里不成立</b>的是最关键的对照做不了：人不能被换一门不可能的语言重训一遍，也没有随机标签的对照组；而且 Jabberwocky 的生造词仍带着词尾和语调线索，模型那边连语调都没有。「同一招」只在纸面上是同一招。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>「学到语法」这句话有没有一个能测的意思？</summary><p>可以拆成三个各自能单独测的问题：能不能判断一句话合不合语法（行为）、内部读不读得出结构（相关）、这个结构它自己在不在用（因果）。三个答案可能不一致，含混几乎都出在把三个当成一个。</p></details>
+<details><summary>如果一个模型在所有语法测试上都满分，还剩什么可问的？</summary><p>还能问它在不可能的语言上是不是同样满分。全能反而是坏消息：一个学什么都一样快的学习器，解释不了人类语言为什么只长成观察到的那几种样子。</p></details>
+<details><summary>汉语没有主谓一致可测，这类测试怎么搬过来？</summary><p>换成同样得看骨架的关系：量词与名词的搭配（「一张纸」行、「一条纸」不行）、「自己」在复句里能指向谁。靠邻近的词蒙不对。代价是每换一门语言测试都得重做，这也是现有结论压在少数几门语言上的原因。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/0010028591900037">Bock &amp; Miller (1991)，Broken agreement</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8746120/">一致性吸引在阅读中的痕迹</a></li>
+<li><a href="https://aclanthology.org/Q16-1037/">Linzen 等 (2016)，循环网络学不学得到依赖结构的规律</a></li>
+<li><a href="https://aclanthology.org/N18-1108/">Gulordava 等 (2018)，无意义句子里的长距离一致性（四门语言）</a></li>
+<li><a href="https://aclanthology.org/N19-1419/">Hewitt &amp; Manning (2019)，结构探针</a> · <a href="https://aclanthology.org/P19-1452/">Tenney 等 (2019)，层与层像一条流水线</a></li>
+<li><a href="https://aclanthology.org/D19-1275/">Hewitt &amp; Liang (2019)，用对照任务设计与解读探针</a></li>
+<li><a href="https://aclanthology.org/N19-1002/">Lakretz 等 (2019)，单复数单元与句法单元的浮现</a></li>
+<li><a href="https://aclanthology.org/2024.acl-long.787/">Kallini 等 (2024)，不可能的语言模型</a> · <a href="https://aclanthology.org/2025.cl-2.7/">对其对照组的质疑</a> · <a href="https://arxiv.org/abs/2509.15114">概率指标分不开可能与不可能</a></li>
+<li><a href="https://aclanthology.org/2020.tacl-1.25/">BLiMP：英语最小对测试集</a> · <a href="https://aclanthology.org/2024.conll-babylm.1/">BabyLM 挑战：一亿词的数据预算</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxwell%27s_demon">麦克斯韦妖</a> · <a href="https://en.wikipedia.org/wiki/Landauer%27s_principle">兰道尔原理</a> · <a href="https://www.nature.com/articles/nphys1821">Toyabe 等 (2010)，信息转成能量的实验</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jabberwocky">Jabberwocky 这首诗</a> · <a href="https://direct.mit.edu/jocn/article/36/7/1427/120796/Distributed-Sensitivity-to-Syntax-and-Semantics">语言网络里句法与语义的敏感性是散布的</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>

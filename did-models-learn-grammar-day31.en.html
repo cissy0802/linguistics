@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Did Large Models Learn Grammar — Linguistics Day 31</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<div class="container">
+<header>
+<div class="kicker">Day 31 · Linguistics</div>
+<h1>Did Large Models Learn Grammar</h1>
+<div class="sub">They pair subjects with verbs almost without error; the hard part is deciding whether that rides on the skeleton of the sentence or on which words tend to show up near which</div>
+<div class="date">2026-09-27</div>
+<div class="pitch">Probing was invented to show that sentence structure is sitting inside a model. In 2019 someone added a control: give every word a random, meaningless label and run the same probe again — the probe learns that just as well. Which means the phrase "we read it out" had to be redefined overnight.</div>
+</header>
+<div class="intro">
+<p>"The key to the cabinets ___ on the table" — is it <em>is</em> or <em>are</em>?</p>
+<p>The answer is <em>is</em>. An English verb has to match its subject on one-versus-many, and the subject is <em>key</em>, singular, not the nearer <em>cabinets</em>. Chinese poses no such problem: its verbs do not change with the subject, and the verb in 他走 (tā zǒu, "he walks") is identical to the one in 他们走 (tāmen zǒu, "they walk"). But because English does pose it, the problem became the most useful ruler for testing machines: to fill the blank you have to know which noun is the subject, which means you have to see the skeleton of the sentence. Going by whichever noun sits closest will lead you off a cliff.</p>
+<p>The counterintuitive part is that machines err here and so do people, and in the same direction. The real slip Bock and Miller recorded in 1991 looks exactly like this — "The cost of the improvements have not yet been estimated", the verb dragged over by the plural noun in the middle. So "does it make mistakes" does not separate people from machines. What is actually being argued about is what it relies on when it gets the answer right.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>Replace every content word with an invented one and the model still picks the right verb form</h2>
+<p>The troublemaking noun in the middle has a name: an attractor. Bock and Miller had people produce sentences from materials in front of them and found a very stable asymmetry — a singular subject followed by a plural noun draws visibly more errors, while the reverse draws far fewer. That asymmetry has been replicated in several languages across three decades.</p>
+<p>In 2016 Linzen, Dupoux and Goldberg handed the same problem to a machine: real sentences pulled from Wikipedia, and a recurrent network (a network that reads one word after another in order) trained to say whether the verb should be singular or plural. With no intervening noun it almost never erred; add attractors one at a time and the error rate climbs step by step — a shape startlingly like the human one.</p>
+<p>But their real point was a different one: swap the training objective from "predict the number" to "predict the next word" — the only thing every large model today does — and the same network gets visibly worse. Their conclusion was blunt: the language-modelling signal alone is not enough.</p>
+<p>Two years later that was pushed back on. What Gulordava and colleagues trained in 2018 were plain language models, in four languages: English, Italian, Hebrew, Russian. The trick was in the test sentences — every content word replaced by an invented word of the same class, as in "The colorless green ideas I ate with the chair sleep furiously". Meaning is destroyed; only the skeleton and the endings survive. The models still picked the right number reliably, and in Italian came close to human intuitions.</p>
+<figure>
+<svg aria-label="Diagram: the subject-verb pairing reaching over an intervening noun, and the same skeleton surviving when content words are invented" role="img" viewbox="0 0 640 260" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="260" width="640" x="0" y="0"></rect>
+<path d="M 68 96 Q 210 40 352 96" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="210" y="34">the verb agrees with this one</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="16" x="30" y="114">The key to the cabinets is on the table</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="68" y="134">subject · singular</text>
+<line stroke="#a86b6b" stroke-dasharray="4 3" stroke-width="1.6" x1="232" x2="352" y1="122" y2="108"></line>
+<text fill="#a86b6b" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="222" y="152">attractor: nearest, but not in charge</text>
+<line stroke="#26314a" stroke-width="1" x1="30" x2="610" y1="176" y2="176"></line>
+<path d="M 128 218 Q 260 190 424 218" fill="none" stroke="#7fb3d5" stroke-width="2"></path>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="16" x="30" y="236">The colorless green ideas I ate with the chair sleep furiously</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="270" y="206">content words invented, pairing intact</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="30" y="254">meaning gone, skeleton left</text>
+</svg>
+<div class="cap">Top: the amber arc is the real pairing, the red dashed line the noun that sits closest and has no say. Bottom: swap the content words for invented ones, the co-occurrence statistics are cut, and the pairing survives.</div>
+</figure>
+<p>That substitution is the hinge of the whole enterprise. Without it a model can answer correctly while knowing nothing about structure: a pairing like "key … is" is common in the corpus anyway, and the statistics from the issue on a word being known by the company it keeps would carry much of the load. Put invented words in and the co-occurrence crutch is gone. The Italian case looks like this: <em>le chiavi dell'armadio sono sul tavolo</em> ("the keys of the wardrobe are on the table"), where the verb <em>sono</em> (are, plural) agrees with <em>chiavi</em> (keys, plural) and not with the adjacent <em>armadio</em> (wardrobe, singular).</p>
+<p>The evidence strength has to be said plainly: four languages, but all four richly inflected, so this is no typological sample. Nor was the tension between the 2016 and 2018 results resolved by one side being right — data volume, network size and test material all differed. The fair summary today is that the bigger the model the more reliably it passes tests like these, so the disagreement has shifted wholesale, from whether it can to what it means that it can.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>A probe can read the sentence skeleton out of a model — but give it random labels and it learns those too</h2>
+<p>Behavioural tests see only what goes in and what comes out. To look inside, the method is called probing: take the model's internal states as raw material, train a very small readout on top of them, and see whether some kind of information can be recovered. In 2019 Hewitt and Manning built an elegant version. Sentence structure can be thought of as a set of distances: any two words are some number of steps apart, close if they attach directly, far if the link runs through several layers. They found a single linear transformation — one stretch and rotation applied uniformly to every vector — under which the distance between two word vectors matches that number of steps. On BERT and ELMo (names of two models common at the time) a good part of the hierarchy could be recovered; on the control representations it could not. The same year Tenney and colleagues found the layers behaving like a pipeline: earlier ones handle word classes, middle ones sentence structure, coreference surfaces later.</p>
+<p>Also in 2019, Hewitt and Liang fitted the method with a mirror that exposes fakes, called the control task: assign every word type a random label. Such labels carry no linguistic information, so the only way to learn them is for the probe itself to memorise them. Several probes popular at the time scored high accuracy on the random labels too. So "the probe scores high" says nothing by itself — what counts is the gap: real task minus control task, which they call selectivity.</p>
+<figure>
+<svg aria-label="Diagram: a probe reading out structure versus the random-label control, and agreement collapsing when a few units are switched off" role="img" viewbox="0 0 640 250" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="250" width="640" x="0" y="0"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="30" y="30">decodable</text>
+<rect fill="none" height="44" rx="4" stroke="#40536e" width="120" x="30" y="44"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="90" y="71">internal states</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="150" x2="208" y1="66" y2="66"></line>
+<rect fill="none" height="44" rx="4" stroke="#40536e" width="86" x="208" y="44"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="251" y="71">tiny readout</text>
+<line stroke="#7fb3d5" stroke-width="1.6" x1="294" x2="352" y1="66" y2="66"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="360" y="62">hierarchy recovered</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="360" y="82">looks like evidence</text>
+<line stroke="#7fb3d5" stroke-dasharray="4 3" stroke-width="1.4" x1="251" x2="251" y1="88" y2="118"></line>
+<text fill="#a86b6b" font-family="Georgia, serif" font-size="12" x="208" y="134">random labels are learned just as well → a high score says nothing</text>
+<line stroke="#26314a" stroke-width="1" x1="30" x2="610" y1="158" y2="158"></line>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="12" x="30" y="182">actually used</text>
+<rect fill="none" height="40" rx="4" stroke="#40536e" width="120" x="30" y="194"></rect>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="12" text-anchor="middle" x="90" y="219">switch those units off</text>
+<line stroke="#e0a458" stroke-width="1.6" x1="150" x2="208" y1="214" y2="214"></line>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="216" y="211">long-distance agreement drops</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="216" y="231">this step is the causal evidence</text>
+</svg>
+<div class="cap">The top half is "decodable", which has a cheap false positive: random labels score high as well. The bottom half is "used", which takes switching it off and seeing whether it breaks.</div>
+</figure>
+<p>The layer that matters more is this: decodable is not the same as used by the model itself. In 2019 Lakretz and colleagues opened up a recurrent language model down to single neurons and found that long-distance number information is carried mostly by a very small number of units, themselves governed by another set of units that track structure; switch those off and long-distance agreement collapses. Breaking it by switching it off is causal evidence, a notch harder than mere decodability. Evidence strength: one model, one architecture, and it does not transfer to other models for free.</p>
+<p>The size of the difference is worth weighing. Far more can be read out of an internal state than the model's own pathway ever consults. Your body temperature is enough to read off the season, but body temperature is not the circuit that decides what you wear.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>Rebuild English into a language no human could learn, retrain the model, and it struggles visibly more</h2>
+<p>There is a forceful claim going around: large models treat languages humans can learn and languages humans cannot exactly alike, so whatever they acquire has nothing to do with the human language capacity. Its virtue is that you can test it directly. In 2024 Kallini and colleagues built 15 "impossible languages" out of English, in three classes: word order scrambled by fixed rules; sentences reversed in whole or in part; verb number marking rewired into a rule that counts a few words ahead. Each was trained from scratch on the same GPT-2 architecture and compared against unaltered English as a control. All of them came out harder to learn, measured by perplexity (roughly, how well the model guesses the next word, lower being better).</p>
+<p>The conclusion was squeezed from both sides at once. One side says the control was unfair: a 2025 paper argues specifically that no genuinely constituency-based language was among the comparisons. The other points out that the worst performer was full within-sentence scrambling, a "language" with almost no regularity to learn, so beating it proves little; and other work argues outright that probability and perplexity metrics cannot separate possible from impossible at all. Where things stand: the paradigm holds, the specific conclusion is still being fought over.</p>
+<p>The two sides do not argue about one thing: the model is not a blank slate, it has a bias. Whether that bias is the human one has not been measured. Measuring it cleanly means feeding both sides comparable input, which is the thinking behind the BabyLM challenge — training data capped at 100 million words, roughly the order of what a child has heard by the age of thirteen. Today's large models have seen thousands of times that.</p>
+<p>One last line that often gets collapsed into the others: batteries of minimal pairs, two sentences differing in one place where one is grammatical and one is not. BLiMP has 67 sets of a thousand pairs each, and human agreement with the labels overall is about 96 percent. The shape of the results is consistent: models are solid on items involving morphological agreement and visibly weaker on finer phenomena — for instance that English <em>any</em> is licensed only in certain negative or interrogative environments ("I didn't see any" works, "I saw any" does not). Which is why "did it learn grammar" is not a question one number can answer. It is dozens of separate curves.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Practice · BigCat</h3>
+<ol>
+<li><b>① Engineering and system design</b>: While chasing a production incident you spot a metric on the dashboard that rises before every failure — a beautiful correlation. The team spends a quarter pushing it down, succeeds, and the failure rate does not move. This is exactly the mechanism from the section on the probe learning random labels: being able to read some piece of information out of a system's state does not mean the decision path uses it. What to change: before committing people, run one real intervention in staging — force that quantity up, or pin it, and see whether the failure rate responds; and change the acceptance measure from "correlation coefficient" to "difference in failure rate before and after the intervention".</li>
+<li><b>② Leading a team</b>: The first tasks you hand a new colleague get done off a template, or off a previous similar ticket, and they come back correct; a variant the template does not cover comes back wrong, and you cannot see it at review time, because the examples you review with look just like the template. This is the mechanism from the section on invented words: leave the surface cues in place and you cannot tell whether what was learned is the rule or the resemblance to the template. What to change: keep one surface-altered item permanently in the review set — rename things, reverse the order of the steps, hand over an edge case the template never covered; and move the criterion from "it's done" to "did the variant pass".</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Connections Beyond the Field</h3>
+<ul>
+<li><b>Physics and mathematics · Information converts into work, but only if something is actually wired to it — and physics has a formula for this one</b>: There is an old thought experiment in thermodynamics: one molecule in a box, and whoever knows which half it is in can extract work from the thermal motion, while whoever does not cannot. That was later made quantitative: in the generalised second law of Sagawa and Ueda, the extra extractable work has a ceiling, and the ceiling is exactly the mutual information between the "memory" and the state of the gas; in 2010 Toyabe and colleagues really did perform that conversion on a Brownian particle. The mechanism running here is the one from the section on the probe learning random labels: what a probe measures is whether information can be read out of the internal state — that is, whether the mutual information is there. Which yields a methodological conclusion you would not otherwise see: probe accuracy should be read as a ceiling — "this computational path could be using at most this much" — and never as "it is using it". The testable corollary: every probing result should come with a matched switch-it-off experiment, and the switch-off number has to be less than or equal to the probe number; where the two diverge sharply, what the probe read is not on the path the model itself takes. <b>Where this does not hold</b>: the ceiling in physics is a theorem with units, and the measuring apparatus cannot manufacture mutual information out of nothing. A probe can — it scores high on random labels too. So probe accuracy is not even a clean ceiling; there is no conservation law to lean on here.</li>
+<li><b>Neuroscience and consciousness · The same trick run on human brains gives the opposite answer about location</b>: Replacing content words with invented ones is done in neuroscience too, with materials known as Jabberwocky sentences (named after Carroll's poem — normal grammar, all content words made up). Fedorenko's line of work found that the language network responds distinctly more strongly to such sentences than to a string of nonwords, so it does feed on structure; but the same regions are also sensitive to word meaning, and both sensitivities are spread across the whole fronto-temporal network, with no one patch dedicated to structure. The mechanism is the one from the section on invented words: cut the meaning, keep the skeleton, and see what response is left. Which yields a conclusion you would not otherwise see: "did it learn grammar" and "does grammar sit in a particular place" are independent questions — on the model side you can name a few units whose removal makes it collapse, while the same operation in a human brain finds no corresponding patch. The testable difference follows: interpretability results that hinge on a handful of units should not be expected to have brain analogues, and the day a pair of number neurons whose removal breaks agreement really is found in a brain, that is news about brains, not confirmation of the model. <b>Where this does not hold</b>: the most important control cannot be run. People cannot be retrained on an impossible language, and there is no random-label control group for them; besides, the invented words in a Jabberwocky sentence still carry endings and prosodic cues, while the model side has no prosody at all. "The same trick" is the same trick only on paper.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>Does "learned grammar" have a meaning that can be measured?</summary><p>It splits into three questions, each separately testable: can it tell whether a sentence is grammatical (behaviour), is structure decodable from the internal states (correlation), and does it use that structure itself (causation). The three answers can disagree, and almost all the muddle comes from treating them as one.</p></details>
+<details><summary>If a model scored full marks on every grammar test, what would be left to ask?</summary><p>Whether it also scores full marks on impossible languages. Being able to learn anything is the bad news: a learner that picks up everything equally fast explains nothing about why human languages come in only the shapes we observe.</p></details>
+<details><summary>Chinese has no subject-verb agreement to test. How do these tests move over?</summary><p>They become other relations that equally require the skeleton: classifier-noun matching — 一张纸 (yī zhāng zhǐ, "one sheet of paper") works while 一条纸 (yī tiáo zhǐ, using the classifier for long thin things) does not — or which noun 自己 (zìjǐ, "self") can point back to in a complex sentence. Neither can be guessed from the nearest word. The cost is that every new language means rebuilding the tests, which is why the existing results are piled onto a handful of languages.</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/0010028591900037">Bock &amp; Miller (1991), Broken agreement</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8746120/">the reading signatures of agreement attraction</a></li>
+<li><a href="https://aclanthology.org/Q16-1037/">Linzen et al. (2016), whether recurrent networks learn syntax-sensitive dependencies</a></li>
+<li><a href="https://aclanthology.org/N18-1108/">Gulordava et al. (2018), long-distance agreement in nonce sentences, four languages</a></li>
+<li><a href="https://aclanthology.org/N19-1419/">Hewitt &amp; Manning (2019), the structural probe</a> · <a href="https://aclanthology.org/P19-1452/">Tenney et al. (2019), layers as a pipeline</a></li>
+<li><a href="https://aclanthology.org/D19-1275/">Hewitt &amp; Liang (2019), designing and interpreting probes with control tasks</a></li>
+<li><a href="https://aclanthology.org/N19-1002/">Lakretz et al. (2019), the emergence of number and syntax units</a></li>
+<li><a href="https://aclanthology.org/2024.acl-long.787/">Kallini et al. (2024), impossible language models</a> · <a href="https://aclanthology.org/2025.cl-2.7/">a challenge to its controls</a> · <a href="https://arxiv.org/abs/2509.15114">probability metrics cannot separate possible from impossible</a></li>
+<li><a href="https://aclanthology.org/2020.tacl-1.25/">BLiMP: a benchmark of English minimal pairs</a> · <a href="https://aclanthology.org/2024.conll-babylm.1/">the BabyLM challenge: a 100-million-word budget</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Maxwell%27s_demon">Maxwell's demon</a> · <a href="https://en.wikipedia.org/wiki/Landauer%27s_principle">Landauer's principle</a> · <a href="https://www.nature.com/articles/nphys1821">Toyabe et al. (2010), converting information into energy</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jabberwocky">the poem Jabberwocky</a> · <a href="https://direct.mit.edu/jocn/article/36/7/1427/120796/Distributed-Sensitivity-to-Syntax-and-Semantics">distributed sensitivity to syntax and semantics in the language network</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
