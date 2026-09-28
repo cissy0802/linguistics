@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Which Machines Can Handle Which Languages — Linguistics Day 32</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<body>
+<div class="container">
+<header>
+<div class="kicker">Day 32 · Linguistics</div>
+<h1>Which Machines Can Handle Which Languages</h1>
+<div class="sub">The rungs are not ranked by cleverness but by what shape of unpaid debt a device can hold; the rung human language sits on was pinned down by one Swiss German sentence and one West African word-formation rule</div>
+<div class="date">2026-09-28</div>
+<div class="pitch">"Some number of As, then exactly as many Bs" looks a great deal like recursion, and even birds can learn it. But judging such a string only requires the ability to count. It does not require remembering which item pairs with which. Two decades of argument over whether animals do recursion is largely stuck on that distinction.</div>
+</header>
+<div class="intro">
+<p>Say a sentence: "Either it rains tomorrow and we stay, or it clears up and we go." Now drop the whole thing inside another one: "If (either it rains and we stay, or it clears and we go), then there is nothing left to settle about the weekend." You can wrap it again. While you wrap it you are doing something quite specific: holding the thought that a "then" is still owed.</p>
+<p>Unpaid debts have a shape, and they can only be settled in one order — the debt incurred last is discharged first. That shape decides what kind of device can handle such sentences. It has nothing to do with what the sentence says, or with whether the language is "expressive".</p>
+<p>Here is the counterintuitive part: line all languages up by what device they require and there are only four rungs, with human language wedged into a narrow gap between the second and the third. What pinned that gap down was not theoretical argument. It was one Swiss German sentence about painting a house, and the word for "whatever dog" in a West African language.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>"Either … or …" can be wrapped inside itself, and that alone rules out the cheapest machine</h2>
+<p>The cheapest device is a single dial. Its formal name is a finite-state machine: it reads a symbol, the dial jumps to another position, and once it has jumped it retains no record of the path — only where it now sits. The number of positions is fixed in advance, and finite.</p>
+<p>Do not be too quick to call that weak. Where it suffices it genuinely suffices, and provably so. Sound and word-form largely fall inside its reach: Johnson in 1972, and Kaplan and Kay in 1994, showed that a whole ordered battery of phonological rules can be compiled into exactly such a dial device, and Koskenniemi in 1983 built Finnish inflection as one — a language in which a single noun has more than a dozen cases. "Sufficient" here is a theorem, not an impression.</p>
+<p>Sentences are another matter. The argument in Chomsky's 1956 paper turns on nesting: "if" incurs a debt of a later "then", "either" a debt of a later "or", and these can be stacked to any depth. A dial has finitely many positions, so once the depth runs past that number the device must squeeze two distinct debt states into the same position — and from then on it cannot tell which sentences to accept from which to reject. The next rung therefore needs a last-in-first-out notepad: the entry written last is crossed off first. Its standard name is a stack, and the rung equipped with one is called context-free, meaning that what a piece of structure looks like does not depend on what surrounds it.</p>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 234" role="img" aria-label="Diagram: three rungs ordered by the shape of memory — a single dial, a last-in-first-out notepad, and a memory able to align two segments in the same order">
+<rect x="0" y="0" width="640" height="234" fill="#19202f"></rect>
+<circle cx="70" cy="42" r="19" fill="none" stroke="#7fb3d5" stroke-width="2"></circle>
+<line x1="70" y1="42" x2="82" y2="30" stroke="#7fb3d5" stroke-width="2"></line>
+<text x="112" y="36" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">One dial: knows only where it sits now</text>
+<text x="112" y="56" fill="#8d95a8" font-family="Georgia, serif" font-size="11">Enough for: sound change, inflection</text>
+<line x1="30" y1="76" x2="610" y2="76" stroke="#26314a" stroke-width="1"></line>
+<rect x="54" y="92" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<rect x="54" y="106" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<rect x="54" y="120" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<text x="96" y="104" fill="#e0a458" font-family="Georgia, serif" font-size="11">↑ last owed, first paid</text>
+<text x="230" y="104" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">A last-in-first-out notepad</text>
+<text x="230" y="124" fill="#8d95a8" font-family="Georgia, serif" font-size="11">Enough for: nested debts</text>
+<line x1="30" y1="150" x2="610" y2="150" stroke="#26314a" stroke-width="1"></line>
+<path d="M 54 174 L 88 174" stroke="#a86b6b" stroke-width="1.6"></path>
+<path d="M 54 190 L 88 190" stroke="#a86b6b" stroke-width="1.6"></path>
+<path d="M 58 174 L 84 190" stroke="#a86b6b" stroke-width="1.4"></path>
+<path d="M 84 174 L 58 190" stroke="#a86b6b" stroke-width="1.4"></path>
+<text x="112" y="180" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">Aligning two segments in order: a notepad won't do</text>
+<text x="112" y="200" fill="#8d95a8" font-family="Georgia, serif" font-size="11">Human language sits here: just above the stack</text>
+</svg>
+<div class="cap">The rungs are not ordered by how much meaning can be expressed but by the shape of the memory: only the current position / a pile of last-in-first-out debts / plus the ability to align two segments in the same order. One rung higher and parsing costs stop being realistic.</div>
+</figure>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>The grammar says you may nest forever; people give out at three levels — and English speakers give out in the opposite way from German speakers</h2>
+<p>Take this English sentence: "The rat the cat the dog chased killed ate the malt." Three nouns pile up at the front, three verbs pile up behind, the grammar is impeccable, and it reads like a knot. In 1964 Miller and Isard asked people to recall such sentences after hearing them: two levels is already hard, three essentially cannot be reproduced. Wedging a clause into the middle of another is called center embedding.</p>
+<p>In 2007 Karlsson moved the question into real text: across 119 genuine multiple center-embeddings in seven European languages, written usage reaches a depth of three at most, with not one authentic case of four, while in speech even depth two is close to non-existent. That is a ceiling the corpora grew on their own.</p>
+<p>Then comes the reversal. Gibson and Thomas found in 1999 that deleting the middle verb of such a three-level sentence — which makes it ungrammatical — leaves English native speakers reading faster and rating it higher. In 2010 Vasishth and colleagues ran seven self-paced-reading and eyetracking experiments carrying the same contrast into German: German speakers go the other way, reading the complete sentence faster than the one missing a verb.</p>
+<p>The first explanation was that memory overload evicts the prediction of the still-owed verb, and that the eviction is a relief. The German result kills the general form of it: German subordinate clauses always park the verb at the end, so German readers settle such debts clause-finally every day and hold the prediction more firmly. But in 2016 Frank, Trompenaars and Vasishth added Dutch — also verb-final, yet patterning with English in showing the illusion. The centre of gravity of the explanation shifted from "how many levels memory holds" to "how often this structure occurs in this particular language".</p>
+<p>An unavoidable controversy sits here: should a grammar license what nobody ever utters? The generative side separates knowing from executing and assigns the three-level ceiling to the latter; the usage-based side holds that a structure which never occurs should not be written into the grammar. The disagreement is still live, and neither set of results above takes a side. The evidence is reasonably strong: self-paced reading plus eyetracking, three languages, independent follow-up groups.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>One Swiss German sentence about painting a house punches through the notepad as well</h2>
+<p>A stack does exactly one shape: nesting, innermost settled first. But dependencies come in another shape, crossing — first noun with first verb, second with second, the two links passing through each other in midair.</p>
+<p>Shieber did this with Swiss German in 1985. The example is "Jan säit das mer em Hans es huus hälfed aastriiche" (literally "Jan says that we Hans-dative the-house-accusative help paint", meaning "Jan says that we helped Hans paint the house"). "em Hans" carries dative marking, because "hälfe" (help) demands a dative object; "es huus" carries accusative marking, because "aastriiche" (paint) demands an accusative one. The nouns come in the order help-then-paint and so do the verbs — the links cross, they do not nest.</p>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img" aria-label="Diagram: nested dependency links above, the crossing links of the Swiss German example below">
+<rect x="0" y="0" width="640" height="250" fill="#19202f"></rect>
+<text x="30" y="28" fill="#7fb3d5" font-family="Georgia, serif" font-size="12">Nested: innermost settled first, a pile of debts is enough</text>
+<path d="M 60 78 Q 300 26 540 78" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<path d="M 180 78 Q 300 46 420 78" fill="none" stroke="#7fb3d5" stroke-width="2"></path>
+<text x="40" y="96" fill="#e4e8f2" font-family="Georgia, serif" font-size="15">if        either      …        or        then</text>
+<text x="40" y="118" fill="#8d95a8" font-family="Georgia, serif" font-size="11">one link sits inside the other; they never meet</text>
+<line x1="30" y1="140" x2="610" y2="140" stroke="#26314a" stroke-width="1"></line>
+<text x="30" y="166" fill="#7fb3d5" font-family="Georgia, serif" font-size="12">Crossing: first pairs with first — a notepad cannot do it</text>
+<path d="M 76 200 Q 250 168 404 200" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<path d="M 216 200 Q 380 164 540 200" fill="none" stroke="#a86b6b" stroke-width="2"></path>
+<text x="40" y="218" fill="#e4e8f2" font-family="Georgia, serif" font-size="15">em Hans      es huus      hälfed      aastriiche</text>
+<text x="40" y="238" fill="#8d95a8" font-family="Georgia, serif" font-size="11">dative noun · accusative noun · dative-taking verb · accusative-taking verb</text>
+</svg>
+<div class="cap">Above, the two arcs nest and the inner one closes first. Below, the two arcs cross and neither sits inside the other.</div>
+</figure>
+<p>The argument's strength lies in the case marking: however many verbs demand a dative, exactly that many dative nouns must appear, and likewise for the accusative — so there is no reanalysis that turns the crossing into nesting.</p>
+<p>A second brick comes from word formation. In 1985 Culy examined Bambara, a Mande language of West Africa: wulu is "dog", wulu-o-wulu is "whatever dog", where the linking o copies the entire preceding word verbatim; and compound nouns can be extended indefinitely, wulu-filela being "dog-watcher", with further elements available. Put the two together and you get an arbitrarily long string repeated as a whole. To judge whether such a word is well formed, a device must align two arbitrarily long segments in the same order.</p>
+<p>Hence the narrow gap: human language sits above the rung with a single stack, but only just above it. Joshi's 1985 name for it is mildly context-sensitive, and "mildly" is not politeness — one rung higher and parsing costs stop being realistic. On evidence strength, both arguments have been pressed: native judgements themselves start to blur once three or four verbs are piled up, "arbitrarily long" is an idealisation, and they rest on a few constructions in a few languages. No replacement conclusion has appeared in thirty years, but calling them verified across a large cross-linguistic sample would be dishonest.</p>
+<p>Measuring machines with the same yardstick gives a clean picture. In 2023 Delétang and colleagues trained 2200 models on 16 tasks: recurrent networks and Transformers (the architecture behind today's large models) fail to extrapolate on tasks that require backtracking — fine within the lengths seen in training, dropping off beyond them; only networks fitted with an external stack, or with a tape they can read and write back and forth, hold up on tasks needing nesting or same-order alignment.</p>
+<p>The difference that falls out is checkable rather than analogical: what the models lack is a debt list of unbounded depth, and bolting one on supplies it; what people lack is not the list but the capacity to maintain it — give a person pen and paper and the manageable depth jumps at once, and a person who cannot parse a sentence can still judge it "legal but too hard". That double response is exactly the kind of judgement the classification needs, while a model offers only a low score on a single scale.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Context · BigCat</h3>
+<ol>
+<li><b>① Writing and expression</b>: what comes back in review is not "I disagree" but "I couldn't parse this sentence"; you look again and two or three layers of qualification have been wedged between the subject and its verb — "the switch we added last quarter to get around that limitation in the permission model is now …". This is the mechanism from "people give out at three levels": the reader has to carry an unsettled debt all the way down. The changeable action: count how many words separate the subject from its verb, and past twenty, unnest it into a chain — finish the main clause first and put the qualifications in a sentence of their own. The criterion moves from "does it read well" to that countable distance.</li>
+<li><b>② Working and living across languages</b>: in a meeting you want to deliver a conclusion that comes with premises, and your habit is to lay out all three premises first; by the second one someone cuts in, or by the time you finish the topic has moved on. This is not about which order is better — both orders are perfectly normal in the languages that use them. It is that for the whole stretch while you lay out premises, the listener is carrying a debt with no pen and paper to carry it on. The changeable action: move the conclusion to the front and add the premises one at a time, and self-check by asking which sentence your conclusion showed up in. If you want to keep the build-up, open with "the conclusion is X, here are three reasons" — that writes the debt down on the listener's behalf.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Interdisciplinary Connections</h3>
+<ul>
+<li><b>Evolutionary biology · "Can birds do recursion" is the wrong question, and it goes wrong exactly at the step the hierarchy is built on</b>: in 2006 Gentner and colleagues trained European starlings to distinguish two kinds of artificial song string: "some number of As followed by equally many Bs" versus "As and Bs alternating". The birds learned it and generalised to elements they had not heard, and the paper's title used the word "recursive". In 2009 van Heijningen and colleagues replicated it with zebra finches and found the same discrimination explicable by far cheaper strategies, such as memorising which pairs of adjacent elements occur; the two sides exchanged one round of replies and did not converge. The mechanism at work is the one from "either … or …": what rules out the cheapest device is never that the quantities match, it is that the paired items stand in an individuated dependency — the first A settles only against that one particular last B. A string of "some As then equally many Bs" can be judged by counting, with no pile of debts at all. What follows is not "the evidence is thin" but a directly actionable requirement on experimental design: quantity-matched material cannot in principle test for recursion, and to test for it you must make the material so that swapping one particular A forces one particular B to change with it. <b>Where this does not hold</b> is a harsher layer: lab material is always finite in length, and any finite set of strings lands on the cheapest rung — the classification is a classification of infinite sets. So "which rung does this species sit on" is in principle unanswerable in a lab; all that can be measured is which strategy it used. The same blade cuts back at us: our own placement rests on native speakers giving legality judgements about sentences they have never heard, and animals cannot give those.</li>
+<li><b>Society and institutions · Parliamentary procedure maintains a stack explicitly, and its depth limit comes from process design rather than from memory</b>: under the rules of order (Robert's Rules of Order), a main motion that has not yet been voted on can have a subsidiary motion moved against it, and another stacked on top of that; the rules require the immediately pending question to be disposed of first and then the next one out, and the chair and the recorder write the whole chain down. What runs here is that last-in-first-out debt list, the stack — parliamentary procedure implements it explicitly. And that yields a conclusion you would not otherwise see: the three-level ceiling in human language is not that nesting is intrinsically hard, it is that the stack has no external support. Wherever the stack is given external support — a pending list on a whiteboard, itemised minutes — the depth limit should run well past three, and the failure mode should differ: with no support, failure looks like never getting back to the original item; with support, failure looks like getting back to it but no longer matching the context it sat in. Those are two failures you can count separately in the minutes. <b>Where this does not hold</b>: the parliamentary stack is visible and auditable, and the chair can declare the whole chain cleared; the listener's stack in language is neither visible nor resettable. So the procedural depth limit is deliberately designed (unlimited nesting would paralyse the proceedings) while the linguistic one leaks out of memory. Treating a depth limit written into an institution as evidence about human cognitive limits runs the causation backwards.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Thinking Further</h3>
+<details><summary>What does it actually mean to say a machine "can handle" a language?</summary><p>At least three things: judging whether a sentence is accepted, delivering its structure, and stating its meaning. The classification covers only the first, and only in the infinite-set sense. So "natural language is not context-free" is a mathematical fact about a set of legal strings; it does not directly tell you what is inside a human head.</p></details>
+<details><summary>If people give out at three levels, why have a grammar that permits unbounded nesting?</summary><p>One answer is that writing the ceiling in is more trouble than leaving it out: you would have to say whether it is three or four, and the number shifts with pen and paper, with time, with content. The opposite answer is that what never occurs should not be in the rules, and that the number three is itself the thing to be explained.</p></details>
+<details><summary>Does Chinese offer anything like the Swiss German case for prying the rungs apart?</summary><p>What gets discussed is the numeral system and reduplicative word formation, such as 看一看 (kàn-yi-kàn, "take a quick look"), where a component is copied — and copying is precisely the mechanism in the Bambara argument. But prying the rungs apart with Chinese is far less clean than with Swiss German, exactly because Chinese has no case marking, and the reason that argument cannot be dodged is that case marking forces the counts of nouns and verbs to match. Which also explains why arguments of this kind keep resting on a handful of languages: not because those languages are special, but because they happen to carry the marking that nails the argument down.</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">The Chomsky hierarchy</a> · <a href="https://ieeexplore.ieee.org/document/1056813">Chomsky (1956), Three models for the description of language</a></li>
+<li><a href="https://dl.acm.org/doi/10.5555/204915.204917">Kaplan &amp; Kay (1994), Regular models of phonological rule systems</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Center_embedding">Center embedding, with the classic examples</a> · <a href="https://researchportal.helsinki.fi/en/publications/constraints-on-multiple-center-embedding-of-clauses">Karlsson (2007), the observed ceiling on multiple embedding</a></li>
+<li><a href="https://www.tandfonline.com/doi/full/10.1080/01690960903310587">Vasishth et al. (2010), opposite missing-verb effects in English and German</a> · <a href="https://onlinelibrary.wiley.com/doi/10.1111/cogs.12247">Frank et al. (2016), adding Dutch</a></li>
+<li><a href="https://link.springer.com/article/10.1007/BF00630917">Shieber (1985), the Swiss German counterargument</a> · <a href="https://en.wikipedia.org/wiki/Cross-serial_dependencies">Cross-serial dependencies</a></li>
+<li><a href="https://link.springer.com/article/10.1007/BF00630918">Culy (1985), the complexity of the vocabulary of Bambara</a> · <a href="https://babel.ucsc.edu/~hank/mrg.readings/Culy1985_Bambara.pdf">full text</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mildly_context-sensitive_grammar_formalism">Mildly context-sensitive formalisms</a> · <a href="https://www.kornai.com/MatLing/mcsfin.pdf">Joshi's survey</a></li>
+<li><a href="https://arxiv.org/abs/2207.02098">Delétang et al. (2023), Neural networks and the Chomsky hierarchy</a> · <a href="https://arxiv.org/abs/2311.00208">What formal languages can Transformers express</a></li>
+<li><a href="https://www.nature.com/articles/nature04675">Gentner et al. (2006), syntactic pattern learning in songbirds</a> · <a href="https://www.pnas.org/doi/10.1073/pnas.0908113106">van Heijningen et al. (2009), the rebuttal</a> · <a href="https://www.pnas.org/content/107/16/E66.full">the exchange</a></li>
+<li><a href="https://robertsrules.org/rror-02.htm">The order of precedence of motions</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>

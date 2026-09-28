@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>什么样的机器能处理什么样的语言 — 语言学 Day 32</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style><body>
+<body>
+<div class="container">
+<header>
+<div class="kicker">Day 32 · 语言学</div>
+<h1>什么样的机器能处理什么样的语言</h1>
+<div class="sub">分档不按聪明，按「记得住什么形状的欠账」；人类语言坐的那一层，是被瑞士德语的一句话和一个西非语言的构词法撬出来的</div>
+<div class="date">2026-09-28</div>
+<div class="pitch">「先来若干个 A，再来同样多个 B」——这种串看上去很像递归，连鸟都学得会。但要判断它，只需要会数个数，不需要记住谁跟谁配对。二十年来「动物会不会递归」的争论，一大半卡在这个区别上。</div>
+</header>
+<div class="intro">
+<p>先说一句：「要么明天下雨我们就留下，要么天晴我们就走。」再把它整个塞进另一句：「如果（要么下雨就留下，要么天晴就走），那么这周末不用再商量了。」还能再套。套的时候你在做一件具体的事：记着「还欠一个『那么』」。</p>
+<p>欠账有形状，而且只能按一个顺序还——最后欠下的最先还。这个形状决定了什么样的装置处理得了这类句子，跟句子说什么、跟这门语言「表达力强不强」都没关系。</p>
+<p>反直觉的是：按「需要什么装置」给语言排队，档位只有四个，人类语言全挤在第二和第三档之间一道窄缝里。钉下这道缝位置的不是理论推演，是瑞士德语里一句关于粉刷房子的话，和西非一门语言里「不管什么狗」这个词。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>「要么……要么……」能往里套，这一下就把最便宜的那台机器排除掉了</h2>
+<p>最便宜的装置是一个旋钮，正式名字叫有限状态机（finite-state machine）：读进一个符号，旋钮跳到另一个位置，跳完就不记得走过哪条路，只知道现在停在哪。位置数目事先定死，有限个。</p>
+<p>别急着觉得它弱——它够用的地方是真的够用，而且被证明过。声音和词形这一层基本在它管辖内：Johnson 1972 年、Kaplan 与 Kay 1994 年的结果是，一整套按顺序作用的音系规则可以整体编译成这种旋钮装置；Koskenniemi 1983 年把芬兰语的词形变化做成了这样一台装置，而芬兰语一个名词有十几种格。「够用」是个定理，不是印象。</p>
+<p>句子这一层就不行了。Chomsky 1956 年那篇文章的论证正是嵌套：if 后面欠一个 then，either 后面欠一个 or，能叠到任意多层。旋钮位置有限，层数一超，装置必然把两种不同的欠账挤进同一个位置，从此分不出哪句该收哪句该拒。所以下一档得配个后进先出的记事本：最后记上去的最先划掉。它的通用名字是栈（stack），配了栈那一档叫上下文无关（context-free，意思是一块结构长什么样，不看周围有什么）。</p>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 234" role="img" aria-label="示意图：三档装置按记忆形状排列，分别是一个旋钮、一个后进先出的记事本、以及能同序对齐的更强记忆">
+<rect x="0" y="0" width="640" height="234" fill="#19202f"></rect>
+<circle cx="70" cy="42" r="19" fill="none" stroke="#7fb3d5" stroke-width="2"></circle>
+<line x1="70" y1="42" x2="82" y2="30" stroke="#7fb3d5" stroke-width="2"></line>
+<text x="112" y="36" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">一个旋钮：只知道现在在哪</text>
+<text x="112" y="56" fill="#8d95a8" font-family="Georgia, serif" font-size="11">够用：音变、词形变化</text>
+<line x1="30" y1="76" x2="610" y2="76" stroke="#26314a" stroke-width="1"></line>
+<rect x="54" y="92" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<rect x="54" y="106" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<rect x="54" y="120" width="34" height="14" fill="none" stroke="#e0a458" stroke-width="1.4"></rect>
+<text x="96" y="104" fill="#e0a458" font-family="Georgia, serif" font-size="11">↑ 最后欠的最先还</text>
+<text x="180" y="104" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">一个后进先出的记事本</text>
+<text x="180" y="124" fill="#8d95a8" font-family="Georgia, serif" font-size="11">够用：嵌套的欠账</text>
+<line x1="30" y1="150" x2="610" y2="150" stroke="#26314a" stroke-width="1"></line>
+<path d="M 54 174 L 88 174" stroke="#a86b6b" stroke-width="1.6"></path>
+<path d="M 54 190 L 88 190" stroke="#a86b6b" stroke-width="1.6"></path>
+<path d="M 58 174 L 84 190" stroke="#a86b6b" stroke-width="1.4"></path>
+<path d="M 84 174 L 58 190" stroke="#a86b6b" stroke-width="1.4"></path>
+<text x="112" y="180" fill="#e4e8f2" font-family="Georgia, serif" font-size="14">要能同序对齐两段，记事本不够</text>
+<text x="112" y="200" fill="#8d95a8" font-family="Georgia, serif" font-size="11">人类语言坐这儿：比栈高一点点</text>
+</svg>
+<div class="cap">分档不按「能表达多少意思」，按记忆的形状：只记当前位置 / 记一叠后进先出的欠账 / 还得能把两段同序对上。再往上一档，解析代价就不现实了。</div>
+</figure>
+<p class="en-brief"><b>EN</b> The cheapest device is a single dial. Its formal name is a finite-state machine: it reads one symbol, the dial jumps from one position to another, and once it has jumped it retains no record of the path it took — only where it now sits. The number of positions is fixed in advance and finite. Do not be too quick to call that weak: where it suffices, it genuinely suffices, and provably so. Sound and word-form largely fall inside its reach. Johnson (1972) and Kaplan and Kay (1994) showed that a whole battery of ordered phonological rules can be compiled into exactly such a dial device, and Koskenniemi (1983) built Finnish word inflection as one — a language in which a single noun has more than a dozen cases. "Sufficient" here is a theorem, not an impression. Sentences are another matter. The argument in Chomsky's 1956 paper turns on nesting: "if" incurs a debt of a later "then", "either" a debt of a later "or", and such debts can be stacked to any depth. A dial has only finitely many positions, so once the depth exceeds that number the device must squeeze two distinct debt states into the same position — and from then on it cannot tell which strings to accept from which to reject. The next rung therefore needs a notepad, and a last-in-first-out one: the entry written last is crossed off first. That notepad has a standard name, a stack, and the rung equipped with one is called context-free — meaning that what a piece of structure looks like does not depend on what surrounds it.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>语法说能套到底，人读到三层就废了 —— 而英语母语者废掉的样子跟德语母语者相反</h2>
+<p>看这句英语：The rat the cat the dog chased killed ate the malt.（那只被狗追的猫咬死的老鼠吃了麦芽）三个名词堆在开头，三个动词堆在后面，语法无可指摘，读起来是一团。1964 年 Miller 和 Isard 让人听完复述这类句子，两层已经吃力，三层基本复述不出来。这种把从句塞在主句正中间的结构叫中心嵌套（center embedding）。</p>
+<p>2007 年 Karlsson 把范围挪到真实文本：七门欧洲语言里 119 个真实的多层中心嵌套，书面语最多到三层，四层一例也没找到；口语里连两层都几乎不存在。这是语料自己长出来的硬顶。</p>
+<p>然后是反转。Gibson 和 Thomas 1999 年发现，把这种三层句里中间那个动词删掉——句子因此不合语法——英语母语者反而读得更顺、评分更高。2010 年 Vasishth 和合作者用自控速阅读和眼动做了七个实验，把同样的对比搬去德语：德语母语者反过来，完整句比缺动词的读得快。</p>
+<p>最早的解释是记忆过载把「还欠一个动词」这条预测挤掉了，挤掉反而轻松。德语的结果否掉了它的通用版本：德语从句动词一律在句末，读者天天在句尾结算欠账，预测维持得更牢。但 2016 年 Frank、Trompenaars 和 Vasishth 加进荷兰语——动词也在句末，却跟英语一样出现了幻觉。解释重心于是从「记忆装得下几层」挪向「这类结构在这门语言里出现得多不多」。</p>
+<p>绕不开的争议：语法该不该许可从来没人说出口的东西。生成语法那边区分「知道什么」和「当场做得到什么」，把三层上限归给后者；用法为本那边认为从不出现的结构不该写进语法。这个分歧到今天还有争论，而上面两组结果谁也没站到某一边。证据强度不错：自控速阅读加眼动、跨三门语言、有独立小组的后续。</p>
+<p class="en-brief"><b>EN</b> Take this English sentence: "The rat the cat the dog chased killed ate the malt." Three nouns pile up at the front, three verbs pile up behind them; it is grammatically impeccable and reads like a knot. In 1964 Miller and Isard asked people to recall such sentences after hearing them: two levels are already hard, three essentially cannot be reproduced. Wedging a clause into the middle of another is called center embedding. In 2007 Karlsson moved the question out of the lab and into real text: across 119 genuine multiple center-embeddings in seven European languages, written usage reaches a maximum depth of three, with not one authentic case of four, while in speech even depth two is close to non-existent. That ceiling is not forced by an experiment; it grew out of the corpora. Then comes the reversal. Gibson and Thomas (1999) found that deleting the middle verb of such a three-level sentence — which makes it ungrammatical — leaves English native speakers reading faster and rating it as more acceptable. In 2010 Vasishth and colleagues ran seven self-paced-reading and eyetracking experiments carrying the same contrast into German, where native speakers show the opposite: the complete sentence is read faster than the one missing a verb. The first explanation was that memory overload evicts the prediction of the still-owed verb, and that eviction is a relief. The German result kills the general form of that account: German subordinate clauses always put the verb at the end, so German readers settle such debts clause-finally every day and hold the prediction more firmly. In 2016 Frank, Trompenaars and Vasishth added Dutch — also verb-final in subordinate clauses, yet patterning with English in showing the illusion. The centre of gravity of the explanation therefore shifted from "how many levels memory holds" to "how often this structure occurs in this particular language". An unavoidable controversy sits here: should a grammar license what no one ever utters? The generative side separates what you know from what you can execute on the spot, and assigns the three-level ceiling to the latter; the usage-based side holds that a structure which never occurs should not be written into the grammar. That disagreement is still live today. Note that neither set of results takes a side — they say that the same ceiling looks different in different languages, not that there is no ceiling. The evidence here is reasonably strong: self-paced reading plus eyetracking, three languages, independent follow-up groups.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>瑞士德语里一句关于粉刷房子的话，把那个记事本也顶穿了</h2>
+<p>栈只会做一种形状：嵌套，里面的先结算。可依赖关系还有另一种形状，叫交叉——第一个名词配第一个动词，第二个配第二个，两条线在半空交叉而过。</p>
+<p>1985 年 Shieber 拿瑞士德语做了这件事。例句是 Jan säit das mer em Hans es huus hälfed aastriiche（字面「Jan 说 我们 给-Hans 这-房子 帮 粉刷」，意思是「Jan 说我们帮 Hans 粉刷房子」）。em Hans 带与格标记，因为「帮」要求与格宾语；es huus 带宾格标记，因为「粉刷」要求宾格宾语。两个名词按「帮、粉刷」的顺序排，两个动词也按「帮、粉刷」排——配对线交叉，不是套着的。</p>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img" aria-label="示意图：上半是嵌套的配对线，下半是瑞士德语交叉的配对线">
+<rect x="0" y="0" width="640" height="250" fill="#19202f"></rect>
+<text x="30" y="28" fill="#7fb3d5" font-family="Georgia, serif" font-size="12">嵌套：里面的先结算，一叠欠账就够</text>
+<path d="M 60 78 Q 300 26 540 78" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<path d="M 180 78 Q 300 46 420 78" fill="none" stroke="#7fb3d5" stroke-width="2"></path>
+<text x="40" y="96" fill="#e4e8f2" font-family="Georgia, serif" font-size="15">如果    要么     …     要么    那么</text>
+<text x="40" y="118" fill="#8d95a8" font-family="Georgia, serif" font-size="11">一条套在另一条里面，从不相交</text>
+<line x1="30" y1="140" x2="610" y2="140" stroke="#26314a" stroke-width="1"></line>
+<text x="30" y="166" fill="#7fb3d5" font-family="Georgia, serif" font-size="12">交叉：第一个配第一个，记事本做不出来</text>
+<path d="M 76 200 Q 250 168 404 200" fill="none" stroke="#e0a458" stroke-width="2"></path>
+<path d="M 216 200 Q 380 164 540 200" fill="none" stroke="#a86b6b" stroke-width="2"></path>
+<text x="40" y="218" fill="#e4e8f2" font-family="Georgia, serif" font-size="15">em Hans      es huus      hälfed      aastriiche</text>
+<text x="40" y="238" fill="#8d95a8" font-family="Georgia, serif" font-size="11">与格名词 · 宾格名词 · 要与格的动词 · 要宾格的动词</text>
+</svg>
+<div class="cap">上半两条弧套着，最里面那条先收口。下半两条弧交叉，谁也不在谁里面。</div>
+</figure>
+<p>论证硬在格标记上：要与格的动词有几个，与格名词就得有几个，宾格同理，于是没法换个分析把交叉说成嵌套绕过去。</p>
+<p>另一块砖来自构词。1985 年 Culy 研究班巴拉语（Bambara，西非曼德语族的一门语言）：wulu 是「狗」，wulu-o-wulu 是「不管什么狗」，中间那个 o 把前面整个词照原样重复一遍；而复合名词可以往长里接，wulu-filela 是「看狗的人」，接完还能再接。两条一叠就得到任意长的一串再整体重复一遍，判断它合不合法，装置得把任意长的两段同序比对。</p>
+<p>结论就是这道窄缝：人类语言比「配一个栈」那一档高，但高得有限。Joshi 1985 年给它起的名字是温和上下文敏感（mildly context-sensitive）。「温和」不是客气——再往上一档，解析代价就不现实了。证据强度上这两个论证都被追问过：动词堆到三四个时母语者判断本身开始模糊，「任意长」也是理想化，而它们依赖的是少数语言里的少数构造。三十多年没出现取而代之的结论，但说成「已被大样本跨语言验证」是不诚实的。</p>
+<p>拿同一把尺子量机器，结果挺干净。2023 年 Delétang 和合作者训了 2200 个模型跑 16 个任务：循环网络和 Transformer（今天大模型用的架构）在需要往回退的任务上外推不了，训练见过的长度内还行，一超就掉；只有外挂了栈、或者外挂一条能来回读写的纸带的网络，才在需要嵌套和同序对齐的任务上稳得住。</p>
+<p>差异因此是能查的，不是一句类比：模型缺的是「一张深度不受限的欠账表」，外挂一个就补上；人缺的不是这张表，是维持它的容量——给人纸笔，层数立刻上去，而且人读不懂的同时还能判断这句「合法但太难」。这个双重反应正是分档要的判断，模型给的只是同一根分数轴上的低分。</p>
+<p class="en-brief"><b>EN</b> A stack does exactly one shape: nesting, innermost settled first. But dependencies come in another shape, crossing — first noun with first verb, second noun with second verb, the two links passing through each other in midair. Shieber did this with Swiss German in 1985. His example is "Jan säit das mer em Hans es huus hälfed aastriiche", meaning "Jan says that we helped Hans paint the house". "em Hans" carries dative marking because the verb "hälfe" (help) demands a dative object; "es huus" carries accusative marking because "aastriiche" (paint) demands an accusative one. The nouns come in the order help-then-paint, and so do the verbs — so the links cross rather than nest. The argument's strength lies in the case marking: however many verbs demand a dative, exactly that many dative nouns must appear, and likewise for the accusative. There is no reanalysis that turns the crossing into nesting, because a device that works by nesting can only produce mirror-image pairings. A second brick comes from word formation. In 1985 Culy examined Bambara, a Mande language of West Africa: "wulu" is dog, "wulu-o-wulu" is "whatever dog", where the linking "o" copies the whole preceding word verbatim. At the same time, compound nouns can be extended indefinitely — "wulu-filela" is dog-watcher, and further elements can be added. Put the two rules together and you get an arbitrarily long string repeated as a whole. To judge whether such a word is well formed, a device must align two arbitrarily long segments in the same order — again the shape a stack cannot make. Hence the narrow gap: human language sits above the rung with a single stack, but only just above it. Joshi's 1985 name for it is mildly context-sensitive, and "mildly" is not politeness — a full rung higher and parsing costs stop being realistic. Measuring machines with the same yardstick gives a clean picture. In 2023 Delétang and colleagues trained 2200 models on 16 tasks: recurrent networks and Transformers (the architecture behind today's large models) fail to extrapolate on tasks requiring you to backtrack — fine within lengths seen in training, dropping off beyond them;and only networks fitted with an external stack or a read-write tape hold up on tasks needing nesting or same-order alignment. That yields a checkable difference rather than an analogy: what the models lack is a debt list of unbounded depth, and bolting one on supplies it, whereas what people lack is not the list but the capacity to maintain it — give a person pen and paper and the manageable depth jumps at once, and a person who cannot parse a sentence can still judge it "legal but too hard". That double response is precisely the kind of judgement the classification needs, while a model offers only a low score on a single scale. The evidence deserves plain labelling: both arguments have been pressed. Native judgements themselves start to blur once three or four verbs are piled up, and Bambara's "arbitrarily long" is an idealisation. No replacement conclusion has appeared in thirty years, but these arguments rest on a few constructions in a few languages, and calling them verified across a large cross-linguistic sample would be dishonest.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 写作与表达</b>：评审意见里冒出来的不是「我不同意」而是「这句没看懂」；回头看，主语和谓语之间塞了两三层限定——「我们上个季度为了绕开那个跟权限模型有关的限制而加的开关，现在……」。这是「人读到三层就废了」那节的机制：读者得挂着一笔没结算的欠账往下走。可改的动作：数主语到它的谓语隔了多少字，超过二十就拆成串联，先把主句说完、限定另起一句；判据从「顺不顺」换成这个数得出来的距离。</li>
+<li><b>② 跨语言工作与生活</b>：会议上你要讲一个带前提的结论，习惯是先铺完三个前提再给结论；讲到第二个前提对方就插话，或者等你说完已经换了话题。这不是哪种语序更好——两种顺序在各自语言里都正常；是听者在你铺前提那整段里一直挂着一笔欠账，而它没有纸笔可挂。可改的动作：把结论提到最前面再一条条补前提，自查的量是「结论出现在第几句」；要保留铺陈顺序，就先说一句「结论是 X，下面三条理由」，等于替听者把欠账写在纸上。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>演化生物学 · 「鸟会不会递归」这个问题被问错了，问错的地方正好是分档的那道台阶</b>：2006 年 Gentner 等人训紫翅椋鸟（European starling）区分两种人造鸣声串：「若干个 A 接同样多个 B」和「A、B 交替」。鸟学会了，还能推广到没听过的音元，论文标题直接用了「递归」。2009 年 van Heijningen 等人拿斑胸草雀（zebra finch）复制，发现同样的辨别能被便宜得多的策略解释，比如记住相邻两个音元的组合；两边互相回了一轮，没有收敛。跑的是「要么……要么……」那节的机制：把最便宜的装置排除掉，靠的不是数量对得上，而是配对项之间有个体化的依赖——第一个 A 只跟最后那个特定的 B 结算。「若干个 A 接同样多个 B」这种串，会数个数就判得出，一叠欠账都不需要。由此推出的不是「证据不足」，而是一条能直接改的实验设计要求：数量匹配的材料原则上测不出递归，要测就得让材料里某一个 A 换掉之后，必须是特定的那个 B 跟着变才合法。<b>但这里不成立</b>的是更狠的一层：实验室材料永远是有限长的，而有限的串集合全部落在最便宜那一档——分档是对无限集合的分类。所以「这个物种坐在哪一层」在实验室里原则上无解，能测的只有「它用了哪种策略」。这一刀同样砍向人类那边：人的定位靠的是母语者对没听过的句子给出合法性判断，动物给不了。</li>
+<li><b>社会与制度 · 议事规则显式地维护一个栈，而它的深度上限来自流程设计，不来自记忆</b>：议事规则那一套（Robert's Rules of Order）里，一个主动议还没表决就可以对它提附属动议，附属动议上面还能再叠；规则规定先处理「当前待决」的那一个，处理完再往回退一层，主持人和记录员把这一串写下来。跑的正是那条后进先出的欠账表机制，也就是栈——议事规则把它显式实现了一遍。由此能推出一个原本看不出的结论：人类语言的三层上限不是「嵌套本身难」，而是「那个栈没有外挂」。凡是给栈配了外挂的场合（白板上的待决清单、逐条记录），深度上限就该明显高于三层，而且失败的样子不一样——没有外挂时表现为再也回不到原议题；有外挂时表现为回到了原议题、但语境已经对不上。这是能在会议记录上分开数的两种失败。<b>但这里不成立</b>的是：议事规则的栈看得见查得到，主持人还能宣布把整串清掉；语言里听者那个栈既看不见也不能重置。所以议事规则的深度上限是有意设计出来的（不限制议事就会瘫掉），语言的上限是记忆漏出来的。把制度里写明的层数上限当成人类认知极限的证据，是把因果反着推了。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>说一台机器「能处理」一门语言，到底是什么意思？</summary><p>至少三件事：判断一句话收不收、给出结构、说出意思。分档只管第一件，而且只管无限集合意义上的第一件。所以「自然语言不是上下文无关的」是个关于合法串集合的数学事实，不直接告诉你人脑里装着什么。</p></details>
+<details><summary>如果人读到三层就废，为什么还要一个允许无限嵌套的语法？</summary><p>一种答案是写下上限反而更麻烦：你得说清是三还是四，而这个数随纸笔、时间、内容变。另一种答案反过来——不出现的东西不该写进规则，三层这个数本身才是要解释的现象。</p></details>
+<details><summary>汉语这边有没有像瑞士德语那样能撬动档位的例子？</summary><p>被讨论过的有数词系统和重叠构词，比如「看一看」这类把同一个成分复制一遍的形式——重叠正是班巴拉语那个论证的核心机制。但用汉语撬档位远没有瑞士德语干净，原因恰好是汉语没有格标记，而那个论证绕不过去就是因为格标记逼着名词和动词的数目对上。这也解释了这类论证为什么总压在少数几门语言上：不是那些语言特别，是它们刚好带着能把论证钉死的标记。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Chomsky_hierarchy">乔姆斯基谱系词条</a> · <a href="https://ieeexplore.ieee.org/document/1056813">Chomsky (1956)，Three models</a></li>
+<li><a href="https://dl.acm.org/doi/10.5555/204915.204917">Kaplan &amp; Kay (1994)，音系规则的有限状态模型</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Center_embedding">中心嵌套词条（含经典例句）</a> · <a href="https://researchportal.helsinki.fi/en/publications/constraints-on-multiple-center-embedding-of-clauses">Karlsson (2007)，多层嵌套的实际上限</a></li>
+<li><a href="https://www.tandfonline.com/doi/full/10.1080/01690960903310587">Vasishth 等 (2010)，英德相反的缺动词效应</a> · <a href="https://onlinelibrary.wiley.com/doi/10.1111/cogs.12247">Frank 等 (2016)，加进荷兰语</a></li>
+<li><a href="https://link.springer.com/article/10.1007/BF00630917">Shieber (1985)，瑞士德语的反证</a> · <a href="https://en.wikipedia.org/wiki/Cross-serial_dependencies">交叉依赖词条</a></li>
+<li><a href="https://link.springer.com/article/10.1007/BF00630918">Culy (1985)，班巴拉语词汇复杂度</a> · <a href="https://babel.ucsc.edu/~hank/mrg.readings/Culy1985_Bambara.pdf">全文</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mildly_context-sensitive_grammar_formalism">温和上下文敏感词条</a> · <a href="https://www.kornai.com/MatLing/mcsfin.pdf">Joshi 的综述</a></li>
+<li><a href="https://arxiv.org/abs/2207.02098">Delétang 等 (2023)，神经网络与谱系</a> · <a href="https://arxiv.org/abs/2311.00208">Transformer 能表达哪些形式语言</a></li>
+<li><a href="https://www.nature.com/articles/nature04675">Gentner 等 (2006)，鸣禽的句法模式学习</a> · <a href="https://www.pnas.org/doi/10.1073/pnas.0908113106">van Heijningen 等 (2009) 的反驳</a> · <a href="https://www.pnas.org/content/107/16/E66.full">双方的往复</a></li>
+<li><a href="https://robertsrules.org/rror-02.htm">动议的优先次序</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
