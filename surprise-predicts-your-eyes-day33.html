@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>模型的「意外」能预测人的眼动 — 语言学 Day 33</title>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>模型的「意外」能预测人的眼动 — 语言学 Day 33</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
@@ -45,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 33 · 语言学</div>
-<h1>模型的「意外」能预测人的眼动</h1>
+<h1 data-tts="ad241202696ceea2">模型的「意外」能预测人的眼动</h1>
 <div class="sub">把「这个词有多出乎意料」算成一个数，再乘上几毫秒，就得到你眼睛在它上面多停的时间；这条汇率在十一门语言里都成立，却在花园幽径句上塌掉</div>
 <div class="date">2026-09-29</div>
 <div class="pitch">你以为模型越强、越会猜词，就该越像人。实际测下来是反的：同一个家族里参数越多、困惑度越低的模型，对人类阅读时间的拟合反而越差，而且差得很整齐。</div>
@@ -57,7 +58,7 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>「一把」两个字出来，你已经把大半本词典划掉了</h2>
+<h2 data-tts="88fcbaed4d773f7e">「一把」两个字出来，你已经把大半本词典划掉了</h2>
 <p>1981 年 Ehrlich 和 Rayner 做了一件很直接的事：同一个目标词，放进两种上下文——一种前文把它逼得几乎只能是它，一种前文什么也没框住。结果是，高约束那一版里读者更常整个跳过这个词；就算停了，停留时间也更短。他们还偷偷把目标词拼错了一部分，发现上下文越紧，读者越不容易发现那个错——你看到的一部分是你自己填进去的。</p>
 <p>这说明预测不是读完一句话之后的补救，是边读边发生的，而且在词进入视野之前就已经开始。</p>
 <p>汉语把这件事做得特别显眼，靠的是量词。你说「一把」，后面的名词就跳进「有把手的那一类」——伞、刀、椅子；说「一只」，是动物和成对物品里的一个——猫、鞋；说「一条」，是细长的——鱼、路、腿。英语的 a 什么也不告诉你。这不只是语法书上的说法：脑电实验里，一个和后面名词搭不上的量词，在读到量词那一刻就会引出 N400（一个在词义对不上时出现的脑电反应），而且这个反应是分级的——量词离读者预期的那个词越近，反应越小。2023 年还有一组用表征相似度分析做的结果：名词出现之前，「活物类」量词和「非活物类」量词引出的脑活动模式就已经分开。</p>
@@ -66,32 +67,32 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>汇率是：每把概率砍一半，就多花固定的几毫秒</h2>
+<h2 data-tts="685dccea24cea0e7">汇率是：每把概率砍一半，就多花固定的几毫秒</h2>
 <p>2001 年 Hale、2008 年 Levy 各自把这件事定成一个量：给定前文，算出这个词出现的概率 p，取 −log p，叫它意外度（surprisal）。概率越低，这个数越大；概率是 1 的时候它是 0。取 2 为底的话，单位就是比特。</p>
 <p>关键不在这个定义，在它跟毫秒之间是什么形状的关系。2013 年 Smith 和 Levy 把概率从接近 1 一直推到小于百万分之一，横跨六个数量级去看阅读时间怎么变，结论是：关系是对数的，不是线性的。翻成人话——从「十拿九稳」掉到「五五开」要多花的时间，和从千分之一掉到两千分之一要多花的时间，是一样多的。每把概率砍一半，就加上固定的一小笔。这一笔大概值多少？自然阅读的估计在每比特两毫秒上下，自定步速阅读里大概四毫秒。一个比特，几毫秒，不多，但它稳定到能从噪声里捞出来。</p>
 <figure>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 268" role="img" aria-label="示意图：阅读时间随词的概率变化的曲线，横轴概率、纵轴多花的毫秒，每把概率砍半纵轴就升高等量的一格">
-<rect x="0" y="0" width="640" height="268" fill="#19202f"/>
-<line x1="70" y1="228" x2="614" y2="228" stroke="#26314a" stroke-width="1.5"/>
-<line x1="70" y1="228" x2="70" y2="36" stroke="#26314a" stroke-width="1.5"/>
-<path d="M 604 228 L 340 196 L 205 164 L 137 132 L 103 100 L 86 68" fill="none" stroke="#e0a458" stroke-width="2.4"/>
-<circle cx="604" cy="228" r="3.4" fill="#e0a458"/><circle cx="340" cy="196" r="3.4" fill="#e0a458"/><circle cx="205" cy="164" r="3.4" fill="#e0a458"/><circle cx="137" cy="132" r="3.4" fill="#e0a458"/><circle cx="103" cy="100" r="3.4" fill="#e0a458"/><circle cx="86" cy="68" r="3.4" fill="#e0a458"/>
-<line x1="70" y1="196" x2="604" y2="196" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
-<line x1="70" y1="164" x2="604" y2="164" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
-<line x1="70" y1="132" x2="604" y2="132" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
-<line x1="70" y1="100" x2="604" y2="100" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
-<line x1="70" y1="68" x2="604" y2="68" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
-<text x="596" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1</text>
-<text x="340" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/2</text>
-<text x="205" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/4</text>
-<text x="137" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/8</text>
-<text x="100" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/16</text>
-<text x="70" y="262" fill="#8d95a8" font-family="Georgia, serif" font-size="11.5">横轴：这个词在前文之下的概率</text>
-<text x="86" y="30" fill="#7fb3d5" font-family="Georgia, serif" font-size="11.5">纵轴：比最好猜的情况多花的毫秒</text>
-<text x="370" y="94" fill="#e4e8f2" font-family="Georgia, serif" font-size="13">每砍半一次，就升高同样一格</text>
-<text x="370" y="114" fill="#8d95a8" font-family="Georgia, serif" font-size="11">一格 ≈ 一个比特 ≈ 两到四毫秒</text>
-<text x="370" y="146" fill="#8d95a8" font-family="Georgia, serif" font-size="11">概率从 1/1000 掉到 1/2000，</text>
-<text x="370" y="164" fill="#8d95a8" font-family="Georgia, serif" font-size="11">代价和从 1 掉到 1/2 一样大</text>
+<svg aria-label="示意图：阅读时间随词的概率变化的曲线，横轴概率、纵轴多花的毫秒，每把概率砍半纵轴就升高等量的一格" role="img" viewbox="0 0 640 268" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="268" width="640" x="0" y="0"></rect>
+<line stroke="#26314a" stroke-width="1.5" x1="70" x2="614" y1="228" y2="228"></line>
+<line stroke="#26314a" stroke-width="1.5" x1="70" x2="70" y1="228" y2="36"></line>
+<path d="M 604 228 L 340 196 L 205 164 L 137 132 L 103 100 L 86 68" fill="none" stroke="#e0a458" stroke-width="2.4"></path>
+<circle cx="604" cy="228" fill="#e0a458" r="3.4"></circle><circle cx="340" cy="196" fill="#e0a458" r="3.4"></circle><circle cx="205" cy="164" fill="#e0a458" r="3.4"></circle><circle cx="137" cy="132" fill="#e0a458" r="3.4"></circle><circle cx="103" cy="100" fill="#e0a458" r="3.4"></circle><circle cx="86" cy="68" fill="#e0a458" r="3.4"></circle>
+<line stroke="#2c4055" stroke-dasharray="3 4" stroke-width="0.8" x1="70" x2="604" y1="196" y2="196"></line>
+<line stroke="#2c4055" stroke-dasharray="3 4" stroke-width="0.8" x1="70" x2="604" y1="164" y2="164"></line>
+<line stroke="#2c4055" stroke-dasharray="3 4" stroke-width="0.8" x1="70" x2="604" y1="132" y2="132"></line>
+<line stroke="#2c4055" stroke-dasharray="3 4" stroke-width="0.8" x1="70" x2="604" y1="100" y2="100"></line>
+<line stroke="#2c4055" stroke-dasharray="3 4" stroke-width="0.8" x1="70" x2="604" y1="68" y2="68"></line>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="596" y="248">1</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="340" y="248">1/2</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="205" y="248">1/4</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="137" y="248">1/8</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle" x="100" y="248">1/16</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11.5" x="70" y="262">横轴：这个词在前文之下的概率</text>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="11.5" x="86" y="30">纵轴：比最好猜的情况多花的毫秒</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="13" x="370" y="94">每砍半一次，就升高同样一格</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="370" y="114">一格 ≈ 一个比特 ≈ 两到四毫秒</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="370" y="146">概率从 1/1000 掉到 1/2000，</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="370" y="164">代价和从 1 掉到 1/2 一样大</text>
 </svg>
 <div class="cap">横轴刻度不是等距的概率，是不断砍半的概率；每砍一次就升高同样一格，这就是「对数」的意思——代价不看概率差了多少，看被除了几次 2。</div>
 </figure>
@@ -100,7 +101,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>模型越好越像人——一直到它好过头</h2>
+<h2 data-tts="470926d783e3b651">模型越好越像人——一直到它好过头</h2>
 <p>既然要一个概率，就得有个东西来给。衡量一个语言模型猜词猜得好不好，常用的数叫困惑度（perplexity）：可以粗略读成「平均而言，它像是在几个等可能的选项里挑一个」——数字越小，猜得越准。</p>
 <p>2018 年 Goodkind 和 Bicknell 报告了一个很干净的规律：模型的困惑度越低，它给出的意外度对人类阅读时间的解释力就越强，而且两者近似成一条直线。当时很自然的推论是，把模型继续做大做强，就会越来越像人。</p>
 <p>2023 年 Oh 和 Schuler 把这条线延长，发现它拐了。在同一个模型家族内部（他们测了 GPT-Neo 和 OPT 两个系列，用了两份阅读语料），参数更多、困惑度更低的那些模型，拟合人类阅读时间反而更差，而且是严格单调的——困惑度和拟合优度之间是一条稳定的对数线性关系，只是方向跟人们期待的相反。同年还有一个更具体的落点：Transformer 模型的意外度在训练量大约二十亿词左右时最像人，再多就开始偏。</p>
@@ -110,7 +111,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 04</span>
-<h2>它说得准「哪儿会卡」，说不准「卡多久」</h2>
+<h2 data-tts="ea034316676f0000">它说得准「哪儿会卡」，说不准「卡多久」</h2>
 <p>英语里有一句著名的句子：The horse raced past the barn fell. 读到 raced 的时候你几乎一定把它当成主句的谓语——「那匹马跑过了谷仓」；一路顺到 fell，整句塌了，你得回头把 raced past the barn 重新读成修饰语，整句其实是「那匹被赶过谷仓的马摔倒了」。同类的还有 While the man hunted the deer ran into the woods：the deer 先被当成 hunted 的宾语，读到 ran 才发现它是后半句的主语。这类句子叫花园幽径句——沿着一条看着好走的小路进去，走到底发现得原路退回来。</p>
 <p>意外度在这里表现得很对：它确实在 fell、在 ran 上给出高值，也就是准确地指出了「人会在这儿卡」。问题出在量上。2021 年 van Schijndel 和 Linzen 拿三类花园幽径结构做检验，结果是：意外度严重低估了人真正卡住的幅度，而且低估的倍数因结构而异——这一条更要命，因为它意味着不存在任何一个「每比特值多少毫秒」的汇率能同时对上三类。2024 年 Huang 等人做了一个更大的基准，结论一样，还多出一条：连同一类结构里不同句子之间的差异，意外度也预测不了。</p>
 <p>合理的读法是：阅读时间里至少有两笔账。一笔是预期落空，意外度管这一笔，管得相当好；另一笔是把已经搭好的结构拆掉重搭，意外度完全不涉及。前者解释「哪里」，后者解释「多久」。</p>
@@ -118,27 +119,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> English has a famous sentence: "The horse raced past the barn fell." Reading "raced", you almost certainly take it as the main verb — the horse ran past the barn — and sail on until "fell" collapses the whole thing, forcing you back to reread "raced past the barn" as a modifier: the horse that was raced past the barn fell. Another of the same kind: "While the man hunted the deer ran into the woods", where you first take "the deer" as the object of "hunted" and only discover at "ran" that it is the subject of the next clause. These are garden-path sentences: you walk down an inviting path and reach the end only to find you must back out the way you came. Surprisal performs well here in one respect. It does assign high values at "fell" and at "ran", pinpointing exactly where a reader will stall. The trouble is the magnitude. In 2021 van Schijndel and Linzen tested three classes of garden-path construction and found that surprisal drastically underpredicts how badly people actually stall — and that the size of the shortfall differs across constructions, which is the more damaging result, because it means no single exchange rate of milliseconds per bit can fit all three at once. In 2024 Huang and colleagues ran a much larger benchmark to the same conclusion, adding that surprisal also fails to predict variation among individual sentences within one construction. The sensible reading is that reading time carries at least two separate bills. One is the cost of a violated expectation, which surprisal handles, and handles well. The other is the cost of tearing down a structure already built and rebuilding it, which surprisal does not touch at all. The first explains where; the second explains how much. So what does the correlation actually show? It shows that people are sensitive to the statistics of their language, and that the sensitivity is logarithmic, incremental, and stable across language families. It does not show that a Transformer runs inside the head. Within this theory a model is only an estimator of probabilities, and how good an estimator it is stands apart from whether its internals resemble a brain. The reversal described in the section on models that guess too well separates those two things precisely: if goodness of fit measured brain-likeness, stronger models would fit better, and measurement says otherwise.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="fe74543f41094afd">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 育儿与教育</b>：你给一个新人讲完一个系统，他点头说「懂了」，第二天交上来的东西方向完全不对。复盘时你找不到他是哪句没听懂，因为他每一句都听懂了。跑的是「一把两个字出来」那节的机制：真正的理解表现为能预测下一步，而「听懂了」只表明当前这句能被接受——接受和预测是两回事，眼动之所以是好证据，正因为它测的是后者。可改的动作：讲到关键处「之前」停住，让他说出你接下来要讲什么，而不是讲完问「懂了吗」。他猜错的那个位置，就是他的模型跟你的模型分叉的位置，比任何提问都定位得准。</li>
 <li><b>② 投资与仓位</b>：一条消息出来，仓位动了，你事后说「这个我其实早就想到了」。这句话几乎不可能是假的。问题在于意外度的定义里，那个 p 必须是「事前」押上去的那个数，事后重构的 p 永远偏高，所以「早就想到了」和「押了多少」根本不是一回事。可改的动作：事前把三到五种结果各写一个概率，哪怕只分高中低三档；事后复盘只允许看那张表，停掉凭记忆估计当时判断这个动作。判据从「我是不是想到了」换成「我事前写下的那个数是多少」。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="3ddaf70a9b8066fa">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>心理学 · 大脑里另一条「预期落空」的信号，形状跟这条不一样，而这个差别能测出来</b>：多巴胺神经元在奖赏兑现那一刻的放电幅度，随事先预期的概率单调变化——Fiorillo 等人 2003 年在猴子身上把整条概率范围扫了一遍。经典的时序差分解释把这个信号写成「实际减预期」，对概率是线性的；而「每砍半一次」那节的机制是对数的，代价不看概率差了多少，看被除了几次 2。两条都叫预期落空，形状却不同，于是能推出：它们不可能是同一个量的两种测法，必然是两套账，一套按差值结算，一套按信息量结算。这是能判的——预期从 0.5 降到 0.25，和从 0.01 降到 0.005，线性那套说前者冲击大得多，对数那套说一样大。<b>但这里不成立</b>的是把两者直接对接：多巴胺那条信号带符号，好于预期是正、差于预期是负；阅读时间那条没有符号——出乎意料的好词和出乎意料的坏词，同样让你多停几毫秒。拿奖赏预测误差去「解释」阅读时间，等于把一个有方向的量当无方向的用。</li>
 <li><b>佛学 · 「降低期待」在这套算术里不是免费的：它压的是最坏情况，抬的是长期均值</b>：修行传统里反复出现一条实践——松开预期，落空的痛就小。「每砍半一次」那节的机制刚好能把这句话拆成两个量。预期就是一个概率分布：分布越尖（押得越死），猜中时代价近零、猜错时代价极大；分布越平，单次代价的上限被压低。但平均意外度恰好等于这个分布的熵，而熵在分布最平时最大。于是推出一个反直觉的结论：完全不押注不是零代价方案，而是把峰值换成了持续的高本底——「什么都不期待」应该表现为波动变小、日常负担变重，这跟「松开预期之后一切都变轻」是两种能分开的预测。<b>但这里不成立</b>的是这笔账算不出数：读者面对的是词表，可数、可估概率；而「事情会怎样」没有词表，那个熵写不出数值。这条只能当结构上的推论，不能当测量。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="90d4bbd27062b238">深入思考</h3>
 <details><summary>如果意外度只解释「哪里卡」，那「卡多久」该由什么解释？</summary><p>一类答案是把重新分析当成独立的一步：不只是概率变了，是已经建好的结构要拆。另一类答案是记忆——把前面某个成分重新取回来是有代价的，而这个代价跟概率无关，跟距离和干扰有关。两类解释预测的东西不同：前者说代价取决于要拆多少，后者说取决于要回头多远。</p></details>
 <details><summary>模型的概率估得越准，为什么反而可能越不像人？</summary><p>因为「像人」要求的不是准，是跟人押得一样偏。人没见过那么多文本，对生僻词的概率估得比模型高得多（也就是更意外）。一个跟人同样无知的模型，在这件事上反而更好用——这也提示拟合度这个指标不能当成模型质量的替代品。</p></details>
 <details><summary>汉语没有词间空格，量词又提前泄露信息，这对这类测量意味着什么？</summary><p>两个麻烦。一是得先切出「一个词」才能给它算概率，而切法本身会改变概率，这跟切词那期是同一个问题。二是量词让一部分信息提前到名词之前释放，只在名词上记账就会漏掉。跨语言比较要小心：拟合度的高低可能来自记账方式，不来自读者。</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="169720eef79ad79d">延伸阅读</h3>
 <ul>
 <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022537181902206">Ehrlich &amp; Rayner (1981)，上下文对眼动的影响</a> · <a href="https://en.wikipedia.org/wiki/Eye_movement_in_language_reading">阅读中的眼动词条</a></li>
 <li><a href="https://academic.oup.com/cercor/article/33/13/8312/7103441">汉语量词与名词语义特征的预激活（2023）</a> · <a href="https://www.pure.ed.ac.uk/ws/files/37429802/KwonEtalC2017PredictingSemanticFeaturesInChinese.pdf">量词失配的分级 N400</a></li>
@@ -152,8 +153,8 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 </div>
-<script src="https://hub.cissychen.com/comments.js" defer></script>
-<script src="https://hub.cissychen.com/search.js" defer></script>
-<script src="https://hub.cissychen.com/index-button.js" defer></script>
-<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+<script defer="" src="https://hub.cissychen.com/comments.js"></script>
+<script defer="" src="https://hub.cissychen.com/search.js"></script>
+<script defer="" src="https://hub.cissychen.com/index-button.js"></script>
+<script defer="" src="https://hub.cissychen.com/i18n-tts.js"></script>
 </body></html>
