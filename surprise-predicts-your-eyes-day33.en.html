@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>A Model's Surprise Predicts Your Eye Movements — Linguistics Day 33</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 33 · Linguistics</div>
+<h1>A Model&#39;s Surprise Predicts Your Eye Movements</h1>
+<div class="sub">Turn &quot;how unexpected was this word&quot; into a number, multiply by a few milliseconds, and you get how much longer your eyes rest on it. The exchange rate holds across eleven languages — and collapses on garden-path sentences.</div>
+<div class="date">2026-09-29</div>
+<div class="pitch">You would assume that the stronger a model is at guessing words, the more humanlike it becomes. Measurement says the opposite: within one model family, the variants with more parameters and lower perplexity fit human reading times worse — and they do so with striking regularity.</div>
+</header>
+<div class="intro">
+<p>The line you are reading now is not being swept over at a steady pace. Your eyes stop, jump ahead, stop again. Across a paragraph, roughly a third of the words never get a stop at all — you skip them. An eyetracker records every one of those stops and jumps to the millisecond.</p>
+<p>How long you stop depends largely on how guessable the word is. That piece of common sense can be turned into a formula accurate to the millisecond: take a language model&#39;s probability for &quot;the next word is this one&quot;, take its negative logarithm, multiply by an exchange rate, and you have the extra milliseconds.</p>
+<p>The formula works well enough to be suspicious of. So the real business of this piece is the second half of the question: where it holds, where it breaks, and what the correlation does and does not show.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>Two syllables in, and you have already crossed out most of the dictionary</h2>
+<p>In 1981 Ehrlich and Rayner did something very direct. They placed the same target word into two kinds of context — one where the preceding text pinned it down almost completely, one where nothing constrained it. Readers skipped the word entirely more often in the high-constraint version, and when they did stop on it, the stop was shorter. The researchers also quietly misspelled part of the target, and found that the tighter the context, the less likely readers were to notice the error. Part of what you see, you supply yourself.</p>
+<p>So prediction is not repair work done after a sentence ends. It runs while you read, and it starts before the word reaches your eyes.</p>
+<p>Mandarin makes this unusually visible, through its classifiers — the small words that sit between a number and a noun. Say 一把 (yī bǎ) and the following noun jumps into the class of things with a handle: 伞 (sǎn, &quot;umbrella&quot;), 刀 (dāo, &quot;knife&quot;), 椅子 (yǐzi, &quot;chair&quot;). Say 一只 (yī zhī) and you land among animals and one-of-a-pair items: 猫 (māo, &quot;cat&quot;), 鞋 (xié, &quot;shoe&quot;). Say 一条 (yī tiáo) and it is long thin things: 鱼 (yú, &quot;fish&quot;), 路 (lù, &quot;road&quot;), 腿 (tuǐ, &quot;leg&quot;). The English article &quot;a&quot; tells you none of this. Nor is this only a claim from grammar books. In brainwave studies, a classifier that clashes with the upcoming noun elicits an N400 — the electrical response that appears when a word&#39;s meaning does not fit — at the moment the classifier itself is read, and the response is graded: the closer the classifier is to what the reader expected, the smaller it gets. A 2023 study using representational similarity analysis found that patterns of brain activity already diverge before the noun arrives, depending on whether the classifier points toward animate or inanimate nouns.</p>
+<p>The betting, then, is real betting. The next question follows on its own: how good is the bet, and can it be turned into a number?</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>The exchange rate: every time the probability is halved, you pay the same few milliseconds</h2>
+<p>In 2001 Hale and in 2008 Levy each turned this into a quantity. Given the preceding context, compute the probability p of the word that actually turns up, and take minus its logarithm. Call it surprisal. The lower the probability, the larger the number; when the probability is 1, it is 0. Take logarithms base two and the unit is the bit.</p>
+<p>What matters is not the definition but the shape of its relation to milliseconds. In 2013 Smith and Levy pushed probability from near one down past one in a million — six orders of magnitude — and watched what reading time did. The relation is logarithmic, not linear. Put plainly: the extra time it costs to drop from &quot;near certain&quot; to &quot;a coin flip&quot; is the same as the extra time it costs to drop from one in a thousand to one in two thousand. Every halving adds the same small charge. How small? Around two milliseconds per bit in naturalistic reading, roughly four in self-paced reading. A few milliseconds per bit is not much, but it is stable enough to pull out of the noise.</p>
+<figure>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 268" role="img" aria-label="Diagram: reading time against a word&#39;s probability. The horizontal axis is probability, the vertical axis is extra milliseconds, and each halving of probability raises the curve by one equal step.">
+<rect x="0" y="0" width="640" height="268" fill="#19202f"/>
+<line x1="70" y1="228" x2="614" y2="228" stroke="#26314a" stroke-width="1.5"/>
+<line x1="70" y1="228" x2="70" y2="36" stroke="#26314a" stroke-width="1.5"/>
+<path d="M 604 228 L 340 196 L 205 164 L 137 132 L 103 100 L 86 68" fill="none" stroke="#e0a458" stroke-width="2.4"/>
+<circle cx="604" cy="228" r="3.4" fill="#e0a458"/><circle cx="340" cy="196" r="3.4" fill="#e0a458"/><circle cx="205" cy="164" r="3.4" fill="#e0a458"/><circle cx="137" cy="132" r="3.4" fill="#e0a458"/><circle cx="103" cy="100" r="3.4" fill="#e0a458"/><circle cx="86" cy="68" r="3.4" fill="#e0a458"/>
+<line x1="70" y1="196" x2="604" y2="196" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
+<line x1="70" y1="164" x2="604" y2="164" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
+<line x1="70" y1="132" x2="604" y2="132" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
+<line x1="70" y1="100" x2="604" y2="100" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
+<line x1="70" y1="68" x2="604" y2="68" stroke="#2c4055" stroke-width="0.8" stroke-dasharray="3 4"/>
+<text x="596" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1</text>
+<text x="340" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/2</text>
+<text x="205" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/4</text>
+<text x="137" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/8</text>
+<text x="100" y="248" fill="#8d95a8" font-family="Georgia, serif" font-size="11" text-anchor="middle">1/16</text>
+<text x="70" y="262" fill="#8d95a8" font-family="Georgia, serif" font-size="11.5">Horizontal: the word&#39;s probability given what came before</text>
+<text x="86" y="30" fill="#7fb3d5" font-family="Georgia, serif" font-size="11.5">Vertical: extra milliseconds over the most guessable case</text>
+<text x="370" y="94" fill="#e4e8f2" font-family="Georgia, serif" font-size="13">Each halving climbs one equal step</text>
+<text x="370" y="114" fill="#8d95a8" font-family="Georgia, serif" font-size="11">one step = one bit = two to four milliseconds</text>
+<text x="370" y="146" fill="#8d95a8" font-family="Georgia, serif" font-size="11">Falling from 1/1000 to 1/2000 costs</text>
+<text x="370" y="164" fill="#8d95a8" font-family="Georgia, serif" font-size="11">exactly what falling from 1 to 1/2 costs</text>
+</svg>
+<div class="cap">The ticks along the bottom are not evenly spaced probabilities but repeatedly halved ones. Because each halving climbs the same step, the relation earns the word logarithmic: the cost does not track how far the probability fell, but how many times it was divided by two.</div>
+</figure>
+<p>In 2024 Shain and colleagues scaled the question up — several eyetracking and self-paced reading corpora, probabilities re-estimated with modern language models — and the logarithmic shape still beat the linear one. In 2023 Wilcox and colleagues checked it from another direction: eleven languages across five families (Korean, Turkish, Hebrew, Finnish, plus Dutch, English, German, Greek, Italian, Russian and Spanish), using the multilingual eyetracking corpus MECO. All three predictions held — surprisal predicts reading time, expected surprisal does too, and the link to surprisal is linear. The evidence here can be labelled fairly firmly: many corpora, several language families, independent groups.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>Better models look more human — right up until they get too good</h2>
+<p>If you need a probability, something has to supply it. The usual measure of how well a language model guesses the next word is perplexity, which can be read loosely as &quot;on average it is picking from about this many equally likely options&quot; — the smaller the number, the better the guess.</p>
+<p>In 2018 Goodkind and Bicknell reported a clean regularity: the lower a model&#39;s perplexity, the more of human reading time its surprisal explained, and the two traded off along roughly a straight line. The natural inference at the time was that bigger and stronger models would keep getting more humanlike.</p>
+<p>In 2023 Oh and Schuler extended that line and found it bends. Within a single model family — they tested the GPT-Neo and OPT series against two reading corpora — the variants with more parameters and lower perplexity fit human reading times worse, and strictly monotonically: perplexity and goodness of fit stand in a stable log-linear relation, just running opposite to what people expected. The same year brought a sharper landmark: Transformer surprisal is at its most humanlike at around two billion training tokens, and drifts off past that.</p>
+<p>The favoured explanation is sheer volume of training text. Having seen too much, a model is no longer surprised by rare personal names or unusual collocations — while people are still stumbling there. It guesses too well to guess the way a person does.</p>
+<p>One step further out, things get messier. In 2021 Kuribayashi and colleagues ran the same comparison on a Japanese eyetracking corpus and found that &quot;lower perplexity is more humanlike&quot; does not hold in Japanese. Japanese puts its predicate last, so information is laid out through a sentence differently than in English; whether word order is the cause remains unsettled. Label this layer weaker: one language, one corpus.</p>
+</section>
+<section>
+<span class="num">// 04</span>
+<h2>It tells you where you will stall, not how long you will stall</h2>
+<p>English has a famous sentence: &quot;The horse raced past the barn fell.&quot; Reading &quot;raced&quot;, you almost certainly take it as the main verb — the horse ran past the barn — and sail on until &quot;fell&quot; collapses everything, forcing you back to reread &quot;raced past the barn&quot; as a modifier: the horse that was raced past the barn fell. Another of the same kind: &quot;While the man hunted the deer ran into the woods&quot;, where &quot;the deer&quot; is first taken as the object of &quot;hunted&quot; and only at &quot;ran&quot; turns out to be the subject of the second half. These are garden-path sentences — you walk down an inviting path and reach the end only to find you must back out the way you came.</p>
+<p>Surprisal does well here in one respect: it really does assign high values at &quot;fell&quot; and at &quot;ran&quot;, pinpointing where a reader will stall. The trouble is the size. In 2021 van Schijndel and Linzen tested three classes of garden-path construction and found that surprisal drastically underpredicts how badly people actually stall — and that the size of the shortfall differs across constructions, which is the more damaging half, because it means no single exchange rate of milliseconds per bit can fit all three at once. In 2024 Huang and colleagues ran a much larger benchmark to the same conclusion, adding that surprisal cannot predict the variation among individual sentences within one construction either.</p>
+<p>The sensible reading is that reading time carries at least two separate bills. One is the cost of a violated expectation; surprisal handles that one, and handles it well. The other is the cost of tearing down a structure already built and rebuilding it, which surprisal does not touch at all. The first explains where; the second explains how much.</p>
+<p>So what does the correlation actually show? That people are sensitive to the statistics of their language, and that the sensitivity is logarithmic, incremental, and stable across language families. It does not show that a Transformer runs inside the head. Within this theory a model is only an estimator of probabilities, and how good an estimator it is stands apart from whether its internals resemble a brain. The reversal in the section on models that get too good separates those two things precisely: if goodness of fit measured brain-likeness, stronger models would fit better, and measurement says otherwise.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 Scenarios · BigCat</h3>
+<ol>
+<li><b>① Parenting and teaching</b>: you finish walking a newcomer through a system, they nod and say they have got it, and the next day what they hand in points somewhere else entirely. In the post-mortem you cannot find the sentence they misunderstood, because they understood every sentence. This runs the mechanism from the section on crossing out the dictionary: real understanding shows up as being able to predict the next step, whereas &quot;I follow&quot; only reports that the current sentence was acceptable. Accepting and predicting are two different things, and eye movements are good evidence precisely because they measure the second. The changeable action: stop just <b>before</b> the key point and have them say what you are about to explain, instead of asking &quot;does that make sense?&quot; afterwards. The place they guess wrong is the place their model of the system diverges from yours, and it localises the gap better than any question.</li>
+<li><b>② Investing and position sizing</b>: a piece of news lands, positions move, and afterwards you say you had seen that coming. The statement is almost never false. The problem is that in the definition of surprisal, p must be the number you staked <b>in advance</b>; a p reconstructed after the fact is always too high, so &quot;I saw it coming&quot; and &quot;what I actually staked&quot; are not the same thing at all. The changeable action: write a probability against three to five outcomes beforehand, even if only in bands of high, medium and low; in the review, allow yourself to look only at that sheet, and stop estimating your past judgement from memory. The test shifts from &quot;did I think of it&quot; to &quot;what number did I write down beforehand&quot;.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing over · Connections beyond the field</h3>
+<ul>
+<li><b>Psychology · The brain has another &quot;expectation violated&quot; signal, and it is a different shape — a difference that can be measured</b>: the firing burst of dopamine neurons at the moment a reward arrives varies monotonically with how probable that reward was, a range Fiorillo and colleagues swept end to end in monkeys in 2003. The standard temporal-difference account writes that signal as actual minus expected, which is linear in probability. The mechanism from the section on halving probabilities is logarithmic instead: the cost does not track how far the probability fell, but how many times it was divided by two. Both are called expectation violation, yet their shapes differ — from which it follows that they cannot be two measurements of one quantity. They must be two separate ledgers, one settled by difference, the other by information content. This is decidable: dropping an expectation from 0.5 to 0.25 versus from 0.01 to 0.005, the linear account says the first hits far harder, the logarithmic account says they are equal. <b>Where it does not hold</b> is any attempt to wire the two together directly. The dopamine signal is signed — better than expected is positive, worse is negative — while reading time is unsigned: an unexpectedly good word and an unexpectedly bad one both cost you the same few milliseconds. Using reward prediction error to &quot;explain&quot; reading time treats a directional quantity as a non-directional one.</li>
+<li><b>Buddhism · &quot;Lower your expectations&quot; is not free in this arithmetic: it shaves the worst case and raises the long-run average</b>: a practice that recurs across contemplative traditions is loosening expectation, on the grounds that less is violated and so less hurts. The mechanism from the section on halving probabilities splits that advice into two quantities. An expectation is a probability distribution. The sharper it is — the harder you have committed — the closer to zero the cost when you are right and the larger the cost when you are wrong; the flatter it is, the lower the ceiling on any single cost. But average surprisal is exactly the entropy of that distribution, and entropy is at its maximum when the distribution is flattest. Which yields a counterintuitive conclusion: staking nothing is not the zero-cost option. It trades a spike for a sustained high baseline. &quot;Expect nothing&quot; should therefore show up as smaller swings together with a heavier everyday load — a different prediction from &quot;loosen your expectations and everything gets lighter&quot;, and in principle separable from it. <b>Where it does not hold</b> is that the ledger has to be computable. A reader faces a vocabulary: countable, with estimable probabilities. &quot;How things will turn out&quot; has no vocabulary, so that entropy has no numerical value. This stays a structural inference, not a measurement.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going deeper</h3>
+<details><summary>If surprisal only explains where you stall, what explains how long?</summary><p>One family of answers treats reanalysis as its own step: it is not merely that the probabilities changed, but that a structure already built has to be dismantled. Another points to memory — retrieving an earlier constituent has a cost that has nothing to do with probability and everything to do with distance and interference. The two predict different things: the first says the cost tracks how much has to be torn down, the second says it tracks how far back you have to reach.</p></details>
+<details><summary>Why might a model whose probabilities are more accurate be less humanlike?</summary><p>Because being humanlike does not demand accuracy, it demands being wrong in the same direction people are. People have not read that much text, and they rate rare words as far less likely — that is, far more surprising — than a large model does. A model as ignorant as a person is more useful for this particular job, which also warns against treating goodness of fit as a stand-in for model quality.</p></details>
+<details><summary>Mandarin has no spaces between words, and its classifiers leak information early. What does that do to this kind of measurement?</summary><p>Two headaches. First, you must carve out &quot;a word&quot; before you can assign it a probability, and the way you carve changes the probability — the same problem as in the piece on word segmentation. Second, classifiers release part of the information before the noun arrives, so booking the cost only on the noun loses it. Cross-linguistic comparison has to be careful here: differences in fit may come from the bookkeeping rather than from the readers.</p></details>
+</div>
+<div class="refs">
+<h3>Further reading</h3>
+<ul>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0022537181902206">Ehrlich &amp; Rayner (1981), contextual effects on eye movements</a> · <a href="https://en.wikipedia.org/wiki/Eye_movement_in_language_reading">Eye movement in reading</a></li>
+<li><a href="https://academic.oup.com/cercor/article/33/13/8312/7103441">Pre-activation of noun semantics by Mandarin classifiers (2023)</a> · <a href="https://www.pure.ed.ac.uk/ws/files/37429802/KwonEtalC2017PredictingSemanticFeaturesInChinese.pdf">Graded N400 to classifier mismatch</a></li>
+<li><a href="https://aclanthology.org/N01-1021/">Hale (2001), surprisal introduced</a> · <a href="https://www.sciencedirect.com/science/article/pii/S0010027707001850">Levy (2008), expectation-based comprehension</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S0010027713000413">Smith &amp; Levy (2013), the relation is logarithmic</a> · <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2307876121">Shain et al. (2024, PNAS), large-scale replication</a></li>
+<li><a href="https://aclanthology.org/2023.tacl-1.82/">Wilcox et al. (2023), eleven languages</a> · <a href="https://www.nature.com/articles/s41597-025-05453-3">MECO, the multilingual eyetracking corpus</a></li>
+<li><a href="https://aclanthology.org/W18-0102/">Goodkind &amp; Bicknell (2018), model quality and explanatory power</a> · <a href="https://aclanthology.org/2023.tacl-1.20/">Oh &amp; Schuler (2023), bigger fits worse</a> · <a href="https://aclanthology.org/2023.findings-emnlp.128/">Most humanlike at about two billion tokens</a></li>
+<li><a href="https://aclanthology.org/2021.acl-long.405/">Kuribayashi et al. (2021), it fails in Japanese</a></li>
+<li><a href="https://onlinelibrary.wiley.com/doi/10.1111/cogs.12988">van Schijndel &amp; Linzen (2021), underpredicting garden paths</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749596X24000135">Huang et al. (2024), a larger benchmark</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Garden-path_sentence">Garden-path sentence</a> · <a href="https://www.science.org/doi/10.1126/science.1077349">Fiorillo et al. (2003), dopamine and reward probability</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
