@@ -46,7 +46,7 @@ figure svg{max-width:100%;height:auto}
 <div class="container">
 <header>
 <div class="kicker">Day 34 · 语言学</div>
-<h1>机器会不会说话里有话</h1>
+<h1 data-tts="ec57ee3497aac4bc">机器会不会说话里有话</h1>
 <div class="sub">「能把盐递给我吗」没人回答「能」——从字面翻到意图这一步，人四岁前后才装上；等我们想测机器有没有它，才发现题目自己先出了问题</div>
 <div class="date">2026-09-30</div>
 <div class="pitch">一套社交失言题里，整体最差的那个模型拿了满分，比人类受试还高。原因跟它懂不懂人心无关：那批题的正确答案总是同一个方向，而它刚好有个偏向答那个方向的毛病。</div>
@@ -58,7 +58,7 @@ figure svg{max-width:100%;height:auto}
 </div>
 <section>
 <span class="num">// 01</span>
-<h2>「你们收信用卡吗」，四成人只回答了「收」</h2>
+<h2 data-tts="ff9d1a773e753f82">「你们收信用卡吗」，四成人只回答了「收」</h2>
 <p>1979 年 Herbert Clark 让人打电话给五十家餐馆，每次都问同一句：「你们收信用卡吗？」他要看的是对方怎么答。结果分三堆：44% 只答了字面问题（「收」），38% 既答字面又把话补全（「收，Visa 和万事达都行」），16% 干脆只当请求答，直接报了卡种。同一句话，三种处理——字面那层没消失，而从字面到意图那一步也不是自动挂上的，是个可做可不做的动作。</p>
 <p>这一步怎么做？1975 年 Grice 给的说法至今还在用：听话的人默认对方在配合这场对话，于是去问「他本可以直说，为什么偏偏这么说」，从落差里反推出没说出口的那部分。这样被反推出来的东西叫会话含义（conversational implicature）。这套推理怎么跑，「说出来的比说的少」那期讲过；这期要的是它的代价——不标价，就没法拿它比人和机器。</p>
 <p>但「能把盐递给我吗」已经用滥了，滥到不需要现场推。1983 年 Gibbs 让受试读完这句，紧接着判断一个和「有没有能力递盐」有关的目标句：要是人真的先算字面再否掉，这个目标句该被激活、判断该变快。他没看到加速。固定成套的间接请求是被整块认出来的。</p>
@@ -67,7 +67,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 02</span>
-<h2>说「有些」的时候，你在替对方清点他没说的那句话</h2>
+<h2 data-tts="16dd577e72b33fe2">说「有些」的时候，你在替对方清点他没说的那句话</h2>
 <p>「有些大象有鼻子。」这句听着不对劲，可它不假——所有大象都有鼻子，它当然为真。别扭的地方在于：说话人明明可以说「所有大象都有」，偏偏挑了更弱的词，于是你读出「不是全部」。这种从「他没用更强的说法」推出来的东西叫量级含义（scalar implicature）。</p>
 <p>2001 年 Noveck 拿一批这样的句子问八到十岁的孩子和成年人，只问对不对。87% 的孩子说对，成年人里只有 41% 说对。孩子在这里反而更「逻辑」：「有些」在逻辑上和「所有」并不冲突，按字面判就该判对。是成年人多算了一步。</p>
 <p>多算的这一步要求什么？要你手里有一张对方本来可用的说法清单，知道哪个更强哪个更弱，还确认他跳过了强的。也就是要求一个关于对方脑子的模型。</p>
@@ -101,7 +101,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 03</span>
-<h2>成绩单：有的项接近人，有的项塌，换个微调方式又变天</h2>
+<h2 data-tts="bc892ea1ecafc408">成绩单：有的项接近人，有的项塌，换个微调方式又变天</h2>
 <p>2023 年 Hu 等人编了一套题，七类语用现象各一批：善意的谎、间接请求、反讽、会话准则、隐喻、幽默、连贯。英语材料、专家编题、不给例子直接问，人和模型做同一批。当时最大的几个模型在所有项目上都好过瞎猜，有几项接近人；最差的三项是幽默、反讽、会话准则。</p>
 <p>同年 Ruis 等人只测会话含义，把题压到只能答「是」或「否」——瞎猜就有 50%。没做过指令微调的预训练模型大约 60%，人类 86%。但同一批底座按「逐条示例」的方式微调过之后，成绩提上去一大截。这一条分量很重：如果「听懂话外之意」是规模自然带出来的本领，它不该对微调方式这么敏感——同样的参数量、同样的语料，只因为后期对齐的做法不同，成绩像换了个东西。</p>
 <p>第三个方向的摆动来自语言：把同一批心智理论题翻成多种语言再测（XToM 那批工作），模型答「盒子里到底装着什么」各语言都稳，换成「他以为里面是什么」就往下掉，各语言掉的幅度还不一样。证据强度怎么标：三项都是单一基准、零样本提问，单拿出来都弱；但三处指向同一件事——测到的不是一项稳定本领，而是随材料、语言、训练方式大幅摆动的表现。</p>
@@ -109,7 +109,7 @@ figure svg{max-width:100%;height:auto}
 </section>
 <section>
 <span class="num">// 04</span>
-<h2>「它到底有没有心智理论」，被题目自己卡住了</h2>
+<h2 data-tts="b399167600d4618f">「它到底有没有心智理论」，被题目自己卡住了</h2>
 <p>2023 年有论文报告 GPT 系列在经典的错误信念题上达到了学龄儿童的水平。同年 Ullman 把题面改了一点点，逻辑一点不动：原题是一个贴着「巧克力」标签的袋子里装着爆米花，他把袋子改成透明的——能看见里面，标签就骗不了人。模型答错了。几种这类小改动试下来，当时几个最强的模型都掉。</p>
 <p>2024 年 Strachan 等人做了规模大得多的一次对照：一整套成型的心理学题目（错误信念、暗示任务、怪异故事、社交失言识别），对上约一千九百名人类受试。GPT-4 在反讽、暗示、怪异故事上到了或超过人，唯一没到的是社交失言；而整体最差的 LLaMA2-70B，偏偏在社交失言上超过了人。</p>
 <p>作者自己把原因挖出来了：原版失言题的正确答案方向是固定的，偏向那个答案的模型自动满分。他们又换种问法去问 GPT-4，发现它其实推出了「说话人并不知情」，只是不肯把结论落下来——作者称之为过度保守。</p>
@@ -119,27 +119,27 @@ figure svg{max-width:100%;height:auto}
 <p class="en-brief"><b>EN</b> In 2023 a paper reported that GPT models reached school-age performance on classic false-belief items. That same year Ullman did something very light: he altered the wording slightly while leaving the logic untouched. The original item has popcorn inside a bag labelled "chocolate". He made the bag transparent — if you can see inside, the label cannot fool you, which for a person needs no thought. The models got it wrong. He ran several such minor alterations, and the strongest models of the day all fell. In 2024 Strachan and colleagues ran a much larger comparison: a full battery of established psychological items (false belief, the hinting task, Strange Stories, faux pas recognition) against roughly 1,900 human participants. GPT-4 matched or exceeded humans on irony, hinting and the Strange Stories; the one test it did not match was faux pas. And LLaMA2-70B, the weakest model overall, beat humans on exactly that test. The authors dug out the reason: in the original faux pas items the correct answer always points the same way, so a model biased toward that answer scores perfectly by accident. They pushed one step further, rephrasing the question for GPT-4, and found it had in fact inferred that the speaker did not know — it simply would not commit to the conclusion. They call this hyperconservatism. So there are two quite different confusions in play here. A model that answers wrongly may be unable to infer, or may have inferred and declined to say. A model that answers correctly may have understood, or may have met a set of items whose answers all point one way. Neither is a flaw in the model; both are flaws in the test, and both surfaced only after extra work was done. The argument today runs roughly three ways. One camp says these are behavioural tests by construction, that humans are credited with theory of mind on behavioural grounds too, and that holding machines to a different standard is unfair. A second says the human versions of these items and their answer keys sit in the training data in bulk, and evidence that cannot clear a contamination check is not evidence. A third wants different items altogether: tasks requiring beliefs to be updated across turns of interaction, rather than a story followed by a multiple-choice question. Each camp has a strong version and the matter is unsettled. Here is a genuinely testable difference that does follow. If a model runs the same inference people run, its errors should point where human errors point — human failures on scalar implicature are retreats to the literal reading, not random answers. Error patterns therefore carry more information than totals, which is precisely what Hu and colleagues reported. On the human side there is a trace of cost that has no counterpart in a model: the same person under time pressure, or working in a language they know less well, retreats to literal readings across the board — the retreat described in the topic on the foreign-language effect. A system that pays no such bill may be scoring the same total while doing something else entirely.</p>
 </section>
 <div class="bigcat">
-<h3>🎒 场景 · BigCat</h3>
+<h3 data-tts="1cdf9711682786e6">🎒 场景 · BigCat</h3>
 <ol>
 <li><b>① 带团队与组织</b>：评审会上有人看完方案说「挺有意思，你再想想」。你当成鼓励，两周后才知道那是否决。跑的是「你们收信用卡吗」那节的机制——位置差越大，请求越会做成间接形式，而间接的成本全落在听的人身上：猜错的风险归他，还显得是他理解力有问题。可改的动作：别解码语气，当场问一句「如果这版一个字不改就提交，最可能被否掉的是哪一条」——它把对方从暗示逼回具名，问内容不问态度。</li>
 <li><b>② 跨语言工作与生活</b>：跨语言的会上对方说「这个也许值得考虑一下」，你当成可选建议，他的意思是必须改；或反过来，你按母语的直接程度提了个请求，被读成命令。跑的是「说『有些』的时候」背后同一件事：你在替对方清点他没说的说法，而那张清单随语言变——跨文化言语行为项目就发现同一情境下各语言的默认直接程度本来不一样。可改的动作：停掉「从语气判断优先级」，把每条反馈都过同一个问句——「必须改还是可以不改」，要对方回一个词。</li>
 </ol>
 </div>
 <div class="crossx">
-<h3>🌀 越界 · 跨学科的联想</h3>
+<h3 data-tts="4bdb098d5bb12370">🌀 越界 · 跨学科的联想</h3>
 <ul>
 <li><b>社会与制度 · 一条被写进法律的量级含义，逼出了「包括但不限于」</b>：法律解释里有一条老准则：条文列举了某些情形，就等于把没列举的排除在外（拉丁文的说法是 expressio unius est exclusio alterius，「提到一个就是排除其他」）。这正是「说『有些』的时候」那节的机制被制度化了：从「他本可以列进去却没列」反推出「他不想让它算」。一旦这条推断成了能在法庭上引用的规则，就推出一个原本看不出的结论——起草的人必须主动反制它，于是条文里长出大量「包括但不限于」「等」这类堵漏措辞，且越严格采纳这条准则的法域应当越密集，这是能去数的。<b>但这里不成立</b>的是含义的前提：会话含义要求有一个正在配合的说话人和一个可恢复的意图，而法条是多人多轮妥协写出来的，有些空白恰恰是为了让各方都能点头而故意留的。那里没有一个「他本可以说清却选择不说」的他。所以在语用学的意义上，「立法意图」未必是一个存在的对象——不是难恢复，是没有。</li>
 <li><b>物理与数学 · 递归到第几层停下来，这条线人和机器不在同一处</b>：博弈论里有个玩了几十年的游戏：一屋子人各写一个 0 到 100 的数，谁最接近全体平均数的三分之二谁赢。一路推到底的答案是 0，真人实验里平均落在二三十——多数人只往里递归一两层就停了。间接说话被写成博弈的版本（Pinker 等人 2008 年那篇讲间接言语逻辑的文章）跑的是同一条机制：说话人算听者会怎么反推，听者算说话人预期他怎么反推。于是推出一个可检验的差异：如果人的语用推断也只有一两层预算，那么「我在暗示你去暗示他」这种三层以上的间接，人应当系统性地崩掉，而把每层显式展开的系统不会——不是谁更强，是代价曲线形状不同，可以拿层数当自变量去测。<b>但这里不成立</b>的是共同知识这个前提：一层层算最优反应要求双方都清楚彼此的收益，而那篇文章自己的出发点恰恰是关系类型不确定、说话人需要留一条可否认的退路。收益不共知，递归就没有落脚点。所以这套数学算得出「为什么要绕着说」，算不出「第几层停」——这也顺带解释了为什么反讽和幽默在成绩单那节里正好垫底：它们是收益最不透明的那一类。</li>
 </ul>
 </div>
 <div class="thinking">
-<h3>深入思考</h3>
+<h3 data-tts="ef49ecd457731b9e">深入思考</h3>
 <details><summary>常规化的间接请求走的是短路，那它还算「话里有话」吗？</summary><p>从结果看算，从过程看不算。这带来一个测量上的麻烦：题目全用现成句式的测试，测的其实是「这些句式你见过多少」。想测现场推算就得用新造的绕法——可那对人也更难，人类基线会一起掉。</p></details>
 <details><summary>成年人在「有些」这类句子上只有四成触发，是能力不稳，还是题目没给足语境？</summary><p>量级含义本来就依赖语境：对方是否可能知道全部、有没有理由说全，都会改变推断该不该做，而孤零零一句「有些大象有鼻子」恰恰把线索全抽走了。所以四成更像在说这个推断是可选的，不是在给人的能力打分。</p></details>
 <details><summary>一道语用测试怎么设计，才能同时躲开「答案方向单一」和训练数据污染？</summary><p>前者好办：每题配一个逻辑对称的版本，正确答案翻到另一边，只看两版的成绩差。后者难得多——经典题目和答案早就在网上。一条出路是现造题面且不公开，另一条是改成互动式：让系统在多轮里根据对方反应改判断，这种过程很难背下来。</p></details>
 </div>
 <div class="refs">
-<h3>延伸阅读</h3>
+<h3 data-tts="94a8f0b9ce589f1e">延伸阅读</h3>
 <ul>
 <li><a href="https://web.stanford.edu/~clark/1970s/Clark.responding.79.pdf">Clark (1979)，餐馆电话实验</a> · <a href="https://en.wikipedia.org/wiki/Speech_act">言语行为</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Cooperative_principle">Grice 的合作原则</a> · <a href="https://en.wikipedia.org/wiki/Implicature">会话含义</a></li>
