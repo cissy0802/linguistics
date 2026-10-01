@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Did Large Models Make Linguistics Obsolete — Linguistics Day 35</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 35 · Linguistics</div>
+<h1>Did Large Models Make Linguistics Obsolete</h1>
+<div class="sub">A system that writes faultless English meets a language with 130 speakers, and its entire capital is one book a linguist spent eleven months writing</div>
+<div class="date">2026-10-01</div>
+<div class="pitch">To test whether a model has grammar, the items were written by linguists. To have it translate a language with no text on the web, the materials were written by linguists. The part of the field that got taken over really was taken over — and what is left is precisely the half that sets the questions.</div>
+</header>
+<div class="intro">
+<p>Ask a model for a paragraph of English and it writes more smoothly than most people. Ask it for one sentence of Kalamang — a language spoken by around 130 people in two villages on the Karas Islands off West Papua, Indonesia — and it cannot produce a word: there is almost no text about this language online.</p>
+<p>So somebody took the grammar a linguist wrote after living in those two villages for eleven months, fed the whole book to a model, and had it read and translate on the spot. The setup is more interesting than the score, because it lays out on the table what the model is actually running on.</p>
+<p>Can a discipline be made obsolete by a tool that outperforms it? No declaration settles that. You have to go item by item: which jobs really were taken over, which were not, and who defined the ones that were.</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>To translate a language with 130 speakers, a model first has to read a hand-written grammar</h2>
+<p>In 2024 Tanzer and colleagues built a benchmark called Machine Translation from One Book. Every piece of material comes from a single source: Eline Visser's 2022 grammar of Kalamang — several hundred pages of grammar, a word list with part-of-speech tags and English descriptions, and 375 paired Kalamang-English sentences. That is the model's whole input; then it translates sentences it has never seen.</p>
+<p>Scores are the character-fragment overlap between the output and a reference translation (the measure is called chrF; higher is closer). The best set at the time reached 44.7 for Kalamang into English and 45.8 for English into Kalamang, against 51.6 and 57.0 for a single human learner working from the same materials — neither direction was caught up with.</p>
+<p>The informative part is not the score but one specific error. The word list has an entry for teba, described as a progressive aspect marker — a particle that does the work of English "be ...-ing" and carries no action of its own. The model turned it into the English adverb "progressively" and wrote that straight into its translation. The shape of that error says it was consulting the word list, not applying the rule in the grammar.</p>
+<p>This language can be processed at all because somebody went there for eleven months and recorded over a thousand example sentences. Of the world's roughly 7,000 languages, the overwhelming majority have about as much web text as Kalamang. The evidence strength needs stating plainly: one benchmark, one language, a very small test set, and weak support for any claim about what models can do. But "the model's entire input is a product of descriptive linguistics" is not a measurement — it is the precondition that lets the experiment exist.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>The grammar of 2,400 languages was typed into a table one cell at a time by a hundred-odd people</h2>
+<p>In April 2023 a database called Grambank went public. It is one very large table: 195 logically independent grammatical features across the top (most of them yes-or-no questions), 2,467 languages down the side, over 400,000 cells, filled in by more than a hundred linguists working from each language's reference grammar.</p>
+<p>Why could this never grow out of text? Because no cell holds a sentence; each holds a statement about a language. Whether a language puts its locational particles before or after the noun is not written inside any sentence of that language — it can only be summarised by someone who has read the whole of it.</p>
+<p>The questions such a table makes askable look like this. In 1963 Greenberg noticed a correlation: languages that put the object before the verb tend to put locational particles after the noun (those are postpositions) rather than before it (prepositions). Japanese matches on both counts: the verb comes last, and in 東京に (Tōkyō ni, "to Tokyo") the particle に (ni) follows the noun; English puts the verb before its object and says to Tokyo. The correlation holds up well across the several-hundred-language sample in the World Atlas of Language Structures — though it is a statistical tendency rather than an iron law, and counterexamples exist.</p>
+<figure>
+<svg aria-label="Diagram: the three layers of linguistic output, description, comparison and explanation, and whether web text can supply the input for each" role="img" viewbox="0 0 640 282" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="282" width="640" x="0" y="0"></rect>
+<rect fill="#1d2536" height="58" rx="6" stroke="#e0a458" width="330" x="22" y="26"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="38" y="48">Description: what this one language is like</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="70">Output = grammars · word lists · annotated corpora</text>
+<rect fill="#1d2536" height="58" rx="6" stroke="#7fb3d5" width="330" x="22" y="106"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="38" y="128">Comparison: what the set of languages is like</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="150">Output = feature tables · cross-linguistic links</text>
+<rect fill="#1d2536" height="58" rx="6" stroke="#7fb3d5" width="330" x="22" y="186"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="38" y="208">Explanation: why only these few shapes</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="230">Output = specifying what to use as a control</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="60">Text covers the few dozen</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="140">Text cannot: it is about language</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="220">Text cannot: needs absent shapes</text>
+<line stroke="#26314a" x1="366" x2="366" y1="26" y2="256"></line>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="22" y="272">The further down, the less the input is text</text>
+</svg>
+<div class="cap">What got taken over is the slice of the top layer where text is plentiful. The lower two layers do not take text as input at all, but judgements about language — and judgements about what could have existed and does not.</div>
+</figure>
+<p>The table's own result: grammatical features are predicted more by genealogy — which languages a language is related to — than by geography or environment; and counting by endangerment, close to half of the world's grammatical diversity is at risk of being lost.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>The exam that tests a model's grammar came in English only until a few years ago</h2>
+<p>The topic on whether large models learned grammar covered the minimal pair test: two sentences differing in one place, one licit and one not, and you check which one the model gives higher probability. Here we look at the other side of it — who wrote those items, and what they cover.</p>
+<p>In 2020 Mueller and colleagues extended subject-verb agreement items from English into German, French, Russian and Hebrew, generating sentences in bulk from hand-written miniature grammars. The shape of the result: with no distractor between subject and verb, every language did well; once the agreement had to reach across an object relative clause (one of those chunks wedged in the middle) accuracy generally dropped; languages with richer morphology scored higher rather than lower; and multilingual models looked good on English and fell off noticeably elsewhere. That last observation became sayable only once the other languages had items at all.</p>
+<p>In 2025 a set called MultiBLiMP pushed coverage to 101 languages and more than 128,000 minimal pairs, generated by a fully automatic pipeline. But the raw material is two hand-made things: Universal Dependencies (sentences annotated for syntactic structure under a shared scheme) and UniMorph (hand-compiled inflection tables). The way to widen an evaluation was not to crawl more text; it was to draw on more hand-assembled linguistic resources.</p>
+<p>So the evaluation is the fulcrum: the question of whether a system handles some construction can only be asked once somebody has named that construction.</p>
+</section>
+<section>
+<span class="num">// 04</span>
+<h2>Of everything in "large models refuted linguistics", exactly one strand became an experiment</h2>
+<p>In 2023 Piantadosi published a piece titled "Modern language models refute Chomsky's approach to language". The core claim: a model is itself a theory of language, and a more successful one — it does produce grammatical sentences, while the rule system the older programme set out to write was never finished.</p>
+<p>There have been at least two kinds of reply. Kodner, Payne and Heinz, in "Why Linguistics Will Thrive in the 21st Century", argue that models are a tool and not a theory, their hardest reason being data volume: a child gets there on far less than 100 million words of input, a model needs three or four orders of magnitude more, so the original puzzle has not been touched. Katzir, writing in Biolinguistics, takes another line: models learn patterns humans cannot learn and stumble where humans find things effortless, which makes them poor theories of human linguistic cognition.</p>
+<p>These are argument papers, not new data, and the evidence strength should be labelled that way. But one strand really was turned into an experiment: the data budget. A public competition called BabyLM fixed the training budget at 100 million words — roughly the scale of what a child has heard by their teens, with a 10-million-word track as well — and asked who could do best inside it. In the first round a submission using the LTG-BERT architecture beat models trained on trillions of words on that evaluation suite, while intuitively appealing ideas like ordering the data by difficulty mostly did nothing.</p>
+<p>The ledger should be kept honestly. What got displaced really was displaced — how hand-written grammar rules lost at translation is the subject of the topic on rules giving way to statistics. And in the BabyLM competition, the referee is exactly the kind of minimal-pair item from the previous section. Setting the strongest version of each position side by side: a model is currently the only artefact that produces language whole; it has not done so at a human data budget; and whether it counts as a theory of people probably cannot be answered before saying what it is supposed to explain. That one is still argued over.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 In Context · BigCat</h3>
+<ol>
+<li><b>① Engineering and system design</b>: a rule-based validator that ran for years gets replaced by a new model; before launch the only comparison made is overall accuracy; weeks later a class of input turns out to be unguarded — that branch in the old rules was the only place in the whole system where the constraint was ever written down. This runs the mechanism from the section on translating a language with 130 speakers: when the description and the implementation live in the same artefact, that artefact is also the only source of the knowledge. Changeable action: before retiring it, turn every branch of the old rules into one named test case (test cases, not a document — nobody runs documents) and make the new system pass them one by one; switch the acceptance metric from overall accuracy to "which lines of the list dropped".</li>
+<li><b>② Writing and expression</b>: you finish a passage, read it back, it flows — and then someone asks what your claim actually is; or the proposal that read without a single snag leaves you stuck when a reviewer asks what you would see if it were false. This runs the distinction behind the section on the one strand that became an experiment: flowing is predicting the next sentence well, having a claim is being able to point at a counterfactual. Changeable action: add one line after each passage — "if this were not true, what would we observe". The passage where you cannot write that line has no claim yet, only fluency.</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 Crossing Over · Links to Other Fields</h3>
+<ul>
+<li><b>Evolutionary biology · You find out why a path was not taken by actually synthesizing it</b>: in 2006 Bridgham, Carroll and Thornton took the inferred 400-million-year-old ancestral sequence of a class of hormone receptor proteins and actually synthesized it, then built several intermediate versions evolution never kept and tested them one by one. One finding: of the two required mutations, the one that came first does not change function at all — it only makes the second one viable. Swap the order and the path is closed. This runs the mechanism from the section on 2,400 languages typed into a table: to answer "why only these few shapes", you need a control set that includes the shapes which did not appear, and the absent ones can only be specified — and built — by a person. Which exposes the half that is missing on the linguistics side: existing "languages humans could not learn" experiments only measure how fast a single learner picks one up, never whether it survives being passed on. The testable difference: if the real constraint lives in transmission across generations rather than in the single learner, then a variant that is slow but learnable, put into an iterated-learning experiment (the Kirby and colleagues 2008 design: one generation's output becomes the next generation's input, run ten deep), should deform within a few generations, while a large model learning it alone is untroubled. <b>Where this does not hold</b> is the premise of fitness: biology can count it directly — how many survived, how many offspring — and language has no such quantity. A grammar being harder to learn does not mean its speakers have fewer children; whether a language is passed on is decided by politics, schooling and economics.</li>
+<li><b>Neuroscience and consciousness · A chip whose answer is fully known put the whole analytic toolkit through an exam</b>: in 2017 Jonas and Kording turned the standard analytic methods of neuroscience on a MOS 6502 chip running a video game. The point is that this chip has a complete, correct answer available: the wiring and the instruction set are public. They "lesioned" transistors one at a time, drew tuning curves, computed correlations and causal measures between signals, ran dimensionality reduction — and got a pile of statistically significant findings (pull these few transistors and the game stops running) without one of them yielding how the chip works. This runs the mechanism from the section on the exam that tests a model's grammar: the fit a measurement reports depends on what the items cover, and what they cover is specified by a theory supplied independently — the metric itself will never tell you what it left out. From which one doable thing follows: calibrate the method first on a system whose answer is known. The counterpart on the linguistics side is already available — train a model on an artificial language whose rules were written entirely by people, and see whether existing probes and benchmarks recover those rules as written; a method that cannot should have its conclusions about human language discounted a notch. <b>Where this does not hold</b> is the premise of there being one correct answer: the chip has a circuit diagram and language does not, and the true answer about human grammar is itself the thing to be explained. So this calibration can only rule out false positives; it cannot show that a method which passes will find a real mechanism.</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>Going Deeper</h3>
+<details><summary>If some language eventually has enough web text, does descriptive linguistics become unnecessary for it?</summary><p>Plentiful text can support "what the sayable sentences of this language look like" but not "which ones do not work". Absence from a corpus does not mean illicit, and the two cannot be distinguished inside text — while a fair share of a grammar is devoted to exactly the second.</p></details>
+<details><summary>What would it take for "a model is itself a theory" to be confirmed or refuted?</summary><p>You would first have to agree on what it is meant to explain. If the target is "on how much input do people get there", a fixed-data-budget competition is the test. If the target is "why languages come in only the observed shapes", you need a learner that is defeated by shapes that should not exist. The two targets are tested differently, so the question probably has to be split before it can be answered.</p></details>
+<details><summary>If the same community writes the items and then judges whether models learned grammar, is there a circle here?</summary><p>There is, and it is a real problem: the phenomena the items cover are the phenomena current theory considers important. One way out is to let model failures point back at what was left out (reading error patterns rather than totals); another is to draw material from languages no theory has looked at yet.</p></details>
+</div>
+<div class="refs">
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://langsci-press.org/catalog/book/344">Visser (2022), A Grammar of Kalamang, open access</a> · <a href="https://lukemelas.github.io/mtob/">Machine Translation from One Book</a> · <a href="https://arxiv.org/abs/2309.16575">Tanzer et al. (2024), the paper</a></li>
+<li><a href="https://grambank.clld.org/">The Grambank database</a> · <a href="https://www.science.org/doi/10.1126/sciadv.adg6175">Grambank (2023), genealogical constraints and language loss</a></li>
+<li><a href="https://wals.info/chapter/95">WALS: object-verb order and adpositions</a> · <a href="https://en.wikipedia.org/wiki/Greenberg%27s_linguistic_universals">Greenberg's list of universals</a></li>
+<li><a href="https://aclanthology.org/2020.acl-main.490/">Mueller et al. (2020), cross-linguistic syntactic evaluation</a> · <a href="https://arxiv.org/abs/2504.02768">MultiBLiMP 1.0, 101 languages</a> · <a href="https://universaldependencies.org/">Universal Dependencies</a></li>
+<li><a href="https://babylm.github.io/">The BabyLM Challenge</a> · <a href="https://aclanthology.org/2024.conll-babylm.1/">Findings of the second round</a></li>
+<li><a href="https://lingbuzz.net/lingbuzz/007180">Piantadosi (2023), do models refute that approach</a> · <a href="https://arxiv.org/abs/2308.03228">The reply by Kodner, Payne and Heinz</a> · <a href="https://bioling.psychopen.eu/index.php/bioling/article/view/13153">Katzir's reply</a></li>
+<li><a href="https://doi.org/10.1126/science.1123348">Bridgham et al. (2006), resurrecting an ancestral receptor</a> · <a href="https://www.pnas.org/doi/10.1073/pnas.0707835105">Kirby et al. (2008), iterated learning in the lab</a></li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005268">Jonas &amp; Kording (2017), could a neuroscientist understand a microprocessor</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>

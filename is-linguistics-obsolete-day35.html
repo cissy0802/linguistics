@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>语言学被大模型淘汰了吗 — 语言学 Day 35</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 35 · 语言学</div>
+<h1>语言学被大模型淘汰了吗</h1>
+<div class="sub">一个能把英语写得挑不出毛病的系统，碰上一门一百三十人说的语言，全部本钱是一位语言学家花十一个月写出来的那本书</div>
+<div class="date">2026-10-01</div>
+<div class="pitch">要测一个模型会不会语法，题是语言学家出的；要让它翻一门网上没有文本的语言，材料是语言学家写的。被接走的那部分确实被接走了，而剩下的那部分正好是出题的那一半。</div>
+</header>
+<div class="intro">
+<p>你让一个模型写一段英语，它写得比大多数人顺。你让它翻一句卡拉芒语（Kalamang）——印度尼西亚西巴布亚卡拉斯群岛上两个村子里大约一百三十个人说的语言——它一个字都翻不出来：网上关于这门语言的文本几乎是零。</p>
+<p>于是有人把一位语言学家在那两个村子住了十一个月写成的那本语法书整本塞给模型，让它现读现翻。这个设置比成绩更有意思——它把「模型到底靠什么」摊在了桌面上。</p>
+<p>一门学科会不会被一个比它更能干的工具淘汰？靠表态答不了，得一项一项看：哪些活真被接走了、哪些没有、被接走的那些当初是谁定义的。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>要翻一门一百三十人说的语言，模型得先去读一本手写的语法书</h2>
+<p>2024 年 Tanzer 等人做了个叫「从一本书学翻译」的基准。全部材料只来自一个来源：Eline Visser 2022 年出版的《卡拉芒语语法》——几百页语法书正文、一份带词类标注和英文释义的词表、375 对卡拉芒语和英语的对照句。模型的输入就这些，然后翻没见过的句子。</p>
+<p>成绩按译文和参考译文的字符片段重合度算（这个指标叫 chrF，越高越接近）。当时最好的一组是卡拉芒语译英语 44.7、英语译卡拉芒语 45.8；只读了同一批材料的一个人类学习者是 51.6 和 57.0——两头都没被追上。</p>
+<p>最有信息的不是分数，是一个具体的错。词表里有个词 teba，释义说它是进行体标记——相当于汉语里「正在」那类成分，自己不表示任何动作。模型把它当成了英语副词 progressively，直接写进了译文。这个错的形状说明它在查词表，没在用语法书里那条规则。</p>
+<p>这门语言能被处理，是因为有人去那里住了十一个月、记了一千多条例句。全世界约七千种语言，绝大多数的网络文本量和卡拉芒语同一个量级。证据强度得说清：单一基准、单一语言、很小的测试集，拿它评判模型能力相当弱。但「模型全部的输入都是描写语言学的产物」不是测量结果，是这个实验能成立的前提。</p>
+<p class="en-brief"><b>EN</b> In 2024 Tanzer and colleagues built a benchmark called Machine Translation from One Book. Every piece of material comes from a single source: Eline Visser's 2022 grammar of Kalamang, a language spoken by roughly 130 people in two villages on the Karas Islands off West Papua, Indonesia. Three resources — several hundred pages of grammar, a bilingual word list with part-of-speech tags and English descriptions, and 375 paired Kalamang-English sentences. That is the model's entire input; then it translates sentences it has never seen. Scores are character-level overlap with a reference translation. The best baselines reached 44.7 for Kalamang into English and 45.8 for English into Kalamang, against 51.6 and 57.0 for a human who studied the same materials. Not bad, but short of the person in both directions. The informative part is not the score but one specific error. The word list has an entry for teba, described as a progressive aspect marker — a particle that carries no action of its own. The model rendered it as the English adverb "progressively" and put that straight into its output. The shape of that error says it was consulting the word list rather than applying the rule in the grammar. Text in this language is not on the web. It can be processed at all because somebody lived there for eleven months and recorded over a thousand example sentences. Of the world's roughly 7,000 languages, the overwhelming majority have about as much web text as Kalamang does. On evidence strength: this is one benchmark, one language, a small test set, and it is weak support for any claim about model ability. But the fact that the model's entire input is a product of descriptive linguistics is not a measurement — it is the precondition that lets the experiment exist.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>两千四百种语言的语法，是一百多个人一格一格手填进表里的</h2>
+<p>2023 年 4 月公开了一个数据库，叫 Grambank。它是一张巨大的表：195 个互相独立的语法特征横着排（多数是「有没有」这种是非题），2467 种语言竖着排，四十多万个格子，由一百多位语言学家按各语言的参考语法书填进去。</p>
+<p>为什么这东西不可能从文本里长出来？因为每一格都不是一句话，而是一句关于一门语言的话。「这门语言把方位词放在名词前还是后」不写在任何一句该语言的句子里——它只能被一个读遍了那门语言的人总结出来。</p>
+<p>有了这种表才问得出来的问题长这样。1963 年 Greenberg 注意到一条关联：宾语放在动词前面的语言，倾向于把表方位的小词搁在名词后面（叫后置词 postposition），而不是前面（叫介词 preposition）。日语两头都对上：动词在句末，「東京に」（Tōkyō ni，「到东京」）里的 に（ni）跟在名词后头；英语动词在宾语前，于是说 to Tokyo。这条在 WALS 那套几百种语言的样本上很稳——但它是统计倾向不是铁律，反例有。</p>
+<figure>
+<svg aria-label="示意图：语言学的三层产出——描写、比较、解释，以及每层的输入能不能由网络文本提供" role="img" viewbox="0 0 640 282" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="282" width="640" x="0" y="0"></rect>
+<rect fill="#1d2536" height="58" rx="6" stroke="#e0a458" width="330" x="22" y="26"></rect>
+<text fill="#e0a458" font-family="Georgia, serif" font-size="13" x="38" y="48">描写：这一门语言长什么样</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="70">产出 = 语法书 · 词表 · 标注过的句子库</text>
+<rect fill="#1d2536" height="58" rx="6" stroke="#7fb3d5" width="330" x="22" y="106"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="38" y="128">比较：语言这个集合长什么样</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="150">产出 = 特征表 · 跨语言的关联</text>
+<rect fill="#1d2536" height="58" rx="6" stroke="#7fb3d5" width="330" x="22" y="186"></rect>
+<text fill="#7fb3d5" font-family="Georgia, serif" font-size="13" x="38" y="208">解释：为什么只长成这几种形状</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="11" x="38" y="230">产出 = 指定该拿什么当对照</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="60">文本多的那几十种能顶掉</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="140">顶不掉：是关于语言的陈述</text>
+<text fill="#e4e8f2" font-family="Georgia, serif" font-size="11.5" x="376" y="220">顶不掉：要用没出现的形状</text>
+<line stroke="#26314a" x1="366" x2="366" y1="26" y2="256"></line>
+<text fill="#5b6478" font-family="Georgia, serif" font-size="11" x="22" y="272">越往下走，输入越不是文本</text>
+</svg>
+<div class="cap">被接走的是最上一层里「文本充足」那一小块。下面两层的输入不是文本，而是关于语言的判断，以及关于「本来可以有而没有」的判断。</div>
+</figure>
+<p>这张表自己的结果是：语法特征更多由谱系（跟哪些语言有亲缘）预测，而不是由地理或环境预测；按濒危程度算，接近一半的语法多样性正面临丢失。</p>
+<p class="en-brief"><b>EN</b> In April 2023 a database called Grambank went public. Its shape is a very large table: 195 logically independent grammatical features across the top, most of them yes-or-no questions; 2,467 languages down the side; over 400,000 cells, filled in one at a time by more than a hundred linguists working from each language's reference grammar. Why could this never grow out of text? Because each cell is not a sentence but a statement about a language. Whether a language puts its locational particles before or after the noun is not written inside any sentence of that language — it can only be summarised by someone who has read through the whole of it. The questions such a table makes askable look like this. In 1963 Greenberg noticed a correlation: languages that put the object before the verb tend to put locational particles after the noun (those are postpositions) rather than before it (prepositions). Japanese matches on both counts: the verb comes last, and in 東京に (Tōkyō ni, "to Tokyo") the particle に (ni) follows the noun; English puts the verb before its object and says to Tokyo, with to in front. The correlation holds up statistically across the several-hundred-language sample in the World Atlas of Language Structures — though it is a statistical tendency, not an iron law, and counterexamples exist. Grambank's own headline result is worth stating too: a language's grammatical features are predicted more by its genealogy — which languages it is related to — than by its geography or environment; and counting by endangerment, close to half of the world's grammatical diversity is at risk of being lost. The loss described in the topic on disappearing languages gets a concrete accounting unit here.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>给模型出语法题的那张卷子，一直到前几年还只有英语版</h2>
+<p>「大模型学到语法了吗」那期讲过那种最小对（minimal pair）测试：给出一对只差一个地方的句子，一句合法一句不合法，看模型给哪句更高的概率。这期要看的是它的另一面——这些题是谁出的，以及覆盖了什么。</p>
+<p>2020 年 Mueller 等人把主谓一致的题从英语扩到德语、法语、俄语和希伯来语，办法是用人工写的小语法成批生成句子。结果的形状：主语和动词之间没有干扰词时各语言都做得好；一旦一致关系要跨过一个宾语关系从句（插在中间的那种成分）就普遍变差；词形变化更丰富的语言成绩反而更高；多语种模型在英语上分数漂亮，换到别的语言明显掉。最后这句只有在别的语言也有了题之后才说得出口。</p>
+<p>2025 年有一套叫 MultiBLiMP 的题集把覆盖推到 101 种语言、十二万八千多对最小对，全自动流水线生成。但原料是两样人工的东西：Universal Dependencies（按统一标准人工标注过句法结构的句子库）和 UniMorph（人工整理的词形变化表）。把评测扩大的办法不是多爬文本，是去用更多手工攒出来的语言学资源。</p>
+<p>所以评测是支点：「这个系统会不会某个结构」这个问句，得先有人把那个结构命名出来才问得出来。</p>
+<p class="en-brief"><b>EN</b> The topic on whether large models learned grammar covered the minimal-pair test: a pair of sentences differing in one place, one licit and one not, and you check which one the model assigns higher probability. Here we look at the other side of it — who wrote the items, and what they cover. In 2020 Mueller and colleagues extended subject-verb agreement items from English into German, French, Russian and Hebrew, generating sentences in bulk from hand-written miniature grammars. The shape of the result is instructive: with no distractor between subject and verb, models did well in every language; once the agreement had to reach across an object relative clause — a chunk like "that I repaired yesterday" wedged in the middle — accuracy generally dropped; languages with richer morphology scored higher rather than lower; and multilingual models looked good on English while falling off noticeably elsewhere. Note that last observation: it became sayable only once the other languages had items at all. In 2025 a set called MultiBLiMP pushed coverage to 101 languages and more than 128,000 minimal pairs, generated by a fully automatic pipeline. But the raw material is two things: Universal Dependencies, a collection of sentences hand-annotated for syntactic structure under a shared scheme, and UniMorph, a set of hand-compiled inflection tables. The way to widen an evaluation, in other words, was not to crawl more text but to draw on more hand-built linguistic resources. So the evaluation is the fulcrum. The very question of whether a system handles some construction requires that somebody first name that construction and state when it holds and when it does not. Whoever writes the items decides what "learned it" means.</p>
+</section>
+<section>
+<span class="num">// 04</span>
+<h2>「大模型推翻了语言学」这句话里，只有一条变成了实验</h2>
+<p>2023 年 Piantadosi 的一篇文章题目就叫《现代语言模型驳倒了乔姆斯基式的语言研究路线》。核心主张是：模型本身就是一种语言理论，而且更成功——它确实产出合乎语法的句子，而过去那条路线想写的那套规则始终没写完。</p>
+<p>回应至少两类。Kodner、Payne 和 Heinz 的《语言学会在二十一世纪繁荣起来》说模型是工具不是理论，最硬的理由是数据量：孩子在远少于一亿词的输入下就学成，模型要多出三四个数量级，所以它没触及那个最初的难题。Katzir 发在《生物语言学》上的那篇走另一条：模型在人学不会的模式上也能学，在人毫不费力的地方反而会掉，所以拿它当人类语言认知的理论是差的。</p>
+<p>这几篇都是论证文章不是新数据，证据强度要这么标。但其中一条真被做成了实验：数据量。有个叫 BabyLM 的公开比赛定了固定训练预算：一亿词，接近一个孩子长到十几岁听到的量级（另有一千万词的小档），比谁能在预算内把模型做得最好。第一届里一个用 LTG-BERT 架构的参赛作品，在那套评测上超过了用上万亿词训出来的模型；而「按难度给数据排顺序」这类直觉办法大多没效果。</p>
+<p>账要诚实地记。被淘汰的那部分是真被淘汰了——手写语法规则去跑翻译这条路怎么输的，「从规则到统计」那期讲的就是它。而 BabyLM 这场比赛，裁判用的正是上一节那种最小对。三方最强的版本并排放：模型是目前唯一能完整产出语言的东西；它确实没在人类的数据量上做到；而「它算不算一种关于人的理论」，多半得先说清要解释什么才答得了。这个今天还有争论。</p>
+<p class="en-brief"><b>EN</b> In 2023 Piantadosi published a piece titled "Modern language models refute Chomsky's approach to language". The core claim: a model is itself a theory of language, and a more successful one than what came before, because it does produce grammatical sentences while the rule system the older programme set out to write was never finished. There have been at least two kinds of reply. Kodner, Payne and Heinz, in "Why Linguistics Will Thrive in the 21st Century", hold that models are a tool and not a theory, their hardest argument being about data volume: a child gets there on far less than 100 million words of input while a model needs three or four orders of magnitude more, so the original puzzle has not been touched. Katzir, writing in Biolinguistics, takes a different line: models learn patterns humans cannot learn and stumble where humans find things effortless, which makes them poor theories of human linguistic cognition. These are argument papers, not new data, and the evidence strength should be labelled accordingly. But one strand did get turned into an experiment: the data budget. A public competition called BabyLM fixed the training budget — 100 million words, roughly the scale of what a child has heard by their teens, with a 10-million-word track as well — and asked entrants to do the best they could inside it. In the first round a submission using the LTG-BERT architecture beat models trained on trillions of words on that evaluation suite, while intuitively appealing ideas like ordering the data by difficulty mostly did nothing. In the second round, among 31 submissions, the winner mixed causal and masked training objectives, and a strong relationship turned up between training compute and average score. The ledger should be kept honestly. What got displaced really was displaced: how hand-written grammar rules lost at translation is the subject of the topic on rules giving way to statistics. And the referee in the BabyLM competition is exactly the minimal-pair kind of item from the previous section. Setting the strongest version of each position side by side: a model is currently the only artefact that produces language whole; it has not done so at a human data budget; and whether it constitutes a theory of people probably cannot be answered before saying what it is supposed to explain. That one is still argued over.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：一套跑了几年的规则校验被新模型替掉，上线前只比了总体准确率；几周后发现有一类输入没人管了——旧规则里那条分支，是这个约束在整个系统里唯一被写下来的地方。跑的是「要翻一门一百三十人说的语言」那节的机制：描述和实现长在同一份东西上时，它同时就是唯一的知识来源。可改的动作：下线前把旧规则每条分支抽成一条具名的测试用例（用例不是文档，文档没人跑），新系统逐条过；验收指标从总体准确率换成「清单里哪几条掉了」。</li>
+<li><b>② 写作与表达</b>：你写完一段自己通读很顺，发出去被问「所以你主张的是什么」；或者评审上那份读着毫无阻碍的方案，被问「要是这条不成立会看到什么」时答不上来。跑的是「只有一条变成了实验」那节背后的分别：顺是对下一句预测得好，主张是能指出反事实。可改的动作：每段后面补一句「如果这条不成立，会观察到什么」——写不出来的那段就还没有主张、只有语感。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>演化生物学 · 把演化史上没走的那条路真的合成出来，才知道它为什么没走</b>：2006 年 Bridgham、Carroll 和 Thornton 把一类激素受体蛋白推断出的四亿多年前的祖先序列真的合成了出来，还造了几个演化史上从未留下的中间版本逐个测。其中一个发现是：两个必需突变里先发生的那个本身不改变功能，它只是让后一个变得可行——顺序一换这条路就走不通。这跑的是「两千四百种语言的语法被手填进表里」那节的机制：要回答「为什么只长成这几种形状」，你得有一个包含了没出现的形状的对照集，而没出现的那些只能由人指定并造出来。于是语言学这边缺的半截露出来了：现有那些「人学不会的语言」实验只测过单个学习器学得快不快，没测过它传不传得下去。可检验的差异是：如果真正的约束在代际传递而不在单个学习者，那么把一门学得慢但学得会的变体放进迭代学习实验（Kirby 等人 2008 年那套：上一代的产出当下一代的输入，连传十代），它应当在几代内走形，而一个大模型单独学它毫无压力。<b>但这里不成立</b>的是适合度这个前提：生物学能直接把它数出来（活下来几个、繁殖多少），语言没有这样一个量。一门语法更难学，不等于说它的人更少生孩子；语言传不传下去由政治、学校和经济决定。</li>
+<li><b>神经科学与意识 · 一块答案完全已知的芯片，把那套分析手段整个考了一遍</b>：2017 年 Jonas 和 Kording 拿神经科学的标准分析手段去对付一块跑游戏的 MOS 6502 芯片。关键是这块芯片有一份完整正确的答案：电路连线和指令集都公开。他们一个个「损毁」晶体管，画调谐曲线，算信号间的相关与因果，做降维，拿到一堆统计上显著的发现（比如某几个晶体管一拆游戏就跑不起来），却没一条能推出这块芯片是怎么工作的。这跑的是「给模型出语法题的那张卷子」那节的机制：测出的符合度取决于题目覆盖了什么，而覆盖什么由一套独立给出的理论指定——指标自己不会告诉你它漏了什么。由此推出一件能做的事：先在答案已知的系统上校准方法。语言学这侧的对应物现成——拿一门规则完全由人写定的人工语言去训模型，看现有的探针和基准能不能把那套规则原样复原；复原不出来的方法，用在人类语言上得出的结论就该降一档。<b>但这里不成立</b>的是「有唯一正确答案」这个前提：芯片有一份电路图，语言没有，人类语法的真答案本身就是待解释的东西。所以这条校准只能排除假阳性，不能证明通过校准的方法就一定能发现真机制。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果某门语言将来网络文本足够多了，描写语言学对它是不是就不必要了？</summary><p>文本多能撑起「这门语言里说得通的句子长什么样」，撑不起「哪些说不通」。语料里没出现不等于不合法，这两件事在文本里没法区分，而语法书有不少篇幅恰恰在讲后者。</p></details>
+<details><summary>「模型本身就是一种理论」这个主张，怎样才算被验证或者被推翻？</summary><p>得先约定它要解释什么。如果要解释「人在多少输入量下学成」，固定数据预算那类比赛就是检验；如果要解释「语言为什么只长成观察到的那些形状」，那就要一个会被不该存在的形状难住的学习器。两个目标的检验方式不同，这问题多半得拆开答。</p></details>
+<details><summary>题由同一群人出、再拿来判断模型学没学到语法，这里会不会有循环？</summary><p>会，而且这是真问题：题覆盖的现象就是现有理论认为重要的那些现象。一条出路是让模型的失败反过来提示被漏掉的现象（看错误模式而不只看总分），另一条是从还没进过任何理论视野的语言里取材。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://langsci-press.org/catalog/book/344">Visser (2022)，《卡拉芒语语法》全书开放下载</a> · <a href="https://lukemelas.github.io/mtob/">「从一本书学翻译」基准</a> · <a href="https://arxiv.org/abs/2309.16575">Tanzer 等 (2024)，论文</a></li>
+<li><a href="https://grambank.clld.org/">Grambank 数据库</a> · <a href="https://www.science.org/doi/10.1126/sciadv.adg6175">Grambank (2023)，谱系约束与语言流失</a></li>
+<li><a href="https://wals.info/chapter/95">WALS：宾语—动词语序与方位词的关系</a> · <a href="https://en.wikipedia.org/wiki/Greenberg%27s_linguistic_universals">Greenberg 的语言共性清单</a></li>
+<li><a href="https://aclanthology.org/2020.acl-main.490/">Mueller 等 (2020)，跨语言的句法评测</a> · <a href="https://arxiv.org/abs/2504.02768">MultiBLiMP 1.0，101 种语言</a> · <a href="https://universaldependencies.org/">Universal Dependencies</a></li>
+<li><a href="https://babylm.github.io/">BabyLM Challenge</a> · <a href="https://aclanthology.org/2024.conll-babylm.1/">第二届结果综述</a></li>
+<li><a href="https://lingbuzz.net/lingbuzz/007180">Piantadosi (2023)，模型驳倒了那条路线吗</a> · <a href="https://arxiv.org/abs/2308.03228">Kodner、Payne、Heinz 的回应</a> · <a href="https://bioling.psychopen.eu/index.php/bioling/article/view/13153">Katzir 的回应</a></li>
+<li><a href="https://doi.org/10.1126/science.1123348">Bridgham 等 (2006)，复活祖先受体蛋白</a> · <a href="https://www.pnas.org/doi/10.1073/pnas.0707835105">Kirby 等 (2008)，实验室里的迭代学习</a></li>
+<li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005268">Jonas &amp; Kording (2017)，神经科学家能看懂一块芯片吗</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
