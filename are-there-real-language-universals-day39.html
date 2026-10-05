@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>有真正的语言共性吗 — 语言学 Day 39</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 39 · 语言学</div>
+<h1>有真正的语言共性吗</h1>
+<div class="sub">一千多门语言里，有些搭配几乎从不出现。这是人脑写死的规定，是语言们彼此继承来的习惯，还是说话的人都怕记不住？一门几百人说的亚马逊语言，把这场官司推到了台前</div>
+<div class="date">2026-10-05</div>
+<div class="pitch">查过的近千门语言里，「动词在宾语前」配「介词在前」的有 456 门，「动词在宾语后」配「介词在后」的有 472 门；交叉的两种组合加起来只有 56 门。可把这些语言按家谱排开，这条看似铁律在不同语系里长得并不一样。</div>
+</header>
+<div class="intro">
+<p>你学日语或韩语时大概骂过：怎么什么都反着来？「去东京」要说成「东京到去」。奇怪的是，它反得很整齐：动词跑到宾语后面，「到」也跟着跑到名词后面，几乎没有只反一半的。</p>
+<p>这种整齐让语言学家相信，所有语言底下压着同一套东西。可「共性」这个词有三种完全不同的读法：每门语言都必须有的；大多数语言倾向于有的；以及人脑有能力处理、但某门语言不一定用的。这场争论一大半的火气，来自双方说的不是同一种。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>宾语放哪，介词就跟着放哪</h2>
+<p>1963 年 Greenberg 从三十门语言里归纳出一批共性，其中最结实的一类是「如果……那么多半……」：如果一门语言的宾语在动词后面，它多半用前置词（preposition，放在名词前面的「在、到、从」）；宾语在动词前面，多半用后置词（postposition，放在名词后面）。英语 go to Tokyo，动词和 to 都在前；日语「東京に行く」（Tōkyō ni iku，字面「东京 到 去」），に和动词都在后。</p>
+<figure>
+<svg aria-label="二乘二格子：动宾语序与介词位置的四种组合各有多少门语言" role="img" viewBox="0 0 640 270" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#19202f" height="270" width="640" x="0" y="0"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="13" x="250" y="32">介词在名词前</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="13" x="450" y="32">介词在名词后</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="13" x="20" y="100">动词在宾语前</text>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="13" x="20" y="205">动词在宾语后</text>
+<rect fill="#e0a458" height="96" rx="6" width="190" x="215" y="48"></rect>
+<text fill="#101624" font-family="Georgia, serif" font-size="26" font-weight="700" x="275" y="96">456</text>
+<text fill="#101624" font-family="Georgia, serif" font-size="12" x="262" y="122">如英语 go to Tokyo</text>
+<rect fill="#26314a" height="96" rx="6" width="190" x="415" y="48"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="22" x="490" y="100">42</text>
+<rect fill="#26314a" height="96" rx="6" width="190" x="215" y="154"></rect>
+<text fill="#8d95a8" font-family="Georgia, serif" font-size="22" x="294" y="206">14</text>
+<rect fill="#7fb3d5" height="96" rx="6" width="190" x="415" y="154"></rect>
+<text fill="#101624" font-family="Georgia, serif" font-size="26" font-weight="700" x="475" y="202">472</text>
+<text fill="#101624" font-family="Georgia, serif" font-size="12" x="447" y="228">如日语「東京に行く」</text>
+</svg>
+<div class="cap">《世界语言结构地图》（WALS）对 1142 门语言的统计；另有 158 门两头都有或分不清，单列为「其他」。</div>
+</figure>
+<p>这种关联叫蕴含共性（implicational universal）。它不是「每门语言都如此」，而是「几乎从不出现某种搭配」。后来的类型学家把样本扩到上千门，对角线依然稳稳的。关于「主语几乎总在宾语前」这类更绝对的说法，「语言学被大模型淘汰了吗」那期讲过一门把宾语放最前的亚马逊语言怎么把它打破。</p>
+<p>2011 年，Dunn、Greenhill、Levinson、Gray 在《自然》上换了个问法。数语言有个漏洞：四百门南岛语都是同一个祖先的后代，它们一起是「动词在前」，可能只是一次继承，被数成了四百次。于是他们借来生物学画演化树的办法，在南岛、班图、印欧、乌托-阿兹特克四个语系共 589 门语言上看：一门语言换掉动宾顺序之后，介词是不是也跟着换？结论是，大多数语序之间的依赖只在部分语系里出现，而且各语系的依赖方式不一样。</p>
+<p>反方的回应也硬：四个语系太少，每个语系内部语序变化的次数有限，统计力不够，拿来否定跨全球的关联说服力有限。今天的共识大概是：对角线是真实的倾向，但它是「法则」还是「常见的路」，还没定。</p>
+<p class="en-brief"><b>EN</b> Greenberg's 1963 implicational universals say that if the object follows the verb, a language usually has prepositions (go to Tokyo), and if it precedes, postpositions (Japanese Tōkyō ni iku, "Tokyo to go"). In WALS, 456 VO languages have prepositions and 472 OV languages postpositions, while the crossed combinations total only 56. In 2011 Dunn, Greenhill, Levinson and Gray noticed a counting flaw — 400 Austronesian languages may share one inherited trait — and used evolutionary-tree methods on 589 languages in four families, asking whether changing verb–object order drags adposition order along. Most dependencies turned out lineage-specific and differently shaped in each family. Critics reply that four families give too little statistical power. Consensus: the diagonal is a real tendency; whether it is a law or a well-worn path is open.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>一门几百人说的语言，成了整场官司的证物</h2>
+<p>皮拉罕语（Pirahã）说在巴西亚马逊的麦西河沿岸，使用者只有几百人；它所属的穆拉语族里，其他成员如今都已没人说了。Daniel Everett 在那里做了三十来年田野。2005 年他发表文章说：这门语言没有从句套从句。英语说「约翰的哥哥的房子」，皮拉罕人会拆开说「哥哥的房子。约翰有个哥哥。就是那个哥哥」。他的解释是文化：这个社群只谈亲眼见过、或亲历者转述的事，一层套一层的结构没有用武之地。</p>
+<p>这是在挑战一个很强的主张。2002 年 Hauser、Chomsky、Fitch 提出，人类语言能力里真正独有的那一小块，可能就只有递归（recursion）——一个结构里能装进同类的结构，「我知道你以为他说过……」可以一直往下套。要是有一门正常运转的人类语言不用它，这个假说至少得改写。</p>
+<p>2009 年 Nevins、Pesetsky、Rodrigues 写了长篇反驳。核心论点有二：第一，Everett 1986 年自己写的皮拉罕语语法里，就把一些句子分析成了从句嵌套，2005 年改了说法，但材料没变；第二，那些「缺口」在别的语言里也有，比如德语放在名词前的那种所有格也很难叠第二层，可没人说德国人的文化限制了语法。</p>
+<p>2016 年 Futrell 等人拿 Everett 早年参与收集的一千多句自然语料逐句查：没找到无可争议的嵌套，但也承认语料小、只做了浅层分析，排除不了。证据强度要标清楚：一门语言，一手材料几乎全出自极少数研究者，外人很难去核对。还有一层不该忘：被反复引用的「证物」是一个活着的社群，他们的语言是用来生活的，不是为这场官司存在的。</p>
+<p class="en-brief"><b>EN</b> Pirahã is spoken by a few hundred people along the Maici River in Brazil. In 2005 Daniel Everett, after decades of fieldwork, argued it has no clause embedding — "John's brother's house" comes out as "Brother's house. John has a brother. It is the same one" — and attributed this to a cultural focus on directly witnessed experience. That challenged Hauser, Chomsky and Fitch's 2002 proposal that recursion may be the only uniquely human part of the language faculty. Nevins, Pesetsky and Rodrigues replied in 2009 that Everett's own 1986 grammar analysed some sentences as embedded, and that the gaps occur elsewhere — German prenominal possessors resist stacking too. Futrell and colleagues' 2016 corpus study found no unambiguous embedding but could not rule it out. One language, data from very few researchers — and a living community, not an exhibit.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>最站得住的共性，可能是「别让相关的词离太远」</h2>
+<p>皮拉罕之争最后卡在一个分岔上。如果「递归是共性」指每门语言都得用，那一门确实不用的语言就推翻它；如果指的是每个人的大脑都有这个能力，那皮拉罕语推翻不了——皮拉罕孩子在别处长大，照样能学会葡萄牙语里的从句。可 Everett 那边反问：一个永远不会被某门语言推翻的共性，还算关于语言的经验主张吗？两边都有道理，这个到今天还有争论。</p>
+<p>与此同时，另一种共性在悄悄攒证据。2015 年 Futrell、Mahowald、Gibson 把 37 门语言的大型标注语料拿来量：句子里每对有语法关系的词（比如动词和它的宾语）隔了多远。结果每一门语言的平均距离都比随机打乱词序的基线短，句子越长差得越明显。这叫依存距离最小化（dependency length minimization）。</p>
+<p>你自己就会这么做。英语里 throw out the old rug 和 throw the old rug out 都行；可宾语一长，说话人几乎都选前一种，把 out 留在 throw 旁边，而不是让它在一长串定语后面孤零零地等着。回头看第一张图：英语 go 和 to 挨着，日语に和行く挨着；交叉的组合会把动词和介词用一整个名词隔开。那条对角线，也许正是这种压力的产物。</p>
+<p>这种解释里，共性不住在基因里规定的语法中，而住在说话的人有限的工作记忆里。它解释了倾向，却解释不了为什么有的语言偏偏走了少见的那条路；普遍语法那边也可以说，这种压力和天生的结构本来就能同时存在。证据强度：37 门语言的语料统计，跟「什么样的机器能处理什么样的语言」那期讲的中心嵌套很少超过三层是同一个方向，但都是相关，不是机制的直接证明。</p>
+<p class="en-brief"><b>EN</b> The Pirahã debate ends at a fork: if "recursion is universal" means every language must use it, one language that does not refutes it; if it means every human brain has the capacity, Pirahã cannot — Pirahã children raised elsewhere learn Portuguese embedding. Everett's reply: a universal no language could ever refute is hardly an empirical claim about languages. Meanwhile another universal gathers evidence: Futrell, Mahowald and Gibson in 2015 measured, across 37 languages, how far apart syntactically related words sit, and every language was shorter than a random-order baseline, increasingly so in longer sentences. Speakers say throw out the old rug once the object grows long, keeping out next to throw. The diagonal in the figure may be the same pressure: go next to to, ni next to iku. Here universals live in limited working memory rather than in an innate grammar — though the two can coexist. Evidence: corpus correlations, not direct proof of mechanism.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：架构评审上有人说「成熟的大系统最后都会这么拆」，然后列出四五家公司。跑的是「宾语放哪，介词就跟着放哪」那节 Dunn 的问法：这几个例子是各自独立走到这一步的，还是同一个源头传下来的——同一个开源框架、同一篇论文、同一拨跳槽的人？可改的动作：把被引的案例写成一列，旁边标出它们的共同来源，只数独立的「家族」；再补一问：有没有谁走了另一条路，结果怎样。</li>
+<li><b>② 写作与表达</b>：设计文档里写出「这个由支付组上季度为了应对大促临时加上、后来一直没人敢动的限流开关需要下线」，评审的人读了两遍才找到主语对应的动作。这是「别让相关的词离太远」那节的压力：主语和谓语之间隔了三十个字。可改的动作：自查时专看主语和它的动词之间隔了多少字，超过一行就把长定语拆成前一句——「上季度大促时支付组加过一个限流开关，一直没人敢动。现在要下线它。」</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>分布式系统与 AI · 人脑对「不可能的语法」的反应不是学不会，是换了一套线路</b>：2003 年 Musso、Moro 等人让说德语的人学意大利语和日语的真规则，以及几条「不可能的规则」，比如否定词永远放在第三个词后面，把「Maria compra il caffè」（玛丽亚买咖啡）变成「Maria compra il no caffè」。受试者把假规则也学会了，正确率不低；差别在大脑：只有学真规则时，布罗卡区（左额叶一块与语法加工密切相关的区域）的激活随练习上升。跑的是「最站得住的共性」那节的分岔：能力和使用分开测。由此推得出一个可检验的差异：「大模型学到语法了吗」那期讲过，小型语言模型学这类人造语言也更费力，但只比困惑度（模型对下一个词有多意外）比不出人那种「换线路」。该测的是：模型学会数词位规则后，这条规则是不是由处理真实主谓一致的那批内部单元在算。人是分开的；模型若混在一起，它和人就在这一点上不同，与它学得快慢无关。</li>
+<li><b>演化生物学 · 判断一个特征是不是适应，要看它在树上是不是跟着另一个特征一起变</b>：生物学早就碰到过同样的数数陷阱：一百种鸟都有某个特征，可能只是一个祖先演化了一次。Felsenstein 1985 年的解法是只看演化树上各分支的独立变化。跑的是「宾语放哪，介词就跟着放哪」那节 Dunn 的方法，推出的结论是：若对角线来自「别让相关的词离太远」那种压力，那么任何语系里一门语言改掉动宾顺序之后，都应在之后的几代里较快地把介词也改掉，而且这种「跟着改」应在各语系里方向一致——这能直接在树上检验。<b>但这里不成立</b>的是树本身：物种之间基因很少横向流动，语言却大量互相借用，相邻的不同语系会一起换语序，这部分变化不走家谱；而且语言的家谱往回只推得出几千年，比生物的树浅得多，能观察到的独立变化次数少，这正是 Dunn 那篇统计力受质疑的根源。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>如果明天在某个山谷里发现一门「动词在后、介词在前」而且一切正常的语言，这能说明什么、不能说明什么？</summary><p>那张格子里已经有 14 门。一个反例能推翻「绝对共性」，推翻不了「倾向」。真正有信息的是：它是怎么变成这样的，有没有刚经历过大规模接触。</p></details>
+<details><summary>「人脑有能力递归，只是这门语言没用」——怎么设计实验，才能让这句话有被证伪的可能？</summary><p>一种思路是去看这门语言的使用者在不靠句法的地方——讲故事、规划、数数——是否表现出层层嵌套的结构。如果那里也没有，能力说就得收缩。</p></details>
+<details><summary>依存距离最小化也出现在大模型生成的文本里。这说明模型「怕记不住」吗？</summary><p>不一定：它学的是人写的文本，压力的痕迹已经在数据里了。要区分，得看模型面对一门故意把相关词拉远的人造语言时，生成时会不会自己把距离缩回来。</p></details>
+<details><summary>如果共性大多是「常走的路」而不是「写死的规定」，学外语时那种「反着来」的难受还剩什么解释？</summary><p>难受来自你的第一语言替你定好了的那些期待，不来自目标语言本身。日本孩子学英语时会觉得 go to Tokyo 才是反的。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://wals.info/chapter/95">WALS 第 95 章：动宾语序与介词位置</a> · <a href="https://en.wikipedia.org/wiki/Greenberg%27s_linguistic_universals">Greenberg 的语言共性</a></li>
+<li><a href="https://www.nature.com/articles/nature09923">Dunn 等，语序共性的谱系特异性（Nature 2011）</a> · <a href="https://languagelog.ldc.upenn.edu/nll/?p=3088">Language Log 上的讨论</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pirah%C3%A3_language">皮拉罕语</a> · <a href="https://ling.auf.net/lingbuzz/000411">Nevins、Pesetsky、Rodrigues，皮拉罕例外性的重估（2009）</a> · <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0145289">Futrell 等，皮拉罕语料中的句法嵌套（2016）</a></li>
+<li><a href="https://www.science.org/doi/10.1126/science.298.5598.1569">Hauser、Chomsky、Fitch，语言能力是什么（Science 2002）</a></li>
+<li><a href="https://www.pnas.org/doi/10.1073/pnas.1502134112">Futrell、Mahowald、Gibson，37 门语言的依存距离最小化（PNAS 2015）</a></li>
+<li><a href="https://www.nature.com/articles/nn1077">Musso 等，布罗卡区与语言本能（2003）</a> · <a href="https://aclanthology.org/2024.acl-long.787/">Kallini 等，不可能的语言模型（2024）</a> · <a href="https://en.wikipedia.org/wiki/Phylogenetic_comparative_methods">系统发育比较法</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
