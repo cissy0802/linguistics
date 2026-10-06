@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>语言学犯过的错 — 语言学 Day 40</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#101624;color:#e4e8f2;line-height:1.85;font-size:17px}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 70px}
+header{padding:48px 0 34px;border-bottom:1px solid #26314a}
+.kicker{font-size:0.8rem;letter-spacing:2px;color:#7fb3d5;text-transform:uppercase;font-weight:700}
+header h1{font-size:1.95rem;font-weight:800;color:#e0a458;margin-top:12px;line-height:1.4}
+header .sub{margin-top:10px;color:#8d95a8;font-size:1rem}
+header .date{margin-top:14px;font-size:0.82rem;color:#5b6478;letter-spacing:1px}
+.pitch{margin-top:22px;padding:16px 18px;background:#19202f;border-left:3px solid #e0a458;border-radius:5px;color:#e4e8f2;font-size:0.98rem}
+.intro{margin-top:34px}
+.intro p{margin-bottom:16px}
+section{margin-top:46px;background:#19202f;border-radius:8px;padding:26px 24px;box-shadow:0 1px 10px rgba(0,0,0,0.35)}
+.num{display:block;font-size:0.78rem;letter-spacing:2px;color:#7fb3d5;font-weight:700}
+section h2{font-size:1.28rem;color:#e0a458;margin:8px 0 18px;line-height:1.45;font-weight:700}
+section p{margin-bottom:15px}
+figure{margin:22px 0 18px;text-align:center}
+figure svg{max-width:100%;height:auto}
+.cap{font-size:0.84rem;color:#8d95a8;margin-top:10px;text-align:left;line-height:1.7}
+.en-brief{margin-top:20px;padding-top:14px;border-top:1px dashed #26314a;font-size:0.88rem;color:#8d95a8;font-style:italic}
+.en-brief b{color:#7fb3d5;font-style:normal;letter-spacing:1px}
+.bigcat,.crossx{margin-top:44px;border-radius:8px;padding:24px}
+.bigcat{background:#1b1f2c;border:1px solid #3d3222}
+.crossx{background:#161e2c;border:1px solid #2c4055}
+.bigcat h3,.crossx h3{font-size:1.05rem;margin-bottom:14px}
+.bigcat h3{color:#e0a458}
+.crossx h3{color:#7fb3d5}
+.bigcat ol,.crossx ul{list-style:none}
+.bigcat li,.crossx li{margin-bottom:14px;font-size:0.95rem}
+.bigcat li b,.crossx li b{color:#e4e8f2}
+.thinking{margin-top:44px}
+.thinking h3{color:#7fb3d5;font-size:1.05rem;margin-bottom:14px}
+.thinking details{background:#19202f;border-radius:6px;padding:14px 16px;margin-bottom:10px;border-left:2px solid #26314a}
+.thinking summary{cursor:pointer;color:#e0a458;font-size:0.96rem}
+.thinking p{margin-top:10px;font-size:0.92rem;color:#c9cfdd}
+.refs{margin-top:44px;border-top:1px solid #26314a;padding-top:22px}
+.refs h3{color:#8d95a8;font-size:0.95rem;margin-bottom:12px}
+.refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
+.refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
+.refs a:hover{color:#e0a458}
+@media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+</style></head><body>
+<div class="container">
+<header>
+<div class="kicker">Day 40 · 语言学</div>
+<h1>语言学犯过的错</h1>
+<div class="sub">一个被讲了七十年、越讲越大的雪词数字；一门拼写最不规则的语言，替全人类定义了「怎么学认字」；还有一张给语言排座次的榜单。三个错，同一个病根</div>
+<div class="date">2026-10-06</div>
+<div class="pitch">1911 年一位人类学家顺手提了一句：爱斯基摩人的语言里有四个跟雪有关的词。七十三年后，《纽约时报》一篇社论里，这个数变成了一百。中间没有人去数过。</div>
+</header>
+<div class="intro">
+<p>「因纽特人有一百个词说雪」，你多半在哪听过，可能还转述过。它好听：远方的人、白茫茫的世界、语言把经验切得比我们细。正因为好听，它成了一门学科犯错的标本。</p>
+<p>语言学是一门很会自我纠错的学科，可它纠过的错有个共同点：错的那一步，几乎都是把手边最熟悉的语言，当成了所有语言的默认值。今天这三个故事，一个错在讲法，一个错在样本，一个错在价值判断。</p>
+</div>
+<section>
+<span class="num">// 01</span>
+<h2>四个雪词，七十年后长成了一百个</h2>
+<p>源头是人类学家 Franz Boas 1911 年那本北美印第安语言手册的导言。他要说明的道理很朴素：不同语言把世界切成词的方式不同。英语里水有一堆独立的词：lake、river、brook、rain、dew、wave、foam，看不出都是「水」；爱斯基摩语里雪也有几个独立的词根：aput 是地上的雪，qana 是正在下的雪，piqsirpoq 是被风卷着跑的雪，qimuqsuq 是雪堆。四个，跟英语的水词一样，是个普通例子。</p>
+<p>1940 年，Whorf 在一篇写给大众的文章里重提此事，把种类说多了一些，还说爱斯基摩人会觉得一个笼统的「雪」字几乎不可想象。之后教科书、讲座、报纸一层层转述，每一层都从上一层抄，数字一路往上走：七个、几十个，到 1984 年《纽约时报》社论写成一百个。1986 年人类学家 Laura Martin 把这条转述链逐环追了一遍；1989 年 Pullum 写了篇辛辣的短文，干脆叫它「爱斯基摩词汇大骗局」。</p>
+<p>更根本的问题是，「几个词」在这里根本没法数。因纽特诸语言是多式综合语（polysynthetic）：一个词根后面能接一长串后缀，一个「词」常常等于英语里一整句话。照这个算法，英语的 snow、snowing、snowfall、snowed in 也该算好几个词，数字可以无限大。</p>
+<p>可这个故事还有反转。2016 年 Regier、Carstensen 和 Kemp 查了近三百门语言：越是温暖地区的语言，越常用同一个词同时指雪和冰。冷的地方需要分，就分得细；用不上，就合并。神话错在夸张和数法，但「语言在需要说清的地方分得更细」这个温和版本，是有跨语言数据的，只不过证据是相关性。滑雪的人嘴里也有 powder、crust、slush，道理一样。</p>
+<p class="en-brief"><b>EN</b> In 1911 Franz Boas noted four Eskimo snow roots — aput (snow on the ground), qana (falling snow), piqsirpoq (drifting snow), qimuqsuq (a snowdrift) — as an ordinary example, comparable to English lake, river, brook, rain, dew, wave, foam. Whorf in 1940 enlarged the list; retellings copied retellings until a 1984 New York Times editorial said one hundred. Laura Martin traced the chain in 1986; Pullum called it the Great Eskimo Vocabulary Hoax in 1989. In polysynthetic Inuit languages one word can equal an English sentence, so counting "words" is meaningless. The twist: Regier, Carstensen and Kemp (2016) found across nearly 300 languages that warmer-climate languages more often use one word for snow and ice — the mild version has correlational support.</p>
+</section>
+<section>
+<span class="num">// 02</span>
+<h2>阅读科学，是在一门最不规则的拼写上建起来的</h2>
+<p>雪词错在讲法，第二个错藏得深得多：错在样本。2022 年 Kidd 和 Garcia 翻了儿童语言习得领域四本主要期刊四十五年的全部论文：研究覆盖的语言约 103 门，占世界语言的 1.5% 左右；单是英语就占了 54% 的论文，其他印欧语再占 30%，剩下几千门语言合计 16%。</p>
+<p>样本窄不一定出错，除非你恰好挑中了一个怪的。英语在拼写上就是个怪的。看 though、through、tough、cough：同样的 ough，四种读法。2003 年 Seymour、Aro、Erskine 比较了欧洲 13 种文字体系下的一年级孩子：芬兰语、希腊语、德语、意大利语、西班牙语的孩子，大多在第一学年结束前就能又准又流利地念出常见词和生造词；法语、葡萄牙语、丹麦语慢一些，英语最慢，发展速度慢了一倍多。</p>
+<p>2008 年心理学家 David Share 据此写了篇长文，标题直说英语是一种「离群」的正字法。他的论点是：阅读科学大半是在英语上做的，于是英语特有的难处被当成了阅读本身的难处，整个领域盯着「念得准不准」，而默读、理解和流畅度相对被冷落了，连阅读发展分几个阶段的模型都带着英语的形状。证据强度：跨文字体系的比较已被多项研究重复；Share 的批评是综述性论证，影响很大，具体哪些理论被扭曲、扭曲多少，还有讨论。</p>
+<p>这里要分清：英语拼写离群，不等于英语这门语言更差。拼写是约定，不是语言本身；英语拼写保住了词形的一致，sign 和 signature 里那个不发音的 g 就是线索，让相关的词一眼看得出是一家。代价是初学者慢，好处是熟练读者快速认出词族。</p>
+<p class="en-brief"><b>EN</b> Kidd and Garcia (2022) reviewed 45 years of four major child-language journals: about 103 languages, roughly 1.5% of the world's, with English alone in 54% of papers and other Indo-European languages in 30%. A narrow sample is dangerous when it is an odd one, and English spelling is odd — though, through, tough, cough. Seymour, Aro and Erskine (2003) compared first-graders across 13 European orthographies: most read familiar and invented words accurately by the end of year one; English developed more than twice as slowly. Share (2008) called English an "outlier" orthography whose peculiar difficulty reading science mistook for reading itself. Outlier spelling is not an inferior language: sign and signature keep a visible family resemblance at the cost of a slower start.</p>
+</section>
+<section>
+<span class="num">// 03</span>
+<h2>十九世纪的语言学，曾经给语言排过座次</h2>
+<p>第三个错最难看，也纠正得最彻底。十九世纪的欧洲学者按词的构造把语言分成三类：孤立语，一个词基本就是一个不变的单位，汉语是典型；黏着语，词根后面一个个贴上意义清楚的词缀，土耳其语是典型；屈折语，一个词尾同时编码好几种意思，拉丁语、希腊语、梵语是典型。分类本身至今有用。出问题的是下一步：August Schleicher 等人把这三类排成演化阶梯，孤立是最原始的阶段，屈折是顶点。汉语于是被放在底层，而站在顶点的，恰好是这些学者在中学里背过语法的那几门。</p>
+<p>阶梯被两样东西拆掉。一是田野调查：Boas 和他的学生记录北美原住民语言，发现那些被欧洲人称作「原始」的社会，说着词形极其繁复的语言。二是方向不对：英语自己就从古英语那套名词变格，一路走向词序定意思、词形少变，照阶梯的逻辑这算「退化」，可没人觉得莎士比亚的英语比古英语低级。汉语也在长出新的语法零件，「吃了饭」里的「了」（le，表示完成）就是从意为「完结」的动词「了」（liǎo）磨出来的，「语言像河流一样变」那期讲过这条路。</p>
+<p>1921 年 Sapir 写下一句后来被反复引用的话：说到语言形式，柏拉图和马其顿的猪倌同行，孔子和阿萨姆的猎头部落同行。意思是：语法的复杂度和文明程度无关。今天还有一条有意思的余波：2010 年 Lupyan 和 Dale 统计两千多门语言，发现使用人口越多、成年学习者越多的语言，词形变化往往越简单。方向正好和旧阶梯相反，而且这只是相关，原因还有争论，更谈不上高低。</p>
+<p class="en-brief"><b>EN</b> Nineteenth-century scholars sorted languages into isolating (Chinese), agglutinating (Turkish) and inflecting (Latin, Greek, Sanskrit). The sorting survives; the next step did not: Schleicher and others ranked them as evolutionary stages, with inflection at the top — exactly the languages they had studied at school. Fieldwork broke the ladder (Boas found richly complex morphology in societies Europeans called primitive), and so did direction: English shed Old English case endings without anyone calling Shakespeare degenerate, while Chinese grows new grammar, as le (completion) worn down from the verb liǎo, "to finish". Sapir in 1921: Plato walks with the Macedonian swineherd. Lupyan and Dale (2010) found languages with more speakers tend toward simpler inflection — a debated correlation, not a ranking.</p>
+</section>
+<div class="bigcat">
+<h3>🎒 场景 · BigCat</h3>
+<ol>
+<li><b>① 工程与系统设计</b>：搜索或内容审核的离线评测集，是几年前从第一批用户日志里抽的，之后加了新市场却没动过；评审会上看到「准确率 95%」就放行。跑的是「阅读科学建在最不规则的拼写上」那节的问题：整体数字里藏着一个占多数、而且恰好特殊的子集。可改的动作：评测报告第一行写明覆盖了哪些语言和文字，指标按语言拆开列，放行看各语言里最差的那一项，不看平均。</li>
+<li><b>② 投资与仓位</b>：好几份研报都引同一个行业「渗透率天花板」，引得越多越像常识。这是「四个雪词长成一百个」那节的转述链，外加数法问题：什么算一个「渗透」，分母是用户数、家庭数还是出货量。可改的动作：建仓前把这个数追到原始出处，在笔记里写下它的口径；口径说不清的数，不进估值模型。</li>
+</ol>
+</div>
+<div class="crossx">
+<h3>🌀 越界 · 跨学科的联想</h3>
+<ul>
+<li><b>复杂性科学 · 引用里的错字是示踪剂</b>：2003 年 Simkin 和 Roychowdhury 研究一篇被引四千多次的物理论文，发现一百九十多条引用写错了页码之类的信息，但不同的错法只有四十几种，同一个错能重复出现几十次。错得一模一样，说明是从别人的参考文献里抄的。他们据此用一个复制模型估算：真正读过原文的引用者大约只有两成。跑的是「四个雪词长成一百个」那节的机制：转述抄转述。推出的结论是，雪词这种神话也能当示踪剂用，看哪些书写的是同一个错数字，就能把转述链还原成一棵家谱，这正是 Martin 手工做的事。<b>但这里不成立</b>的是「中性复制」这个前提：抄错页码时，错误原样传下去，不会越抄越大；雪词的数字却单向往上涨。纯复制模型预测数字停在四，它解释不了膨胀。所以语言学神话传播里一定还有一股选择压力，偏爱更惊人的版本，这可以检验：把各个版本按时间排开，数字应当几乎只升不降。</li>
+<li><b>分布式系统与 AI · 孩子学哪门语言都按一张时间表，模型的本事却跟着文本量走</b>：一个说两千人小语种的孩子，学会母语的节奏不受这门语言在世上有多少书面文本影响，他根本不读网页。模型反过来：Joshi 等 2020 年把两千多门语言按可用数据分档，近九成落在几乎没有可用数据的最底档。跑的是「阅读科学建在最不规则的拼写上」那节的样本偏差，但在机器里性质变了：研究样本偏，扭曲的是理论；训练数据偏，扭曲的是能力本身。推出的可检验差异是：找结构相近、网上文本量差很多的一对语言，人类孩子的习得进度应当相差无几，模型的表现差距则应主要由文本量解释。而当模型被拿来当研究工具，偏差会回流进科学，「模型的意外能预测人的眼动」那期讲过，在英语上成立的规律搬到日语就不成立。</li>
+</ul>
+</div>
+<div class="thinking">
+<h3>深入思考</h3>
+<details><summary>雪词神话被拆穿了几十年，为什么还在流传？「拆穿」本身的传播力比神话差在哪？</summary><p>神话是一句话、有画面；拆穿需要先解释「词怎么算」。也许纠错要传得开，得自带一个同样好记的反画面，比如「英语里水也有七个词」。</p></details>
+<details><summary>如果今天的语言学研究样本仍有一半是英语，你觉得下一个被发现的「英语离群值」会在哪个领域？</summary><p>候选：句子加工（英语词序很固定）、儿童早期词汇（英语名词偏多，而有些语言的孩子早期动词多）、语音感知（英语元音特别多）。</p></details>
+<details><summary>「语言没有高下」是经验结论，还是一条伦理立场？如果是前者，什么样的数据能推翻它？</summary><p>它至少有一半是经验结论：迄今没发现任何人类群体的语言不足以表达这个群体需要表达的东西。但「复杂度」这把尺子本身该怎么量，仍有争论。</p></details>
+<details><summary>大模型会不会成为新的「样本压在少数语言上」？它和十九世纪学者只读拉丁语有什么不同？</summary><p>不同在于规模和隐蔽：学者的偏好写在书里，看得见；模型的偏好藏在训练数据配比里，用的人未必知道。</p></details>
+</div>
+<div class="refs">
+<h3>延伸阅读</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Eskimo_words_for_snow">爱斯基摩语的雪词（维基）</a> · <a href="https://press.uchicago.edu/ucp/books/book/chicago/G/bo3684610.html">Pullum，爱斯基摩词汇大骗局（1991 文集）</a></li>
+<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151138">Regier、Carstensen、Kemp，雪与冰的词（PLOS ONE 2016）</a></li>
+<li><a href="https://journals.sagepub.com/doi/10.1177/01427237211066405">Kidd、Garcia，儿童语言习得研究有多多样（First Language 2022）</a></li>
+<li><a href="https://doi.org/10.1348/000712603321661859">Seymour、Aro、Erskine，欧洲各文字体系的基础读写习得（2003）</a> · <a href="https://doi.org/10.1037/0033-2909.134.4.584">Share，阅读研究的英语中心主义（2008）</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Morphological_typology">形态类型学（维基）</a> · <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008559">Lupyan、Dale，语言结构部分由社会结构决定（2010）</a></li>
+<li><a href="https://arxiv.org/abs/cond-mat/0212043">Simkin、Roychowdhury，引用前先读一读（2003）</a> · <a href="https://aclanthology.org/2020.acl-main.560/">Joshi 等，自然语言处理世界里的语言多样性（ACL 2020）</a></li>
+</ul>
+</div>
+</div>
+<script src="https://hub.cissychen.com/comments.js" defer></script>
+<script src="https://hub.cissychen.com/search.js" defer></script>
+<script src="https://hub.cissychen.com/index-button.js" defer></script>
+<script src="https://hub.cissychen.com/i18n-tts.js" defer></script>
+</body></html>
