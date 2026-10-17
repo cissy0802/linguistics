@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -118,6 +124,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · services inside one organisation converge, and how far they converge tells you how people moved</b>: in a single company, services written in different languages and frameworks will, after a few years, wrap their error codes the same way, back off on retries the same way, default to the same timeout — even when they were copied from completely unrelated templates. That is exactly the mechanism from "neighbours come to resemble each other, related or not": what ferries structure across is people fluent on both sides, not common origin, and what gets ferried is construction rather than vocabulary — naming styles usually stay distinct. From that follows a conclusion you would not otherwise see: the strength of convergence should track the movement of people, not technical similarity. Two teams using the same language who have never shared anyone should be less alike than a Go team and a Java team who have lent each other engineers. This is directly checkable: build one graph from code ownership and another from transfers and shared on-call, and see which predicts agreement on conventions. <b>Where it breaks down</b> is the requirement that borrowed material be reshaped. A borrowed word gets run through the local sound system — Mandarin 咖啡 (kāfēi) is not pronounced "coffee" — so it carries a trace of the year it came in. Code can be copied file for file in a second, with no accent at all. The dating ruler from "a borrowed word carries a timestamp" has no counterpart in a codebase; all you have is commit history.</li>
 <li><b>Society and institutions · the statutes that can be lifted whole are the ones that need no new procedure to hold them up</b>: a country writes a section of another country's code into its own. Comparative lawyers call this a legal transplant, and it has been happening since the nineteenth century; which ones take root and which become dead letters varies enormously. The borrowability ranking from "a borrowed word carries a timestamp" transfers directly: nouns borrow easily, function words resist, because a function word must fit a whole set of existing slots. Pushed onto institutions, that yields a non-obvious test — whether a rule can be transplanted depends not on how advanced it is but on whether it needs a new procedural slot to hold it. Creating a new actionable right is like borrowing a noun and takes effect readily; changing the burden of proof or the structure of appeals is like borrowing a function word, and gets reinterpreted by existing procedure into something else. Checkable: split one batch of transplanted provisions by whether they require new procedure, and compare how often each group is actually invoked a decade later. <b>Where it breaks down</b> is the shape of the spread. Nobody can announce that from January everyone will borrow a particular word; borrowing seeps in through bilinguals, which is why it leaves layers at all. A legal transplant has a commencement date and lands everywhere at once. Layers cannot be built in institutional history, and the real variable there is what a rule gets worn into after it takes effect.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The three Japanese readings myō, mei and min of a single kanji are three separate waves of borrowing from Chinese, each layer settling on top of the last without erasing it.</li>
+<li>Native English shirt and Norse-borrowed skirt come from one Germanic root and survive side by side; even they, them and their were borrowed from Old Norse.</li>
+<li>Borrowability is ranked: nouns go first, verbs next, function words last, because a function word must fit a set of grammatical slots already in place.</li>
+<li>In the World Loanword Database, borrowed shares run from 1.2% in Mandarin to 62.7% in Selice Romani, a spread that reflects social setting, not linguistic quality.</li>
+<li>Tok Pisin's words are almost all English, but its two words for "we", yumi and mipela, encode a local Melanesian distinction English lacks.</li>
+<li>Languages whose vocabulary and grammar point to two different sources break the comparative method's single-ancestor assumption, so ordinary family trees cannot place them.</li>
+<li>Whether creoles form a type of their own is still argued; "simple" there means few inflectional affixes, never poverty of expression.</li>
+<li>Albanian, Romanian and Bulgarian are only distantly related yet all put the definite article after the noun, a Sprachbund feature spread by bilingual speakers.</li>
+<li>Haudricourt showed that Vietnamese tones grew from lost final consonants, placing the language in Austroasiatic: the loudest feature is often the borrowed one.</li>
+<li>Whether a statute survives transplant into another country depends less on how advanced it is than on whether it needs new procedure to hold it up, much as function words resist borrowing.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

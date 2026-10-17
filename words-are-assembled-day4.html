@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -173,6 +179,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 频率效应挂在规则上还是挂在词条上</b>：有人把 Berko 那套材料拿去考大模型。Weissweiler 等人 2023 年在英语、德语、泰米尔语、土耳其语上做了这件事，结论是 ChatGPT 明显不如专门做形态变化的小系统（英语尤其明显），四门语言都出现「真词偏好」——同一条规则，套在真实存在的词上比套在生造词上准得多。跑的是「你会给一个不存在的词加复数」那节的机制：规则如果挂在结构上，词根是不是真的存在就不该有影响。但这条真正有用的地方不是「模型不如人」，而是推出一个能测的差异：<b>人也有频率效应，只是位置不同</b>。Berko 那批数据里，孩子从 91% 掉到 28%，差的不是词根熟不熟，是那条子规则在语言里出现得多不多；模型掉的时候，差的是这个词形在训练语料里见过几次。检验办法很具体：造一批全新词根，一半配常见的形态模式，一半配罕见但完全规则的模式。人的成绩该跟着<b>模式</b>的频率走、跟词根无关；模型如果跟着<b>词条</b>走，两条曲线会在这里分开。<b>但这里不成立</b>的是「测出差异就等于机制不同」——足够大的模型完全可能学出对模式的敏感，那时曲线会重合，而这不证明它装的是规则。这个实验能证伪「模型只会背词条」，证明不了「模型学到了规则」。</li>
 <li><b>社会与制度 · 必填字段填得满，不等于填得准</b>：屈折最要命的性质是躲不掉——说英语时你被迫在每个可数名词上选单复数，哪怕根本不知道有几个。把这条搬到表单和工单系统上，能推出一个反直觉的结论：一个字段的<b>填充率</b>和它的<b>信息量</b>没关系，常常还反着来。必填字段的填充率天然是 100%，正因为不能不填，区分度可能接近零；选填字段一旦被人主动填了，「有人愿意填」本身就是信号。该换的指标是每个字段对你真正关心的那个结果的互信息，不是完成度。<b>但这里不成立</b>的地方最有用：语言里的强制是零成本、无意识的，没人会为了省事说一个「敷衍的复数」，语法范畴的值仍然可信；表单的强制有摩擦，人会填垃圾值绕过去。差别看得见——语法上单复数的分布跟着现实走，必填字段的取值会在某个默认选项上堆出一个不自然的尖峰。看到那个尖峰，这个字段就已经失效了。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>语素是带意义的最小单位，一块算不算语素，要看它能不能在别的词里再用一次。</li>
+<li>Jean Berko 1958 年的 wug 测试里，孩子给生造词加复数，说明脑中存的是规则而非词表。</li>
+<li>英语复数有三种念法，由前一个音决定：清辅音后念 s，带嗓音的音后念 z，嘶擦音后多加一个音节。</li>
+<li>多加音节那档复数学得最慢：生造词 gutches 约三成答对，真词 glasses 却有 91%。</li>
+<li>派生造出新词、常换词类且到处有洞，屈折不造新词、几乎没洞，而且总在词的最外层。</li>
+<li>土耳其语是黏着型，一个后缀一个意思；拉丁语是融合型，一个词尾同时承担人称、数、时态等几件事。</li>
+<li>屈折最重要的性质是躲不掉：Jakobson 指出，语言之间的根本差别在于它逼你表达什么。</li>
+<li>汉语屈折很少，「们」只是有条件的可选标记，但复合、半虚化词缀和重叠让汉语造词非常活跃。</li>
+<li>汉语真正躲不掉的是量词，孩子先用「个」覆盖一切再慢慢分化，和英语孩子说 goed 是同一种路径。</li>
+<li>必填字段填充率 100% 不代表信息量高，评估字段该看它对目标结果的互信息，而不是完成度。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="6bc7c4197b374524">深入思考</h3>

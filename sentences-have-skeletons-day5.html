@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -147,6 +153,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 牵住远处的是配对，不是距离</b>：有人把「岛」拿去考语言模型。Wilcox 等人 2018 年测的是：模型读到句首那个疑问词后，会不会开始期待后面某处有个空着的位置。结果是会，而且这份期待在几类岛结构里会被压低。这条结果被反复引用也被反复质疑——它反映的是结构敏感还是某种长度效应，至今没有共识。跑的是「一个词能牵住很远的地方」那节的机制：人的判断随结构变，不随距离变（Sprouse 那组测不出记忆容量的影响，是同一个方向的证据）。由此能推出一个真能做的实验：造两套句子，把岛内与岛外的线性距离配平到完全一样，只让「中途穿过什么」不同。人的排斥应当原样保留；模型的效应若是长度带来的，就会在这里塌掉。<b>但这里不成立</b>的是把它想成协议里的请求—响应配对：那边被牵住的一端带着显式编号，收到就能查表；语言里那个位置是沉默的，不发音也没有标记，解析器得先赌它存不存在。所以分布式那边不会有花园幽径句那种「先猜后倒车」的开销，也就没法拿它预测人的阅读时间。</li>
 <li><b>社会与制度 · 一条法条的两种搭法值五百万美元</b>：美国缅因州的加班费法规列了一串豁免作业，末尾是 packing for shipment or distribution（为运输或配送而包装）。奶制品公司 Oakhurst 主张这是两件事——包装，以及配送，配送因此不用付加班费；司机们主张这是一件事——为运输或配送而做的包装，配送本身没被豁免。2017 年联邦第一巡回上诉法院支持了司机，公司随后以五百万美元和解。跑的是「句子里的词是一伙一伙的」那节的机制：分组不同，真值条件就不同。由此推出的结论对写规则的人有用——补救不该是加解释句或加限定词，那只是往同一串词上再堆可分组的材料；该换掉的是成分结构本身，拆成编号列表，让分组由排版承担。法律界那些解释规范（末位先行词规则、系列限定规则）救不了场，正因为它们彼此冲突，等于给同一串词规定了两个默认切分。<b>但这里不成立</b>的是「语境自然会消歧」这条在口语里很硬的经验：Snedeker 那个实验里说话人会主动加停顿、听话人当场能追问，而法条的读者是若干年后的对立双方，他们恰恰想要另一个切分。差别是可见的——口语的结构歧义绝大多数在半秒内消失，法条里的能活到开庭。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>句子不是一串词，而是一伙一伙的成分（constituent），小的成分套在大的成分里。</li>
+<li>判断几个词是不是一个成分，可以看它能否被整体替换、整体搬走、跟同类并列。</li>
+<li>「咬死了猎人的狗」字和顺序都不变，只因分界位置不同就有两个意思。</li>
+<li>Ding Nai 等人 2016 年发现，听懂的人脑活动会跟着声音里并不存在的短语和句子节奏走。</li>
+<li>花园幽径句会让读者先选错结构，读到后面卡住，只能倒回岔口重新搭。</li>
+<li>人读句子不等说完就先搭结构，眼动实验显示改错时注视变长、眼睛回跳重读。</li>
+<li>说话人会无意识地用停顿位置帮听话人消歧，听话人在歧义出现前就能看向正确的东西。</li>
+<li>疑问词可以跟很远处的空位相连，但落进关系从句这类「岛」时连线就会被挡住。</li>
+<li>汉语疑问词留在原位不移动，但2020年的评分实验显示汉语里岛的限制同样存在。</li>
+<li>缅因州一条加班法规因「包装」和「配送」的分组之争，最终以五百万美元和解收场。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="c7242e2bd9421f2f">深入思考</h3>

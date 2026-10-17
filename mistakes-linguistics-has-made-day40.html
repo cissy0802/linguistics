@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -94,6 +100,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>复杂性科学 · 引用里的错字是示踪剂</b>：2003 年 Simkin 和 Roychowdhury 研究一篇被引四千多次的物理论文，发现一百九十多条引用写错了页码之类的信息，但不同的错法只有四十几种，同一个错能重复出现几十次。错得一模一样，说明是从别人的参考文献里抄的。他们据此用一个复制模型估算：真正读过原文的引用者大约只有两成。跑的是「四个雪词长成一百个」那节的机制：转述抄转述。推出的结论是，雪词这种神话也能当示踪剂用，看哪些书写的是同一个错数字，就能把转述链还原成一棵家谱，这正是 Martin 手工做的事。<b>但这里不成立</b>的是「中性复制」这个前提：抄错页码时，错误原样传下去，不会越抄越大；雪词的数字却单向往上涨。纯复制模型预测数字停在四，它解释不了膨胀。所以语言学神话传播里一定还有一股选择压力，偏爱更惊人的版本，这可以检验：把各个版本按时间排开，数字应当几乎只升不降。</li>
 <li><b>分布式系统与 AI · 孩子学哪门语言都按一张时间表，模型的本事却跟着文本量走</b>：一个说两千人小语种的孩子，学会母语的节奏不受这门语言在世上有多少书面文本影响，他根本不读网页。模型反过来：Joshi 等 2020 年把两千多门语言按可用数据分档，近九成落在几乎没有可用数据的最底档。跑的是「阅读科学建在最不规则的拼写上」那节的样本偏差，但在机器里性质变了：研究样本偏，扭曲的是理论；训练数据偏，扭曲的是能力本身。推出的可检验差异是：找结构相近、网上文本量差很多的一对语言，人类孩子的习得进度应当相差无几，模型的表现差距则应主要由文本量解释。而当模型被拿来当研究工具，偏差会回流进科学，「模型的意外能预测人的眼动」那期讲过，在英语上成立的规律搬到日语就不成立。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>「一百个雪词」源自 Boas 1911 年举的四个雪词根，本是和英语水词并列的普通例子。</li>
+<li>雪词数字靠转述抄转述一路膨胀，到 1984 年《纽约时报》社论里成了一百个，中间没人数过。</li>
+<li>因纽特诸语言是多式综合语，一个词常常等于一整句话，所以「有几个雪词」这个问题本身没法数。</li>
+<li>雪词神话有个温和版本站得住：近三百门语言的数据显示，温暖地区的语言更常用一个词同时指雪和冰。</li>
+<li>儿童语言习得研究四十五年只覆盖了约 1.5% 的世界语言，单是英语就占了 54% 的论文。</li>
+<li>比较欧洲 13 种文字体系的一年级孩子，英语孩子学认字的速度比芬兰语、西班牙语等慢了一倍多。</li>
+<li>Share 指出英语是离群的正字法，阅读科学把英语拼写特有的难处误当成了阅读本身的难处。</li>
+<li>十九世纪学者把孤立语、黏着语、屈折语排成演化阶梯，屈折语在顶点，汉语被放在底层。</li>
+<li>田野调查和英语自身词形的简化拆掉了这张阶梯，语法复杂度和文明程度无关。</li>
+<li>引用错误的复制分析显示约两成引用者读过原文，但纯复制解释不了雪词数字为何只涨不降。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="ec6acd5fd246cf3b">深入思考</h3>

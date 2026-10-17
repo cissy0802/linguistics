@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -124,6 +130,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>复杂性科学 · 语言变化画出来像传染曲线，但它的斜率出卖了它不是传染</b>：新技术的采纳率、一种病在人群里的比例、一个说法的流行，画出来都是 S 形，背后通常是同一个逻辑——已经改变的人越多，没改的人被碰到的机会越大。这有个直接后果：斜率由接触密度定，接触稀疏的子群体该升得更慢。可是「没有一场变化是全体同时改的」那节里的恒定速率效应给的是另一幅画：同一场变化在不同句法环境里起点差很远，斜率却一模一样。句法环境之间不存在"接触密度"这回事，说明真正在动的量不在人际那一层，而在每个说话人脑子里两套规则的相对权重，所有环境共用它。<b>但这里不成立</b>的正是传染那套：如果变化靠接触扩散，网络边缘的小社群该表现为"曲线更平"；如果是两套规则在竞争，边缘社群只会表现为"曲线整体右移"。这是个能分辨的预测，而且能拿现成的方言语料去查。证据强度：S 曲线是拟合出来的形状，近年有人系统检验过它在真实数据上的表现，并非每场变化都拟合得最好。</li>
 <li><b>分布式系统与 AI · 大模型能把一个词推成高频，但它推不动那台磨损机</b>：Kobak 等人 2025 年扫了 2010 到 2024 年的一千五百万篇生物医学论文摘要，发现 2024 年有一批词的出现率突然远高于趋势外推：delves 约二十五倍，showcasing、underscores 约九倍。「"going to" 正在被磨成一个语法零件」那节说语法化的引擎有三件事：高频、语义漂白、形式磨损。现在高频这一件被机器单独拧到了最大，于是能推出一个原本看不出的预测：这批词应该开始漂白（变成不承载信息的套话），却<b>不会</b>被磨短——磨短来自嘴省力，而模型的输出不经过发音器官。去口语语料里查它们有没有出现缩读，是个能做的检验。<b>但这里不成立</b>的是扩散那一头：玛莎葡萄园岛那套机制里，一个形式被采纳常常是因为说话人想像某群人那样说话；模型不向谁靠拢，它是语料的平均。所以它推高的词反而因为"听起来像机器写的"被人主动回避——这是方向相反的一股力，S 曲线可能中途掉头，自然扩散的曲线不会。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>十七世纪英语里 k 和 g 在 n 前整批消失，knee、know、knife 一起掉，拼写却留在原处。</li>
+<li>音变作用的对象是某个位置上的音，不是单个词，所以它会在成千上万个词里同时发生。</li>
+<li>拉丁语 pater 对英语 father、tres 对 three，是日耳曼语三条音变规律各跑过几千个词的结果。</li>
+<li>Verner 1875 年用更早的重音位置解释了例外，英语 was 和 were 的 s/r 交替就是遗留的化石。</li>
+<li>中古汉语的 -p、-t、-k 韵尾在粤语里还保留，官话则整批丢掉了这个位置上的塞音。</li>
+<li>词汇扩散认为音变可以一个词一个词地扩散并中途停下，Labov 认为它和规则音变两种机制都在跑。</li>
+<li>英语 going to 表将来是语法化：意思漂白、形式磨成 gonna、位置固化，而 gonna 后面只能接动词。</li>
+<li>汉语的“了”“把”“给”都是从实义动词虚化成语法成分的，跨语言调查显示“位移动词变将来标记”反复出现。</li>
+<li>语法化的单向性是很强的统计倾向而非定律，引擎是使用频率，所以各种语言里的语法零件都很短。</li>
+<li>Kroch 的恒定速率效应显示，同一场变化在不同句法环境里起点不同、斜率相同，这一点不符合传染式扩散的预测。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="5ec66f8b3c686a7a">深入思考</h3>

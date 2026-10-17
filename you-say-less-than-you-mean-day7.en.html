@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · what large models have actually learned about reading between the lines</b>: Ruis and colleagues in 2023 built a 600-item conversational-implicature test set — a dialogue is shown, one turn has to be read as yes or no, and the model is asked which. On base models untouched by task tuning, accuracy stayed well short of human even for GPT-3-scale systems; only after instruction tuning (post-RLHF) did scores approach the human baseline. The mechanism is the one from the section on why nobody answers <i>yes</i> to <i>can you pass the salt</i>: two layers run in parallel, and the reply picks a layer. To tell whether a model is really computing implicatures or shortcut-matching, use adversarial scalar items — "some of the students passed" followed by "all of the students passed," asked to judge consistency. Humans do not hesitate to say inconsistent; models' answers wobble with surface phrasing, betraying that at least part of their "implicature" is sentence-similarity, not a quantity-maxim inference. <b>Where this breaks down</b> is thinking of pragmatics as a benchmark you can cover with more items: the core of implicature is <i>what the speaker specifically did not say</i>, and coverage cannot reach that negative space unless the model can hold the inference in a novel context — and cross-context stability is where models still lag most visibly.</li>
 <li><b>Neuroscience and consciousness · one half of the brain handles the literal, the other handles what is beyond it</b>: patients with right-hemisphere damage (RHD) score normally on most standard language tests — they read, they speak, they understand simple assertions — but on indirect requests, irony, and metaphor, they fall visibly behind. Kaplan and colleagues in 1990 ran a classic contrast: read RHD listeners a short story ending in an ironic remark, and they routinely misread the remark as a lie or a mistake — precisely the pre-six state from the Winner section. The mechanism is the one from the section on why irony survives being flipped word-for-word: the layer that tracks the second-order intention has been detached, while the literal layer sits intact. The testable difference that follows is sharp: the same patient responds to a direct request ("close the window") at rates comparable to controls, and to the equivalent indirect request ("it's cold in here") at reliably lower rates — a pattern replicated across several groups. <b>Where this breaks down</b> is the tidy attribution "right hemisphere equals pragmatic module": later fMRI work shows that left-frontal lesions also produce sizable pragmatic deficits, and pragmatics is not localisable to a single patch the way Wernicke's area is — it is more like the output of several systems cooperating, and the right hemisphere is the link most likely to snap.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Grice's cooperative principle assumes speakers are truthful, informative, relevant and clear, so listeners fill in an implicature whenever a speaker seems to break the rules.</li>
+<li>An indirect speech act is an utterance whose grammar is a question or statement while what it actually does is something else, such as a request.</li>
+<li>Answering "Yes, I can" plus directions is judged more polite, showing that listeners compute the literal and the intended layer at the same time, not one as a fallback.</li>
+<li>Japanese adults almost never use bare imperatives for everyday requests, wrapping them in a "could you do this for me" frame that children are steered toward from early on.</li>
+<li>People grasp brand-new indirect questions instantly, so indirect requests rest on general reasoning rather than on memorized stock phrases.</li>
+<li>"Some" is heard as "not all" because the maxim of quantity assumes a speaker who knew the stronger claim would have made it; this is a scalar implicature.</li>
+<li>People who judge "Some elephants are mammals" false answer measurably slower, so moving from literal meaning to implicature costs real milliseconds.</li>
+<li>On Sperber and Wilson's echoic account, irony is not a literal reversal but an echo of some prior expectation delivered with a mocking attitude.</li>
+<li>Children only reliably tell irony apart from lying around age six, because understanding irony means tracking a speaker's second-order intention.</li>
+<li>Patients with right-hemisphere damage pass standard language tests yet often misread irony as lying and respond worse to indirect requests than to direct ones.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

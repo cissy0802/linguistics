@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -130,6 +136,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · a machine writes the coordinate frame into a field of its own; a speaker can only fuse it into the sentence</b>: robotics software carries a thing called a transform tree — map, chassis and camera each have their own coordinate frame, and every pairwise relation is recorded explicitly as a timestamped transform, so a coordinate travelling through the system always carries a tag saying which frame it was stated in. The mechanism from "There are people who never say 'on the left'" says the absolute frame is not issued by language but calibrated by environmental cues plus habit, with language merely making one of them obligatory, so a speaker must keep a bearing estimate running at all times. Put the two side by side and a conclusion falls out that you could not otherwise see: the cost is not in the vocabulary, it is in the upkeep. The classic transform-tree failure is not "north is unknown" but picking up a stale transform and using it anyway, emitting a confidently misplaced pose; whereas a human who has lost their bearings knows they have lost them and switches on the spot to "it's on your left". That is the testable difference: people have an "I am not sure" gear when crossing frames, and the transform tree has no such gear — it just extrapolates. <b>Where this does not hold</b> is treating the transform tree as a model of Guugu Yimithirr: the machine writes the frame as a field separate from the content, so the receiver can convert it themselves, while a Guugu Yimithirr speaker has no such field — the bearing is fused into the sentence, and without committing to one you cannot say the sentence at all. And obligatoriness is exactly the engine of the weak version, which has no counterpart in a system where the field is optional.</li>
 <li><b>Complexity science · where a language cuts colour is not arbitrary, it is pressed there by the colour statistics of the environment</b>: Gibson and colleagues in 2017 had speakers of many languages name colour chips, then computed how much information a word carries about which chip it was. From the Tsimane' of the Amazon to students in Boston, warm colours (yellows, reds) come through more reliably than cool ones (blues, greens); they then went and counted the colour statistics of natural photographs, and found objects tend to be warm while backgrounds tend to be cool. Zaslavsky and colleagues in 2018 recast the whole thing as a compression problem and found colour partitions across languages sitting close to optimal compression. The mechanism from "Russian has two names for blue" is that a category boundary is worth its few dozen milliseconds only near the boundary and only at the moment you have to make the discrimination. Join the two ends and the direction of causation flips: it is not that language carves the world arbitrarily and your mind follows, it is that the statistics of what needs separating in the world press the blade into that position. The testable difference follows: a language's colour boundaries should be predictable from the colour statistics its speakers are exposed to, and largely unrelated to genealogical kinship — two languages in one family, one of whose speakers dye cloth and the other not, should have boundaries that part company. <b>Where this does not hold</b> is the time scale: the compression model treats "what needs separating" as given and stable, whereas dyes and industrial pigments can rewrite it inside a few decades, while basic colour words are famously sluggish. So it explains the distribution across languages and fails to explain why any one language does not track its own needs.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Linguistic relativity today is not about what speakers cannot think, but whether distinctions their language forces still operate when they are silent.</li>
+<li>Russian has no neutral word for blue: speakers must choose between goluboy, light blue, and siniy, dark blue.</li>
+<li>Winawer and colleagues (2007) found Russian speakers matched cross-boundary blues faster, and a verbal memory load wiped the advantage out.</li>
+<li>The Russian blues effect is tens of milliseconds and failed to replicate in 2020, so it counts as contested, not established.</li>
+<li>The claim that the Himba cannot spot a blue square comes from a 2011 TV documentary, not from any published experiment.</li>
+<li>Guugu Yimithirr uses north, south, east and west instead of left and right, so ordinary speech requires always knowing where north is.</li>
+<li>Li and Gleitman changed only the lab blinds, and American students went from mostly relative answers to an even split.</li>
+<li>Frames of reference are calibrated by environment and habit; language makes one obligatory and forces a constant bearing estimate.</li>
+<li>Aymara uses the word for front to mean the past and back to mean the future, and speakers' gestures follow the same layout.</li>
+<li>Kuuk Thaayorre speakers at Pormpuraaw laid time cards out east to west whichever way they faced; the language changed a default, not an ability.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

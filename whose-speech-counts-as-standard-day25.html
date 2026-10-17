@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -136,6 +142,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 一条没人遵守的规则，在协议里活不过一次修订，在语言里能活两百年</b>：写协议的人都知道，规范文本说了不算，装机量最大的那个实现说了算；网页标准后来干脆改成一份跟着浏览器实际行为走的「活文档」。这跑的是「标准语是被挑出来的那一支」那节的第二步和第四步：写下来和被接受是两件事，写下来的权威不来自内容，来自它够得着多少人。由此能推出一个可以量的差异——同样是规则被普遍违反，两边的寿命差着数量级。协议那边，不一致时绝大多数是改规范去迁就实现，一两次修订就结束；语言这边，不定式不许被副词切开这条从 1803 年活到今天，几乎每个英语母语者天天违反，它还留在不少编辑手册里。差别来自有没有一致性测试：机器能判实现合不合规，没有机器能判一个人「说得对不对」，判的是别的人，而人可以一边违反一边照样觉得这条规则是对的。<b>但这里不成立</b>的是作者和系统的关系：规范的作者不会在写规范的同一句话里违反刚写的条款，Lowth 写那句「介词放后面不够庄重」自己却是介词收尾的。所以协议史上没有「母语直觉」这种能推翻规范的证据，语言学里它是最硬的一种。</li>
 <li><b>复杂性科学 · 一条线上一旦挂了奖惩，人会挤到线上，而挤得最狠的不是线上面那群</b>：把一个连续的量用一条行政线切开——分数线、指标临界值、达标门槛——分布就会在线的正上方堆出尖峰，经济学里叫聚堆（bunching）：线一旦带来奖惩，人优化的就是线，不是线背后那个量。「你听到的口音里」那节是它的语言版——语言态度给某些形式定了价。合起来能推出一个原本看不出的形状：如果只是「地位越高越标准」，曲线该单调上升；聚堆模型预测的却是非单调，离线最近、又最在意的那一群会超射。Labov 的纽约数据正是这个形状。<b>但这里不成立</b>的是阈值知不知道。分数线是公布的，人清楚线画在哪；语言里没人公布「说到什么程度算标准」，判定权分散在每个听者手上。所以语言里的超射常瞄错目标——把本来不该有 r 的位置也加上 r。阈值公开的系统只堆在线上，不会朝错误方向加码，这本身就是区分两类系统的签名。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>标准意大利语以十四世纪佛罗伦萨话为底，因为但丁、彼特拉克、薄伽丘的书被抄得最多。</li>
+<li>1913 年设计的「老国音」南北兼顾却没有母语者，教不下去，1932 年改按北平音定标准。</li>
+<li>标准化分四步：选一支、写成词典语法、扩充用途、等人接受，每步都与这支话本身无关。</li>
+<li>挪威有两套官方书面标准而没有口语标准，可见挑一支口语当标准并非必需。</li>
+<li>方言连续体里相邻处处互通、两端不通，荷兰语和德语的界线是学校和书面语拉出来的。</li>
+<li>丹麦语、挪威语、瑞典语按互通度算一门、按国家和正字法算三门，界线不在语言本身。</li>
+<li>「句子不能以介词结尾」源自 Dryden 的挑剔，Lowth 只说是文体偏好，后来的课本才改成禁令。</li>
+<li>非裔美国人英语只在标准英语能缩写 is 的位置省略系动词，说明「不规范」也有严密规则。</li>
+<li>同一段母语者录音配上东亚面孔照片，听众就报告听到口音；追查发现变的是评分而非听觉。</li>
+<li>念词表时纽约下中层发 r 的比例反超上中层，形状与人挤在奖惩线上的「聚堆」一致。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="af2b312df6c6ce53">深入思考</h3>

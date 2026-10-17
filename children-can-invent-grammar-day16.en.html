@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -125,6 +131,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · whether self-training decays or builds depends on the gate in the middle</b>: A body of work now worries about "model collapse" — train the next model on a model's own output and after a few rounds the output grows monotonous. Kirby, Cornish and Smith, in 2008, chained people up to do the same thing and got the opposite: each generation learns part of an artificial language and teaches it onward, and the language becomes more structured with transmission, ending up with recombinable parts that no generation set out to design. The mechanism is the one from "the second cohort received it earlier": the systematising happens at the receiving end, and its driver is that the receiver sees less than the whole language — forced to fill gaps, and what fills a gap is a rule. That yields a comparison you can actually run: one self-training chain fed the full output of the previous generation, another fed a strict subsample with communicatively unsuccessful samples filtered out, measuring description length and compositionality per generation. If the mechanism is right, collapse belongs only to the first arm — making it a property of the feeding regime, not of self-training as such. <b>Where this does not hold</b> is the source of the bottleneck. In the lab the bottleneck is scarce data; in Managua it was not — by the time the second cohort arrived there were four hundred-odd students and far more people to talk to than the first cohort ever had. The narrow aperture on the human side is an age window, and a model has no age window — so whatever the chain produces cannot be evidence that the human effect requires a critical period.</li>
 <li><b>Complexity science · "agreeing on words" and "growing a grammar" are not the same engine</b>: Centola and Baronchelli, in 2015, had nearly a hundred people online paired off in a naming game: look at the same face, each write a name, win a little money if the names match. Where everyone can meet everyone, a global consensus emerges on its own with no central coordination; switch to a network where you only meet neighbours and local conventions form smoothly while that one global name never settles. This end is pure negotiation, all adults, nobody learning, and the product is a shared vocabulary; Kirby's chain of learners has no negotiation at all, and its product is combinatorial structure. Held against this issue's narrowing, the two engines come apart: for the Negev sign language to exist, the vocabulary half needed a village bumping into itself repeatedly, and the grammar half needed a second generation taking the first as input. From that you can preregister a criterion: the naming-game paradigm will not grow a grammar however far you scale it, because it hands the meaning space over ready-made — one face, one name, no parts inside to carve. <b>Where this does not hold</b> is the reverse half: a chain of learners will not grow a device like "this location in space stands for that person" either. That device exists to track who is who across a stretch of discourse, and it needs an interlocutor listening in real time, not a person quietly learning.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Before 1977 most deaf children in Nicaragua stayed home, talking with their families in self-invented home sign and never meeting another deaf person.</li>
+<li>Once schools for the deaf opened in Managua, dozens of unrelated home-sign systems met on buses and in schoolyards, and a new language came out of the mix.</li>
+<li>Home signers produce consistent word order that their mothers' gestures lack, and deaf children in Turkey and the United States converge on the same packaging patterns.</li>
+<li>Home sign hits a ceiling because it has a single user in a single household, with nobody treating it as something to learn.</li>
+<li>Describing a ball spinning down a slope, hearing gesturers and first-cohort signers fuse manner and path; later cohorts split them into two sequenced signs.</li>
+<li>Using a location in space to stand stably for the same person became systematic in Nicaraguan Sign Language only with the second cohort.</li>
+<li>By comparing cohorts within matched age-at-entry groups, Senghas and Coppola showed the second cohort's edge came from early exposure, not more years of signing.</li>
+<li>A Bedouin village sign language in the Negev settled on subject–object–verb by its second generation, an order no surrounding language uses.</li>
+<li>Bickerton argued children turn a pidgin into a creole in one generation; Siegel's re-examination of Hawai'i found a multi-generation process fed by a stabilised pidgin.</li>
+<li>In Kirby's human transmission chains language gains structure rather than collapsing, likely because each learner sees only part of the previous generation's output.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

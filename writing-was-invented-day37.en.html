@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -146,6 +152,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · the Arabic consonant script is already a morpheme-aligned tokenizer</b>: before a large model reads text it cuts it into small pieces called tokens, the business covered in the topic on where a word ends. Run a tokenizer trained on English text over Arabic and a single word can shatter into a dozen pieces, down to individual letters, with the cuts mostly not landing on meaningful boundaries. The mechanism is the one from the section on a script recording only the distinctions its designer could hear: Arabic meaning lives in a three-consonant root (the k-t-b family), and the script happens to leave exactly those consonants on the page while omitting the vowel layer — which is to say the script is itself a morpheme-aligned segmentation, with the lines already drawn. That yields a conclusion you would not otherwise see: the usual tokenizers merge whatever character strings are frequent in the corpus, and in root-and-pattern languages frequent strings and meaningful units are simply not the same thing, so the merging cuts straight through the line the script had already drawn. The testable difference: forbid merges from crossing a morpheme boundary and the gain should be clearly larger for such languages than for English, where affixes are added linearly — people have tried this (MorphBPE reports its biggest gains on Hungarian and Arabic), which is correlational evidence. <b>Where it does not hold</b> is the selection pressure: scripts were filtered under the budget that every child has to learn one within a few years of childhood, so they can only settle on units a speaker can hear for himself; a tokenizer has no learner and is optimising compression over one corpus, while a model with enormous data can reassemble the root out of fragments — a trick a child's data budget cannot pull off.</li>
 <li><b>Society and institutions · a sign can be vague, as long as the message space is narrow</b>: the earliest tablets are almost entirely accounts, and lexical lists make up under 1% of the Uruk IV tablets but close to 20% of the Uruk III ones that follow — the range of what people wrote was widening. The mechanism is the rebus step from the section on using the picture of an arrow to write "life": a sloppy sign can be recovered because the reader is guessing inside a very narrow set. A ledger's message space is only "which commodity, how much, whose", so even a crude sign can be identified uniquely; "he did not come yesterday" cannot be guessed, and the only way out is to start spelling the sound. Hence the conclusion: phonetic spelling is not a technical improvement someone thought up, it is forced the moment the message space widens — and it works as a ruler in reverse, since the share of phonetic signs in a script lets you infer how wide the writing had become independently of what the texts say. Chinese happens to have left the graduations: phono-semantic characters run from above 20% of Shang oracle-bone characters to above 80% of seal script to above 90% today. <b>Where it does not hold</b> is the starting point: the Mesoamerican invention did not begin with ledgers. The oldest surviving Zapotec carvings bear calendar day-names, rulers and sacrificed captives. So "writing is born of bookkeeping" is not a law — the narrowness doing the work there was the narrowness of a fixed calendrical and dynastic template.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The earliest Uruk tablets are almost all accounts: a commodity, a quantity, a name, never a readable sentence.</li>
+<li>Writing crossed its threshold through the rebus principle, when a sign switched from what it depicts to what it sounds like.</li>
+<li>Sumerian scribes borrowed the arrow sign, ti, to write the near-homophone "life"; Chinese did the same with a winnowing-basket character.</li>
+<li>Writing was invented from scratch only three or four times: Mesopotamia, Shang China, Mesoamerica, and possibly Egypt.</li>
+<li>Scripts differ mainly in which unit a sign points at: phonemes give alphabets, syllables give syllabaries, morphemes give Chinese characters.</li>
+<li>A language's syllable count decides which road works: Japanese, with about 100 syllables, suits kana; English must split down to phonemes.</li>
+<li>No script is pure: over 90% of Chinese characters are phono-semantic, and the s in cats and dogs spells the plural morpheme, not a sound.</li>
+<li>Sequoyah's Cherokee syllabary marks neither tone nor vowel length, because native speakers restore both from context.</li>
+<li>Arabic can drop short vowels because meaning lives in consonantal roots like k-t-b, while the vowels carry grammar and derivation.</li>
+<li>Writing is a lossy record: it keeps only the distinctions its designer could hear and leaves the rest to readers who already speak the language.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

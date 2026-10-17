@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -124,6 +130,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 「学到了规则」和「学到了最近邻」，在一条曲线上分得开</b>：想知道一个模型是真抽出了规则，还是在拿相似的训练样本做检索，通常的办法是看准确率——而准确率恰恰区分不了这两者，两种系统在常见输入上给的答案一样。跑的是「他只往一个方向错」那节的机制：Prasada 和 Pinker 那个不对称说明，规则的定义性质不是「用得多」，是「不查邻居」。由此能推出一个直接能跑、而且不需要任何人类数据的探针：把「新词与训练集里最近的词的距离」当自变量，画模型给出规则形式的比例。纯检索的系统曲线随距离单调下塌；有默认规则的系统曲线是平的，而且在距离最大的那一端仍然平——判据就在这一端，中间段两种系统长得一模一样，测中间段等于没测。<b>但这里不成立</b>的是把它当双向判据。这条探针只朝一个方向硬：曲线陡能证伪「有规则」，曲线平证明不了「有规则」。一个单通道的网络，只要训练数据里规则形式压倒性地多，在远端也会给出平的曲线——不是因为它有规则，是因为那么远的地方根本没有不规则的邻居能把它拉走。</li>
 <li><b>演化生物学 · 不规则形式有半衰期，而且能提前点名下一个</b>：Lieberman 等人 2007 年把英语过去一千两百年的不规则动词过了一遍，177 个里有 79 个在这段时间里变成了规则动词。他们量出的规律是：一个动词保住不规则形式的半衰期，大致正比于它使用频率的平方根——频率低一百倍的动词，规则化快十倍。跑的是「他只往一个方向错」那节的同一条机制：规则是默认，每个不规则形式都得靠被反复听见来维持，频率就是维持费；一个孩子嘴里那个只朝一个方向的溢出，攒够了人和年头就是历史上的单向漂移。推出的不是「语言会变」这种废话，而是一份可以预先点名的清单——按频率从低往高排，下一个掉队的是谁。那篇文章点的是 wed（结婚）：wedded 已经在和 wed 并用。变化在这儿成了可以预注册的预测，不是事后解释。<b>但这里不成立</b>的正是那个生物学类比本身。演化模型里每个位点的命运基本独立，词不是：不规则动词是成群的，sing / ring / spring 共用同一套元音交替，群里一个词能活下来靠的不只是自己被说了多少次，还靠同群的伙伴撑着。把每个词当独立个体算半衰期，会系统性地高估孤例的寿命、低估成群者的寿命。再加上样本是一门语言的一千年，这条平方根定律的证据强度只到「单一语言的历史相关」。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>英语孩子先说对 went，后来改说 goed，几年后再改回来，这种过度规则化让正确率曲线呈 U 形。</li>
+<li>Marcus 等人 1992 年统计 83 个孩子的 11521 处不规则过去式，过度规则化的中位数只有 2.5%。</li>
+<li>goed 既不可能是听来的，也不是忘了 went，所以它证明孩子自己抽出了一条加 -ed 的规则。</li>
+<li>过度规则化的比例对录音密度敏感，记录越密算得越高；可靠的是 U 形和错误方向，不是具体比例。</li>
+<li>孩子几乎只往一个方向错，反向错误在英语里只占约 0.2%，说明规则是默认路径，特例是一张要逐个查的表。</li>
+<li>德语复数词尾 -s 在词典里占比很小，却被用在姓氏、外来词和新词上，说明默认不等于最常见，但此说仍有争议。</li>
+<li>成年人给生造动词配不规则过去式时看它像不像现有的不规则动词，加 -ed 时则完全不看相似度。</li>
+<li>汉语动词不变形，汉语孩子的过度规则化落在量词上，把本就最宽泛的「个」用成「一个书」「一个纸」。</li>
+<li>土耳其语后缀透明，孩子两岁前就能稳定使用格标记；过度规则化的多少测的是语言的形态，不是孩子。</li>
+<li>英语不规则动词保住不规则形式的半衰期大致正比于使用频率的平方根，越少用的越早变成规则动词。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="4c58f946df6a7cbc">深入思考</h3>

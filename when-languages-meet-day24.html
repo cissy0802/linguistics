@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -124,6 +130,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 同一个组织里的服务会互相长得像，而像的程度能告诉你人是怎么流动的</b>：一家公司里，用不同语言、不同框架写出来的服务，几年之后错误码的包法、重试退避的写法、超时的默认值会长成一个样，哪怕它们是从毫不相干的模板复制出来的。这正是「邻居住久了会长得像，哪怕不是亲戚」那节的机制：搬运结构的是两边都熟的人，不是共同来源，而且搬过去的是搭法不是词表——各服务的命名风格往往还各留各的。由此能推出一个原本看不出的结论：趋同的强度应当跟人的流动对得上，跟技术相似度对不上。两个都用同一门语言、却从没有人共事过的团队，应该比一个用 Go 一个用 Java、但互相借调过人的团队更不像。这可以直接查：拿代码所有权记录和转岗、共值班记录各画一张图，看哪张更能预测约定的一致程度。<b>但这里不成立</b>的是"借进来必须被改造"那一头。语言里借来的词要被本地音系捏一遍——咖啡不读成 coffee——所以它身上留着进门那年的痕迹；代码可以整文件复制，一秒完成、毫无口音。于是「借来的词身上带着一个时间戳」那节的断代尺子在代码库里没有对应物，你只能靠提交历史。</li>
 <li><b>社会与制度 · 能被整条搬走的法条，恰好是不需要新程序来托住的那些</b>：一个国家把另一个国家的条文整段写进自己的法典，比较法里叫法律移植；哪些抄得活、哪些成了一纸空文，事后看差别极大。「借来的词身上带着一个时间戳」那节的可借性等级可以直接搬过来用：名词好借、功能词难借，差别在于功能词必须插进一整套已有的格子。推到制度上就得出一个不太直觉的判据——一条规则能不能移植，不看它多先进，看它需不需要一套新的程序格子来托住。设立一项新的可诉权利像借一个名词，容易生效；改动举证责任或者审级结构像借一个功能词，会被本地既有程序重新解释成别的东西。这能查：同一批移植条文按"是否需要新程序"分成两组，比较十年后的实际援引率。<b>但这里不成立</b>的是扩散的样子。语言里没有谁能宣布"从明年一月起大家借这个词"，借入靠双语者一点点渗，所以才会留下层、才有那把断代的尺子；法律移植有生效日期、一次到位、全境同时，层这个东西在制度史上做不出来，那边真正的变量是生效之后被磨成了什么样。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>日语「明」的 myō、mei、min 是三批不同年代从汉语借走的读音，新层压在旧层上，谁也没覆盖谁。</li>
+<li>英语 shirt 是本土词、skirt 借自古诺斯语，同一词根的两个版本并存，连 they、them、their 也是借来的。</li>
+<li>可借性有等级：名词最好借，动词次之，功能词最难，因为功能词得插进一整套已经排好的语法格子。</li>
+<li>世界借词数据库里借词比例从普通话的 1.2% 到 Selice Romani 的 62.7%，差距反映的是社会处境，不是语言优劣。</li>
+<li>托克皮辛语的词几乎全来自英语，但 yumi 和 mipela 区分包不包括听话人的「我们」，这套格子来自当地美拉尼西亚语言。</li>
+<li>词表和语法指向两个来源的语言，打破了比较法默认两者同出一个祖先的前提，所以塞不进普通的语系树。</li>
+<li>克里奥尔语是否自成一类仍有争论；这里的「简单」只是屈折词缀少，不等于表达力差。</li>
+<li>阿尔巴尼亚语、罗马尼亚语、保加利亚语亲缘很远却都把定冠词挂在名词后面，这是双语者传播出来的语言联盟特征。</li>
+<li>越南语的声调是从丢掉的音节尾辅音里长出来的，Haudricourt 据此证明它属南亚语系，最扎眼的特征常常是借来的。</li>
+<li>一条法条能否被别国整段移植，不看它多先进，看它需不需要一套新的程序格子来托住，正如功能词难借。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="0e708b0ee00ede59">深入思考</h3>

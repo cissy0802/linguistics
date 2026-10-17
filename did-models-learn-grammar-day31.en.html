@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -136,6 +142,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Physics and mathematics · Information converts into work, but only if something is actually wired to it — and physics has a formula for this one</b>: There is an old thought experiment in thermodynamics: one molecule in a box, and whoever knows which half it is in can extract work from the thermal motion, while whoever does not cannot. That was later made quantitative: in the generalised second law of Sagawa and Ueda, the extra extractable work has a ceiling, and the ceiling is exactly the mutual information between the "memory" and the state of the gas; in 2010 Toyabe and colleagues really did perform that conversion on a Brownian particle. The mechanism running here is the one from the section on the probe learning random labels: what a probe measures is whether information can be read out of the internal state — that is, whether the mutual information is there. Which yields a methodological conclusion you would not otherwise see: probe accuracy should be read as a ceiling — "this computational path could be using at most this much" — and never as "it is using it". The testable corollary: every probing result should come with a matched switch-it-off experiment, and the switch-off number has to be less than or equal to the probe number; where the two diverge sharply, what the probe read is not on the path the model itself takes. <b>Where this does not hold</b>: the ceiling in physics is a theorem with units, and the measuring apparatus cannot manufacture mutual information out of nothing. A probe can — it scores high on random labels too. So probe accuracy is not even a clean ceiling; there is no conservation law to lean on here.</li>
 <li><b>Neuroscience and consciousness · The same trick run on human brains gives the opposite answer about location</b>: Replacing content words with invented ones is done in neuroscience too, with materials known as Jabberwocky sentences (named after Carroll's poem — normal grammar, all content words made up). Fedorenko's line of work found that the language network responds distinctly more strongly to such sentences than to a string of nonwords, so it does feed on structure; but the same regions are also sensitive to word meaning, and both sensitivities are spread across the whole fronto-temporal network, with no one patch dedicated to structure. The mechanism is the one from the section on invented words: cut the meaning, keep the skeleton, and see what response is left. Which yields a conclusion you would not otherwise see: "did it learn grammar" and "does grammar sit in a particular place" are independent questions — on the model side you can name a few units whose removal makes it collapse, while the same operation in a human brain finds no corresponding patch. The testable difference follows: interpretability results that hinge on a handful of units should not be expected to have brain analogues, and the day a pair of number neurons whose removal breaks agreement really is found in a brain, that is news about brains, not confirmation of the model. <b>Where this does not hold</b>: the most important control cannot be run. People cannot be retrained on an impossible language, and there is no random-label control group for them; besides, the invented words in a Jabberwocky sentence still carry endings and prosodic cues, while the model side has no prosody at all. "The same trick" is the same trick only on paper.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>An English verb must agree in number with its subject, and a plural noun after a singular subject trips up humans and machines alike.</li>
+<li>Linzen and colleagues found in 2016 that a recurrent network trained only to predict the next word got noticeably worse at verb number.</li>
+<li>With content words swapped for invented ones, Gulordava's language models still chose the right verb number across four languages.</li>
+<li>Nonce words cut off co-occurrence statistics, which is the only way to tell structure-based answers from familiar word pairings.</li>
+<li>A structural probe uses a single linear transformation to recover much of the sentence hierarchy from inside BERT and ELMo.</li>
+<li>Probes also learn random word labels, so what matters is selectivity: real-task accuracy minus control-task accuracy.</li>
+<li>Information being decodable from a model does not mean the model uses it; agreement collapsing when units are switched off is causal evidence.</li>
+<li>GPT-2 found all 15 impossible languages built from English harder to learn, though the choice of comparison languages is still disputed.</li>
+<li>On BLiMP minimal pairs, models are solid on morphological agreement and weaker on finer phenomena, so grammar is dozens of curves, not one score.</li>
+<li>The brain's language network responds to structure in Jabberwocky sentences, yet syntax and meaning sensitivity are spread out with no dedicated syntax spot.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

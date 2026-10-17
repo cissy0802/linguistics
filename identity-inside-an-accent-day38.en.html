@@ -38,6 +38,12 @@ figure svg{max-width:100%;height:auto}
 .refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
 </style></head><body>
 <div class="container">
@@ -108,6 +114,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · A machine that can't understand an accent is missing the "carries over to a new speaker" step</b>: In 2020 Koenecke and colleagues tested five companies' commercial speech recognisers: the average word error rate was 0.35 for Black speakers and 0.19 for white speakers, and the gap was just as large when both groups said identical phrases — the problem sat in the layer of the model that hears the sound. This runs on the mechanism from "half of 'I can't understand them' is on the listener's side": whether you understand depends on how much, and how varied, the listener's exposure to that accent has been. That yields a testable difference: a person chatting with an unfamiliar accent for a few minutes makes fewer and fewer errors, while a recogniser whose weights are frozen after deployment should show an error rate as flat at minute thirty as at minute one — it is a listener that never gets to sit the training session. Bradlow and Bent's result also points to the fix: when adding data, adding more speakers should pay off more than adding hours from a few. <b>But it doesn't hold</b> for the other layer on the human side. Human bias comes in two layers: not hearing clearly, and hearing clearly yet still marking down (the rating shift from the topic on standard speech). Training only fixes the first layer. Machines only have the first, so adding data really can close the gap; with people, more listening alone will not.</li>
 <li><b>Evolutionary biology · An accent is a hard-to-fake signal, and what makes it hard is a learning window, not a cost</b>: In biology, a signal that sustains cooperation has to be hard to fake, or freeloaders will simply copy it. Nettle and Dunbar ran a simulation in 1997: with cheats mixed in among cooperators, groups carrying a "dialect marker" and trading only with others who shared it kept cooperation going more easily — and the marker had to change fast enough that the cheats could not catch up. This runs on the mechanism from "the kids who least wanted to side with the school": accent as team jersey. The conclusion it yields: an accent is hard to fake because fine pronunciation detail gets installed during a childhood window and is hard to learn in full as an adult; so the features people use to tell friend from stranger should mostly be pronunciation details rather than vocabulary, which can be learned in a day. Shibboleth is a pronunciation detail; burnouts leading the newest vowel changes also fits the requirement that markers change fast. <b>But it doesn't hold</b> for what the honesty points at: an animal's honest signal points at the individual's own quality, whereas an accent points only at where you grew up, not at your loyalty or nationality — which is exactly the mismatch the asylum guidelines correct. And it is honest in only one direction: turning up your own accent is easy (the Welsh experiment), passing as someone else is hard.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>An accent is not just distance from a standard; it announces who you are and whose side you are on, and listeners hear it that way.</li>
+<li>Penelope Eckert found city-oriented burnouts further along the Northern Cities Shift than school-oriented jocks, wearing their vowels like a team jersey.</li>
+<li>In a 1977 Welsh study, learners taunted about studying a "dying language" promptly broadened their Welsh accents.</li>
+<li>Talking unlike your listener on purpose is divergence and drifting toward them is convergence, so code-switching also signals whom you stand with.</li>
+<li>When John Baugh phoned Bay Area landlords with the same enquiry in three American accents, the standard voice won far more viewings.</li>
+<li>Listeners guess a speaker's ethnic group about 70% of the time from a single hello, which turns accent into a tool for covert linguistic profiling.</li>
+<li>In asylum cases, accent can reveal which speech community someone grew up in, but not which passport they hold.</li>
+<li>Philadelphia court reporters got only 59.5% of African American English sentences fully right, though the speakers were perfectly clear.</li>
+<li>Most Black listeners hear She BEEN married as married long ago and still, while most white listeners hear it as no longer married.</li>
+<li>Listeners trained on several accented talkers understand new ones better, yet it is almost always the speaker who is asked to adjust.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

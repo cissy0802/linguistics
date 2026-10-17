@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -131,6 +137,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>社会与制度 · 一条被写进法律的量级含义，逼出了「包括但不限于」</b>：法律解释里有一条老准则：条文列举了某些情形，就等于把没列举的排除在外（拉丁文的说法是 expressio unius est exclusio alterius，「提到一个就是排除其他」）。这正是「说『有些』的时候」那节的机制被制度化了：从「他本可以列进去却没列」反推出「他不想让它算」。一旦这条推断成了能在法庭上引用的规则，就推出一个原本看不出的结论——起草的人必须主动反制它，于是条文里长出大量「包括但不限于」「等」这类堵漏措辞，且越严格采纳这条准则的法域应当越密集，这是能去数的。<b>但这里不成立</b>的是含义的前提：会话含义要求有一个正在配合的说话人和一个可恢复的意图，而法条是多人多轮妥协写出来的，有些空白恰恰是为了让各方都能点头而故意留的。那里没有一个「他本可以说清却选择不说」的他。所以在语用学的意义上，「立法意图」未必是一个存在的对象——不是难恢复，是没有。</li>
 <li><b>物理与数学 · 递归到第几层停下来，这条线人和机器不在同一处</b>：博弈论里有个玩了几十年的游戏：一屋子人各写一个 0 到 100 的数，谁最接近全体平均数的三分之二谁赢。一路推到底的答案是 0，真人实验里平均落在二三十——多数人只往里递归一两层就停了。间接说话被写成博弈的版本（Pinker 等人 2008 年那篇讲间接言语逻辑的文章）跑的是同一条机制：说话人算听者会怎么反推，听者算说话人预期他怎么反推。于是推出一个可检验的差异：如果人的语用推断也只有一两层预算，那么「我在暗示你去暗示他」这种三层以上的间接，人应当系统性地崩掉，而把每层显式展开的系统不会——不是谁更强，是代价曲线形状不同，可以拿层数当自变量去测。<b>但这里不成立</b>的是共同知识这个前提：一层层算最优反应要求双方都清楚彼此的收益，而那篇文章自己的出发点恰恰是关系类型不确定、说话人需要留一条可否认的退路。收益不共知，递归就没有落脚点。所以这套数学算得出「为什么要绕着说」，算不出「第几层停」——这也顺带解释了为什么反讽和幽默在成绩单那节里正好垫底：它们是收益最不透明的那一类。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>Herbert Clark 问五十家餐馆「你们收信用卡吗」，44% 只答了「收」：从字面到意图是个可做可不做的动作。</li>
+<li>Grice 认为听话人默认对方在配合，追问「他为何不直说」，从落差里反推出会话含义。</li>
+<li>「能把盐递给我吗」这类用滥的间接请求是被整块认出来的，不必先算字面义再否掉。</li>
+<li>请求的直接程度因语言而异：阿根廷西班牙语最直接，澳大利亚英语最间接，而间接不等于礼貌。</li>
+<li>Noveck 发现 87% 的孩子判「有些大象有鼻子」为对，成年人只有 41%，多算一步的是成年人。</li>
+<li>读出量级含义要清点对方没用的更强说法，靠的是关于他人心智的模型，孩子四岁前后才装上。</li>
+<li>大模型的语用成绩随材料、语言和微调方式大幅摆动，同一底座换种微调，含义题成绩就提高一截。</li>
+<li>Ullman 把贴「巧克力」标签的爆米花袋改成透明，逻辑不变，最强的模型就答错了错误信念题。</li>
+<li>最差的 LLaMA2-70B 在社交失言题上超过人类，只因那批题的正确答案方向固定。</li>
+<li>法律里「列举即排除其他」是被制度化的量级含义，逼得条文里长出大量「包括但不限于」。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="ef49ecd457731b9e">深入思考</h3>

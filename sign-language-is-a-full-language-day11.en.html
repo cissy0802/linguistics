@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -123,6 +129,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · change the physical channel and what gets rewritten is the structure, not the encoding</b>: move a protocol onto a different link and the intuition is that the upper layer is untouched and only the encoding below changes; follow that intuition and sign language becomes "speech over a different link layer." The measurements in "Space is not the backdrop; space is the grammar" do not support that reading: individual signs are slower than words, yet the same story takes the same time and delivers the same number of propositions, because the grammar itself is reorganised to run in parallel — several parts each carrying information at the same instant rather than lined up in a queue. That yields a testable difference: a system that treats signing as "gesture recognition plus translation into a word sequence" should not fail uniformly, but should fail in a cluster on the structures that ride on the parallelism — spatial reference, the direction of verbs, the grammatical actions of the face. If the measured errors really do cluster there, what is being lost is channel-specific structure, not vocabulary coverage. <b>Where this fails</b> is the premise of layering itself: layering works because the same packet is handed across intact, whereas signed grammar is not spoken grammar in another encoding — ASL and BSL cannot understand each other and ASL is closer to French Sign Language. With no layer boundary where the same content is handed over, "different link layer" is only a figure of speech.</li>
 <li><b>Buddhist thought · a name that looks like what it names still has to travel the symbolic road</b>: Buddhist thought works over and over on the relation between name and thing — the name is a cut made by us, and it is not the thing. It is easy to grow an intermediate assumption from that: if a name resembles what it points at, the gap should be thinner. Sign language is a rare test site, because it holds far more resemblance than speech does. The mechanisms are the ones from "Two countries with the same spoken language" and from Petitto's longitudinal work: what surfaces when retrieval jams is handshape and location — form parameters, not what the sign resembles; and although pointing at your addressee for "you" is as transparent as it gets, deaf toddlers still go through avoidance and then reversal. The conclusion you could not otherwise see: resemblance buys no shortcut around the symbolic system; at most it is a handle for memory. Evidence strength: iconicity does help adults learning a second sign language and helps in some memory tasks, but helps little with the order of first-language acquisition, and that literature is still accumulating. <b>Where this fails</b> is reading any of it as support for or against "names obscure reality": that claim is about how to hold distinctions in practice, while the mechanism here concerns only the channel between a symbol's form and its referent. All sign language removes is the intermediate assumption that looking more alike means standing one layer closer.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>ASL and BSL are mutually unintelligible even though both countries speak English; ASL's roots lie in nineteenth-century French Sign Language.</li>
+<li>A sign breaks down into handshape, location and movement, and ASL SUMMER and DRY form a minimal pair that differs only in location.</li>
+<li>Signers get tip-of-the-fingers states in which handshape and location surface first and movement is what most often goes missing.</li>
+<li>Signing places referents at points in space, and the ASL verb GIVE moves between them, so reversing its direction reverses who gave to whom.</li>
+<li>Petitto found that deaf toddlers still reverse the pointing signs for "you" and "me", treating even a transparent point as a symbol to be learned.</li>
+<li>Single signs take longer than spoken words, yet stories take the same time and carry as many propositions, because sign channels run in parallel.</li>
+<li>After a left-hemisphere stroke signers can develop sign aphasia with spatial skills intact; after a right-hemisphere stroke spatial skills collapse while sign grammar survives.</li>
+<li>The brain divides labour by whether something is language rather than whether it is spatial, though the right hemisphere does more for sign than for speech.</li>
+<li>Hockett's 1960 list put the vocal-auditory channel first among language's design features, and sign languages knocked that feature off the list.</li>
+<li>Al-Sayyid Bedouin Sign Language settled into a stable word order by its second generation, so grammar can emerge within a single generation.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

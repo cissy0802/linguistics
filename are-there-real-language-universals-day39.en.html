@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -110,6 +116,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · The brain's response to an "impossible grammar" is not failing to learn it but switching circuits</b>: In 2003 Musso, Moro and colleagues had German speakers learn real rules of Italian and Japanese alongside a few "impossible" ones — for instance, the negation word always goes after the third word, turning Maria compra il caffè ("Maria buys the coffee") into Maria compra il no caffè. Participants learned the fake rules too, and accurately; the difference was in the brain: only while learning real rules did activation in Broca's area (a left frontal region closely tied to grammatical processing) rise with practice. This runs on the fork in "Don't let related words drift apart": test capacity and use separately. It yields a testable difference. The topic on whether large models learned grammar described small language models also finding such artificial languages harder — but comparing perplexity alone (how surprised a model is by the next word) cannot reveal a human-style circuit switch. The test should be: once a model has learned a count-the-word-positions rule, is that rule computed by the same internal units that handle real subject–verb agreement? In humans they are separate; if a model mixes them, it differs from humans on exactly this point, whatever its learning speed.</li>
 <li><b>Evolutionary biology · Whether a trait is an adaptation shows in whether it changes together with another trait along the tree</b>: Biology hit the same counting trap long ago: a hundred bird species sharing a trait may reflect a single evolutionary event in one ancestor. Felsenstein's 1985 solution was to look only at independent changes along the branches of the tree. This runs on Dunn's method from "Where the object goes, the preposition follows", and leads to a conclusion: if the diagonal comes from the "don't let related words drift apart" pressure, then in any family, a language that changes its verb–object order should change its adpositions fairly soon afterwards, and this "follow-on change" should point the same direction in every family — something that can be tested directly on the trees. <b>But here it breaks down</b> at the tree itself: genes rarely flow sideways between species, while languages borrow from each other massively, and neighbouring languages from different families can shift word order together, changes that bypass the family tree; and language family trees only reach back a few thousand years, far shallower than biology's, so there are fewer independent changes to observe — exactly the root of the doubts about the statistical power of Dunn's study.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>"Universal" can mean something every language must have, something most languages tend to have, or a capacity every brain has that a language need not use — and debaters often mean different ones.</li>
+<li>Greenberg's 1963 implicational universals: languages with the object after the verb tend to use prepositions, and those with the object before it tend to use postpositions.</li>
+<li>In WALS, 456 verb–object languages have prepositions and 472 object–verb languages have postpositions, while the two crossed combinations total only 56.</li>
+<li>Hundreds of related languages in one family may reflect a single inherited trait, so simply counting languages can inflate a universal.</li>
+<li>Using evolutionary-tree methods on 589 languages in four families, Dunn and colleagues found in 2011 that most word-order dependencies are lineage-specific and differently shaped.</li>
+<li>Critics say four families lack statistical power; the rough consensus is that the word-order diagonal is a real tendency, but not settled as a law.</li>
+<li>Daniel Everett claimed Pirahã, an Amazonian language, has no clause embedding, challenging the proposal that recursion is the uniquely human core of language.</li>
+<li>Rebuttals note that Everett's own 1986 grammar found embedding and German prenominal possessors resist stacking too; a later corpus check could not settle it.</li>
+<li>If a universal means a brain capacity rather than something every language uses, one language without recursion cannot refute it — but such a claim is hard to falsify.</li>
+<li>Corpora of 37 languages all keep related words closer than random order would; dependency length minimization may be the working-memory pressure behind the word-order diagonal.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

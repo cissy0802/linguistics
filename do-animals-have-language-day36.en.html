@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -120,6 +126,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · Cutting a signal into discrete parts does not buy accuracy, it buys the ability to be relayed</b>: early long-distance telephony relayed through analogue amplifiers, and each stage amplified the noise along with the signal, so the further it went the mushier it got. Digital repeaters changed that: each hop first decides the waveform back into zeros and ones and then re-transmits, and the noise stops accumulating — what was bought is not precision but the act of rounding to discrete symbols, which resets the error to zero. The mechanism is the contrast inside the section on only ever saying this one kind of thing: the waggle dance is a continuous code, five degrees off is five degrees off, whereas human speech is discrete, with no middle ground between 妈 (mā, "mother") and 趴 (pā, "to lie face down"). From which a conclusion follows that was not visible before: the payoff from discreteness only comes due when a signal has to be forwarded across several hops, and the waggle dance is single-hop — the dancer went to those flowers herself, so no relay chain stretches the information. There is the testable difference: cut off the bees that foraged directly and let only dance-watchers dance onward to a third bee, and the spread of bearings should widen systematically at every hand-off; whereas when a human sentence reaches the fifth person, what has degraded is the content, not the sounds. <b>Where it does not hold</b> is the symbol set: in digital communication the zeros and ones are fixed by a standard, identical network-wide, and they do not move. The boundaries between speech sounds have no standards body; each generation calibrates them against everyone else's output, and over centuries the boundaries drift on their own — the sound change from the topic on language changing like a river. So "discrete means lossless" holds for language only within a single generation, and only approximately.</li>
 <li><b>Complexity science · How many signals a system has may not be a brain question but a question of whether the signals were ever taken apart</b>: a hundred-odd chemical elements combine into hundreds of millions of compounds; twenty-odd standard brick shapes build more configurations than anyone can count. The state space of a combinatorial system grows exponentially with the number of parts, while unsplittable wholes can only be accumulated one at a time. The mechanism is the duality of patterning from the section on no species passing them all: to distinguish N meanings, if each meaning gets one indivisible whole signal, you need N sounds that can be reliably told apart, and the number of whole signals that acoustic space supports is capped — by noise and by the resolution of hearing. From which: an animal signalling system holding only a handful or a few dozen signals need not mean there is nothing to say or not enough brain, but may only mean the signals were never broken into recombinable parts. The testable difference: if the bottleneck is combination rather than cognition, then training a species on more one-key-one-word whole symbols, of the kind on Kanzi's board, should hit a hard ceiling fast and the learning curve should saturate, whereas giving it a few parts plus one rule for recombining them should put the ceiling somewhere else. The two curves can be laid side by side. <b>Where it does not hold</b> is the source of the ceiling: the combinatorics of the elements are set by physical law whether or not anybody uses them, while a language's vocabulary is not capped by acoustics at all but by frequency of use and by how much can be learned in a lifetime — only a few thousand words get used again and again. The exponential space is only a space of possibilities; how much of it gets occupied is decided by a community.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In the honeybee waggle dance, the angle of the waggle run from vertical gives the flowers' bearing from the sun, and its duration gives the distance.</li>
+<li>Radar tracking showed recruits flying straight to places they had never visited, so the dance gives directions rather than exact coordinates.</li>
+<li>Bees pass the displacement test, yet can only ever say direction, distance and worth, because the dance has no parts to recombine.</li>
+<li>Most of Nim the chimpanzee's "sentences" imitated his teachers, and his sixteen-sign record grew by stacking, not by nesting.</li>
+<li>Kanzi the bonobo outscored a two-year-old child on spoken English instructions, but one individual against one is weak evidence.</li>
+<li>The Clever Hans effect means animal language studies must be run blind, since how strictly a tape is scored changes the conclusion.</li>
+<li>Sign languages have full grammars; the ape projects taught borrowed gestures, and conflating the two flatters the apes and slights the languages.</li>
+<li>Vervet monkeys respond differently to leopard, eagle and snake alarm calls, hard evidence of reference, though the calls also carry arousal.</li>
+<li>Japanese great tits react to ABC-D but not to the reversed D-ABC, proving order-sensitivity, though whether that is composed meaning is disputed.</li>
+<li>Bees, vervets and great tits each pass one criterion, but openness, built on duality of patterning, is still passed by humans alone.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

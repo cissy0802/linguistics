@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -123,6 +129,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>演化生物学 · 一个变异要多大才「被看见」，和一个句式要出现多少次才学得会，是同一道门槛</b>：自然选择也是一台不理解自己在做什么的机器，只按结果筛。群体遗传学算出了它的分辨率：一个突变的优劣幅度若小于大约 1/(2Ne)（Ne 是有效群体大小），选择就看不见它，命运交给随机漂变——这就是漂变屏障。跑的是「加拿大国会的会议记录」那节同一条机制：数出来的差异必须大过噪声，否则等于不存在。由此能推出一个平时不会这么想的结论：机器翻译译不好某个句式，多半不是因为它「复杂」，而是因为它在语料里太少；反过来，语法上刁钻却天天出现的句式会被学得很好。这可以直接去查——按语料频率排，不按语法难度排。<b>但这里不成立</b>的是能不能加样本：演化那边 Ne 由物种的生态决定，研究者动不了，漂变屏障是硬地板；翻译这边样本量只是预算问题，可以去爬、可以回译造数据。</li>
 <li><b>社会与制度 · 一个便宜的指标会把整个行业的方向掰过去，掰成什么样取决于指标和目标之间那条缝有多好钻</b>：纽约州从 1991 年起公开每位心脏外科医生的风险调整死亡率。后来两件事同时发生：死亡率确实降了，也出现了高风险病人被劝退、被转去外州的证据。跑的是「读不懂意思的评分脚本」那节的机制：一个便宜到可以天天跑的指标会接管方向盘，而它和真正目标之间那条缝会被单独优化。由此能推出比「有指标就会被钻」更具体的判断：钻法由缝的形状决定，不由人的品性决定。BLEU 的缝开在输出端——它只认字面重合，于是系统被推向更保守、更常见的用词。<b>但这里不成立</b>的是入口：外科医生能选择收谁，缝开在输入端；翻译系统改不了测试集，别人给什么就译什么。「拒收高风险病人」这一招在机器翻译里没有对应物——这也解释了为什么 BLEU 被钻了十五年，钻出来的是平庸而不是造假。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>1954 年乔治城–IBM 演示只用 250 个词和 6 条语法规则，媒体却预言机器翻译三五年内就能解决。</li>
+<li>手写规则的真正困境是互相打架：为一个语境新加的规则，会在另外许多本来译对的句子里悄悄生效。</li>
+<li>巴希勒尔用「盒子在 pen 里」说明，消歧靠的是世界知识，全自动高质量翻译得先有一部百科全书。</li>
+<li>英语把「怎么动」放进动词、西班牙语把「往哪动」放进动词，这种倾向而非铁律最难用规则写清。</li>
+<li>1966 年 ALPAC 报告认为机器译文的返工成本不低于人工翻译，美国机器翻译经费因此断了近二十年。</li>
+<li>1990 年前后 IBM 不再问句子什么意思，而是问哪句法语最可能是译文，把翻译变成了数数题。</li>
+<li>加拿大国会英法双语会议记录约有 360 万对句子，是国家双语制度顺手攒下的平行语料。</li>
+<li>统计系统没有扔掉语言学判断，只是把「某人认为应该这样」换成了「在这批数据里出现过多少次」。</li>
+<li>BLEU 只数机器译文和参考译文的词串重合，不懂意思，却把验证一个想法的等待从几天压到几十秒。</li>
+<li>规则系统坏掉时吐出看得出的乱码，神经翻译坏掉时吐出很顺的假话，比如把不分性别的土耳其语 o 猜成 he 或 she。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="eb9097f38da134b6">深入思考</h3>

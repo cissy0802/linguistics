@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -149,6 +155,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 每个音节装多少信息，和一秒说几个音节，是被绑在一起的</b>：通信里有条老经验——信道容量给定时，每个符号携带的信息越多，符号就发得越慢，乘积才是真吞吐。语言这边跑的是「声调不稀罕」那节的机制：声调给每个音节多加了一维对比，普通话不带调的音节只有约四百个、带上调约一千三。2019 年有人把 17 门语言放在一起量：日语和西班牙语每秒约 8 个和 7.7 个音节，越南语和泰语只有 5.3 和 4.7，普通话 5.11；可把音节速率乘上每音节的信息量，所有语言都挤在每秒 39 比特上下。由此推出一个平时看不见的结论：「某门语言语速快」几乎全是错觉，听着快的语言每个音节装得更少。跟大模型的差别也在这里，而且可检验：模型没有嘴也没有耳朵，token 速率和 token 熵之间没有这条绑定，给它一门信息密度极高的语言它不会自动慢下来，人会。<b>但这里不成立</b>的是「容量」二字：通信里容量先由物理给定、再设计编码，语言这边没人设计过，39 比特是量出来的结果，每音节信息量还是从语料估的。它是一条稳健的相关，不是定律。</li>
 <li><b>心理学 · 范畴是围着中心长的，还是一节一节接出去的</b>：认知心理学有个经典结论——范畴有典型成员，知更鸟比企鹅更「像鸟」，于是范畴被画成一个中心加一圈外围。「数数之前」那节的量词研究动摇了这幅图：拿近半个世纪的新名词去测，赢的是加权样例模型，新词跟着跟它最像的那几个老词走，不是跟着范畴中心走。由此能推出一个可以直接去查的预测：一个新事物配哪个量词，看的不是它跟范畴「平均成员」像不像，而是跟某几个具体老成员像不像——「短信」拿到「条」不是因为细长，是因为它像「新闻」。<b>但这里不成立</b>的是时间尺度：原型效应量的是一个成熟范畴此刻在单个人脑子里的样子，链式生长量的是它跨几代人长出来的轨迹；量词数据分不清「这个人是链式推的」和「整个社群慢慢漂过去了」。它推翻的是「范畴必然绕着中心扩张」，不是「原型不存在」。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>声调并不稀罕：WALS 收录的 527 门语言里，四成多用音高区别词义。</li>
+<li>音高算语言还是旋律，看它在母语里干不干活：泰语声调在泰语母语者脑中算语言，在汉语母语者脑中只是音高。</li>
+<li>声调是词尾辅音脱落留下的影子：汉语上声来自失落的喉塞，去声来自失落的 -s，越南语独立走了同一条路。</li>
+<li>量词同样常见：WALS 的 400 门语言样本里，有 78 门像汉语一样强制使用量词。</li>
+<li>量词范畴是链式接出去的：新名词跟着意思最像的几个老词挑量词，不是围着范畴中心入座。</li>
+<li>「量词语言使用者更按材质归类」的效应只在需要解释名词的任务里出现，关乎怎么理解词，而不是怎么看世界。</li>
+<li>汉语是话题优先语言：句首就是话题，日语、韩语给话题配专门助词，汉语只靠位置和停顿。</li>
+<li>约 72% 的小学汉字是形声字，但两千多年音变磨损了声旁，最先教的常用字反而最不规则、最不透明。</li>
+<li>真正罕见的是语素文字：在人类几次独立发明的文字里，只有汉字这一支仍在大规模日用。</li>
+<li>17 门语言的音节速率乘每音节信息量都在每秒约 39 比特，「某门语言语速快」多半是错觉。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="730a8dc3c2add7de">深入思考</h3>

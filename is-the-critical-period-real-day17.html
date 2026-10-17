@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -126,6 +132,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 「一开始能力弱反而学得好」这条，在机器上跑出过相反的两次</b>：Elman 1993 年让一个循环神经网络学一门人造语言，里面有关系从句和主谓一致。一次性喂全部句子，网络学不会；先只喂短句、或者人为把网络的短期记忆压小再慢慢放开，就学成了。Newport 由此提出「少即是多」：孩子学得好，可能正因为早期处理能力弱，被迫先抓住小片段。这跟「那道门不是砰一下关上的」那节的默认解释是反着的——不是能力衰减把门关上，是早期能力受限把门打开。由此推出的分歧可检验，而且已经被检验过：Rohde 和 Plaut 1999 年换成更接近自然语言的语法重跑，「先小后大」的好处消失了，有时还更差；他们认为网络自带从简单规律学起的倾向，不需要外部限流。<b>但这里不成立</b>的是这条链能回答的问题范围。模型可以把训练顺序倒过来重来一遍，人不能；更要命的是，模型不存在「之前没有任何语言」这个条件——它的第一语言永远就是它的唯一语言。课程顺序这件事模型能替人试，本期最硬的那条「第一语言缺席」，它连对照组都造不出来。</li>
 <li><b>神经科学与意识 · 关窗这件事，在别的系统里是能被撬开的</b>：小鼠视觉皮层有一个「哪只眼睛说了算」的窗口，开合时间很准。Hensch 一系的工作发现关窗跟抑制性神经元的成熟、以及神经元外面一层叫神经周网（perineuronal net）的结构有关；把这些干预掉，成年鼠的可塑性能部分回来。Gervain 等 2013 年顺着这条线，让成年男性服用丙戊酸两周并同时做音高训练，服药组辨认绝对音高的成绩高于安慰剂组。如果语言的年龄曲线跑的是同一台机器，它原则上可撬——这就给出一条能把类比变成检验的差异：撬开的应该是口音那一端（一张感知映射表），不该是语法；要是某种干预把晚起步者的口音和语法同时抬高了，反倒说明年龄效应不是单一窗口。<b>但这里不成立</b>的是证据强度的落差。丙戊酸那项是 24 人的交叉设计，换药之后的后半段两组没有差异，也没有独立复制；而绝对音高是给频率贴标签，语法不是一张感知地图。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>关键期假说由 Eric Lenneberg 1967 年提出，常被描述成一扇在青春期前后关上的门。</li>
+<li>Johnson 和 Newport 发现，七岁前到美国的移民语法判断与母语者无异，之后随到达年龄下降。</li>
+<li>青春期之后才到达的人，语法成绩曲线大致压平，但个体之间的差距反而突然拉开。</li>
+<li>66 万份网上测验数据曾把语法能力下降的起点估在 17.4 岁，重新分析却显示多数人更像连续下降。</li>
+<li>随起始年龄下滑本身是稳的，但曲线有没有拐点、拐点在哪儿，至今没有定论。</li>
+<li>语言的年龄效应不是一扇门而是几扇：口音收得最早，语法晚得多，词汇几乎不关。</li>
+<li>Genie 同时遭受营养不良、虐待和社会隔绝，这个单一个案证明不了语法有过期时间。</li>
+<li>同在九到十三岁起学美国手语的聋人里，早年有过口语的复述复杂句正确率 82%，没有过语言的仅 43%。</li>
+<li>Mayberry 的对照说明，决定后来学语言天花板的主要不是年龄，而是早年有没有过一门语言。</li>
+<li>晚学第二语言仍有代价，但比第一语言缺席小一个量级：天花板变低了，门并没有锁死。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="8554469423199965">深入思考</h3>

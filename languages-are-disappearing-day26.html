@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -125,6 +131,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 一份备份有多大，和它救不救得回来，是两件事</b>：机房里有条老规矩：从没做过恢复演练（restore drill，把备份真的还原成一个能跑起来的系统）的备份等于没有备份——恢复路径会随环境漂移悄悄腐烂，而这在备份体积上看不出来。跑的是「消失的到底是什么」那节第三问的机制：记录和使用是两件事，记录只买到「还有没有可能」。由此能给语言记录（language documentation）这行推出一个它现在没有的验收标准：现行指标是体量（录了多少小时、转写了多少页），演练标准问的却是有没有人只靠这批材料、在没有母语者可问的条件下产出一段新的、被社群接受的话——Wampanoag 正是这个演练真做成过的案例。它还推出一个可检验的预测：能不能复原，和材料体量的相关会弱于和「有没有自然对话录音」的相关——词表和翻译好的例句里没有人怎么接话、怎么打断、怎么开玩笑。<b>但这里不成立</b>的是验收方式：数据恢复的判定是二值的，字节要么一样要么不一样；语言没有这个基准，复活出来的必然带着复兴者母语的痕迹，算不算成功只能由社群判定。这也解释了为什么现代以色列那门语言算不算希伯来语的延续能吵几十年，而没人吵一次数据库恢复算不算恢复。</li>
 <li><b>演化生物学 · 两边都在数「还剩多少」，只有一边把「差多远」也算进去了</b>：保育生物学早就不只数物种数了。有个指标叫系统发育多样性（phylogenetic diversity）：把演化树上的枝长加起来，一个没有近亲的孤立类群顶得上一整簇亲缘很近的物种，按它排优先级名单会很不一样。这跑的是本期两条机制的合成：「两周一门」那节说分母本身是判断，「消失的到底是什么」那节说学科的损失落在样本边缘上——所以光数「还剩多少门」没问到点子上。语言这边的树是现成的，「给语言认亲戚」那期讲的比较法就是造树的工具。搬过同一个指标，能推出一个可以直接算、而且和现行排法给出不同答案的预测：孤立语言（language isolate，至今找不到任何亲戚的那些，比如巴斯克语）和只剩一两门成员的小语系会排到最前，大语系里的濒危成员往后挪。<b>但这里不成立</b>的是不可逆性：生物学里灭绝就是终点，基因没了就是没了；语言的载体是可学的，所以曼语能从「已灭绝」被改回「极度濒危」。也正因为有这种改判，语言这边的优先级要多算一个生物学不需要的量：还有没有材料能把它学回来。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>「每两周死掉一门语言」是把 1992 年的一个百年预测摊平得来的，并不是实际数出来的。</li>
+<li>濒危语言编目统计有记录的消亡，速率约为三个月一门；现存语言中约 45% 被判为濒危。</li>
+<li>2022 年对 6511 门语言的研究发现，受教育年限越长濒危越重，因为学校通常只用一门主导语言授课。</li>
+<li>Fishman 的分级量表里，家庭与社区的日常代际传递是决定性的一级，这一级失守，其余措施只是拖延。</li>
+<li>说话人数是滞后指标：语言按公文、买卖、学校、朋友、家里的顺序退出场合，家里最后丢也最骗人。</li>
+<li>Dorian 追踪东萨瑟兰盖尔语发现，「半个说话人」把名词复数的多种做法收缩成一种，这比人口曲线更早报警。</li>
+<li>宾语开头的 Hixkaryána 打破了「主语几乎总在宾语前」的共性，语言共性成不成立取决于最先消失的边缘语言。</li>
+<li>Wampanoag 靠 1663 年圣经译本和地契等文献被重建出新的母语者：文献救不活语言，但决定还能不能复活。</li>
+<li>希伯来语是唯一从无母语者变回日常第一语言的案例，前提特殊，结果也被认为是带着意第绪语底子的混合体。</li>
+<li>毛利语言巢和夏威夷的 Pūnana Leo 说明，成功的复兴都是把语言塞回照看小孩这种每天必然发生的场合。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="fc0c9b07975f0b25">深入思考</h3>

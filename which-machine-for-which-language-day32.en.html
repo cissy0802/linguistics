@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <body>
 <div class="container">
@@ -138,6 +144,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Evolutionary biology · "Can birds do recursion" is the wrong question, and it goes wrong exactly at the step the hierarchy is built on</b>: in 2006 Gentner and colleagues trained European starlings to distinguish two kinds of artificial song string: "some number of As followed by equally many Bs" versus "As and Bs alternating". The birds learned it and generalised to elements they had not heard, and the paper's title used the word "recursive". In 2009 van Heijningen and colleagues replicated it with zebra finches and found the same discrimination explicable by far cheaper strategies, such as memorising which pairs of adjacent elements occur; the two sides exchanged one round of replies and did not converge. The mechanism at work is the one from "either … or …": what rules out the cheapest device is never that the quantities match, it is that the paired items stand in an individuated dependency — the first A settles only against that one particular last B. A string of "some As then equally many Bs" can be judged by counting, with no pile of debts at all. What follows is not "the evidence is thin" but a directly actionable requirement on experimental design: quantity-matched material cannot in principle test for recursion, and to test for it you must make the material so that swapping one particular A forces one particular B to change with it. <b>Where this does not hold</b> is a harsher layer: lab material is always finite in length, and any finite set of strings lands on the cheapest rung — the classification is a classification of infinite sets. So "which rung does this species sit on" is in principle unanswerable in a lab; all that can be measured is which strategy it used. The same blade cuts back at us: our own placement rests on native speakers giving legality judgements about sentences they have never heard, and animals cannot give those.</li>
 <li><b>Society and institutions · Parliamentary procedure maintains a stack explicitly, and its depth limit comes from process design rather than from memory</b>: under the rules of order (Robert's Rules of Order), a main motion that has not yet been voted on can have a subsidiary motion moved against it, and another stacked on top of that; the rules require the immediately pending question to be disposed of first and then the next one out, and the chair and the recorder write the whole chain down. What runs here is that last-in-first-out debt list, the stack — parliamentary procedure implements it explicitly. And that yields a conclusion you would not otherwise see: the three-level ceiling in human language is not that nesting is intrinsically hard, it is that the stack has no external support. Wherever the stack is given external support — a pending list on a whiteboard, itemised minutes — the depth limit should run well past three, and the failure mode should differ: with no support, failure looks like never getting back to the original item; with support, failure looks like getting back to it but no longer matching the context it sat in. Those are two failures you can count separately in the minutes. <b>Where this does not hold</b>: the parliamentary stack is visible and auditable, and the chair can declare the whole chain cleared; the listener's stack in language is neither visible nor resettable. So the procedural depth limit is deliberately designed (unlimited nesting would paralyse the proceedings) while the linguistic one leaks out of memory. Treating a depth limit written into an institution as evidence about human cognitive limits runs the causation backwards.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Languages are ranked not by expressive power but by the shape of the debts a device must remember, and there are only four rungs.</li>
+<li>A finite-state machine remembers only where it is, yet it suffices for sound and word-form; Finnish inflection has been built as one.</li>
+<li>Because either-or and if-then can nest to any depth, sentences need a last-in-first-out stack, the context-free rung.</li>
+<li>Grammar allows center embedding without limit, but people fail to recall three levels, and real written text never reaches four.</li>
+<li>Deleting the middle verb of a three-level sentence makes English speakers read more smoothly, while German speakers show the opposite.</li>
+<li>Dutch is verb-final yet shows the English-style missing-verb illusion, shifting the explanation toward how common a structure is in each language.</li>
+<li>Shieber used Swiss German case marking to show that nouns and verbs can pair up crosswise, a shape no nesting stack can produce.</li>
+<li>Culy found that Bambara can repeat an arbitrarily long compound word as a whole, which requires matching two segments in the same order.</li>
+<li>Human language sits just above context-free, in what Joshi called mildly context-sensitive; one rung higher, parsing becomes unrealistic.</li>
+<li>Starlings learning "some A's followed by as many B's" do not prove recursion, because such strings can be judged just by counting.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Thinking Further</h3>

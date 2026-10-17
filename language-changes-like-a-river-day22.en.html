@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -118,6 +124,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Complexity science · Language change plots like a contagion curve, but its slope gives it away</b>: adoption of a new technology, the share of a population carrying a disease, the spread of a turn of phrase — all plot as an S, usually for the same reason. The more people have already changed, the likelier an unchanged person is to meet one. That has a direct consequence: slope is set by contact density, so a sparsely connected subgroup should rise more slowly. But the constant rate effect in "No change is made by everyone at once" paints a different picture: within one change, syntactic environments start far apart and rise at exactly the same slope. There is no such thing as contact density between syntactic environments, which means the quantity actually moving is not at the interpersonal layer at all. It is the relative weight of two rules inside each speaker, and every environment shares that one weight. <b>Where this breaks down</b> is precisely the contagion picture: if change spread by contact, a subgroup at the edge of the network would show a flatter curve; if two grammars are competing, the edge subgroup shows the same curve shifted right. That is a distinguishable prediction, and existing dialect corpora can be used to test it. Strength of evidence should be marked: the S-curve is a fitted shape, and recent work has systematically tested how well it performs on real change data — not every change fits it best.</li>
 <li><b>Distributed systems and AI · A large model can drive a word to high frequency, but it cannot drive the grinding machine</b>: Kobak and colleagues scanned fifteen million biomedical abstracts from 2010 to 2024 in 2025 and found a batch of words whose 2024 rate jumped far above what the trend predicted: "delves" around twenty-five times over, "showcasing" and "underscores" around nine. The section "Going to is being ground into a piece of grammar" gives grammaticalization three ingredients: high frequency, semantic bleaching, and erosion of form. Machines have now turned the frequency dial alone all the way up, which yields a prediction you could not otherwise see: these words should begin to bleach into contentless filler, yet should <b>not</b> get shorter — erosion comes from mouths saving effort, and a model's output never passes through a vocal tract. Checking spoken corpora for contracted pronunciations of these words is a test somebody could run. <b>Where this breaks down</b> is the spreading end: in the Martha's Vineyard mechanism, a form is adopted because a speaker wants to sound like some group of people. A model leans toward nobody; it is the average of its corpus. So the words it inflates get actively avoided for "sounding machine-written" — a force pointing the other way, which could turn an S-curve back down midway. Natural diffusion curves do not do that.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In seventeenth-century English, k and g dropped before n across the board — knee, know, knife all at once — while the spelling stayed put.</li>
+<li>Sound change targets a sound in a given position rather than individual words, which is why it sweeps through thousands of words together.</li>
+<li>Latin pater against English father, and tres against three, reflect Germanic sound laws each running over thousands of words, not coincidences.</li>
+<li>Verner explained the leftover exceptions in 1875 by where the older accent fell, and English was/were preserves that s/r alternation as a fossil.</li>
+<li>Middle Chinese final -p, -t, -k survive in Cantonese, while Mandarin lost every stop in that syllable-final position wholesale.</li>
+<li>Lexical diffusion holds that a change can spread word by word and stall; Labov's settlement is that both it and regular sound change operate.</li>
+<li>The going-to future is grammaticalization: meaning bleaches, the form erodes to gonna, the slot hardens — and gonna can only be followed by a verb.</li>
+<li>Chinese le, ba and gei all bleached from full verbs into grammatical markers, and motion verbs turning into future markers recurs across unrelated languages.</li>
+<li>Unidirectionality in grammaticalization is a strong statistical tendency, not a law; frequency drives the erosion, which is why grammatical words are short.</li>
+<li>Kroch's constant rate effect shows one change starting at different times in different syntactic environments but rising at the same slope, unlike contagion.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Deeper Questions</h3>

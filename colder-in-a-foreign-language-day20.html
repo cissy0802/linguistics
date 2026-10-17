@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -120,6 +126,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 模型也会换种语言换个答案，但它没有一个对着它说过话的人</b>：多语言大模型对同一道道德或分配题，换个提示语言答案会变。2024 年有工作报告，同一模型在印地语和斯瓦希里语提示下的道德推理评分低于英语、中文和西班牙语；另有研究在分配正义场景上测出 9 到 56 个百分点的跨语言差距。这看着和本期一模一样，正因为太像才要小心。"母语里的『你羞不羞』会让你出汗"那节的机制是：情绪挂在习得情境上，不挂在词义上——那是一段有人对着你说话的历史，模型没有这一档。于是两边的语言依赖必须由不同的量预测，这就是可检验的差异：模型的跨语言差距应当跟该语言在训练和对齐数据里的份额走，并且可以被"先在内部译成英文再作答"大幅抹平；人的差距抹不平——你可以要求一个人把外语题在心里译成母语再答，但读到那句话时该起的生理反应已经没起，补不回来。<b>但这里不成立</b>的是把模型的这种不一致读成"模型也有母语"：模型的差异是数据分布的差异，加数据就能移动；人的那一档是习得史，练到很熟只是把效应缩小（元分析里自评阅读熟练度越高效应越小），并不能把它变成另一门母语。</li>
 <li><b>社会与制度 · 把工作语言统一成英语，等于给一类决定装了单向的衰减器</b>：跨国公司和国际组织常把工作语言定成一门对多数在场者而言的第二语言，理由通常是"沟通效率"。"桥上那一推"那节的机制说明这个选择不是中性的：外语削弱的是义务论那一侧——不许把人当工具的那条禁令——而不是把决策整体调准。推论因此有方向：二语环境里开的会，涉及"对人的伤害"的方案（裁员方式、赔偿口径、把谁排除在外）更容易过，而纯财务、不涉及伤害的决定不该出现同样的偏移。这个差值能查：同一家公司同一类议题，母语子公司会议和英语总部会议分头统计通过率，看偏移是不是只出现在前一类上。<b>但这里不成立</b>的是直接把个人实验外推到机构：实验里的题匿名、一次性、无后果，真实决定是集体的、留痕的、要担责的；更要命的是会上话语权最大的往往是母语者或最熟练的那几个，而元分析恰恰说熟练度越高效应越弱——最该被衰减器影响的那几张嘴，正好是受影响最小的。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>600 人救人题里，「救下 200」和「死掉 400」是同一件事，却把多数人推向相反选择，这叫框架效应。</li>
+<li>Keysar、Hayakawa 和 An 2012 年把救人题译成被试学过的外语，母语里出现的框架翻转在外语里消失了。</li>
+<li>用外语问一个期望值为正的赌局，接受率会上升，真掏钱下注的版本也是如此。</li>
+<li>外语变的不是算术能力，而是对措辞的敏感度；换成结果偏差、代表性启发等其他偏差，两种语言没有差别。</li>
+<li>Costa 等 2014 年发现，天桥推人题里选择推的比例从母语的 20% 升到外语的 33%，扳道器版本则没有差别。</li>
+<li>Hayakawa 等 2017 年用过程分离法发现，外语削弱的是「不许把人当工具」的禁令，而不是加强功利考量：感觉得更少，不是想得更多。</li>
+<li>违反社会规范却没有实际受害者的事，用外语读会被判得更轻，说明外语变动的是反感本身。</li>
+<li>两份元分析都确认外语效应存在，但对阅读熟练度是否调节效应给出了不一致的答案。</li>
+<li>皮肤电导实验显示，母语里的童年训斥语引起的生理反应最强，换成二语后下降最多，情绪挂在学会这句话的情境上。</li>
+<li>Miozzo 等 2020 年发现，从小在家讲的威尼托语和贝尔加莫语也会产生外语效应，情绪距离解释不了，语言平时用在什么场合是更好的候选。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="1e80d87cf5ee17d8">深入思考</h3>

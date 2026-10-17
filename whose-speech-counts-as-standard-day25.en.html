@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -130,6 +136,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · A rule nobody follows dies within one revision in a protocol, and lives two centuries in a language</b>: everyone who writes specifications knows the text does not decide — the implementation with the largest install base does. Web standards eventually gave up and became a living document that tracks what browsers actually do. That is steps two and four from "a standard is the variety that got picked": codification and acceptance are separate events, and the authority of a written standard comes not from its content but from how many people it reaches. From which a measurable difference follows — for the same condition, a rule widely violated, the lifespans differ by orders of magnitude. On the protocol side, a mismatch is overwhelmingly resolved by editing the spec to match the implementation, within a revision or two. On the language side, the ban on splitting infinitives has run from 1803 to today, is violated daily by nearly every native speaker of English, and still sits in plenty of editing manuals. The difference is conformance testing: a machine can decide whether an implementation complies, and no machine can decide whether a person is "speaking correctly" — other people do, and a person can violate a rule and go on believing it is right. <b>Where this breaks down</b> is the relation between author and system: a spec author does not violate the clause just written in the same sentence that states it, while Lowth wrote that prepositions at the end are less solemn in a sentence ending with a preposition. So there is nothing in the history of protocols like native-speaker intuition, evidence that can overturn the written rule — and in linguistics it is the hardest evidence there is.</li>
 <li><b>Complexity science · Put a reward on a line and people pile up at it, and the ones pushing hardest are not the ones above it</b>: cut a continuous quantity with an administrative line — a passing score, a threshold on a metric, a target — and the distribution grows a spike just above it, which economists call bunching: once the line carries reward, what gets optimised is the line, not the quantity behind it. "Part of the accent you hear" is the language version of the same thing — attitudes put a price on certain forms. Together they predict a shape you would not otherwise expect: if the story were simply "higher status, more standard", the curve would rise monotonically; the bunching model predicts a non-monotonic one, with the group nearest the line and most invested in crossing it overshooting. Labov's New York data has exactly that shape. <b>Where this breaks down</b> is whether the threshold is known. A passing score is published and everyone can see where it sits; nobody publishes how standard is standard enough, and the judging is dispersed across every listener, a moment at a time. So overshoot in language often aims at the wrong target — adding r where the prestige form has none. Systems with a published threshold pile up at the line and do not keep pushing past it in the wrong direction, which is itself a signature for telling the two kinds of system apart.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Standard Italian rests on fourteenth-century Florentine, chosen because Dante, Petrarch and Boccaccio were the most widely copied writers.</li>
+<li>China's 1913 pronunciation commission designed a careful north-south compromise that nobody spoke natively, and by 1932 the standard switched to Beijing speech.</li>
+<li>Standardisation runs in four steps: select a variety, codify it, extend it to law, schooling and news, then win acceptance; none depends on the variety itself.</li>
+<li>Norway has two official written standards and no spoken standard at all, so picking one spoken variety as the norm is not a necessary step.</li>
+<li>In a dialect continuum neighbouring villages always understand each other while the ends do not; schooling, not linguistics, split Dutch from German at the border.</li>
+<li>Danish, Norwegian and Swedish are one language by mutual intelligibility and three by states and spelling; a dialect is simply a variety that never got standardised.</li>
+<li>The ban on ending sentences with prepositions began with Dryden's 1672 complaint; Lowth in 1762 called it a matter of style, and later textbooks hardened it into a rule.</li>
+<li>African American English drops the copula only where Standard English could contract is, Labov's 1969 evidence that stigmatised varieties follow strict rules of their own.</li>
+<li>In Rubin's 1992 study one native speaker's recording, paired with an East Asian face, made listeners hear an accent and score lower; follow-up work suggests judgement shifted, not hearing.</li>
+<li>In Labov's New York survey the lower middle class overshot the upper middle class on r while reading word lists, the same shape as bunching at an economic reward threshold.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

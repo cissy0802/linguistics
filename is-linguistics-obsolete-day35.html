@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -125,6 +131,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>演化生物学 · 把演化史上没走的那条路真的合成出来，才知道它为什么没走</b>：2006 年 Bridgham、Carroll 和 Thornton 把一类激素受体蛋白推断出的四亿多年前的祖先序列真的合成了出来，还造了几个演化史上从未留下的中间版本逐个测。其中一个发现是：两个必需突变里先发生的那个本身不改变功能，它只是让后一个变得可行——顺序一换这条路就走不通。这跑的是「两千四百种语言的语法被手填进表里」那节的机制：要回答「为什么只长成这几种形状」，你得有一个包含了没出现的形状的对照集，而没出现的那些只能由人指定并造出来。于是语言学这边缺的半截露出来了：现有那些「人学不会的语言」实验只测过单个学习器学得快不快，没测过它传不传得下去。可检验的差异是：如果真正的约束在代际传递而不在单个学习者，那么把一门学得慢但学得会的变体放进迭代学习实验（Kirby 等人 2008 年那套：上一代的产出当下一代的输入，连传十代），它应当在几代内走形，而一个大模型单独学它毫无压力。<b>但这里不成立</b>的是适合度这个前提：生物学能直接把它数出来（活下来几个、繁殖多少），语言没有这样一个量。一门语法更难学，不等于说它的人更少生孩子；语言传不传下去由政治、学校和经济决定。</li>
 <li><b>神经科学与意识 · 一块答案完全已知的芯片，把那套分析手段整个考了一遍</b>：2017 年 Jonas 和 Kording 拿神经科学的标准分析手段去对付一块跑游戏的 MOS 6502 芯片。关键是这块芯片有一份完整正确的答案：电路连线和指令集都公开。他们一个个「损毁」晶体管，画调谐曲线，算信号间的相关与因果，做降维，拿到一堆统计上显著的发现（比如某几个晶体管一拆游戏就跑不起来），却没一条能推出这块芯片是怎么工作的。这跑的是「给模型出语法题的那张卷子」那节的机制：测出的符合度取决于题目覆盖了什么，而覆盖什么由一套独立给出的理论指定——指标自己不会告诉你它漏了什么。由此推出一件能做的事：先在答案已知的系统上校准方法。语言学这侧的对应物现成——拿一门规则完全由人写定的人工语言去训模型，看现有的探针和基准能不能把那套规则原样复原；复原不出来的方法，用在人类语言上得出的结论就该降一档。<b>但这里不成立</b>的是「有唯一正确答案」这个前提：芯片有一份电路图，语言没有，人类语法的真答案本身就是待解释的东西。所以这条校准只能排除假阳性，不能证明通过校准的方法就一定能发现真机制。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>卡拉芒语只有约一百三十人使用，网上几乎没有它的文本，模型要翻译它只能整本读 Visser 写的语法书。</li>
+<li>在「从一本书学翻译」基准上，最好的模型两个方向都没追上只读同样材料的人类学习者。</li>
+<li>模型把进行体标记 teba 译成英语副词 progressively，说明它在查词表，而没有运用语法规则。</li>
+<li>全世界约七千种语言里，绝大多数的网络文本量和卡拉芒语处在同一个量级。</li>
+<li>Grambank 把 2467 种语言的 195 个语法特征制成大表，由一百多位语言学家按参考语法逐格手填。</li>
+<li>「宾语在动词前的语言倾向用后置词」是 Greenberg 发现的统计倾向，有反例，不是铁律。</li>
+<li>语言的语法特征更多由谱系而非地理或环境预测，接近一半的语法多样性正面临丢失。</li>
+<li>测试模型语法的最小对题集，靠人工标注的句法库和词形变化表才扩展到 101 种语言。</li>
+<li>BabyLM 比赛把训练量限定在一亿词左右，接近孩子长到十几岁听到的量，把数据量之争变成了实验。</li>
+<li>MOS 6502 芯片实验提示：分析方法应先在答案已知的系统上校准，再用于人类语言。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="170885b4b3839fbf">深入思考</h3>

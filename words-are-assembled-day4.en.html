@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -173,6 +179,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · whether the frequency effect attaches to the rule or to the entry</b>: someone took Berko's materials and gave them to a large language model. Weissweiler and colleagues did this in 2023 across English, German, Tamil and Turkish, and found ChatGPT falling well short of purpose-built morphological systems (most visibly in English), with a "real word bias" in all four languages — the same rule applied to an existing word comes out far more accurate than the same rule applied to an invented one. The mechanism at work is the one from "you can pluralize a word that does not exist": if a rule is attached to structure, whether the stem really exists should make no difference. But the useful part of this is not "models are worse than people." It is a testable difference: <b>humans have a frequency effect too, just in a different place</b>. In Berko's own data children fall from 91% to 28%, and what varies is not how familiar the stem is but how often that sub-rule shows up in the language; when the model falls, what varies is how many times that word form appeared in training. So the test is concrete: build a batch of entirely new stems, half taking a common morphological pattern, half taking a rare but perfectly regular one. Human scores should track the frequency of the <b>pattern</b> and ignore the stem; if a model tracks the <b>entry</b> instead, the two curves separate right there. <b>Where this breaks down</b>: measuring a difference is not the same as showing the mechanisms differ. A large enough model could learn sensitivity to patterns, at which point the curves converge — and that would still not prove a rule is what sits inside. The experiment can falsify "the model only memorizes entries." It cannot establish "the model learned the rule."</li>
 <li><b>Society and institutions · a required field being full does not make it accurate</b>: the deadly property of inflection is that you cannot opt out — an English speaker is forced to choose singular or plural on every countable noun, even with no idea how many there are. Carry that to forms and ticketing systems and you get a counterintuitive conclusion: a field's <b>fill rate</b> and its <b>information content</b> are unrelated, and often run opposite. A required field is 100% filled by construction, and precisely because it cannot be skipped, its discriminative power may be near zero; an optional field, once someone chooses to fill it, carries the signal that someone bothered. The metric to switch to is each field's mutual information with the outcome you actually care about, not completeness. <b>Where this breaks down</b> is the most useful part: linguistic obligation is costless and unconscious — nobody utters a "lazy plural" to save effort, so the values of grammatical categories stay trustworthy. Form obligation has friction, and people enter garbage to get past it. The difference is visible: grammatical number tracks reality, while a required field's values pile up into an unnatural spike on some default option. Once you see that spike, the field has already stopped working.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>A morpheme is the smallest piece that still carries meaning, and the test is whether that piece can be reused in some other word.</li>
+<li>In Jean Berko's 1958 wug test, children pluralized a word they had never heard, which means they store a rule, not a word list.</li>
+<li>The English plural has three pronunciations, chosen by the preceding sound: s after voiceless consonants, z after voiced sounds, an extra syllable after hissing sounds.</li>
+<li>Children master the first two plural endings early but lag on the extra syllable: about three in ten got the made-up gutches, versus 91% for real glasses.</li>
+<li>Derivation makes new words, often changes word class and is full of gaps; inflection makes no new words, has almost no gaps and always sits on the outside.</li>
+<li>Turkish is agglutinative, one suffix per meaning, while Latin is fusional, with a single ending carrying person, number, tense and more at once.</li>
+<li>The defining trait of inflection is that you cannot opt out, and Jakobson argued that languages differ mainly in what they force you to express.</li>
+<li>Mandarin has little inflection, and the plural marker men is optional and restricted, but compounding, semi-bound affixes and reduplication make its word-building very productive.</li>
+<li>What Mandarin does force on speakers is the classifier; children start by using the general ge for everything, the same path as English children saying goed.</li>
+<li>A mandatory form field is always 100% filled yet may carry almost no information, so judge fields by mutual information with the outcome, not by completion rate.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

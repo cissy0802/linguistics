@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -129,6 +135,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · A model's chain of thought and the sentence in your head: only one of them is keeping something from fading</b>: large models emit a chain of thought before answering a hard question, which looks like inner speech printed out. But the mechanism in "Mutter 'the the the'" says the two are doing different jobs: human inner speech keeps alive a store that fades in about two seconds, and occupying it costs you span immediately, while a model's context sits there intact and does not fade — what those tokens buy is extra computation steps. That yields a checkable difference, and both sides have been tested. Pfau, Merrill and Bowman found in 2024 that replacing the chain of thought with a run of meaningless dots still moved models from failure to success on two algorithmic tasks: the content can be empty as long as the positions are filled. People go the other way — substitute meaningless syllables for rehearsal and the function is simply gone. <b>Where it breaks down</b> is treating human inner speech as a readable record of reasoning: Turpin et al. (2023) slipped biasing cues into the input, the answers moved with the bias, and the chain of thought never mentioned the cue — it is text on the output channel and can come apart from the actual decision. Human inner speech is not on the output channel at all, and self-reports of it are reconstructions after the fact. So "make the chain of thought faithful" has no corresponding operation in people.</li>
 <li><b>Neuroscience and consciousness · If inner speech is an articulatory act, it should leave a signature that does not depend on self-report</b>: when the brain issues a motor command it also sends a copy of the prediction to the sensory system (corollary discharge), so the expected self-produced signal gets damped — the same mechanism that makes you unable to tickle yourself. "It is condensed, it argues back" says inner speech is rehearsed articulation, which makes the prediction sharp: say a syllable silently while the same syllable is played aloud and auditory cortex should respond less; play a different syllable and it should not be damped. That prediction has been measured, and in patients with current hallucinations the direction reverses — the matched condition draws a larger response, with the degree of reversal tracking hallucination severity. The new conclusion is that inner speech now has a handle independent of self-report: whether people who report no inner speech show the damping is a doable experiment nobody has run, and it would separate "no experience" from "no mechanism". <b>Where it breaks down</b> is reading hallucinations as inner speech gone astray: the same suppression deficit shows up in patients without hallucinations, so it is not sufficient; and many hallucinations carry a definite other identity and content outside the hearer's control, which rehearsing a sentence does not generate. Evidence strength: electrophysiological correlations in small samples; the chain is still a hypothesis.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The phonological similarity effect: rhyming letters are harder to recall in order, even when they were only ever seen, never heard.</li>
+<li>Muttering "the the the" while memorizing letters shrinks memory span and wipes out the phonological similarity effect.</li>
+<li>Baddeley's phonological loop pairs a sound store that fades in about two seconds with silent rehearsal that keeps refreshing it.</li>
+<li>Welsh number words take longer to say than English ones, so Welsh–English bilinguals hold fewer digits when counting in Welsh.</li>
+<li>Random-beep sampling found inner speech in only about a quarter of sampled moments; some people had it almost always, others never.</li>
+<li>Inner speech is often condensed to a bare predicate and often dialogic, which is what lets rumination keep running on its own.</li>
+<li>Deaf signers rehearse in signs: similar handshapes and long movement paths hurt recall, so the same loop runs on the hands.</li>
+<li>People reporting little inner speech struggled with rhyme judgements and similar-sounding word lists, but not with task switching.</li>
+<li>Aphasic patients with grammar badly damaged kept basic calculation intact: losing grammar did not take arithmetic and reasoning with it.</li>
+<li>Replacing a model's chain of thought with meaningless dots can still help it, while replacing human rehearsal with nonsense syllables kills it.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

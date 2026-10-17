@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -115,6 +121,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 人脑对「不可能的语法」的反应不是学不会，是换了一套线路</b>：2003 年 Musso、Moro 等人让说德语的人学意大利语和日语的真规则，以及几条「不可能的规则」，比如否定词永远放在第三个词后面，把「Maria compra il caffè」（玛丽亚买咖啡）变成「Maria compra il no caffè」。受试者把假规则也学会了，正确率不低；差别在大脑：只有学真规则时，布罗卡区（左额叶一块与语法加工密切相关的区域）的激活随练习上升。跑的是「最站得住的共性」那节的分岔：能力和使用分开测。由此推得出一个可检验的差异：「大模型学到语法了吗」那期讲过，小型语言模型学这类人造语言也更费力，但只比困惑度（模型对下一个词有多意外）比不出人那种「换线路」。该测的是：模型学会数词位规则后，这条规则是不是由处理真实主谓一致的那批内部单元在算。人是分开的；模型若混在一起，它和人就在这一点上不同，与它学得快慢无关。</li>
 <li><b>演化生物学 · 判断一个特征是不是适应，要看它在树上是不是跟着另一个特征一起变</b>：生物学早就碰到过同样的数数陷阱：一百种鸟都有某个特征，可能只是一个祖先演化了一次。Felsenstein 1985 年的解法是只看演化树上各分支的独立变化。跑的是「宾语放哪，介词就跟着放哪」那节 Dunn 的方法，推出的结论是：若对角线来自「别让相关的词离太远」那种压力，那么任何语系里一门语言改掉动宾顺序之后，都应在之后的几代里较快地把介词也改掉，而且这种「跟着改」应在各语系里方向一致——这能直接在树上检验。<b>但这里不成立</b>的是树本身：物种之间基因很少横向流动，语言却大量互相借用，相邻的不同语系会一起换语序，这部分变化不走家谱；而且语言的家谱往回只推得出几千年，比生物的树浅得多，能观察到的独立变化次数少，这正是 Dunn 那篇统计力受质疑的根源。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>「语言共性」有三种读法：每门语言都必须有、大多数语言倾向于有、人脑能处理但不一定用，争论双方常说的不是同一种。</li>
+<li>Greenberg 1963 年的蕴含共性：宾语在动词后的语言多用前置词，宾语在动词前的语言多用后置词。</li>
+<li>WALS 统计中，动宾配前置词 456 门、宾动配后置词 472 门，两种交叉组合加起来只有 56 门。</li>
+<li>同一语系的几百门语言可能只是一次继承被数了几百次，所以单纯数语言会高估共性。</li>
+<li>Dunn 等人 2011 年用演化树方法看四个语系 589 门语言，发现多数语序依赖只在部分语系出现，形式也各不相同。</li>
+<li>反方认为四个语系的统计力不够；目前共识是语序对角线是真实倾向，但算不算法则仍无定论。</li>
+<li>Everett 主张亚马逊的皮拉罕语没有从句嵌套，这挑战了「递归是人类语言能力唯一独有部分」的假说。</li>
+<li>反驳者指出 Everett 早年自己的语法曾分析出嵌套，且德语名词前所有格同样难叠层；语料复查也无法定论。</li>
+<li>如果共性指人脑的能力而非每门语言都得用，一门语言不用递归就推翻不了它，但这样的共性也难以被证伪。</li>
+<li>37 门语言的语料显示相关词距离都比随机词序短，依存距离最小化可能就是语序对角线背后的工作记忆压力。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="83cd4d3b77696cc2">深入思考</h3>

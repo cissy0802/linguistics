@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -140,6 +146,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Buddhist philosophy · "cow" means "not a non-cow" — a theory of meaning built purely on difference, written down in the sixth century</b>: Buddhist epistemology has a doctrine called apoha, literally "exclusion". Dignāga (roughly 5th–6th century CE) argued that the word "cow" does not point positively at a class of real things; it is constituted by excluding every non-cow. The mechanism is the one running through this issue: a word's position is fixed by what it differs from, not by content it carries inside itself. That yields a conclusion you would not otherwise reach — the failure to separate "hot" from "cold" is not sloppy engineering but a consequence of the theory itself: if meaning is purely differential, two words whose contrast sets coincide must be indistinguishable. It even suggests a test: rank words by how far their contrast sets overlap, and that ranking should predict vector distance, most sharply for antonyms. <b>Where it breaks down</b> is the ground of the exclusion. In apoha the excluding is purposive — later thinkers anchored it in whether something achieves a practical effect, milk or ploughing, which is why cows form a class at all. Counting has no purpose; all it can exclude is words that never showed up together. Apoha can say why cows and horses are two classes; a distributional method can only report that the two words are similar.</li>
 <li><b>Psychology · put words in a space twice, once with coordinates from people and once from text, and the two must disagree precisely on antonyms</b>: in 1957 Charles Osgood built the semantic differential — have people rate a word on scales running between poles like good–bad, strong–weak, fast–slow, then factor-analyse. Three dimensions keep falling out: evaluation, potency, activity, and they recur across communities speaking many different languages. The contrast is clean: both methods compute a position for each word, but one takes its coordinates from human responses and the other from co-occurrence in text. That gives a testable difference with a known direction — the two sets of coordinates must disagree most on antonyms, since "good" and "bad" nearly coincide in a co-occurrence space while sitting at opposite ends of the evaluation dimension. Antonymy is not unmeasurable; it needs a different instrument. <b>Where it breaks down</b> is coverage: the semantic differential has only three dimensions and all of them are affective, so it cannot separate "cat" from "dog" (both mildly good, mildly active), which a co-occurrence space does easily. Which one carries more information depends on which kind of difference you are asking about.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The distributional hypothesis holds that a word's meaning comes from its neighbours: four sentences of context are enough to guess that tezgüino is an alcoholic drink.</li>
+<li>Zellig Harris and J. R. Firth stated the idea in the 1950s, and its real weight turned out to be that neighbours can be counted while reference cannot.</li>
+<li>Distributional methods measure whether two words fit the same slot, not whether they mean the same thing, so antonyms like hot and cold are the hardest pair to separate.</li>
+<li>Latent semantic analysis squeezed a huge, mostly empty co-occurrence table into a few hundred numbers per word and scored 64.4% on TOEFL synonym items in 1997.</li>
+<li>The word2vec trick of king minus man plus woman landing on queen is overrated, because the standard test excludes the three input words, and king itself would otherwise usually win.</li>
+<li>Word vectors reproduce human implicit associations, since co-occurrence counts cannot separate facts about the labour force from habits in how people write.</li>
+<li>Giving each word a single string of numbers forces an average over all its uses, so the senses of Mandarin dǎ or English "bank" collapse into one position.</li>
+<li>Three- and four-year-olds can fast-map a new word like "chromium" to a colour after a single hearing, while a co-occurrence space usually needs dozens to hundreds of occurrences.</li>
+<li>Bender and Koller's fable of an octopus tapping an undersea cable argues that meaning cannot be learned from linguistic form alone, and the debate is still open.</li>
+<li>Dignāga's apoha theory defines "cow" by excluding everything that is not a cow, and a meaning built purely on difference likewise cannot separate words whose contrast sets coincide.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

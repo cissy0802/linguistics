@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -134,6 +140,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 模型的"思维链"和你心里那句话，只有一样是在给快褪的东西续命</b>：大模型解题时会先生成一段"思维链"（chain of thought），看着像内语被打印出来。但"不停嘴地念『the the the』"那节的机制指出两者的活不同：人的内语在给一块两秒就褪的存储续命，占住它就掉跨度；模型的上文完整躺着不褪，那段话买到的是额外计算步数。可检验的差异因此有了，两边也都测过——Pfau、Merrill 和 Bowman 2024 年发现把思维链换成一串毫无意义的点号，模型在两类算法任务上照样从做不出变成做得出（内容可以是空的，占住位置就行）；人反过来，用无意义的音节替代排练，功能直接没了。<b>但这里不成立</b>的是把人的内语当成"可读的推理记录"：Turpin 等 2023 年把偏向性提示塞进输入，模型答案跟着偏而思维链从不提它——那是输出通道上的文本，能和真正的决定脱钩；人的内语不在输出通道上，自述是事后重构的。于是"要求思维链忠实"这类补救在人身上没有对应操作。</li>
 <li><b>神经科学与意识 · 如果内语是发音动作，它就该留下一份不靠自述的签名</b>：大脑发运动指令时会同时发一份预告给感觉系统（corollary discharge，伴随放电），预期中的自身动静因此被压低——这是你挠自己不觉得痒的同一套机制。"它是压缩的、会跟你吵架"那节说内语是发音动作的排练，推论就很硬：在心里默念一个音节的同时外放同一个音节，听觉皮层的反应应当被压低；默念的和外放的不一样就不该压低。这个预测被测到了，而且在有幻听的患者身上方向反转——匹配时反应反而增强，程度与幻听严重度相关。新结论是内语有了个不靠自述的抓手：自述"没有内语"的人在这个任务上压不压低，是一个能做而还没做的实验，做出来就能分开"没有体验"和"没有这套机制"。<b>但这里不成立</b>的是把幻听读成"内语走丢了"：同样的抑制缺损在没有幻听的患者身上也测到，不是充分条件；许多幻听还带着明确的他人身份和不受控的内容，那不是"排练一句话"能生成的。证据强度：脑电相关加小样本，链条仍是假说。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>语音相似性效应：读音相近的一串字母更难按顺序记住，哪怕全程只用眼睛看、没出过声。</li>
+<li>一边不停小声念「the the the」一边记字母，记忆跨度下降，语音相似性效应也跟着消失。</li>
+<li>Baddeley 的语音回路由一块约两秒就褪的声音存储和「在心里念一遍」的排练机制组成。</li>
+<li>威尔士语数词念起来比英语长，威尔士语—英语双语者用威尔士语记数字串的跨度明显更短。</li>
+<li>随机时刻抽样发现内语只出现在约四分之一的时刻，有人几乎每次都有，有人一次都没有。</li>
+<li>内语常被压缩到只剩一个谓语，也常是对话式的，对话这一维正是反刍能自己续下去的原因。</li>
+<li>聋人手语者在心里「打手」：手形相近、动作路径长的手语串更难记，同一个回路排练的是手。</li>
+<li>自评内语少的人在押韵判断和记音近词上更吃力，任务切换和范畴效应却与内语多的人无异。</li>
+<li>失语症患者语法严重受损、基本计算程序却完整：语法这套机器坏了，算术和推理骨架没跟着坏。</li>
+<li>大模型的思维链换成无意义点号照样管用，人的排练换成无意义音节就失效，两者干的活不同。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="1dea490e7c092af8">深入思考</h3>

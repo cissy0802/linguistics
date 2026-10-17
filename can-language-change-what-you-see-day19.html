@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -136,6 +142,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 坐标系这件事，机器把它写成一个字段，说话的人只能熔进句子</b>：机器人软件里有一套叫坐标变换树的东西——地图、车身、摄像头各有自己的坐标系，两两之间的关系被显式记成一条带时间戳的变换，一个坐标在系统里流动时永远带着「这是在哪个系里说的」标签。「有一群人从来不说『左边』」那节的机制说：绝对框架不是语言发的，是环境线索加习惯校出来的，语言只把其中一套变成强制项，于是说话人必须一直在线维护一个方位估计。并排看能推出一个原本看不出的结论：代价不在词汇上，在维护上。坐标树的经典故障不是「不知道北在哪」，是拿到一条过期变换还照用，输出一个自信的错位；而人丢了方位是知道自己丢了的，会当场切回「在你左手边」。可检验的差异就在这儿：人跨参照框架时有一个「我不确定」的挡位，坐标树没有这一挡，它只会外推。<b>但这里不成立</b>的是把坐标树当成 Guugu Yimithirr 的模型——机器把坐标系写成和内容分开的字段，接收方自己换算；说 Guugu Yimithirr 的人没有这个字段，方位熔在句子里，不承诺一个方位就说不出这句话。而「强制」正是弱版本的动力源，字段可选的系统里它没有对应物。</li>
 <li><b>复杂性科学 · 颜色词的刀口不是随手划的，是被环境的颜色统计压到那儿的</b>：Gibson 等 2017 年让多门语言的使用者给色卡命名，再算「听到这个词能猜中是哪块色卡」的信息量。从亚马逊的 Tsimane' 人到波士顿的学生，暖色（黄、红）一律比冷色（蓝、绿）传得更准；他们接着去数自然照片，发现物体倾向于是暖的、背景倾向于是冷的。Zaslavsky 等 2018 年把这做成压缩问题，发现各语言的颜色划分都接近最优压缩。「俄语里的蓝有两个名字」那节的机制是：范畴边界只在边界附近、只在你要做区分的那一刻，值几十毫秒。两头接起来，因果方向就翻了——不是语言随手切开世界然后脑子跟着走，是世界里「需要被分开的东西」的统计把刀口压到了那儿。可检验的差异：一门语言的颜色边界应当能从它使用者接触到的颜色统计预测出来，跟谱系亲缘关系不大——同语族的两门语言，一门的使用者染布、另一门不染，边界该分头走。<b>但这里不成立</b>的是时间尺度：压缩模型把「需要区分什么」当成给定且稳定的，可染料和工业颜料在几十年里就能改写它，而基本颜色词出名地迟钝。所以它解释得了语言之间的分布，解释不了单门语言为什么不跟着需求走。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>语言相对论今天争的不是「想不到」，而是语言强制的区分在不说话时还起不起作用。</li>
+<li>俄语必须在浅蓝 goluboy 和深蓝 siniy 之间二选一，没有一个中性的「蓝」。</li>
+<li>Winawer 2007 年发现俄语被试辨认跨界蓝色更快，占住语言资源后这点优势就消失了。</li>
+<li>俄语蓝色效应只有几十毫秒，2020 年的重做没有复现，目前应算有争议而非已确立。</li>
+<li>「Himba 人挑不出蓝方块」出自 2011 年电视纪录片，文献里找不到对应实验。</li>
+<li>Guugu Yimithirr 语用东南西北代替左右，说一句普通的话就得随时知道北在哪。</li>
+<li>Li 和 Gleitman 只拉起实验室百叶窗，美国学生的方位选择就从相对解法变成一半一半。</li>
+<li>参照框架由环境线索和习惯校准，语言只把其中一套变成强制项，迫使人持续维护方位估计。</li>
+<li>Aymara 语用「前面」指过去、「背后」指未来，说话人的手势也朝身前指过去、朝身后甩未来。</li>
+<li>Pormpuraaw 的人把时间卡片从东排到西，换个朝向就换排法，语言改变的是默认值而非能力。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="04500c123b400542">深入思考</h3>

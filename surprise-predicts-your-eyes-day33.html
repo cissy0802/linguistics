@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -131,6 +137,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>心理学 · 大脑里另一条「预期落空」的信号，形状跟这条不一样，而这个差别能测出来</b>：多巴胺神经元在奖赏兑现那一刻的放电幅度，随事先预期的概率单调变化——Fiorillo 等人 2003 年在猴子身上把整条概率范围扫了一遍。经典的时序差分解释把这个信号写成「实际减预期」，对概率是线性的；而「每砍半一次」那节的机制是对数的，代价不看概率差了多少，看被除了几次 2。两条都叫预期落空，形状却不同，于是能推出：它们不可能是同一个量的两种测法，必然是两套账，一套按差值结算，一套按信息量结算。这是能判的——预期从 0.5 降到 0.25，和从 0.01 降到 0.005，线性那套说前者冲击大得多，对数那套说一样大。<b>但这里不成立</b>的是把两者直接对接：多巴胺那条信号带符号，好于预期是正、差于预期是负；阅读时间那条没有符号——出乎意料的好词和出乎意料的坏词，同样让你多停几毫秒。拿奖赏预测误差去「解释」阅读时间，等于把一个有方向的量当无方向的用。</li>
 <li><b>佛学 · 「降低期待」在这套算术里不是免费的：它压的是最坏情况，抬的是长期均值</b>：修行传统里反复出现一条实践——松开预期，落空的痛就小。「每砍半一次」那节的机制刚好能把这句话拆成两个量。预期就是一个概率分布：分布越尖（押得越死），猜中时代价近零、猜错时代价极大；分布越平，单次代价的上限被压低。但平均意外度恰好等于这个分布的熵，而熵在分布最平时最大。于是推出一个反直觉的结论：完全不押注不是零代价方案，而是把峰值换成了持续的高本底——「什么都不期待」应该表现为波动变小、日常负担变重，这跟「松开预期之后一切都变轻」是两种能分开的预测。<b>但这里不成立</b>的是这笔账算不出数：读者面对的是词表，可数、可估概率；而「事情会怎样」没有词表，那个熵写不出数值。这条只能当结构上的推论，不能当测量。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>Ehrlich 和 Rayner 1981 年发现，上下文约束越紧，读者越常跳过目标词，也越不容易察觉它被拼错。</li>
+<li>汉语量词让预测提前可见：和后面名词搭不上的量词，在读到量词那一刻就会引出分级的 N400 脑电反应。</li>
+<li>意外度是词在前文条件下概率的负对数，阅读时间随它线性增长，也就是与概率呈对数关系。</li>
+<li>词的概率每砍一半，读者就多停固定的一小段，自然阅读约每比特两毫秒，自定步速阅读约四毫秒。</li>
+<li>Wilcox 等人用多语眼动语料 MECO 验证，意外度预测阅读时间在五个语系的十一门语言里都成立。</li>
+<li>Oh 和 Schuler 发现，同一模型家族里参数越多、困惑度越低的语言模型，拟合人类阅读时间反而越差。</li>
+<li>Transformer 的意外度在训练量约二十亿词时最像人，见得更多之后对生僻人名和罕见搭配不再意外。</li>
+<li>在日语眼动语料上，「困惑度越低越像人」的规律不成立，是否源于谓语后置的语序还没有定论。</li>
+<li>花园幽径句里意外度能指出读者在哪儿卡住，却严重低估卡住的幅度，且低估倍数因结构而异。</li>
+<li>意外度与阅读时间的相关只说明人对语言统计规律敏感，并不说明人脑里运行着一个 Transformer。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="90d4bbd27062b238">深入思考</h3>

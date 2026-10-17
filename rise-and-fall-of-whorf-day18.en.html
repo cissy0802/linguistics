@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · The strong version is true of machines precisely because machines lack the route humans have</b>: large language models make strangely-shaped errors on multi-digit arithmetic, and the shape of the error depends on how the digits were split. The GPT-3.5 and GPT-4 vocabularies have slots for one-, two- and three-digit numbers, so long numbers get chunked left to right; Singh and Strouse found in 2024 that forcing right-to-left grouping at inference time, by comma-separating the digits, markedly improves accuracy — same model, same problem, only the split changed. That is exactly the shape the section on not being able to prove thought from speech declared dead: how the vocabulary carves the world decides what you can do. The conclusion it yields is counter-intuitive. The strong version died for humans not because it is absurd, but because humans have a route around language — gaze, memory and categorisation all bypass words. A model has no such route; every behaviour it has passes through the vocabulary, so the model is the genuine specimen of strong Whorfianism and the human is not. The testable difference sits right there: give a person a distinction their language has no ready word for and they can still cover part of it non-verbally (pairing two heaps one-to-one to see which is bigger, with no number words); change a model's segmentation and its capability shifts wholesale. <b>Where this does not hold</b> is the reverse reading: none of it says "models prove Whorf was right" — it works only because the model is missing the route we have. And commas or written-out intermediate steps can route around part of the tokenisation problem, which means it is inconvenient encoding, not an unthinkable thought.</li>
 <li><b>Buddhist practice · Two traditions give opposite instructions about labelling experience</b>: one strand of insight meditation teaches noting — a thought arises, and you silently attach a label, "thinking, thinking", "pain, pain". Another strand, the one concerned with names versus what is actually there, holds that verbal designation is exactly what chops experience into pieces, and trains towards looking without it. Same activity, two opposite instructions. The mechanism from the section on the half-second before you speak pulls the contradiction apart: labelling works because it drags attention towards the component the label habitually encodes, and that drag is online. So both strands can be right about different stretches of time — and two testable differences follow. Noting should change the distribution of attention only while noting is happening, returning to a shared baseline once it stops; and it should damage memory for the dimensions that went unlabelled. That second one is verbal overshadowing in experimental psychology: have people describe a face they saw in words, and their accuracy at picking it out afterwards drops. <b>Where this does not hold</b> is range. The Buddhist claim is that verbal designation veils experience continuously and generally, even when you are not speaking; the evidence here only supports a task-bound, online effect. And verbal overshadowing is not that solid itself: a multi-lab registered replication in 2014 found a 4-percentage-point gap when the description came immediately and a 16-point gap when it came twenty minutes later — which looks more like interference at retrieval than perception being remade by concepts.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The name "Sapir-Whorf hypothesis" was attached by Harry Hoijer after 1953; neither Sapir nor Whorf ever wrote down such a hypothesis.</li>
+<li>Whorf's empty gasoline drums show one ambiguous word steering one action, which is a long way from language shaping a worldview.</li>
+<li>Ekkehart Malotki's 677-page Hopi Time (1983) catalogued Hopi tense markers, time words and time units, against the claim that Hopi has no expressions for time.</li>
+<li>"Language L has no word for X" is almost never evidence by itself, because the meaning is often carried by grammar or a whole phrase.</li>
+<li>Testing linguistic determinism needs evidence that bypasses language; otherwise speaking differently is circularly used to prove thinking differently.</li>
+<li>The finding that grammatical gender colours how German and Spanish speakers describe bridges and keys failed to replicate in two designs in 2014.</li>
+<li>Berlin and Kay found basic colour terms across nearly a hundred languages appear in a constrained order, so languages do not carve the spectrum arbitrarily.</li>
+<li>Slobin's "thinking for speaking" holds that language does not change thought in general, only which details you must retrieve before you speak.</li>
+<li>Greek and English speakers' eye movements split within a second when preparing to describe a motion clip, but not when merely memorising it.</li>
+<li>Language models' multi-digit arithmetic depends on how the tokenizer splits numbers, making them true strong-Whorf cases because they lack a non-verbal route.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -126,6 +132,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 大模型学「言下之意」这件事到底学到了什么</b>：Ruis 等 2023 年做过一个 600 多条的会话含义题库：给模型一段对话，问某句"是"还是"否"的言下之意——比如「你想去看电影吗？」「我明天要交论文」，第二句是拒绝。他们发现在还没做过任务微调的模型上，即便到 GPT-3 那一代，准确率也远不到人类基线；进入指令微调后（RLHF 之后）分数才逼近人类。跑的是「『能把盐递给我吗』为什么没人真的回答『能』」那节的机制：字面和实际请求两层同时算，再挑一层回。你要判断模型是真在算含意还是在做模式匹配，方法是给它标量含意的对抗题——「有些学生通过了考试」后面接一句「所有学生都通过了」，问是否一致；人在这里毫不犹豫说不一致，模型的表现按题干措辞抖得厉害，说明它的"含意"至少有一部分是句面相似度而不是数量准则的推理。<b>但这里不成立</b>的是把语用当作可以被覆盖率补齐的一列题——含意的核心是"对方特意没说的那部分"，覆盖率再高也测不到"没说什么"这条负空间，除非你能在没见过的话语情境里维持它，而这类跨情境的稳定性目前是模型最薄弱的一环。</li>
 <li><b>神经科学与意识 · 一半大脑管字面，另一半管字面之外</b>：右半脑受损的病人（RHD）在多数标准语言测试上得分正常——他们能读、能说、能理解简单陈述——但拿间接请求、反话、隐喻去考，就明显掉队。Kaplan 等 1990 年做过一个经典对比：给右半脑受损者念一段短故事，末尾出现反话，他们经常把反话解读成撒谎或误解——正是 Winner 那节的六岁前状态。跑的是「反话为什么明明说反了还能被听懂」那节的机制：识别二阶意图这一层被拆下来了，字面那一层完好。推得出的可检验差异是：同一位病人对直接请求（「把窗户关上」）的反应准确率与常人相当，对等价的间接请求（「屋里有点冷」）的反应率显著更低——这一点被多组研究复制。<b>但这里不成立</b>的是「右半脑 = 语用模块」这个简单归因：晚近的磁共振研究发现，左额叶损伤也会带来相当程度的语用受损，语用不像韦尼克区那样能被指到某一小块——它更像是几个系统合作的产物，右半脑只是合作里更容易掉链子的一环。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>Grice 的合作原则假定对方说话真、够、相关、清楚，表面违反时听者会自动补出会话含义。</li>
+<li>间接言语行为指一句话语法上是问句或陈述，实际在做的却是请求之类的另一件事。</li>
+<li>有人回答「能，给你」被判得更礼貌，说明字面层和请求层是同时被计算的，而非先字面后兜底。</li>
+<li>日语成人日常请求几乎不用直接祈使句，默认套上「能不能帮我」的外壳，孩子从小被纠正到这条轨道。</li>
+<li>新造、从没听过的间接问句人也能秒懂，说明间接请求靠通用推理，不只是背熟的固定套话。</li>
+<li>说「有些」会让人推出「不是全部」，因为量的准则默认对方知道更强的说法就会说出来，这叫标量含义。</li>
+<li>判断「有些大象是哺乳动物」为假的人反应明显更慢，说明从字面滑到含意要多花可测的毫秒。</li>
+<li>Sperber 和 Wilson 认为反话不是把字面取反，而是回声式引用某个先前期望并加上嘲弄态度。</li>
+<li>孩子大约六岁才能稳定区分反话和撒谎，因为听懂反话要追踪说话人的二阶意图。</li>
+<li>右半脑受损的病人常规语言测试正常，却常把反话误读成撒谎，对间接请求的反应也明显变差。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="f82fe14a5ec80529">深入思考</h3>

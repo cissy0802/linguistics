@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Evolutionary biology · Language trees and species trees run on one inference, but the clock on the language side has to be binned by word frequency</b>: biologists building trees also refuse shared retentions and accept only shared innovations — two species both having a backbone says nothing about how closely they are related, whereas both having some specialisation found nowhere else does. That is the same logic as "Resemblance does not count; correspondence does". The molecular clock can put dates on such a tree because the mutation rate per site is roughly constant, and that constancy has a physical basis, unrelated to how much a given gene gets used in daily life. Language has no such basis: Pagel and colleagues in 2007 combined four corpora with 200 basic meanings across 87 Indo-European languages and found that the more frequently a word is used, the more slowly it is replaced — a single factor accounting for about half the variation in historical replacement rates. From which follows a conclusion you would not otherwise see: the time axis of a language tree can only be right if it is binned by frequency, and one uniform clock will systematically misdate some nodes. That is also why this issue's ceiling is so soft — half-lives differ across words by an order of magnitude. <b>Where it does not hold</b> is the tree shape itself. Moving genes between species is mainly a bacterial affair and can be treated as noise in most groups; in language, borrowing is the norm, and a language can borrow from several neighbours at once. So "which family does this language belong to" and "how tree-like is this dataset" are two separate questions in linguistics, the second one turned into a directly computable quantity (the kind of index Gray, Bryant and Greenhill pushed in 2010). Species trees have no step that must be done that way.</li>
 <li><b>Distributed systems and AI · A neural network can guess Latin back, but it cannot guess a sound that exists in none of the descendants</b>: Meloni, Ravfogel and Goldberg trained a sequence model on exactly this task in 2021 — feed in cognates from the Romance languages, have it output the Latin form, over eight thousand entries — and it beat the automatic methods that came before, with internal representations that line up with documented sound changes. The craft appears to have been automated. But "Take several daughter languages and reconstruct a word nobody has heard" points to a structural difference: the comparative method does not want the form that most resembles the descendants, it wants the form from which all of them can be derived, even if that form left no direct trace in any of them. A model of this kind has an output alphabet consisting of the sounds seen in training, and its objective is to bring the predicted form as close to the target as possible. The testable difference is therefore blunt: remove Hittite from the data and watch whether the model ever volunteers an extra element nobody has seen in some position. It will not, because that only raises the loss. Saussure did precisely that, and paid for it by being treated as a crank for fifty years. <b>Where it does not hold</b> is the scope of that human advantage: it depends on change being conditioned and enumerable. Once the residue answers to no phonetic conditioning at all — the kind described in "Language changes like a river" — the criterion of the most economical ancestor is unusable, and human and model alike are left counting frequencies.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Looking alike proves nothing about kinship: Persian bad and English bad match in sound and meaning yet are unrelated, while Latin deus's true relative is Greek Zeus.</li>
+<li>What counts is a repeatable sound correspondence across many words, such as Latin initial f becoming a silent Spanish h in filius/hijo and facere/hacer.</li>
+<li>Apparent exceptions usually mean the conditioning is incomplete: Latin focus keeps its f in Spanish fuego because f survived before the diphthong ue.</li>
+<li>Correspondences also expose loanwords: native English father, fish and foot have f, while paternal, piscine and pedal, borrowed from Latin, have p.</li>
+<li>The comparative method lines up cognate sets, extracts the sounds that correspond reliably, and picks the ancestor reaching every descendant in the fewest natural steps.</li>
+<li>Reconstructing Latin from the Romance languages checks out, but what emerges is the Latin people actually spoke, not the classical written standard.</li>
+<li>Bernhard Karlgren reconstructed Middle Chinese sound values by triangulating rime-dictionary classes, modern regional pronunciations and the readings borrowed into Japanese, Korean and Vietnamese.</li>
+<li>In 1879 Saussure predicted an unattested class of Indo-European sounds, and in 1927 Kurylowicz found a Hittite consonant sitting exactly where Saussure had said.</li>
+<li>Cognate signal erodes every millennium while chance look-alikes stay constant, so the comparative method tops out around eight thousand years and proposals like Nostratic cannot meet the bar.</li>
+<li>Language trees cannot run on one uniform clock: Pagel and colleagues found frequent words are replaced more slowly, explaining about half the variation in replacement rates.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -120,6 +126,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Evolutionary biology · How large a variant must be to be "seen", and how often a construction must occur to be learned, are the same threshold</b>: natural selection is also a machine that does not understand what it is doing and filters purely on outcomes. Population genetics has computed its resolution: if a mutation's advantage or disadvantage is smaller than roughly 1/(2Ne), where Ne is the effective population size, selection cannot see it and its fate is handed to random drift — the drift barrier. That is the mechanism running in "the record of the Canadian Parliament" section: a counted difference must exceed the noise or it does not exist. Which yields a conclusion one does not usually reach: when machine translation handles a construction badly, it is usually not because the construction is complex but because it is rare in the corpus, and conversely a syntactically awkward construction that appears every day is learned well. That is directly checkable — rank by corpus frequency, not by grammatical difficulty. <b>Where it does not hold</b> is whether you can add samples. In evolution Ne is set by a species' ecology and no researcher can move it, so the drift barrier is a hard floor; in translation the sample size is a budget question, and you can crawl more or manufacture data by back-translation.</li>
 <li><b>Society and institutions · A cheap metric will steer a whole field, and the direction depends on how easy the gap between metric and goal is to work</b>: New York State has published risk-adjusted mortality for individual cardiac surgeons since 1991. Two things followed at once: risk-adjusted mortality did fall, and there is evidence that high-risk patients were discouraged or referred out of state. The mechanism is the one in "a scoring script that understands nothing": a metric cheap enough to run daily takes the wheel, and the gap between it and the actual goal gets optimised on its own. Which gives something more specific than "any metric will be gamed" — the form of the gaming is set by the shape of the gap, not by anyone's character. BLEU's gap is on the output side: it recognises only literal overlap, so systems were pushed toward safer, more common wording. <b>Where it does not hold</b> is the intake. A surgeon can choose which patients to accept, so that gap opens on the input side; a translation system cannot alter the test set and must translate whatever it is handed. Declining the high-risk case has no counterpart in machine translation — which is why fifteen years of working BLEU produced blandness rather than fraud.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The 1954 Georgetown–IBM demo used just 250 words and six grammar rules, yet the press predicted translation would be solved within three to five years.</li>
+<li>The real trouble with hand-written rules was interaction: a rule added for one context quietly fired in many other sentences that had been correct.</li>
+<li>Bar-Hillel's "the box was in the pen" showed that disambiguation needs world knowledge, so fully automatic high-quality translation would need an encyclopedia.</li>
+<li>English packs manner into the verb while Spanish packs path into it, and a tendency like this is harder for rule writers than a strict law.</li>
+<li>The 1966 ALPAC report found post-editing machine output cost no less than human translation, and US funding stopped for about two decades.</li>
+<li>Around 1990 IBM stopped asking what a sentence means and asked which French sentence is most likely its translation, turning translation into counting.</li>
+<li>The Canadian Hansard, about 3.6 million English–French sentence pairs, was parallel data produced as a by-product of national bilingual policy.</li>
+<li>Statistical systems did not discard linguistic judgement; they replaced "someone decided this" with "this occurred so many times in the data".</li>
+<li>BLEU counts word-sequence overlap with reference translations and understands nothing, yet it cut the wait to test an idea from days to seconds.</li>
+<li>Rule-based systems break into visible gibberish while neural ones break into fluent falsehood, such as guessing he or she for genderless Turkish o.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

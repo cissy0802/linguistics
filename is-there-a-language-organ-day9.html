@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -123,6 +129,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 专用化能长出来，不必被设计进去</b>：训练好的神经网络里事后常能找到高度专用的部件——图像模型里有单元专挑曲线、专挑人脸；语言模型里有一小撮注意力头专干「把前面出现过的那个词再取出来」这一件事。没人设计它们，它们是训练出来的副产物。跑的是「有一片皮层对数学和音乐都不理睬」那节的判据：专用性靠「对别的任务不响应」测出来，而这个判据只问功能，不问来源——所以人身上测到的专用性再干净，也反推不出「这是基因指定的」。倒过来还能推出一个可检验的差异：专用化若来自学习，换一批数据、换一个随机种子，专用部件该落在不同地方；这一条在模型里大体成立，承担同一件事的头在不同模型里出现在不同的层。而人脑那边位置极稳，45 种语言和手语都在同一片。<b>但这里不成立</b>的是把这个差异当判决：模型里两层之间连线不要钱，大脑里长距离连接又贵又慢。位置固定这件事在模型里根本没有对应物，所以它证不了「基因写好了图纸」，只提示那个位置可能是发育中的布线经济挑出来的。</li>
 <li><b>演化生物学 · 一个基因不是一件事</b>：一个基因影响许多看似无关的性状，这在遗传学里叫多效性（pleiotropy），是常态不是例外——FOXP2 管着几百个下游基因，还表达在肺、心脏、小脑里。接上「『语言基因』这个名字是怎么被吹大又瘪掉的」那节：「X 基因 = Y 能力」这类说法能拿到的证据形态天生只有一种，破坏它、看 Y 坏没坏；而破坏实验对「瓶颈」和「内容」一视同仁，管道被掐断和图纸被删掉，从外面看是一样的。要分开就得换个物种问：同一个基因压低在一个根本不会说话的物种身上，斑胸草雀模仿老师的歌就变不准了。于是推出一个原本看不出的结论——这条通路管的层次比「语言」低得多，是「把一长串精细动作照样板调准」。<b>但这里不成立</b>的是从同源基因跳到同源功能：鸟学歌和人学说话是各自演化出来的，不是共同祖先传下来的同一件本事。跨物种的一致只说明这条通路被反复征用，不能当成「鸟身上有语言的雏形」，更不能拿鸟去给人类语言的起源排时间表。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>英国 KE 家族三代人里约一半成员说话走样、句子缺零件，比例像是显性单基因遗传。</li>
+<li>Gopnik 用 wug 测验发现受影响成员不会给生词加语法词尾，媒体因此称之为「语法基因」。</li>
+<li>更完整的测查显示 KE 家族的困难远超语法，还有口面部运动失用和偏低的非语言智力。</li>
+<li>把 KE 家族两组分得最干净的是非词复述，成绩随发音动作复杂度排开，和语法标记无关。</li>
+<li>FOXP2 是开关数百个下游基因的转录因子，还在肺、心脏和小脑里表达，并不编码说话。</li>
+<li>FOXP2 的「人类特有」改变尼安德特人也有，2018 年更大样本的重算让选择扫荡信号消失。</li>
+<li>斑胸草雀脑中压低 FoxP2 后学歌变得不准，说明 FOXP2 管的是照样板调准精细动作那一层。</li>
+<li>Fedorenko 用句子减假词串逐人定位出左侧语言网络，它对心算、音乐和代码几乎不响应。</li>
+<li>全面性失语的病人仍能算数、解逻辑题和找路，与健康人的结果构成语言专用性的双重分离。</li>
+<li>阅读区位置同样稳定却不可能天生，所以语言网络跨 45 种语言位置一致也证不了先天。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="cdfd37e004d989db">深入思考</h3>

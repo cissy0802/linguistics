@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -122,6 +128,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 同一份数据两种归纳，差的可能根本不是数据量</b>：拿儿向语料训练不带层级偏好的网络，它把表面统计学得很好，造疑问句时却按位置数推广。跑的是「一句他从没听过的问句」那节的机制：那份材料同时兼容两条规则，落到哪条由归纳偏好决定，不由材料决定。由此能推出一个可以直接量的差异，而不是又一句「模型像不像人」。如果差距是材料量造成的，把语料加大应该出现一个拐点，某个规模之后模型翻到按结构块那条；如果是偏好造成的，加大只会让按位置数拟合得更好，曲线单调、永不翻转。这两个预测长得完全不一样，跑一条曲线就能分开。<b>但这里不成立</b>的是「模型的输入等于孩子的输入」。文本把语调删掉了，而英语里主句和从句的边界常常带着停顿和音高变化，那正是「哪一块是一整块」的外部标记；场景、对方的眼神、说错之后对方的反应也都不在文本里。想把这条论证立住，得先把韵律标记加回去再测同一件事——在此之前，模型的失败只证明「光靠文字不够」。</li>
 <li><b>复杂性科学 · 一条阈值线：例外多到什么程度，规则就不再被推广</b>：词频是长尾的——少数词占掉绝大部分出场次数，绝大多数词你一辈子只碰上几次。在这种分布下，「我没听过」几乎推不出「它不合法」。跑的是「孩子的语法一开始是一个个动词各管各的」那节的机制：规则从一个个具体条目里长出来，长不长得成取决于守规则的条目和例外的比例。Charles Yang 把这条写成了一个数：一个含 N 个词的类别，例外数超过 N 除以 N 的自然对数就不再推广。推出的不是「例外多了学不会」这种废话，而是一个非线性后果：N 等于 9 时能容忍 4 个例外，占四成四；N 等于 1000 时只能容忍 145 个，占一成半。类别越大越不容忍例外——于是同一个不规则形式在小类里活得下来，在大类里迟早被规则碾平，这给语言变化指了一个可算的方向。人工语言实验里，五六岁孩子的表现在这条线两侧近乎是二分的。<b>但这里不成立</b>的是「N 是已知的」。这条线要求你先知道规则该管哪些词，可真实词汇是开放的、长尾的，N 随着你听到新词一直在变，你永远不在终态上算这道题。把它当成一条稳定的临界值用，前提比它看上去强得多。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>英语一般疑问句可以按位置挪第一个 is，也可以按结构块挪主语外面的 is，两条规则只在主语带从句时才分岔。</li>
+<li>1987 年 Crain 和 Nakayama 让三十个三到五岁孩子造这类问句，没有一个说出按位置数的错句。</li>
+<li>刺激的贫乏论证是说：孩子做出的语法区分，超出了他听到的材料所能支持的范围。</li>
+<li>后来的语料统计和换用情态动词的重做实验表明，按位置数的错句很少见，但并非从不出现。</li>
+<li>汉语一般疑问句只需在句末加「吗」，不挪任何词，所以结构依赖这道题的证据来自英语。</li>
+<li>用法为本一派认为孩子早期语法是「动词孤岛」：每个动词单独学会怎么用，抽象规则是后来才磨出来的。</li>
+<li>二十一个月的英语孩子已能凭语序理解生造动词的施事和受事，理解能力跑在造句能力前面。</li>
+<li>德语孩子要到七岁才在语序和格标记冲突时信格标记，抽象的快慢取决于这门语言哪条线索最可靠。</li>
+<li>理想的贝叶斯学习器能从儿向语料挑出结构依赖，而不带层级偏好的神经网络却按位置数推广疑问句。</li>
+<li>Charles Yang 的容忍原则给出一条阈值：类别越大，能容忍的例外比例越低，超过就不再推广规则。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="04e81872a95949fb">深入思考</h3>

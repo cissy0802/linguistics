@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -145,6 +151,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 哪些区分会被丢掉，训练之前就能算</b>：Maye 那组结果说的是，一个区分留不留得住，不取决于有没有人教，取决于输入沿那根轴的分布形状——双峰留得住，单峰留不住。于是有件本来要等评测才知道的事，训练前就能算：拿语料沿某个可测维度画张直方图，单峰还是双峰，已经预测了模型保不保得住那个区分。它还推出一个人机差异：人「丢掉」一个对立之后并没把信号扔掉，格内几毫秒的差别照样在改变竞争词的激活；而把输入量化成离散符号的系统，格内差别在量化那一步就没了。检验办法是在格内加一个不足以改变判断的扰动——人的反应时和注视比例该连续地变，模型的输出该逐位相同。<b>但这里不成立</b>的是「分布即命运」：婴儿拿到的分布是环境给的，几乎无法干预；模型的训练分布是挑出来的，想改成双峰随时能改。同一条机制，一侧是发育事实，另一侧只是可撤销的选择。</li>
 <li><b>佛学 · 名相把连续的经验切成格子</b>：这个说法在语音上有一个字面成立的版本——一根连续的轴被切成两块平地加一道悬崖，格内的差别不再被报告，跑的正是「你听不出来的差别，是被你自己压掉的」那节的机制。但语音学测得更细，能把它削准一档：被切掉的不是感知，是<b>报告</b>。你说「一样」的那两个音，你的眼睛已经不一样地动了。所以「名相遮蔽实相」若指信息被销毁，这里是反证；若指它进不了你能说出口的那一层，这里是最干净的证据——差别很实在：前者不可挽回，后者可以用不经过口头报告的测量绕过去。<b>但这里不成立</b>的是可塑性：音位的格子一岁前就从输入分布里长出来了，不受注意力调控，你再专注也听不出 pin 和 spin 那两个 p 的差别；分别心则被认为可以靠训练注意力去动。断口落在「能不能靠注意改」，而且断得有用——它预测发音矫正有效的手段不是「更用心地听自己」，而是换掉输入分布加外部反馈。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>英语 pin 和 spin 里两个 p 的送气差别，正好是普通话「趴」和「八」的全部区别，英语母语者却听不出来。</li>
+<li>音位是一门语言里能区分意义的最小声音单位；换了不改变词身份的具体发音，只是同一音位的不同变体。</li>
+<li>Liberman 1957 年的实验显示，物理上等距的 b–p 连续体被听成两块平地加一道悬崖，这就是范畴知觉。</li>
+<li>格内的差别并没有被销毁：眼动实验发现，人报出的词不变，眼睛却会随声音靠近边界而连续地瞟向竞争词。</li>
+<li>日语母语者分不清英语 r 和 l，但把同一段共振峰差别剥掉语音外壳后，他们和英语母语者一样听得出来。</li>
+<li>日语和韩语都只有一个流音音位，英语 r 和 l 都会掉进这一格；英语母语者同样分不清普通话的 x 和 sh。</li>
+<li>成年人可以通过训练补画英语 r–l 的界线，但「材料越多样越好」的配方在 2022 年的大样本复制中没能重复出来。</li>
+<li>Werker 和 Tees 发现，6 到 8 个月的英语环境婴儿还能分辨印地语的两个 t，到 10 到 12 个月就分不出了。</li>
+<li>婴儿光凭输入的分布形状就能学会分格：听两分钟双峰分布的音，就能分开连续体两端，单峰组则不能。</li>
+<li>Kuhl 的实验中，9 个月的美国婴儿跟真人学普通话能分辨 q 和 x，同样材料换成电视或录音则毫无效果。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="385d6a62240c5e5c">深入思考</h3>

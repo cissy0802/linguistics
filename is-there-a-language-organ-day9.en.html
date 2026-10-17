@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -118,6 +124,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · specialization can grow; it need not be designed in</b>: inside a trained neural network you can usually find highly specialized parts after the fact — units in image models that pick out curves, or faces; a small handful of attention heads in language models that do one job, retrieving a token that appeared earlier. Nobody designed them; they are a byproduct of training. This runs the criterion from "There is a patch of cortex that ignores arithmetic and music": specialization is measured by non-response to other tasks, and that criterion asks only about function, never about origin — so no matter how cleanly you measure specialization in a person, it cannot be run backwards into "the genes specified this." Turned around, it yields a testable difference: if specialization comes from learning, then changing the data or the random seed should relocate the specialized parts. In models this broadly holds — the heads doing a given job sit at different layers in different models. In brains the address is extremely stable, the same patch across 45 languages and across sign languages. <b>Where this breaks down</b> is treating that difference as a verdict: in a model, wiring between two layers is free, while in a brain long-range connections are expensive and slow. Stable location has no counterpart in models at all, so it cannot prove "the genes wrote a blueprint" — it only hints that the address may have been selected by the economics of wiring during development.</li>
 <li><b>Evolutionary biology · one gene is not one thing</b>: a single gene influencing many apparently unrelated traits is called pleiotropy, and it is the norm rather than the exception — FOXP2 governs hundreds of downstream genes and is expressed in lung, heart, and cerebellum. This picks up the mechanism from "How the name 'language gene' got inflated, then deflated": a claim of the form "gene X equals ability Y" can only ever be supported by one kind of evidence, breaking X and checking whether Y breaks — and a breakage experiment treats bottlenecks and content identically. A severed pipe and a deleted blueprint look the same from outside. To separate them you have to ask another species: lower the same gene in an animal with no speech at all, and zebra finches copy their tutor's song less accurately. That yields a conclusion you could not otherwise see — this pathway operates at a level far below "language," at "tuning a long string of fine movements to a model." <b>Where this breaks down</b> is the jump from homologous gene to homologous function: bird song learning and human speech evolved separately; they are not the same ability inherited from a common ancestor. Cross-species consistency shows only that this pathway keeps getting recruited. It does not make birds a prototype of language, and it certainly cannot be used to date the origin of human language.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In the British KE family, about half the members across three generations had distorted speech, a split that looked like a single dominant gene.</li>
+<li>Gopnik's wug-style tests showed affected KE members failing to add grammatical endings to new words, and the press dubbed it a "grammar gene."</li>
+<li>Vargha-Khadem's fuller testing found the deficit went far beyond grammar, including orofacial dyspraxia and lower nonverbal IQ scores.</li>
+<li>Nonword repetition separated affected and unaffected KE members with no overlap, and scores tracked articulatory difficulty rather than grammar.</li>
+<li>FOXP2 encodes a transcription factor that switches hundreds of other genes on and off and is active in the lungs, heart and cerebellum.</li>
+<li>Neanderthals carried the supposedly human-specific FOXP2 changes, and a larger 2018 reanalysis made the selective-sweep signal disappear.</li>
+<li>Knocking down FoxP2 in zebra finches makes their copies of a tutor's song less accurate, pointing to a role in tuning learned motor sequences.</li>
+<li>Subtracting nonword strings from sentences, Fedorenko maps a left-hemisphere language network person by person that barely responds to math, music or code.</li>
+<li>Patients with global aphasia can still do arithmetic, solve logic puzzles and navigate, completing a double dissociation for language specificity.</li>
+<li>The reading area sits in the same place across writing systems yet cannot be innate, so a consistent language network across 45 languages does not prove innateness.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

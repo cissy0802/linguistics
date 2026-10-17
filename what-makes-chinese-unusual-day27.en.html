@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -145,6 +151,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · How much a syllable carries and how many you say per second are tied together</b>: communications engineering has an old rule of thumb — for a given channel capacity, the more information each symbol carries, the slower symbols can be sent, and only the product is real throughput. The mechanism here is the one from the tone section: tone adds a further dimension of contrast to every syllable, and Mandarin has only about four hundred syllables without tone, about thirteen hundred with it. In 2019 a group measured 17 languages together: Japanese and Spanish run at roughly 8.0 and 7.7 syllables per second, Vietnamese and Thai at only 5.3 and 4.7, Mandarin at 5.11 — yet multiply syllable rate by information per syllable and every language lands near 39 bits per second. That yields a conclusion you cannot otherwise see: "that language is spoken fast" is almost entirely an illusion, because the fast-sounding ones pack less into each syllable. The difference from a large language model sits right here, and it is testable: a model has neither mouth nor ears, so there is no binding between its token rate and its token entropy, and handing it an extremely information-dense language will not slow it down, whereas a person slows down. <b>Where it breaks down</b> is the word "capacity": in communications the capacity is fixed by physics first and the code designed afterwards, while nobody designed a language, and 39 bits is a measured result whose per-syllable information estimates come from text corpora. It is a robust correlation, not a law.</li>
 <li><b>Psychology · Does a category grow around a centre, or link by link</b>: cognitive psychology has a classic result — categories have typical members, a robin is more "birdlike" than a penguin, and so a category gets drawn as a centre with a rim around it. The classifier work from "before you can count something" unsettles that picture: tested on nouns that emerged over the past half century, the winner was a weighted-exemplar model in which a new word follows the old words most like it rather than the centre of the category. That yields a prediction you can go and check directly: which classifier a new thing takes depends not on its resemblance to the category's average member but on its resemblance to a few specific old ones — 短信 (duǎnxìn, "text message") took 条 (tiáo) not because it is long and thin but because it resembles 新闻 (xīnwén, "news item"). <b>Where it breaks down</b> is the time scale: prototype effects measure a mature category as it sits in one person's head right now, while chaining measures the trajectory of a category growing across generations, and the classifier data cannot separate "this individual chained" from "the whole community slowly drifted". What it overturns is the claim that categories must expand around a centre, not the existence of prototypes.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Tone is not rare: of the 527 languages in WALS, over 40% use pitch to tell words apart, in dense belts across Africa, Mesoamerica and mainland Southeast Asia.</li>
+<li>Whether pitch counts as language or melody depends on whether it does work in your language: Thai listeners process Thai tones in the left hemisphere, Chinese listeners treat them as plain pitch.</li>
+<li>Tones are the shadows of lost final consonants: the Mandarin rising tone comes from a lost glottal stop, the departing tone from a lost -s, and Vietnamese took the same path independently.</li>
+<li>Numeral classifiers are common too: in a WALS sample of 400 languages, 78 require them as Mandarin does, clustered in East and Southeast Asia, Mesoamerica and beyond.</li>
+<li>Classifier categories grow link by link: a new noun takes the classifier of the few older nouns most similar to it, not of some central prototype.</li>
+<li>The finding that classifier-language speakers sort by material rather than shape shows up only in tasks that require interpreting a noun, so it concerns reading words, not seeing the world.</li>
+<li>Mandarin is topic-prominent: sentence-initial position itself marks the topic, and unlike Japanese and Korean, which use a dedicated particle, Mandarin topics must be heard from position and pause.</li>
+<li>About 72% of the characters taught in Chinese primary school are semantic-phonetic compounds, but sound change has worn the phonetic halves down, and the first characters taught are the least regular.</li>
+<li>What is truly rare is the morpheme-based script: of the few writing systems humans invented independently, the Chinese line is the only one still in mass daily use.</li>
+<li>Across 17 languages, syllable rate times information per syllable converges on about 39 bits per second, so the impression that some language is spoken fast is largely an illusion.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

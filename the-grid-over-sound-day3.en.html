@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -139,6 +145,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · which distinctions get dropped is computable before training</b>: what the Maye result says is that whether a distinction survives depends not on anyone teaching it, but on the shape of the input distribution along that axis — two peaks survive, one peak doesn&#39;t. That turns something normally learned at evaluation time into something computable beforehand: plot a histogram of your corpus along any measurable dimension, and unimodal-versus-bimodal already predicts whether the model will keep that distinction. It also yields a concrete human-machine difference. A person who has &#34;lost&#34; a contrast did not throw the signal away — a few milliseconds of within-category variation still shifts how strongly competing words are activated. A system that quantises its input into discrete symbols loses the within-category difference at the quantisation step, full stop. The test: inject a perturbation inside a category too small to change the decision. Human reaction times and fixation proportions should shift continuously; the model&#39;s output should be bit-identical. <b>Where this breaks down</b> is the &#34;distribution is destiny&#34; half: an infant&#39;s input distribution is whatever the environment supplies and is nearly impossible to intervene on, while a model&#39;s training distribution is chosen and can be made bimodal at will. The same mechanism is a developmental fact on one side and a revocable decision on the other.</li>
 <li><b>Buddhist thought · names carve continuous experience into boxes</b>: there is a version of this claim that holds literally in speech — a continuous axis gets cut into two plateaus and a cliff, and within-plateau differences stop being reported. That is precisely the mechanism from the section on differences you flattened yourself. But phonetics measures more finely, and the finer measurement sharpens the claim by a notch: what gets cut off is not perception, it is <b>report</b>. The two sounds you call &#34;the same&#34; already moved your eyes differently. So if &#34;names obscure reality&#34; means the information is destroyed, this is a counterexample; if it means the information cannot reach the layer you can speak from, this is the cleanest evidence available — and the difference is practical, because the first is unrecoverable while the second can be routed around with any measure that bypasses verbal report. That also predicts something you can act on: checking whether you are being led by a concept by asking yourself &#34;am I really seeing this clearly?&#34; is useless, since you are querying the flattened layer itself. <b>Where this breaks down</b> is plasticity: phoneme boxes grow out of the input distribution before age one and are not under attentional control — no amount of concentration lets you hear the two p sounds in pin and spin. The discriminating mind that Buddhist practice talks about is explicitly held to be workable by trained attention. The break falls exactly on &#34;can attention change it&#34;, and it is a useful break: it predicts that what actually corrects pronunciation is not listening to yourself more carefully but changing the input distribution and adding external feedback.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The puff of air that separates the p in pin from the p in spin is the entire difference between Mandarin pa and ba, yet English speakers cannot hear it.</li>
+<li>A phoneme is the smallest sound unit that distinguishes meaning in a language; pronunciations that can swap without changing the word are allophones of one phoneme.</li>
+<li>In Liberman's 1957 experiment, an evenly spaced b-to-p continuum was heard as two flat plateaus and a cliff, a pattern called categorical perception.</li>
+<li>Within-category detail is not destroyed: eye-tracking shows listeners report the same word while their gaze drifts toward a competitor more as the sound nears the boundary.</li>
+<li>Japanese speakers who cannot tell English r from l hear the same formant difference as well as English speakers once it is stripped of its speech-like quality.</li>
+<li>Japanese and Korean each have a single liquid phoneme that absorbs both English r and l, just as English speakers struggle with Mandarin x versus sh.</li>
+<li>Adults can be trained to hear the English r-l boundary, but the claim that more varied training material works better failed a large 2022 replication.</li>
+<li>Werker and Tees found that English-learning infants tell apart two Hindi t sounds at six to eight months but lose that ability by ten to twelve months.</li>
+<li>Infants learn categories from distribution shape alone: two minutes of a two-peaked distribution lets them separate a continuum's ends, while a one-peaked one does not.</li>
+<li>In Kuhl's study, nine-month-old American babies learned the Mandarin q-x contrast from live tutors, but the same material on video or audio taught them nothing.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Thinking Further</h3>

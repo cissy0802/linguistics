@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -128,6 +134,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · the bill is filed in two different places</b>: push more languages into a model of fixed size and the low-resource ones gain at first, but past a point every language's performance falls together — the phenomenon has a name, the curse of multilinguality, and making the model bigger pushes the drop further out. The mechanism is the one from "You cannot listen with only one language switched on" plus the slower-retrieval ledger: two systems share one pool of resources, selection happens late, and each must yield something to the other. But the two bills are filed in different places, which yields a testable difference: the model's is a capacity bill, eased by adding parameters; the human one is a frequency bill — the slowdown is on low-frequency words, and the dominant language barely suffers. So one can predict that half a year of using only one of your languages intensively should speed retrieval in that one and blunt the other, whereas a model does not reallocate capacity because it was prompted in a given language more often at inference time. <b>Where this fails</b> is taking the curse's numbers as a yardstick for the human cost: a model has no layer that asks which language this moment calls for — the prompt decides, not who is sitting across the table — while a large part of the human switch cost comes from being externally directed, and vanishes when the switch is free.</li>
 <li><b>Society and institutions · how "mixing two languages" came to be read as a defect</b>: in many places, mixing is treated as evidence that neither language was properly learned — corrected in classrooms, read in interviews as poor communication. Following "People who switch between languages are following rules": within-sentence switch points are jointly constrained by both grammars, and within-sentence switching is done by the most fluent speakers, while less fluent ones switch between sentences or insert a single noun. That turns the social judgement into a falsifiable prediction: if mixing came from not knowing enough, switch points should cluster on the low-frequency words the speaker lacks, and the less fluent should mix within sentences more. The data run the other way. The conclusion you could not otherwise see: mixing, as a surface feature, cannot be used to estimate language ability at all — at most it tells you which community someone grew up in. <b>Where this fails</b> is running it backwards into a measure of ability: how much within-sentence switching occurs depends heavily on community norms, and some bilingual communities barely do it, which says nothing about how fluent anyone there is.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Russian–English bilinguals hearing the English word marker glance first at a stamp, because the Russian word for stamp, marka, starts with the same sounds.</li>
+<li>When Chinese–English bilinguals judge English word pairs, pairs whose Chinese translations share a character trigger a different N400 brain response, though nobody notices.</li>
+<li>Poplack's recordings of a Puerto Rican community in New York showed that code-switches almost never fall inside a word and steer clear of spots where the two grammars order words differently.</li>
+<li>Switching languages mid-sentence is the mark of the most fluent bilinguals; less fluent speakers tend to finish the sentence first or drop in a single noun.</li>
+<li>Switching back into the native language is slower than switching out of it, because the stronger language was being held down, and the harder it was suppressed the slower it returns.</li>
+<li>The switch-cost asymmetry often shrinks, disappears or reverses in balanced bilinguals, and is most reliable in bilinguals whose two languages are unevenly matched.</li>
+<li>When an external cue dictates the switch, control regions fire 100 to 160 milliseconds after the word; when bilinguals switch freely, that early rise does not appear.</li>
+<li>The executive-control advantage of bilingualism was small to begin with, falls to about zero after correcting for publication bias, and vanished in a matched sample of 11,000 people.</li>
+<li>Bilingualism may delay the appearance of dementia symptoms by a few years without lowering the risk of the disease, and the evidence comes mostly from retrospective case files.</li>
+<li>Bilinguals retrieve words a little more slowly and hit more tip-of-the-tongue moments; Gollan explains this as each word's use being split across two languages, a frequency cost rather than an ability one.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

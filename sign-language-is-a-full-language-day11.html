@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -129,6 +135,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 换一条物理通道，被重写的不是编码而是结构</b>：把同一个协议搬到另一种链路上跑，直觉是上层内容原封不动，只有底下的编码换了；顺着这个直觉，手语就成了「口语换个链路层」。「空间不是背景，空间就是语法」那节量到的数据不支持这个读法：手语的单个词比口语词慢，可讲完同一个故事的时间和命题数都一样，因为语法本身重组成了并行的——多个零件在同一时刻各带一份信息，而不是排成一列。于是能推出一个可检验的差异：把手语当成「手势识别 + 翻成词序列」来做的系统，失败不该均匀分布，而该聚在靠并行承载的结构上——空间里的指代、动词的方向、脸上承担语法的动作。错误真这样聚堆，说明丢的是通道特有的结构，不是词汇量不够。<b>但这里不成立</b>的是分层协议那个前提：分层成立是因为同一个包能跨层原样交接；手语的语法却不是口语语法换了套编码——美国手语和英国手语互相看不懂，跟法国手语反而更近。找不到那个交接的层界，「换链路层」就只是个比方。</li>
 <li><b>佛学 · 一个长得就像所指的名字，仍然得走符号那条路</b>：佛学里反复处理名与实的关系——名相是被切出来的，不等于所指的那个东西。顺着这个说法容易生出一个中间假设：如果名字长得就像它指的东西，这层隔阂总该薄一点。手语是个罕见的检验场，因为它的象似性比口语多得多。跑的是「同样说英语的两个国家，手语互相看不懂」和 Petitto 那项跟踪研究的机制：取词卡住时浮上来的是手形和位置这些形式参数，不是「它像什么」；而美国手语里指着对方就是「你」，透明到极点，聋童照样先回避、再指反。于是能推出一个原本看不出的结论——形似不给你一条绕过符号系统的近路，它顶多是个记忆的把手。证据强度要说明：象似性在成人学第二门手语和某些记忆任务里确实帮得上忙，在母语习得顺序上帮助很小，这一块还在积累。<b>但这里不成立</b>的是把它读成对「名相遮蔽实相」的支持或反驳：那套说法的落点在修行上如何对待分别，这里的机制只谈符号形式和所指之间的通道。手语能取消的只是「越像就越少隔一层」这个中间假设。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>美国手语和英国手语互相看不懂，美国手语的根反而在十九世纪的法国手语。</li>
+<li>手语词能拆成手形、位置、运动等零件，美国手语的「夏天」和「干」只差位置，构成最小对立。</li>
+<li>手语使用者也会卡在「话到手边」，浮上来的是手形和位置这些形式零件，最容易丢的是运动。</li>
+<li>手语把人物立在空间的点上，动词「给」在两点之间移动，方向一反，谁给谁就反过来。</li>
+<li>Petitto 跟踪的聋童学透明的指人手势「你」「我」时照样会指反，指点在手语里也是要学的符号。</li>
+<li>手语单个词比口语词慢，但多个零件同时带信息，讲完一个故事的时间和命题数与口语相当。</li>
+<li>手语使用者左脑中风会出现手语失语而空间能力正常，右脑中风则空间能力垮掉而手语语法完好。</li>
+<li>大脑按「是不是语言」而不是「是不是空间」分工，但手语处理空间成分时右半球参与得比口语多。</li>
+<li>Hockett 把声音—听觉通道列为语言的第一条设计特征，手语的证据把这一条打掉了。</li>
+<li>以色列的贝都因村落手语到第二代就长出了稳定词序，语法不需要几千年，一代人就够。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="e1c09d242501d5be">深入思考</h3>

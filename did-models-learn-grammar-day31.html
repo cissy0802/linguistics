@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -139,6 +145,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>物理与数学 · 信息能换成功，但得有个东西真的接在它上面——这一条物理学有公式</b>：热力学里有个老思想实验：盒子里一个分子，知道它在左半边还是右半边的人能靠这点知识从热运动里榨出功，不知道就榨不出。后来它被做成了定量的：Sagawa 和 Ueda 的广义第二定律里，多榨出来的功有个上限，上限正是「记忆」和「气体状态」之间的互信息；2010 年 Toyabe 等人在一个布朗粒子上真把这个转换做了出来。跑的是「探针照样学得会」那节的机制：探针测的就是信息能不能从内部状态里被读出来，也就是有没有互信息。由此能推出一个原本看不出的方法论结论：探针准确率该当上界读——「这条计算路径最多可能用到这么多」，从来不是「它在用」。配套是个可检验的要求：每个探针结果都该配一个同题的关掉实验，关掉的数字必须小于等于探针的数字；差得远就说明探针读到的东西模型自己的路上并不经过。<b>但这里不成立</b>的是：物理那边的上界是个定理、带单位，而且量具没法凭空造出互信息。探针可以——随机标签上它也拿高分。所以探针准确率连干净的上界都算不上，这里没有守恒律可靠。</li>
 <li><b>神经科学与意识 · 同一招用在人脑上，得到的是相反的定位答案</b>：把实词换成生造词这件事神经科学那边也在做，材料叫 Jabberwocky 句（名字来自 Carroll 的一首诗，语法正常、实词全是造的）。Fedorenko 那一系列研究发现：语言网络对这种句子的反应明显强于一串无意义词，说明它确实吃结构；但同一批脑区也同时对词义敏感，两种敏感性散在整个额-颞网络里，没有一块专管结构的地方。跑的是「胡编的词」那节同一条机制：切断词义只留骨架，看还剩什么反应。由此能推出一个原本看不出的结论：「学到语法了吗」和「语法在不在某个具体位置」是两个独立的问题——模型这边能点名几个单元、关掉就塌，人脑那边同样的操作找不到对应的一小块。可检验的差异也就出来了：靠少数单元的可解释性结果不该预期在脑上有对应物；哪天真在脑里找到一对关掉就废的「数」神经元，那是关于脑的新闻，不是对模型的印证。<b>但这里不成立</b>的是最关键的对照做不了：人不能被换一门不可能的语言重训一遍，也没有随机标签的对照组；而且 Jabberwocky 的生造词仍带着词尾和语调线索，模型那边连语调都没有。「同一招」只在纸面上是同一招。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>英语动词的数要跟主语对齐，单数主语后跟一个复数名词时，人和机器都最容易被带跑。</li>
+<li>Linzen 等人 2016 年发现，训练目标换成只预测下一个词后，循环网络判断动词单复数明显退步。</li>
+<li>把实词全换成胡编的词后，Gulordava 等人训的语言模型在四门语言上仍能挑对动词的数。</li>
+<li>换成生造词能切断词语共现统计，才分得清模型靠的是句子骨架，还是常见搭配。</li>
+<li>结构探针用一个线性变换，就能从 BERT、ELMo 内部还原出相当一部分句子层级。</li>
+<li>给每个词随机配标签，探针照样学得会，所以探针该看真任务减对照任务的选择性。</li>
+<li>从模型内部读得出某种信息不等于模型在用它，关掉相关单元后一致性崩掉才是因果证据。</li>
+<li>用英语改造出的 15 门不可能的语言，GPT-2 都学得更费劲，但这一结论的对照组仍有争议。</li>
+<li>BLiMP 最小对测试里，模型擅长词形一致、弱于更细的现象，学没学到语法不是一个数能回答的。</li>
+<li>人脑语言网络对 Jabberwocky 句的结构有反应，但句法和语义敏感性散布各处，没有专管句法的一小块。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="53559197971b09bd">深入思考</h3>

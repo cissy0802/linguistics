@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -132,6 +138,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 一条没有分隔符的流，边界只能从预测里长出来</b>：网络协议要从连续的比特流里认出一帧的起止，工程上的办法是明写一个同步头，再用填充位保证这个头在数据里绝不会偶然出现——边界是插进去的。语音没有这个东西：真正的静音常落在词中间，而词与词之间连绵不断。「两分钟的胡话」那节的机制给的是另一条路：边界不靠标记，靠预测什么时候变差——词内下一个音几乎必然，接缝上掉到三分之一，切点就在掉下去的地方。由此能推出一个可检验的差异：这条路子的能力上限由单元长度的整齐程度决定，而不是由数据量决定。Johnson 和 Tyler 只把词改成长短不一，八个月大的婴儿就失败了；同理，一个纯靠相邻转移概率切分的算法，在定长记录上会很准，一遇到变长记录就该系统性地把短的并进长的，加多少数据都补不上——想修就必须换成能同时假设多个候选长度的做法。<b>但这里不成立</b>的是「流里有冗余」这个前提。协议的载荷通常已经压过，压缩干的事恰恰是把可预测的部分挤干净，让每一位的下一位都尽量不可预测。也就是说，一条压得足够好的流在原则上是切不开的——不是算法不够聪明，是被切的东西里已经没有起伏了。所以工程上非用同步头不可不是懒；而语言之所以可切，正因为它保留着大量冗余——在信道效率上是浪费，在可学性上是全部本钱。</li>
 <li><b>演化生物学 · 同一台机器长在很多物种身上，那语言到底加了什么</b>：绒顶柽柳猴能从和婴儿一模一样的合成音流里切出块，大鼠也能，人类婴儿对纯音的音高序列同样能做。跑的是「两分钟的胡话」那节的同一条机制：追踪相邻单元的转移概率。顺手的读法是「所以语言能力是通用学习能力」，但更硬的结论在另一头——正因为这台机器分布得这么广，它就不可能是语言的分水岭；真正需要解释的是紧接着的那一步。「切出来的还只是一块声音」那节给了它的形状：十七个月大的孩子能把切出来的块当成物体的名字，而同样频次的跨界块不行。这就推出一个可做的对照：给猴子做完同一套切分训练，再测它会不会自发把某个块当成某个物体的标签——按现有证据该失败，而这个失败点比「猴子不会说话」精确得多。<b>但这里不成立</b>的是「多物种共有 = 同源」这层默认。灵长类和啮齿类的这条能力隔着很远的分支，可能是各自长出来的，也可能只是任何一个带短期记忆的序列系统都会附带的性质。共有本身不构成演化连续性的证据——要立这个论，得先说清它在这几个物种里是不是同一套神经实现，目前没有定论。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>连续说话的录音里几乎没有词间静音，真正的停顿常落在词中间，听者听见的缝是自己补上的。</li>
+<li>1996 年 Saffran 等人让八个月大的婴儿听两分钟无停顿的假语言音流，婴儿就能分出完整词和跨界块。</li>
+<li>假语言里词内下一个音节的转移概率是 1，词与词接缝处掉到三分之一，切点落在预测最不准的地方。</li>
+<li>1998 年把频次配平后婴儿照样分得开，说明婴儿算的是条件概率，而不是某个组合出现了几次。</li>
+<li>绒顶柽柳猴和大鼠也能做统计切分，婴儿对纯音序列也行，这更像一台通用的序列统计机器。</li>
+<li>2017 年的汇总分析显示统计切分效应小而不稳，合成语音和真人语音差别明显，没有教科书说得那么强。</li>
+<li>英语对话里约九成实词以重读音节开头，所以英语婴儿会把 guiTAR is 错切成 TARis。</li>
+<li>切分的路标因语言而异：英语靠重音，法语靠音节，日语靠比音节更小的拍，普通话没有强弱交替。</li>
+<li>Johnson 和 Tyler 只让假语言的词长短不一，八个月大的婴儿就切不出来，纯统计线索很脆。</li>
+<li>十七个月大的孩子只能把统计切出来的块学成物体名字，猴子能切却没人见过它们把块当名字。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="1dd13800794dffe5">深入思考</h3>

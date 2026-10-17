@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -146,6 +152,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>佛学 · 「牛」的意思是「不是非牛」——一套公元六世纪就写下来的、纯靠差别定义意思的理论</b>：印度佛教因明有个主张叫遮诠（apoha，字面就是「排除」）：陈那（Dignāga，约公元五到六世纪）提出，「牛」并不正面指向一类实有的东西，它是靠排除掉所有非牛而成立的。跑的机制和本期同一条：一个词的位置由它跟谁不同确定，不由它自己装着什么确定。由此推出一个原本看不出的结论——「热」「冷」分不开不是工程没做好，而是这套理论自己的推论：若意思纯粹是差别，两个对比集合完全重合的词就必然不可区分。这还给出一个可做的检验：按「对比集合的重合度」给词排序，它应该能预测向量距离，而且在反义词上预测得最准。<b>但这里不成立</b>的是排除的依据：因明里的排除是有目的的，后来的论师把它落在「能不能达成某个实际效果」上——挤奶、耕地，所以牛才被划成一类；共现计数没有目的，它能排除的只是「没一起出现过的词」。遮诠说得出为什么牛和马是两类，分布法只能报告这两个词很像。</li>
 <li><b>心理学 · 同样是把词摆进一个空间，坐标从人嘴里来还是从文本里来，结果在反义词上必然打架</b>：1957 年奥斯古德（Charles Osgood）做过语义微分：让人给一个词在「好—坏」「强—弱」「快—慢」这类两端刻度上打分，再做因子分析，反复只析出三个维度——评价、力量、活动，且在许多语言的社群里都重复出来。机制对照很清楚：两边都在给词算位置，但一边的坐标来自人的反应，另一边来自文本共现。由此推出一个方向确定、可检验的差异：两套坐标在反义词上必然最不一致——「好」和「坏」在共现空间里几乎重合，在评价那一维上却是最远的一对。反义词不是测不出来，是得换一种量具去测。<b>但这里不成立</b>的是覆盖面：语义微分只有三维且全是情绪色彩，它分不开「猫」和「狗」（两边都偏好、偏活跃），共现空间轻松分开。谁的信息多，取决于你问的是哪种区别。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>分布假说主张一个词的意思由它的邻居决定，没查词典也能从四句话猜出 tezgüino 是一种酒。</li>
+<li>哈里斯和弗斯在 1950 年代写下这个主张，它的分量在于邻居可以计数，而「指向世界上的什么」不能。</li>
+<li>分布法测的是两个词能否换到同一个位置，而不是意思是否相同，所以「热」和「冷」这类反义词最难分开。</li>
+<li>潜在语义分析把巨大而几乎全空的共现表压成每个词几百个数，1997 年在托福同义词题上答对 64.4%。</li>
+<li>word2vec 的「国王减男人加女人得女王」被高估了：标准做法预先排除题面三个词，否则最近的往往是国王自己。</li>
+<li>词向量会复现人类的内隐联想，因为共现计数分不开劳动统计上的事实和人们叙述上的惯性。</li>
+<li>一个词只配一串数就只能取所有用法的平均，汉语「打」和英语 bank 的几种意思因此挤在同一位置。</li>
+<li>三四岁的孩子靠快速映射听一次就能把 chromium 挂到一种颜色上，而共现空间里的词通常要出现几十上百次。</li>
+<li>本德和科勒用偷听海底电缆的章鱼寓言主张光靠语言形式学不到意思，争论至今未定。</li>
+<li>陈那的遮诠理论认为「牛」靠排除一切非牛而成立，纯靠差别定义词义，同样会让对比集合重合的词无法区分。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="2f9bdf254b47ec42">深入思考</h3>

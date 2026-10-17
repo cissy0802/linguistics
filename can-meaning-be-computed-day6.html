@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -152,6 +158,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 组合这道题，人和模型难的地方不一样</b>：Lake 和 Baroni 2018 年造了一个玩具语言 SCAN：一堆指令词映射成动作序列，训练时让模型见过「跳」，也见过「走两次」，测试时问「跳两次」。当年从头训练的序列模型在这类题上几乎全错；Kim 和 Linzen 的 COGS 里，有的结构切分甚至报出过零正确率。跑的是「你没见过的句子，是你当场算出来的」那节的机制：人拿到一个新词的几个例子，就能把它塞进所有已经掌握的框架里——那个用假词做的人类实验考的正是同一批题。今天再说「模型没有组合性」已经太粗，大模型在很多这类题上分数很高，争议变成了「是真泛化还是训练里见过」。能把两者分开的做法是控制曝光：给人和模型同样只引入一次全新的原语，再只考它跟旧结构的组合。人这边一次就够，且错误集中在少数几种可预测的偏好上；模型若要几百上千次才稳，差的就不是组合规则，是把新条目挂进旧结构的速度。<b>但这里不成立</b>的是把组合想成「函数吃掉参数」：形式系统里的算子不会把参数的身份取消掉，而「假」恰恰取消了「枪」。SCAN 这类题里的算子全是良性的、不改变参数身份的，所以它测不到自然语言最难的那一段。</li>
 <li><b>东西方哲学 · 指到哪个东西，光看行为定不下来</b>：Quine 设想过一个田野场景：一只兔子跑过，当地人说了个词，你记下「兔子」。可同样的行为证据也支持「未分离的兔子部件」这种解读——只要相应改动他语言里管同一性和数量的那些词，所有能观察到的对错判断都不变。跑的是「懂一句话，就是知道它在什么情况下算真」那节的机制：真值条件把意思钉在世界的状态上，但同一组真值条件可以由不止一种指称分配得到。由此推出的结论是经验性的：学词的孩子必须自带偏好，否则第一课就迈不动步。而这个偏好可测——Markman 和 Wachtel 1988 年发现三岁孩子默认新词指整个物体；当那个物体已经有名字了，他们才把新词分给它的部件或材质。也就是说 Quine 的不确定性在人这里是被一条经验性的先验按住的，不是被逻辑消掉的。<b>但这里不成立</b>的是那个前提：真实的孩子不止有行为证据，还有指点、目光跟随和大人的纠正，通道比设想中的田野语言学家宽得多。可检验的后果是：把共同注意这条通道削弱——新词只在大人没看着那个东西时出现——学词效率应当明显掉下来，这也正是实验里看到的方向。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>组合性原则说，一句话的意思由各部分的意思加上组合方式共同决定，所以没听过的句子也能当场算懂。</li>
+<li>Lake、Linzen 和 Baroni 2019 年的实验里，人只看几个例子就学会假词和操作，并能套到没见过的组合上。</li>
+<li>习语不是组合性的整块反例：比喻义越能分给内部各个词，习语在句法上就越能变形。</li>
+<li>同样是形容词加名词，「红苹果」取两个条件的重叠，「熟练的外科医生」只在名词范围里衡量，「假枪」则取消了「是枪」。</li>
+<li>组合不是一个动作而是一族动作，每个词进入句子时都带着自己的接法。</li>
+<li>懂一句话，就是能说出世界得是什么样它才成立，这叫真值条件，四岁孩子就能用真值判断任务来测。</li>
+<li>英语和汉语的辖域读法不同：汉语被试在关键材料上不接受逆向读法，但后续研究发现这也要分结构和环境。</li>
+<li>Frege 区分指称和涵义：「晨星就是暮星」与「晨星就是晨星」指同一颗金星，信息量却天差地别。</li>
+<li>「高」这类模糊词不自带阈值，总是相对一个对照类，边界上的人甚至常被判为「又高又不高」。</li>
+<li>SCAN 这类组合测试里的算子都不改变参数的身份，所以测不到「假」取消「枪」这种自然语言最难的组合。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="ea01373a4470a55d">深入思考</h3>

@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 
@@ -151,6 +157,21 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Language runs on a few dozen sound parts yet yields endless new sentences, so it cannot be a dictionary with a last page.</li>
+<li>Mandarin mā, má, mǎ and mà use identical mouth movements; only the pitch contour turns 'mother' into 'scold'.</li>
+<li>Duality of patterning means a small set of meaningless sound units below is endlessly reshuffled into meaningful words and sentences above.</li>
+<li>Rotokas gets by with 11 phonemes while Taa counts up to 130 consonants, and both can express anything at all.</li>
+<li>Al-Sayyid Bedouin Sign Language has a rich vocabulary but no settled layer of recombinable parts yet, so that layer can emerge later.</li>
+<li>The link between a word's sound and its meaning is mostly convention, which is what lets the same parts point at anything.</li>
+<li>A rooster sounds different in every language because onomatopoeia can only imitate with the parts a language already has.</li>
+<li>Across 25 languages and many scripts, people reliably match 'bouba' to a round shape and 'kiki' to a spiky one.</li>
+<li>Recursion lets a sentence hold another sentence, so none is longest, yet two or three center-embedded layers already defeat listeners.</li>
+<li>Multiple center-embedding shows up almost only in writing: recursion removes the ceiling, while memory and paper set the real depth.</li>
+</ol>
+</div>
 <div class="thinking">
 <h3>Going deeper</h3>
 <details><summary>If a language has only eleven phonemes, are its words longer?</summary><p>Fewer parts means fewer short combinations, so intuition says words must stretch. But is "enough" measured in word length or in information delivered per second? If two languages differ twofold in word length and twofold in speaking rate, would you call them equally efficient? The answer depends on which unit you picked first.</p></details>

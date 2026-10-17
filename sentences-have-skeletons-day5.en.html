@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -146,6 +152,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · what holds the far end is pairing, not distance</b>: people have put islands to language models. What Wilcox and colleagues measured in 2018 is whether a model, having read a fronted question word, starts expecting an empty slot somewhere later. It does, and that expectation is damped inside several island structures. The result is cited as often as it is questioned — whether it reflects structural sensitivity or some length effect is still unsettled. The mechanism is the one from the section on holding onto somewhere far away: human judgements track structure, not distance (Sprouse's group finding no effect of memory capacity points the same way). That yields an experiment someone could actually run: build two sets of sentences with the linear distance inside and outside the island matched exactly, varying only what the line passes through. Human rejection should survive intact; a model effect that comes from length would collapse here. <b>Where this breaks down</b> is treating it as request-and-response pairing in a protocol: there the far end carries an explicit identifier and you look it up on arrival, whereas the slot in a sentence is silent, unpronounced and unmarked, so the parser has to bet on whether it exists at all. Which is why distributed systems never show the guess-then-reverse cost of a garden path, and cannot be used to predict human reading times.</li>
 <li><b>Society and institutions · two readings of one statute, worth five million dollars</b>: Maine's overtime law listed exempt activities ending in packing for shipment or distribution. The dairy company Oakhurst argued that was two things — packing, and distribution — so distribution earned no overtime; the drivers argued it was one thing, packing done for shipment or for distribution, leaving distribution unexempt. In 2017 the First Circuit sided with the drivers and the company settled for five million dollars. The mechanism is the one from the section on words coming in gangs: change the grouping and you change the truth conditions. The useful conclusion for people who draft rules is that the fix is not an added clause or qualifier — that just piles more groupable material onto the same string — but a change to the constituent structure itself: break it into a numbered list and let the layout carry the grouping. The interpretive canons lawyers reach for (last antecedent, series qualifier) cannot save it precisely because they conflict, which amounts to legislating two default groupings for one string. <b>Where this breaks down</b> is the rule of thumb that context will disambiguate, which holds up well in speech: in Snedeker's experiment the speaker adds a pause and the listener can ask on the spot, while a statute is read years later by opposed parties who actively want the other reading. The difference is visible — nearly all structural ambiguity in conversation is gone within half a second, and the kind in a statute survives to trial.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>A sentence is not a string of words: words form constituents, and smaller constituents nest inside larger ones.</li>
+<li>Whether some words form a constituent can be tested by replacing them as a whole, moving them, or coordinating them with a similar unit.</li>
+<li>The same Mandarin string about a dog and a hunter has two meanings purely because the boundary between its groups can fall in two places.</li>
+<li>Ding Nai and colleagues found in 2016 that listeners' brains track phrase and sentence rhythms that are absent from the sound itself.</li>
+<li>Garden path sentences like The horse raced past the barn fell lure readers into the wrong structure, forcing them to back up and rebuild.</li>
+<li>People build structure before a sentence ends, and eye-tracking shows the cost of repairs as longer fixations and backward jumps.</li>
+<li>Speakers place pauses that help listeners resolve ambiguity, mostly without knowing they do it, and listeners use them almost instantly.</li>
+<li>A question word can link to a gap arbitrarily far away, but not into islands such as relative clauses.</li>
+<li>Mandarin leaves question words in place, yet a 2020 rating study found island effects in Mandarin too.</li>
+<li>Two possible groupings of one phrase in Maine's overtime law ended in a five-million-dollar settlement for a dairy company.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

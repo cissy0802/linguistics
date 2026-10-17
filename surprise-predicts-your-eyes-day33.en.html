@@ -41,6 +41,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -126,6 +132,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Psychology · The brain has another &quot;expectation violated&quot; signal, and it is a different shape — a difference that can be measured</b>: the firing burst of dopamine neurons at the moment a reward arrives varies monotonically with how probable that reward was, a range Fiorillo and colleagues swept end to end in monkeys in 2003. The standard temporal-difference account writes that signal as actual minus expected, which is linear in probability. The mechanism from the section on halving probabilities is logarithmic instead: the cost does not track how far the probability fell, but how many times it was divided by two. Both are called expectation violation, yet their shapes differ — from which it follows that they cannot be two measurements of one quantity. They must be two separate ledgers, one settled by difference, the other by information content. This is decidable: dropping an expectation from 0.5 to 0.25 versus from 0.01 to 0.005, the linear account says the first hits far harder, the logarithmic account says they are equal. <b>Where it does not hold</b> is any attempt to wire the two together directly. The dopamine signal is signed — better than expected is positive, worse is negative — while reading time is unsigned: an unexpectedly good word and an unexpectedly bad one both cost you the same few milliseconds. Using reward prediction error to &quot;explain&quot; reading time treats a directional quantity as a non-directional one.</li>
 <li><b>Buddhism · &quot;Lower your expectations&quot; is not free in this arithmetic: it shaves the worst case and raises the long-run average</b>: a practice that recurs across contemplative traditions is loosening expectation, on the grounds that less is violated and so less hurts. The mechanism from the section on halving probabilities splits that advice into two quantities. An expectation is a probability distribution. The sharper it is — the harder you have committed — the closer to zero the cost when you are right and the larger the cost when you are wrong; the flatter it is, the lower the ceiling on any single cost. But average surprisal is exactly the entropy of that distribution, and entropy is at its maximum when the distribution is flattest. Which yields a counterintuitive conclusion: staking nothing is not the zero-cost option. It trades a spike for a sustained high baseline. &quot;Expect nothing&quot; should therefore show up as smaller swings together with a heavier everyday load — a different prediction from &quot;loosen your expectations and everything gets lighter&quot;, and in principle separable from it. <b>Where it does not hold</b> is that the ledger has to be computable. A reader faces a vocabulary: countable, with estimable probabilities. &quot;How things will turn out&quot; has no vocabulary, so that entropy has no numerical value. This stays a structural inference, not a measurement.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Ehrlich and Rayner showed in 1981 that the tighter the context, the more often readers skip a target word and the less they notice it is misspelled.</li>
+<li>Mandarin classifiers make prediction visible early: a classifier that clashes with the coming noun triggers a graded N400 as soon as the classifier is read.</li>
+<li>Surprisal is the negative log probability of a word given its context, and reading time grows linearly with it, which means logarithmically with probability.</li>
+<li>Every halving of a word's probability costs the reader the same fixed amount: about two milliseconds per bit in natural reading, about four in self-paced reading.</li>
+<li>Using the multilingual eyetracking corpus MECO, Wilcox and colleagues found that surprisal predicts reading time across eleven languages from five families.</li>
+<li>Oh and Schuler found that within one model family, larger language models with lower perplexity fit human reading times worse, not better.</li>
+<li>Transformer surprisal is most humanlike at around two billion training tokens; beyond that, models stop being surprised by rare names and odd collocations that still trip people up.</li>
+<li>On a Japanese eyetracking corpus, the rule that lower perplexity means more humanlike fails, and whether verb-final word order is the cause is still open.</li>
+<li>On garden-path sentences, surprisal correctly marks where readers stall but badly underestimates how long, and by different factors for different constructions.</li>
+<li>The link between surprisal and reading time shows that people track the statistics of their language, not that a Transformer is running inside the head.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

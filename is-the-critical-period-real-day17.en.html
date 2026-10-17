@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · "Weak early capacity helps you learn" has been run on machines twice, with opposite results</b>: Elman (1993) trained a recurrent neural network on an artificial language containing relative clauses and subject–verb agreement. Fed all the sentences at once, it failed. Fed only short sentences first, or with its short-term memory artificially squeezed and then gradually released, it succeeded. Newport built the "less is more" proposal on this: children may learn well precisely because their early processing capacity is weak, forcing them to grab small fragments first. That runs opposite to the default reading in the section on the door not slamming shut — decaying capacity does not close the door, limited early capacity opens it. The resulting disagreement is testable, and has been tested: Rohde and Plaut (1999) reran it with grammars closer to natural language, and the benefit of starting small vanished, sometimes reversing; they argued networks already tend to pick up simple regularities first, with no external throttle needed. <b>Where this does not hold</b> is the range of questions such a chain can answer. You can reverse a model's training order and run it again; a person cannot be rerun. Worse, no model has the condition "no language before this" — its first language is always its only language. Curriculum order a model can test on our behalf; the hardest claim here, the cost of a missing first language, it cannot even build the control group for.</li>
 <li><b>Neuroscience and consciousness · In other systems the window can be prised back open</b>: Mouse visual cortex has a window for which eye dominates, with sharp opening and closing times. Work from Hensch and others found the closing tied to the maturation of inhibitory neurons and to a lattice around them called the perineuronal net; interfere with those and some adult plasticity returns. Gervain and colleagues (2013) followed the thread: adult men took valproate for two weeks while training on pitch, and the drug group identified absolute pitch better than placebo. If the language age curve runs on that same machinery, it is prisable in principle — and that turns the analogy into a difference you can test: what should come back open is the accent end (a perceptual mapping table), not grammar. If some intervention lifted late starters' accent and grammar together, that would argue the age effect is not one window at all. <b>Where this does not hold</b> is the gap in evidence strength. The valproate study was a crossover design with 24 participants, the two groups did not differ in the second half after the switch, and there has been no independent replication; and absolute pitch is labelling frequencies, while grammar is not a perceptual map.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The critical period hypothesis, proposed by Eric Lenneberg in 1967, is usually pictured as a door that shuts around puberty.</li>
+<li>Johnson and Newport (1989) found that immigrants who arrived in the US before seven judged English grammar like native speakers, with scores falling as arrival age rose.</li>
+<li>Among people who arrived after puberty, average grammar scores levelled off but the spread between individuals suddenly widened.</li>
+<li>Data from 669,498 online quiz-takers once put the onset of grammar-learning decline near 17.4 years, but a reanalysis found steady, continuous decline fits most learners better.</li>
+<li>Decline with age of first exposure is well established; whether the curve has an elbow, and where, remains unsettled.</li>
+<li>The age effect is several doors rather than one: accent narrows earliest, grammar much later, and vocabulary hardly at all.</li>
+<li>Genie suffered malnutrition, abuse and total isolation at once, so her single case cannot show that grammar has an expiry date.</li>
+<li>Among deaf adults who all began American Sign Language at nine to thirteen, those with an earlier spoken language recalled complex sentences at 82%, those with no early language at 43%.</li>
+<li>Mayberry's comparison suggests the later ceiling on language learning is set less by age than by whether a child had any language early on.</li>
+<li>Learning a second language late still costs something, but an order of magnitude less than a missing first language: a lowered ceiling, not a locked door.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

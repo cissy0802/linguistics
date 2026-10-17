@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -148,6 +154,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>演化生物学 · 遗传密码也是两层的</b>：4 个碱基，三个一组编成密码子，对应 20 种氨基酸，再串成长度没有上限的蛋白质。底层单位自己不表示任何东西，靠重组产生上层意义——跟「几十个什么都不表示的零件」那节是同一条机制，所以两边都有「最小对立对」：换掉一个碱基就是镰状细胞贫血，换掉一条音高曲线就从「妈」变成「骂」。<b>但这里不成立</b>：遗传密码几乎全地球共用一套、几十亿年基本没动，而音位库从 11 个到 120 多个各不相同，几百年就能换一批。类比正好断在「码表是否共享且冻结」这一点上，而且断得有用——生物学能靠密码表通用做跨物种的基因移植，语言这边永远做不出对应的操作：你没法把一门语言的音位表直接装到另一门语言上。</li>
 <li><b>心理学 · 外部记忆抬高的是深度，不是合法性</b>：Karlsson 那批语料里最扎眼的一点是，多重中心嵌套只在书面语里出现，口语几乎为零，而且跟着书写传统一起来的。机制是「没有最长的那一句话」那节：递归负责取消上限，工作记忆负责决定实际深度，两件事是分开的。于是有个能做的判据：给读者纸笔或者允许回读，三层嵌套的理解率应该明显回升；而对一个真正不合语法的串，纸笔不会带来任何回升——你盯多久都拼不出唯一的读法。「读不动」和「不合语法」看起来一样，用外部记忆一测就分开了。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>语言只靠几十个声音零件，却能造出无穷多从没说过的句子，所以它不可能是一本有最后一页的词典。</li>
+<li>普通话的妈、麻、马、骂嘴型完全一样，只差一条音高曲线，意思就从母亲变成了骂人。</li>
+<li>双重分节指下层是一小袋本身没意思的声音单位，上层的词和句子靠反复重排这些单位产生。</li>
+<li>罗托卡斯语只有 11 个音位，塔语的辅音能数到上百个，两边都足以表达任何事情。</li>
+<li>阿萨伊德贝都因手语词汇已经够用，却还没长出可自由重组的零件层，说明这一层可以后来才出现。</li>
+<li>声音和意思之间的联系主要靠约定，这种任意性让同一袋零件可以被派去指任何东西。</li>
+<li>各语言的公鸡叫声差别很大，因为拟声词只能用本语言现成的零件去模仿真实声音。</li>
+<li>bouba/kiki 实验在 25 种语言里重复成功，人们普遍把圆形配给 bouba、尖形配给 kiki。</li>
+<li>递归允许句子里套句子，句子没有最长的一句；但中间嵌套到两三层，人就读不动了。</li>
+<li>语料显示多重中心嵌套只出现在书面语里，说明递归取消上限，工作记忆和纸笔决定实际能走多深。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="2d56d5cc36aef363">深入思考</h3>

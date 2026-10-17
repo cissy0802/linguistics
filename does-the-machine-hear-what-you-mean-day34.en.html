@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -127,6 +133,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Society and institutions · a scalar implicature written into law, which forced "including but not limited to" into existence</b>: legal interpretation carries an old canon — if a provision lists some cases, the cases it does not list are excluded (in Latin, expressio unius est exclusio alterius, "to express one is to exclude the others"). That is the mechanism from the section on saying "some", institutionalized: from "he could have listed it and didn't" you infer "he doesn't want it to count". Once that inference becomes a rule citable in court, a conclusion follows that was not visible before — drafters must actively work against it, so provisions sprout large amounts of gap-plugging language ("including but not limited to", "and the like"), and jurisdictions that apply the canon more strictly should show denser use of it. That is countable, not a figure of speech. <b>Where this does not hold</b> is the precondition for implicature: it requires a speaker who is cooperating and an intention that can be recovered, whereas a statute is written by many hands over many rounds of compromise, and some of its gaps were left deliberately so that every side could nod. There is no single "he" who could have been clear and chose not to be. So in the pragmatic sense "legislative intent" may not be an existing object at all — not hard to recover, but absent.</li>
 <li><b>Physics and mathematics · the level at which recursion stops is not in the same place for people and for machines</b>: game theory has a decades-old party trick — everyone in a room writes down a number from 0 to 100, and whoever comes closest to two-thirds of the group average wins. Reasoned all the way down the answer is 0, but in real experiments the average lands in the twenties or thirties: most people recurse one or two levels and stop. Indirect speech written as a game (the 2008 paper by Pinker and colleagues on the logic of indirect speech) runs the same mechanism: the speaker computes how the listener will reason back, and the listener computes what the speaker expects of that reasoning. So a testable difference follows: if human pragmatic inference also has a budget of one or two levels, then indirectness of three levels or more — "I am hinting that you should hint to him" — should break down systematically in people, while a system that unrolls each level explicitly will not. That is not about who is stronger; it is a difference in the shape of the cost curve, and the number of levels can be used as an independent variable. <b>Where this does not hold</b> is the common-knowledge premise: computing best responses level by level requires both sides to know each other's payoffs, whereas that paper's own starting point is that the type of relationship is uncertain and the speaker needs a deniable line of retreat. If the payoffs are not shared knowledge, the recursion has nothing to stand on. So this mathematics can derive why people speak around a point, but not where they stop — which incidentally explains why irony and humour came out at the bottom of the scorecard: they are the cases where payoffs are least transparent.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In 1979 Herbert Clark had fifty restaurants asked "Do you accept credit cards?" and 44% answered only the literal "yes", showing that moving from wording to intention is an optional step.</li>
+<li>Grice's account: a listener assumes the speaker is cooperating, asks why this wording was chosen over a plainer one, and recovers the conversational implicature from the gap.</li>
+<li>Worn-smooth indirect requests like "can you pass the salt" are recognized whole; Gibbs found in 1983 no sign that people compute the literal reading first and then discard it.</li>
+<li>Which forms count as ready-made varies by language: the cross-cultural speech act project found Argentinian Spanish requests most direct and Australian English least, and indirectness is not the same as politeness.</li>
+<li>In Noveck's 2001 study, 87% of eight-to-ten-year-olds judged "some elephants have trunks" true against only 41% of adults; it is the adults who compute the extra step.</li>
+<li>Reading a scalar implicature means tallying the stronger wordings the speaker passed over, which takes a model of their mind, the same machinery a false-belief test checks and children acquire around age four.</li>
+<li>Language models' pragmatic scores swing with materials, language and fine-tuning: the same base model scores far higher on implicature after a different instruction-tuning recipe.</li>
+<li>Ullman made the popcorn-filled "chocolate" bag transparent, leaving the logic untouched, and the strongest models of 2023 failed the false-belief item.</li>
+<li>LLaMA2-70B, the weakest model overall, beat humans on faux pas only because the correct answers in those items all pointed the same way.</li>
+<li>The legal canon that listing some cases excludes the rest is a scalar implicature turned into an institution, which is why drafters write "including but not limited to" so often.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

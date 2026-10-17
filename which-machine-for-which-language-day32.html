@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <body>
 <div class="container">
@@ -141,6 +147,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>演化生物学 · 「鸟会不会递归」这个问题被问错了，问错的地方正好是分档的那道台阶</b>：2006 年 Gentner 等人训紫翅椋鸟（European starling）区分两种人造鸣声串：「若干个 A 接同样多个 B」和「A、B 交替」。鸟学会了，还能推广到没听过的音元，论文标题直接用了「递归」。2009 年 van Heijningen 等人拿斑胸草雀（zebra finch）复制，发现同样的辨别能被便宜得多的策略解释，比如记住相邻两个音元的组合；两边互相回了一轮，没有收敛。跑的是「要么……要么……」那节的机制：把最便宜的装置排除掉，靠的不是数量对得上，而是配对项之间有个体化的依赖——第一个 A 只跟最后那个特定的 B 结算。「若干个 A 接同样多个 B」这种串，会数个数就判得出，一叠欠账都不需要。由此推出的不是「证据不足」，而是一条能直接改的实验设计要求：数量匹配的材料原则上测不出递归，要测就得让材料里某一个 A 换掉之后，必须是特定的那个 B 跟着变才合法。<b>但这里不成立</b>的是更狠的一层：实验室材料永远是有限长的，而有限的串集合全部落在最便宜那一档——分档是对无限集合的分类。所以「这个物种坐在哪一层」在实验室里原则上无解，能测的只有「它用了哪种策略」。这一刀同样砍向人类那边：人的定位靠的是母语者对没听过的句子给出合法性判断，动物给不了。</li>
 <li><b>社会与制度 · 议事规则显式地维护一个栈，而它的深度上限来自流程设计，不来自记忆</b>：议事规则那一套（Robert's Rules of Order）里，一个主动议还没表决就可以对它提附属动议，附属动议上面还能再叠；规则规定先处理「当前待决」的那一个，处理完再往回退一层，主持人和记录员把这一串写下来。跑的正是那条后进先出的欠账表机制，也就是栈——议事规则把它显式实现了一遍。由此能推出一个原本看不出的结论：人类语言的三层上限不是「嵌套本身难」，而是「那个栈没有外挂」。凡是给栈配了外挂的场合（白板上的待决清单、逐条记录），深度上限就该明显高于三层，而且失败的样子不一样——没有外挂时表现为再也回不到原议题；有外挂时表现为回到了原议题、但语境已经对不上。这是能在会议记录上分开数的两种失败。<b>但这里不成立</b>的是：议事规则的栈看得见查得到，主持人还能宣布把整串清掉；语言里听者那个栈既看不见也不能重置。所以议事规则的深度上限是有意设计出来的（不限制议事就会瘫掉），语言的上限是记忆漏出来的。把制度里写明的层数上限当成人类认知极限的证据，是把因果反着推了。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>给语言分档不看表达力强弱，而看装置需要记住什么形状的欠账；档位只有四个。</li>
+<li>有限状态机只记当前位置，却足以处理音系和词形，芬兰语的词形变化就做成过这种装置。</li>
+<li>「要么……要么……」「如果……那么……」能无限往里套，所以句子层必须配一个后进先出的栈。</li>
+<li>中心嵌套在语法上可以套到底，但人读到三层就复述不出来，真实书面语也从没出现过四层。</li>
+<li>删掉三层嵌套句中间的动词，英语母语者反而读得更顺，德语母语者却正好相反。</li>
+<li>荷兰语动词也在句末却和英语一样出现缺动词幻觉，解释重心因此移向结构在该语言里常不常见。</li>
+<li>Shieber 用瑞士德语的格标记证明名词和动词能交叉配对，这是只会嵌套的栈做不出的形状。</li>
+<li>Culy 发现班巴拉语能把任意长的复合词整体重复一遍，判断它需要把两段同序比对。</li>
+<li>人类语言坐在比上下文无关略高的窄缝里，Joshi 称之为温和上下文敏感，再高一档解析就不现实。</li>
+<li>紫翅椋鸟学会「若干个 A 接同样多个 B」不能证明递归，因为这种串只需会数数就能判断。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="8a995fd61e2919b2">深入思考</h3>

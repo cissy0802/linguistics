@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -126,6 +132,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · in a stream with no delimiters, boundaries can only grow out of prediction</b>: a network protocol has to find where one frame starts and ends in a continuous run of bits, and the engineering answer is to write an explicit sync header and use bit stuffing to guarantee that header can never occur by accident inside the payload — the boundary is inserted. Speech has nothing of the kind: the real silences tend to fall inside words while the joins between words run on unbroken. The mechanism in "two minutes of gibberish" offers the other route: boundaries are not marked, they are found where prediction degrades — inside a word the next sound is near-certain, at a seam it drops to one in three, and the cut goes where the drop is. From that follows a testable difference: the ceiling on this route is set by how uniform the units are, not by how much data you have. Johnson and Tyler only made the words unequal in length and the eight-month-olds failed; by the same token, an algorithm segmenting purely on adjacent transition probabilities should be accurate on fixed-length records and, on variable-length ones, should systematically fold the short items into the long, with no amount of extra data fixing it — the repair has to be a method that entertains several candidate lengths at once. <b>Where it does not hold</b> is the premise that the stream carries redundancy. Protocol payloads are usually already compressed, and compression does exactly the job of wringing out the predictable part so that each bit's successor is as unpredictable as possible. A sufficiently well-compressed stream is in principle unsegmentable — not because the algorithm is too dull, but because the thing being cut has no rise and fall left in it. So insisting on a sync header is not laziness; and language is cuttable precisely because it keeps a great deal of redundancy, wasteful on channel efficiency and the whole of its capital on learnability.</li>
 <li><b>Evolutionary biology · the same machine sits in many species, so what did language add</b>: cotton-top tamarins segment chunks out of exactly the streams the infants heard, rats do it too, and human infants do it with sequences of pure tones. What runs is the same mechanism as in "two minutes of gibberish": tracking the transition probability between adjacent units. The easy reading is "so language ability is just general learning ability", but the harder conclusion lies the other way — precisely because this machine is so widely distributed, it cannot be the watershed for language; what needs explaining is the step right after. "What you cut out is still just a chunk of sound" gives that step its shape: seventeen-month-olds can take a segmented chunk as the name of an object, while an equally frequent cross-seam chunk will not do. That yields a comparison one could actually run: put a tamarin through the same segmentation training and then test whether it spontaneously treats some chunk as a label for some object — on present evidence it should fail, and that failure point is far more precise than "monkeys don't talk". <b>Where it does not hold</b> is the tacit step from "shared across species" to "homologous". Primates and rodents sit far apart on this branch; the ability may have arisen separately in each, or may just be something any sequence-sensitive system with short-term memory gets for free. Sharing is not by itself evidence of evolutionary continuity — to argue that, you would first have to show it is the same neural implementation in these species, and that is unsettled.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Recordings of continuous speech contain almost no silences between words; the real pauses often fall inside words, and listeners supply the gaps themselves.</li>
+<li>In 1996 Saffran and colleagues played eight-month-olds two minutes of a pause-free artificial language, and the infants then told whole words apart from chunks spanning a seam.</li>
+<li>Inside each made-up word the next syllable was certain, while at word seams the odds fell to one in three, so the cut lands where prediction is worst.</li>
+<li>When a 1998 follow-up equalised how often each chunk occurred, infants still discriminated them, so they track conditional probability rather than raw frequency.</li>
+<li>Cotton-top tamarins and rats can segment the same streams, and infants do it with pure-tone sequences, which points to a general sequence-statistics machine.</li>
+<li>A 2017 meta-analysis found the statistical segmentation effect small and fragile, and sensitive to synthetic versus natural speech.</li>
+<li>About ninety percent of content words in English conversation start with a stressed syllable, which is why English-learning infants mis-segment "guiTAR is" as "TARis".</li>
+<li>Segmentation cues differ by language: English uses stress, French the syllable, Japanese the smaller mora, and Mandarin lacks a strong-weak alternation altogether.</li>
+<li>Johnson and Tyler broke statistical segmentation in eight-month-olds simply by making the artificial words unequal in length.</li>
+<li>Seventeen-month-olds only learn segmented chunks as object names, and tamarins segment but have never been reported treating a chunk as a name.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

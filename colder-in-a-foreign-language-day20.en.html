@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -114,6 +120,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · Models change their answer with the language too, but nobody ever spoke to them</b>: a multilingual large model asked the same moral or allocation question gives different answers depending on the prompt language. Work in 2024 reports that the same model scores lower on moral reasoning when prompted in Hindi and Swahili than in English, Chinese or Spanish; other work measures cross-language gaps of 9 to 56 percentage points on distributive-justice scenarios. This looks exactly like today's topic, and that is precisely why it needs care. The mechanism in "'Shame on you' in your first language makes you sweat" is that emotion hangs on the situation of acquisition, not on word meaning — it is a history of people saying things to you, and a model has no such register. So the two language dependencies must be predicted by different quantities, and that is the testable difference: a model's cross-language gap should track the share of that language in its training and alignment data, and should be largely erasable by translating into English internally before answering; a person's gap is not erasable — you can tell someone to translate the problem into their first language in their head before answering, but the physiological response that should have fired while reading the sentence did not fire, and it does not come back. <b>Where it breaks down</b> is reading that inconsistency as "the model has a mother tongue too": the model's difference is a difference in data distribution, movable by adding data, while the human notch is an acquisition history — high proficiency only shrinks the effect (the meta-analyses find weaker effects at higher self-rated reading proficiency) and never converts a language into a second mother tongue.</li>
 <li><b>Society and institutions · Making English the working language installs a one-way attenuator on one class of decisions</b>: multinationals and international bodies routinely set the working language to one that is a second language for most people in the room, usually justified as communication efficiency. The mechanism in "On the footbridge" shows the choice is not neutral: a foreign language weakens the deontological side — the prohibition on using a person as a means — rather than tuning the decision as a whole. The implication therefore has a direction: in meetings held in a second language, proposals that involve harm to people (how layoffs are done, how compensation is framed, who gets excluded) should pass more easily, while purely financial decisions that harm nobody should show no such shift. That difference is checkable: for the same class of question in the same company, count approval rates separately in first-language subsidiary meetings and English headquarters meetings, and see whether the shift appears only in the first class. <b>Where it breaks down</b> is extrapolating individual experiments straight to institutions: the experimental items are anonymous, one-shot and consequence-free, while real decisions are collective, recorded and attributable. Worse, the people with the most say in the room are usually native speakers or the most proficient ones — and the meta-analyses say the effect is weakest exactly there. The mouths most exposed to the attenuator are the least affected by it.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In the 600-lives disease problem, "200 saved" and "400 die" describe the same outcome, yet they push most people toward opposite choices: the framing effect.</li>
+<li>When Keysar, Hayakawa and An translated the problem into a language participants had learned at school, the framing flip seen in the native language vanished.</li>
+<li>Offered a bet with positive expected value in a foreign language, more people accept it, even when real money is at stake.</li>
+<li>A foreign language changes sensitivity to wording, not arithmetic skill; for outcome bias or the representativeness heuristic, language makes no difference.</li>
+<li>In the footbridge dilemma, endorsement of pushing rose from 20% in the native language to 33% in a foreign one, while the lever version showed no gap.</li>
+<li>Process dissociation suggests a foreign language weakens the ban on using a person as a means rather than boosting utilitarian concern: feeling less, not thinking more.</li>
+<li>Norm violations that offend but harm nobody are judged more leniently when read in a foreign language, so what shifts is disgust itself.</li>
+<li>Two meta-analyses agree the foreign-language effect is real but disagree on whether reading proficiency moderates it.</li>
+<li>Skin-conductance measurements show childhood reprimands in the first language trigger the strongest arousal and lose the most in a second language: emotion sticks to where a phrase was learned.</li>
+<li>Venetian and Bergamasque, languages spoken at home since childhood, produce the same effect as a foreign language, so the setting a language is habitually used in beats emotional distance as an explanation.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

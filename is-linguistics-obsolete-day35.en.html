@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Evolutionary biology · You find out why a path was not taken by actually synthesizing it</b>: in 2006 Bridgham, Carroll and Thornton took the inferred 400-million-year-old ancestral sequence of a class of hormone receptor proteins and actually synthesized it, then built several intermediate versions evolution never kept and tested them one by one. One finding: of the two required mutations, the one that came first does not change function at all — it only makes the second one viable. Swap the order and the path is closed. This runs the mechanism from the section on 2,400 languages typed into a table: to answer "why only these few shapes", you need a control set that includes the shapes which did not appear, and the absent ones can only be specified — and built — by a person. Which exposes the half that is missing on the linguistics side: existing "languages humans could not learn" experiments only measure how fast a single learner picks one up, never whether it survives being passed on. The testable difference: if the real constraint lives in transmission across generations rather than in the single learner, then a variant that is slow but learnable, put into an iterated-learning experiment (the Kirby and colleagues 2008 design: one generation's output becomes the next generation's input, run ten deep), should deform within a few generations, while a large model learning it alone is untroubled. <b>Where this does not hold</b> is the premise of fitness: biology can count it directly — how many survived, how many offspring — and language has no such quantity. A grammar being harder to learn does not mean its speakers have fewer children; whether a language is passed on is decided by politics, schooling and economics.</li>
 <li><b>Neuroscience and consciousness · A chip whose answer is fully known put the whole analytic toolkit through an exam</b>: in 2017 Jonas and Kording turned the standard analytic methods of neuroscience on a MOS 6502 chip running a video game. The point is that this chip has a complete, correct answer available: the wiring and the instruction set are public. They "lesioned" transistors one at a time, drew tuning curves, computed correlations and causal measures between signals, ran dimensionality reduction — and got a pile of statistically significant findings (pull these few transistors and the game stops running) without one of them yielding how the chip works. This runs the mechanism from the section on the exam that tests a model's grammar: the fit a measurement reports depends on what the items cover, and what they cover is specified by a theory supplied independently — the metric itself will never tell you what it left out. From which one doable thing follows: calibrate the method first on a system whose answer is known. The counterpart on the linguistics side is already available — train a model on an artificial language whose rules were written entirely by people, and see whether existing probes and benchmarks recover those rules as written; a method that cannot should have its conclusions about human language discounted a notch. <b>Where this does not hold</b> is the premise of there being one correct answer: the chip has a circuit diagram and language does not, and the true answer about human grammar is itself the thing to be explained. So this calibration can only rule out false positives; it cannot show that a method which passes will find a real mechanism.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Kalamang has about 130 speakers and almost no text online, so a model can only translate it by reading Eline Visser's grammar of the language.</li>
+<li>On the Machine Translation from One Book benchmark, the best model fell short in both directions of a human who studied the same materials.</li>
+<li>Rendering the Kalamang progressive marker teba as the English adverb "progressively" showed the model was consulting the word list, not applying the grammar.</li>
+<li>Most of the world's roughly 7,000 languages have about as much web text as Kalamang does, which is to say almost none.</li>
+<li>Grambank charts 195 grammatical features across 2,467 languages, filled in cell by cell by more than a hundred linguists from reference grammars.</li>
+<li>Greenberg's observation that object-before-verb languages tend to use postpositions is a statistical tendency with counterexamples, not an iron law.</li>
+<li>Grammatical features are predicted more by genealogy than by geography or environment, and close to half of grammatical diversity is at risk.</li>
+<li>Minimal-pair grammar tests for models reached 101 languages only by building on hand-annotated treebanks and hand-compiled inflection tables.</li>
+<li>BabyLM caps training at about 100 million words, near what a child hears by their teens, turning the data-volume dispute into an experiment.</li>
+<li>The MOS 6502 chip study suggests analytic methods should be calibrated on a system with a known answer before being applied to human language.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

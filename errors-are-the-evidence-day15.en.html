@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -119,6 +125,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · "Learned a rule" and "learned the nearest neighbour" come apart on one curve</b>: to find out whether a model has genuinely abstracted a rule or is retrieving from similar training examples, the usual move is to look at accuracy — and accuracy is exactly what cannot separate the two, since both systems answer the same way on common inputs. What is running is the mechanism from "He only ever goes wrong in one direction": the asymmetry Prasada and Pinker found shows that the defining property of a rule is not being used often, it is not consulting the neighbours. From that follows a probe you can run directly, and one that needs no human data at all: take the distance between a novel word and its nearest training item as the independent variable, and plot the share of rule-form responses. A pure retrieval system gives a curve that sags monotonically with distance; a system with a default rule gives a flat one, and stays flat at the far end — the far end is where the criterion lives, since in the middle the two look identical, and testing the middle is testing nothing. <b>Where it breaks down</b> is treating this as a two-way criterion. The probe is hard in one direction only: a sagging curve can falsify "there is a rule", a flat curve cannot establish one. A single-route network whose training data is overwhelmingly rule-following will also go flat at the far end — not because it holds a rule, but because that far out there are no irregular neighbours left to pull it anywhere.</li>
 <li><b>Evolutionary biology · Irregular forms have a half-life, and the next one to go can be named in advance</b>: Lieberman and colleagues went through the irregular verbs of English across the last twelve hundred years in 2007; of 177, some 79 became regular in that span. The regularity they measured: the half-life of a verb's irregular form scales roughly with the square root of its frequency of use — a verb a hundred times rarer regularizes ten times faster. What is running is the same mechanism from "He only ever goes wrong in one direction": the rule is the default and every irregular form has to be maintained by being heard, with frequency as the maintenance cost; the one-way spill in a single child's mouth, given enough children and enough centuries, is the one-way drift in the historical record. What follows is not the platitude that languages change, but a list you can name in advance — order by frequency from the bottom and you have the next dropouts. That paper named <i>wed</i>: <i>wedded</i> is already in circulation alongside it. Change becomes a pre-registerable prediction rather than an after-the-fact story. <b>Where it breaks down</b> is the biological analogy itself. In evolutionary models the fate of each locus is largely independent; words are not. Irregular verbs come in gangs — <i>sing</i>, <i>ring</i>, <i>spring</i> share one vowel alternation — and a word's survival rides not only on how often it is said but on the company holding it up. Computing a half-life word by word will systematically overestimate the lifespan of isolates and underestimate the gangs. Add that the sample is a thousand years of one language, and the square-root law is worth only "a historical correlation within a single language".</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>English-speaking children say went correctly, then switch to goed, then switch back years later, so their accuracy traces a U-shaped curve called overregularization.</li>
+<li>Marcus and colleagues (1992) counted 11,521 irregular past-tense uses from 83 children and found a median overregularization rate of only 2.5%.</li>
+<li>A form like goed cannot have been heard from adults and does not come from forgetting went, so it shows the child has extracted an add-ed rule.</li>
+<li>The overregularization rate depends on recording density, rising with denser sampling; the U shape and the direction of errors are robust, the exact number is not.</li>
+<li>Children's errors run almost one way: treating a regular verb as irregular is only about 0.2% in English, pointing to a default rule plus a looked-up list of exceptions.</li>
+<li>German plural -s is rare in the dictionary yet is what speakers use for names, borrowings and new words, suggesting the default need not be the most common pattern, though this is contested.</li>
+<li>When adults give an invented verb an irregular past tense, they go by its resemblance to existing irregulars; adding -ed ignores resemblance entirely.</li>
+<li>Mandarin verbs do not inflect, so Mandarin-speaking children overregularize classifiers instead, stretching the already broad general classifier ge to books and sheets of paper.</li>
+<li>Turkish suffixes are transparent and children use case marking reliably before age two, showing that the amount of overregularization measures a language's morphology, not the child.</li>
+<li>The half-life of an English irregular verb scales roughly with the square root of its frequency, so the rarest irregulars are the first to turn regular.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Thinking Further</h3>

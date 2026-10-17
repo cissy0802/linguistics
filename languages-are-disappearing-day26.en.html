@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -121,6 +127,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · How big a backup is, and whether it can bring anything back, are different questions</b>: there is an old rule in operations that a backup which has never been through a restore drill — actually reconstituting it into a running system — is not a backup. The restore path rots quietly as the surrounding environment drifts, and none of that shows up in the size of the archive. This runs the mechanism from the third question in "what is actually lost": documentation and use are separate things, and documentation buys exactly one thing, the answer to whether it remains possible. From which language documentation gains an acceptance test it does not currently have. The usual measure is volume — hours recorded, pages transcribed. A drill asks something else: has anyone, working only from this material and with no native speaker to consult, produced new speech the community accepts? Wampanoag is the case where that drill was actually passed. It also yields a testable prediction: whether recovery is possible should correlate less with the sheer volume of material than with whether the material contains natural conversation, because word lists and translated example sentences contain nothing about how people take a turn, interrupt, or make a joke. <b>Where this breaks down</b> is the acceptance test itself. Data restoration is binary — the bytes match or they do not. Language has no such baseline; what comes back inevitably carries traces of the revivalists' own first language, so whether it counts as success can only be settled by the community. Which is why whether modern Israeli is a continuation of Hebrew can be argued for decades, and nobody argues about whether a database restore counts as a restore.</li>
 <li><b>Evolutionary biology · Both sides count what is left; only one side also counts how far apart things are</b>: conservation biology stopped counting species alone a long time ago. There is a measure called phylogenetic diversity: sum the branch lengths on the evolutionary tree, and one isolated group with no close relatives is worth a whole cluster of near-identical species. Ranked that way, the priority list looks very different. This runs two of this topic's mechanisms together: "one every two weeks" showed that the denominator is itself a judgement, and "what is actually lost" showed that the cost to the field lands at the edges of the sample — so counting how many are left misses the point. The tree already exists on the language side; the comparative method from the topic on finding a language's relatives is the tool that builds it. Porting the measure across yields a prediction that can be computed directly and gives different answers from the current speaker-count ranking: language isolates (those with no demonstrated relatives at all, such as Basque) and small families down to one or two members rise to the top, while endangered members of large families fall back. <b>Where this breaks down</b> is irreversibility. In biology extinction is terminal; genes gone are gone. A language is carried by something learnable, which is why Manx could be moved back from "extinct" to "critically endangered". And precisely because such reclassification exists, priority-setting for languages has to include a quantity biology never needs: whether material survives from which it could be learned again.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>“A language dies every two weeks” is not a count: it comes from spreading a 1992 century-long projection evenly over a hundred years.</li>
+<li>Counting documented extinctions, the Catalogue of Endangered Languages finds roughly one every three months, and rates about 45% of living languages as endangered.</li>
+<li>A 2022 study of 6,511 languages found that more years of schooling predicts greater endangerment, because schools usually teach in one dominant language.</li>
+<li>On Fishman's graded scale, everyday transmission in the home and community is the decisive level; once it fails, everything else only buys time.</li>
+<li>Speaker counts lag: a language retreats from official use, trade, school, friends and finally the home, and that last domain is the most deceptive.</li>
+<li>Dorian's decades of work on East Sutherland Gaelic showed semi-speakers collapsing many plural patterns into one, a warning that arrives long before the population curve turns.</li>
+<li>Object-initial Hixkaryána broke the near-universal of subject before object, so claims about all languages hinge on the marginal languages most likely to vanish first.</li>
+<li>Wampanoag was rebuilt from a 1663 Bible and colonial-era deeds into a language with a new native speaker: documentation cannot keep a language alive, but it decides whether revival is possible.</li>
+<li>Hebrew is the only language to go from no native speakers to a community's everyday first language, under unusual conditions and with an outcome some call a hybrid with Yiddish underneath.</li>
+<li>Māori language nests and Hawai'i's Pūnana Leo show that successful revivals put the language back into a daily, unavoidable occasion: looking after small children.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

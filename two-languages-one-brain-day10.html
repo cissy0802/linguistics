@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -134,6 +140,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 多学几门语言，账单记在两个不同的地方</b>：往一个固定大小的模型里塞更多语言，一开始资源少的那些语言获益，塞过头之后所有语言的表现一起往下掉；这件事有个现成的名字叫「多语性的诅咒」，而把模型做大，这条下坠就往后推。跑的是「你没法只开着一门语言听话」那节的机制加上取词变慢那笔账：两套系统共用同一批资源，选择发生在很后面，每一门都要给另一门让位。但两边的账记在不同地方，这能推出一个可检验的差异：模型那笔是容量账，加参数就缓解；人这笔是频率账——慢的是低频词，强势语言几乎不掉。于是可以预言，一个人高强度只用其中一门语言过半年，那门的取词该变快、另一门该变钝，而模型不会因为推理时多用某种语言就重新分配容量。<b>但这里不成立</b>的是把「诅咒」的数字直接当成人身上双语代价的尺子：模型没有「此刻该说哪门」这一层，语言由提示定，不由对面坐着谁定；而人的切换代价里有一大块来自被外部指令支配，自由换的时候那块控制活动根本不出现。</li>
 <li><b>社会与制度 · 「两种话混着说」是怎么被判成毛病的</b>：混用两种语言在很多地方被当作两门都没学好的证据——课堂上被纠正、面试里被读成表达能力差。接上「换着说话的人，嘴上有一套规矩」那节：句内换点受两门语法共同约束，而且句内换是最流利的那批人在做，不流利的更多在句子之间换或只塞一个名词。这把那个社会判断变成了一个可以被证伪的预测：如果混用来自能力不足，换点该聚在说话人不会的那些低频词上，越不流利的人句内混得越多。数据方向相反。于是能推出一个原本看不出的结论——「混着说」这个表面特征没法用来估计语言能力，它能透露的顶多是这个人在哪个社群里长大。<b>但这里不成立</b>的是把它反过来当能力的指标：句内换的多少强烈依赖社群规范，有的双语社群几乎不这么说话，这并不说明那儿的人不流利。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>俄语—英语双语者听到英语 marker 时，眼睛会先瞟向邮票，因为俄语「邮票」marka 的开头跟它撞音。</li>
+<li>汉语—英语双语者判断英语词对时，翻成汉语后共用一个字的词对会引出不同的 N400 脑电，本人却毫无察觉。</li>
+<li>Poplack 分析纽约波多黎各社区的对话发现，语码转换的换点几乎不落在词内部，也避开两门语法词序冲突处。</li>
+<li>在句子内部换语言的恰恰是最流利的双语者，不太流利的人更多是整句说完再换，或只塞进一个名词。</li>
+<li>从第二语言切回母语比切到第二语言更慢，因为说外语时更强的母语一直被压着，压得越狠回来越慢。</li>
+<li>切换代价的不对称在两门语言势均力敌的平衡双语者身上常会缩小、消失甚至反转，在不平衡双语者身上更可靠。</li>
+<li>被外部指令规定何时换语言时，控制区域在词出现后 100–160 毫秒就忙起来，自由换语言时则不会。</li>
+<li>「双语提升执行控制」的优势本来就小，按发表偏倚校正后基本归零，一万多人的大样本里匹配背景后也消失了。</li>
+<li>双语可能把痴呆症状的显现推迟几年，但不降低患病风险，而且证据大多来自回顾性的病历统计。</li>
+<li>双语者取词稍慢、更常话到嘴边说不出，Gollan 归因于每个词的使用次数被两门语言摊薄，是频率账不是能力账。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="03e75490f7db0def">深入思考</h3>

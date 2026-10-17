@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -163,6 +169,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 判据是相对时序，不是绝对时刻</b>：语音识别系统在英语上训练好之后，遇到西班牙语口音会把 pat 判成 bat。跑的是「八和趴之间只隔了几十毫秒」那节的机制：类别边界画在两个事件的时间差上，而这条线的位置是各语言自己定的。由此能推出一个原本看不出的结论：这类错误的<b>方向可以提前算出来</b>，把训练语言的边界位置和说话人母语的分布叠在一起就行——它不是噪声，是可预测的系统偏差，因此不重训也能靠移动判决阈值补掉一部分。更能检验的是另一半：人类听者的边界会自己挪，权重冻结的模型不会。把同一位说话人的三十句连续录音同时给人和给模型，人的第三十句比第一句准，模型的第三十句和第一句错得一模一样。</li>
 <li><b>心理学 · 缺的是误差信号，不是练习量</b>：运动技能通常越练越好，投篮、骑车、盲打都是；口音练二十年却几乎不动。差别不在努力，在「住了三十二年」那节的等价归类：新目标被收进旧格子，于是你自己听自己时听不出偏差，练习的次数根本没落在需要改的地方。这推出一个能验的预测：同样时长的训练，给即时声学反馈的一组（屏幕上直接显示你这次的嗓音起始时间落在哪）应该明显优于只是跟读的一组，而单纯加倍练习量应该几乎没有增益。<b>但这里不成立</b>的是反过来那一面：投篮能靠练习修正，是因为球进没进是外部可见的结果，误差信号不经过你的知觉系统；口音的误差信号必须穿过那个已经定型的知觉系统才能到你这儿，而它正是要被修的东西。所以「多练就会好」的适用前提是误差判据独立于被训练的那套感知——一旦不独立，练习量和进步就脱钩。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>说话的主要工作不是制造声音，而是给气流设卡：挡在哪儿、怎么挡、挡多久。</li>
+<li>「爸」和「妈」嘴唇动作完全一样，区别只在软腭这扇门是否打开通往鼻腔的路。</li>
+<li>按挡气方式，辅音分为完全堵死再放开的塞音、留窄缝摩擦的擦音，以及两者相接的塞擦音。</li>
+<li>印地语在舌尖一带分出两个部位、各分四路，共八个辅音，普通话在同一部位只分两路。</li>
+<li>各语言在连续的发音维度上画不同的格子，格子多少不决定表达力，麻烦来自格子位置对不上。</li>
+<li>嗓音起始时间是嘴唇放开与声带开始振动之间的时间差，正负号表示两者谁先谁后。</li>
+<li>普通话没有真正的浊塞音，b 和 p 的区别是不送气与送气，相差约八十毫秒。</li>
+<li>西班牙语的 p 落在英语 b 的位置上，所以英语母语者常把西班牙语口音的 pat 听成 bat。</li>
+<li>Flege 对 240 位意大利裔移民的研究中，开始学英语的年龄解释了口音评分差异的 59%。</li>
+<li>等价归类让与母语相似的外语音被收进旧格子，所以越像的音越难学，而听者一分钟内就能适应口音。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="60a7022d05a3da75">深入思考</h3>

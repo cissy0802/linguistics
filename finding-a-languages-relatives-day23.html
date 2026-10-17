@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -124,6 +130,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>演化生物学 · 语系树和物种树用的是同一条推理，但语言这边的钟必须按词频分档</b>：生物学家建树也不认"共同保留"，只认共同的新变化——两个物种都有脊椎说明不了亲疏，都有某个别处没有的特化才说明，这跟「像不像不算数，对得上才算数」那节是同一条逻辑。分子钟能给树装上年代，靠的是每个位点的突变率大致恒定，而这个恒定有物理基础，和"这个基因被用得多不多"无关。语言没有这个基础：Pagel 等人 2007 年拿四种语料库配上 87 种印欧语的 200 个基本词，发现用得越频繁的词被替换得越慢，这一条就解释了历史替换速率里约一半的差异。于是能推出一个原本看不出的结论——语言树的时间轴必须按词频分档，一根统一的钟会系统性地算错某些节点；这也是本期那个天花板软得厉害的原因：不同的词半衰期差着量级。<b>但这里不成立</b>的是树这个形状本身。生物学里跨物种搬基因主要是细菌的事，多数类群可以当噪声；语言里"借"是常态，还能同时向好几个邻居借。所以"属于哪个语系"和"这批数据有多像一棵树"在语言学里是两个分开的问题，后者被做成了能直接算的量（Gray、Bryant 和 Greenhill 2010 年推的那类指标），物种树里没有非做不可的对应步骤。</li>
 <li><b>分布式系统与 AI · 神经网络能把拉丁语猜回来，却猜不出一个在所有后代里都不存在的音</b>：Meloni、Ravfogel 和 Goldberg 2021 年训了个序列模型做这件事：喂进罗曼语各语言的同源词、让它输出拉丁语形式，八千多组数据，效果好过此前的自动方法，学到的内部表示还对得上有记载的音变。看起来这门手艺被自动化了。但「拿几种后代语言，推一个没人听见过的词」那节指出一处结构性差别：比较法要的不是最像的形式，是能把所有后代都推导出来的形式，哪怕它在任何一个后代里都没留下直接痕迹。而这类模型的输出字母表就是训练数据里见过的那些音，训练目标是让预测形式和目标形式尽量接近。于是可检验的差异很干脆：把赫梯语从数据里抽掉，看模型会不会在某些位置主动多吐一个谁都没见过的成分——它不会，那样只会让损失变大。索绪尔当年做的恰恰是这件事，代价是被当了五十年怪人。<b>但这里不成立</b>的是人的这点优势的适用范围：它依赖变化有条件、可穷举。一旦残余找不到任何语音条件（「语言像河流一样变」那期说的那种），"最经济的祖先"这条判据就没得用，人和模型一样只能去数频率。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>认亲戚不看像不像：波斯语 bad 和英语 bad 音义全同却毫无亲缘，拉丁语 deus 的真亲戚是毫不相像的希腊语 Zeus。</li>
+<li>真正算数的是成批可重复的语音对应，比如拉丁语词首 f 在西班牙语里整批变成不发音的 h：filius 对 hijo，facere 对 hacer。</li>
+<li>看似例外的音变往往只是条件没写全：拉丁语 focus 到西班牙语是保留 f 的 fuego，因为 f 在双元音 ue 前不变。</li>
+<li>语音对应还能筛出借词：英语本土词 father、fish、foot 用 f，从拉丁语借来的 paternal、piscine、pedal 用 p。</li>
+<li>比较法把同源词成组排开，抽出各组里稳定对应的音，再挑一个用最少最自然的几步能推出所有后代的祖先形式。</li>
+<li>用罗曼诸语反推拉丁语能对上答案，但推出的是当时人口头说的那一版，而不是教科书上的古典拉丁语。</li>
+<li>高本汉把《切韵》的分类、现代方言读音和日韩越的汉字音读三方对照，给中古汉语重建出了音值。</li>
+<li>索绪尔 1879 年预言印欧语里有一类无人见过的音，1927 年 Kuryłowicz 在赫梯语里找到了恰好落在预言位置上的辅音。</li>
+<li>同源信号随时间流失而偶然相似不减，比较法的天花板约在八千年，诺斯特拉语系这类更深的假说够不着证据门槛。</li>
+<li>语言树的年代不能用一根统一的钟：Pagel 等人发现越常用的词被替换得越慢，词频一项就解释了替换速率约一半的差异。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="cea84173cea5d8f0">深入思考</h3>

@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
 </style></head><body>
 <div class="container">
@@ -112,6 +118,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · what removing a part can and cannot prove</b>: trained neural networks contain something exactly isomorphic to the lesion method — delete one unit, see how much performance drops. Morcos and colleagues ran this at scale in 2018, and the result is somewhat counterintuitive: the better a network generalizes, the less it depends on any single unit, and deleting one barely costs anything; networks that memorized noisy labels are the ones sensitive to single units. The mechanism is the one from "what overturned the diagram was those same two brains": inferring "the function lives inside it" from "removing it broke things." Read backwards, that gives a testable prediction — if brains are redundant in the same way, small clean local lesions should <em>not</em> produce clean syndromes, and genuinely clean dissociations should come more often from severed connections. Both check out: Mohr's patients with only the small region damaged recovered quickly, and maps computed from fiber-bundle disconnection explain such symptoms better than maps computed voxel by voxel. <b>Where this breaks down</b> is the clean counterfactual: in a model you can put the unit back and re-run the identical input; a patient cannot be re-run, and he goes on living and compensating. Do the lesion-to-symptom mapping once in the acute stage and once in the chronic stage and the maps come out similar but not identical — what you measure months later is already a reorganized system.</li>
 <li><b>Complexity science · the break point is not the function point</b>: network science has a repeatedly confirmed result: the damage done by removing a node depends mainly on its position in the graph — whether it sits on many shortest paths — and almost not at all on what that node itself computes. The classic model assumed the opposite: where it broke is where the function is. Bolting that rule on yields two conclusions you would not otherwise reach. First, white-matter fibers sitting at a bottleneck should produce symptoms wildly out of proportion to the volume of tissue lost. Second, one and the same behavioral deficit should be producible from several different points along a single route — so "find the point for this syndrome" may have no solution at all. Conduction aphasia went exactly that way: the people who predicted it pointed at the connecting line, and the overlap across fourteen cases landed on cortex. <b>Where this breaks down</b> is the premise that you get to choose which node to hit. In attack simulations the experimenter picks the node; a stroke does not — it takes out a whole vascular territory at once. Human lesion data is therefore a sample heavily biased by the shape of the blood supply: certain combinations always co-occur, certain combinations never happen in nature, and a functional parcellation inferred from it carries a bias that no increase in sample size will remove.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In 1861 Broca's patient Leborgne could understand and gesture, yet produced only one syllable, tan; his lesion sat in the lower back part of the left frontal lobe.</li>
+<li>Automatic speech (greetings, curses, memorized phrases) can survive while propositional speech, building a new sentence on the spot, collapses, so speaking runs on at least two channels.</li>
+<li>The fluent aphasia Wernicke described sounds like normal sentences at normal speed, but the words are wrong, comprehension is poor, and patients do not notice their errors.</li>
+<li>A double dissociation, two patient groups whose deficits mirror each other, is the strongest evidence for inferring division of labor in the brain from damage.</li>
+<li>Lichtheim's two-box diagram predicted conduction aphasia, with only repetition lost; the syndrome turned up, but its lesions centre on cortex rather than the connecting tract.</li>
+<li>MRI scans in 2007 of the two brains Broca preserved showed damage far larger and deeper than the surface patch he had identified.</li>
+<li>Strokes confined to Broca's area itself cause a brief loss of speech and then recover, so damage to that spot does not produce the aphasia named after it.</li>
+<li>The current framework asks about pathways instead: a strongly left-lateralized dorsal route links sound to articulation, and a bilateral ventral route links sound to meaning.</li>
+<li>English-speaking aphasic patients drop word endings while Italian speakers fill in the wrong ones, so the same damage takes a different shape in each language.</li>
+<li>Well-generalizing neural networks barely suffer when any single unit is deleted, a reminder that breaking when removed does not mean a function lives there.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

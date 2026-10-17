@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -147,6 +153,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · on composition, the hard part is not the same for people and models</b>: Lake and Baroni built a toy language called SCAN in 2018 — instruction words mapped onto action sequences, where a model is trained on jump and on walk twice and then asked for jump twice. Models trained from scratch got these splits almost entirely wrong at the time; on Kim and Linzen's COGS, some structural splits were reported at zero accuracy. The mechanism is the one from the section on working out sentences you have never seen: give a person a handful of examples of a new word and they can slot it into every frame they already command — which is exactly what the nonsense-word experiment tested. Saying models lack compositionality is too blunt today; large models score well on many of these, and the argument has moved to whether that is real generalisation or coverage in the training data. The way to separate them is to control exposure: introduce one genuinely new primitive exactly once, to person and model alike, then test only its combination with old structures. One exposure suffices for people, and their errors cluster into a few predictable biases; if a model needs hundreds of exposures to stabilise, what it lacks is not the combining rule but the speed of hooking a new entry into old structure. <b>Where this breaks down</b> is treating composition as a function consuming an argument: an operator in a formal system never cancels the identity of its argument, and fake cancels gun. Every operator in SCAN-style tasks is benign and identity-preserving, so those benchmarks cannot reach the hardest part of natural language.</li>
 <li><b>Eastern and Western philosophy · behaviour alone cannot fix what a word points at</b>: Quine imagined a field scene — a rabbit runs past, a local says a word, and you write down rabbit. But the same behavioural evidence equally supports undetached rabbit parts, provided you adjust the words for identity and number in their language to match; every observable judgement of right and wrong stays the same. The mechanism is the one from the section on knowing when a sentence would be true: truth conditions pin meaning to states of the world, but one set of truth conditions can be produced by more than one assignment of reference. The conclusion that follows is empirical — a child learning words must arrive with a bias, or the first lesson would be unpassable. And the bias is measurable: Markman and Wachtel found in 1988 that three-year-olds default to taking a new word as naming the whole object, and only when the object already has a name do they hand the new word to a part or a substance. Quine's indeterminacy, in humans, is held down by an empirical prior rather than dissolved by logic. <b>Where this breaks down</b> is the premise itself: a real child has more than behavioural evidence — pointing, gaze-following, and adult correction give a far wider channel than the imagined field linguist enjoys. The testable consequence is that weakening joint attention, by introducing new words only when the adult is not looking at the thing, should visibly slow word learning down, which is the direction experiments report.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The principle of compositionality says a sentence's meaning comes from its parts plus the way they combine, which is why brand-new sentences make sense instantly.</li>
+<li>In a 2019 study by Lake, Linzen and Baroni, people learned made-up words and operations from a few examples and applied them to unseen combinations.</li>
+<li>Idioms are not a clean exception to compositionality: the more an idiom's figurative meaning can be split across its words, the more freely it can be rearranged.</li>
+<li>Adjective plus noun hides different operations: red apple takes an overlap, skilful surgeon is judged only within surgery, and fake gun cancels being a gun.</li>
+<li>Composition is a family of operations rather than one, because every word brings its own way of attaching when it enters a sentence.</li>
+<li>Understanding a sentence means knowing what the world must be like for it to be true, and truth-value judgement tasks test this even in four-year-olds.</li>
+<li>English and Mandarin speakers differ on scope: Mandarin speakers rejected inverse readings in the key materials, though later work shows it depends on the structure.</li>
+<li>Frege separated reference from sense: the morning star is the evening star picks out the same planet as a trivial identity yet tells you something new.</li>
+<li>Vague words like tall carry no built-in threshold but borrow one from a comparison class, and borderline cases are often judged both tall and not tall.</li>
+<li>Benchmarks like SCAN only use operators that keep their arguments intact, so they miss the hardest kind of natural-language composition, where fake cancels gun.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

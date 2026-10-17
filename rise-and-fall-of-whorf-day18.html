@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -126,6 +132,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 强版本在机器上是真的，恰恰因为机器缺了人有的那条路</b>：大模型算多位数加法会错得莫名其妙，而错法跟它怎么切数字有关。GPT-3.5 和 GPT-4 的词表给 1 位、2 位、3 位数分别留了位置，长数字被从左往右切成块；Singh 和 Strouse 2024 年发现，推理时用逗号把数字强制成从右往左三位一组，正确率明显上升——同一个模型、同一道题，只改切法。这正是「你不能用他们说的话，去证明他们想得不一样」那节判了死刑的那个形状：词表怎么切世界，决定了你能不能做这件事。推出来的结论是反常识的：强版本在人身上死掉不是因为它荒谬，而是因为人有绕过语言的通道——眼动、记忆、归类都绕得开词；模型没有这条通道，每个行为都要过词表，所以它才是强沃尔夫的真实样本，人不是。可检验的差异就在这儿：给人一个他语言里没有现成词的区分，他还能用非语言办法顶一部分（把两堆东西一一配对来比多少，不用数词）；模型换一套切分，能力整体平移。<b>但这里不成立</b>的是反过来读：这不能说成「模型证明了沃尔夫是对的」——它成立的前提正是模型缺了人有的那条路；而且加逗号、写出中间步骤就能绕掉一部分，说明那是编码不便，不是想不到。</li>
 <li><b>佛学 · 给经验贴标签这件事，两个传统给的指示是反的</b>：内观禅修里有一派教「标记」：念头升起来，心里默默贴个标签，「想、想」「痛、痛」。另一条讲名相与实相的线说，名言正是把经验切碎的东西，训练方向是不加名言地看。同一件事，两套相反的指示。「效应只在你准备张嘴的那半秒里出现」那节的机制能把这个矛盾拆开：贴标签之所以有用，是因为它把注意力往标签惯常编码的那个成分上拽，而这一拽是在线的。于是两派可以都对，只是管的不是同一段时间；还能推出两条可检验的差异：标记应当只在标记进行时改变注意力分布，一停就回到共同基线；它还应该损害对没被标记那些维度的记忆——这正是心理学里的「言语遮蔽」：让人先用语言描述一张看过的脸，之后认人的正确率会掉。<b>但这里不成立</b>的是射程：佛学那条主张说的是名言持续地、普遍地遮蔽经验，哪怕你没在说话，本期证据只撑得起任务绑定的在线效应。言语遮蔽自己也没那么硬：2014 年一次多实验室的注册复制发现，描述紧接着发生时只差 4 个百分点，隔二十分钟才差到 16 个——更像检索阶段的干扰，不像知觉被概念改造过。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>萨丕尔-沃尔夫假说这个名字是 Hoijer 在 1953 年之后安上的，Sapir 和 Whorf 都没写下过这条假说。</li>
+<li>Whorf 的空汽油桶例子只说明一个词的歧义能带偏一次行为，撑不起「语言塑造世界观」。</li>
+<li>Malotki 1983 年的《Hopi Time》用 677 页列出霍皮语的时间表达，反驳了霍皮语里没有时间的论断。</li>
+<li>「某语言没有表示 X 的词」本身几乎不算证据，那个意思常常装在语法标记或整句话里。</li>
+<li>检验语言决定论必须有不经过语言的证据，否则就是用说法不同去证明想法不同的循环论证。</li>
+<li>德语和西班牙语的语法性别会给物体染色的实验，2014 年用两种设计重做都没复制出来。</li>
+<li>Berlin 和 Kay 发现近百种语言的基本颜色词按固定顺序出现，说明语言并不随意切分色谱。</li>
+<li>Slobin 的「为说话而想」认为语言不改变平时怎么想，只规定开口前得先去查哪几样信息。</li>
+<li>准备描述动作短片时，希腊语者和英语者的眼动在头一秒内按母语分开；只需记住时两组没有分开。</li>
+<li>大模型做多位数加法的成败取决于词表怎么切数字，因为缺少人绕开语言的通道，它才像强版沃尔夫。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="533023d178be6b62">深入思考</h3>

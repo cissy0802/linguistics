@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -136,6 +142,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Complexity science · No vocabulary is ever large enough, and the distribution itself guarantees that; it is not a shortfall of engineering</b>: Word frequencies in a corpus follow Zipf's law: ranked by number of occurrences, the second is about half the first and the third about a third, with a long, thin tail. Its companion, Heaps' law, says that the larger the corpus, the more distinct word forms you have seen, at an ever slower rate but never reaching a ceiling. How thin the tail is can be measured: in one Twitter corpus of 1.8 billion words, about 62 percent of the 13.26 million distinct forms occur exactly once. The mechanism at work is the one from the section on the 1994 compression algorithm: BPE merges from high frequency down, and there is always something further out on that tail. From this follows a conclusion that is not otherwise visible — subword splitting is not a convenient approximation but the only available route under this distribution: any vocabulary of fixed size must miss infinitely many word forms. It also yields a prediction you can check: the more inflectional morphology a language has, the heavier its tail of word forms, and the more tokens each word costs at a given vocabulary size — which is roughly the ordering in Petrov's figures. <b>Where it does not hold</b>: Zipf's law is computed over units that have already been cut. To say that word frequencies follow a power law, you must first decide what counts as a word, and that is exactly what the section on marking boundaries has been arguing about for thirty years. The law tells you how long the tail is; it is no help whatsoever in finding where the boundaries are.</li>
 <li><b>Genetics and molecular biology · The ribosome also has to cut a long string with no delimiters in it, and its solution is one language cannot use</b>: When the information in DNA is turned into protein, the sequence is read three bases at a time, yet nothing on the strand marks the groups. In 1961 Crick, Barnett, Brenner and Watts-Tobin ran a beautiful experiment on a bacteriophage: insert one base into a gene and the gene is ruined; insert two and it is still ruined; insert three and function largely returns — which proves the reading goes in threes, since three insertions shift the whole thing by exactly one group and everything downstream realigns. The mechanism is this topic's own: units have to be cut out of a continuous string, and the cut is not in the signal. From this follows a conclusion one does not normally reach: life really did solve this problem, and the solution was to put a delimiter into the signal — the start codon pins the reading frame once, and everything after it is determined. Language has nothing of the kind, so the shape of the errors differs on the two sides, measurably: get the frame wrong by one and everything downstream is destroyed, whereas a mis-cut word usually ruins only that spot and reading continues. <b>Where it does not hold</b>: at the level of ambiguity. Once the frame is set, each triplet corresponds to exactly one amino acid, and the ribosome never has to choose between two readings that both work; whereas both cuts of 乒乓球拍卖完了 (pīngpāngqiú pāimài wán le) — "paddles sold out" or "balls auctioned off" — are grammatical and both mean something. So "just add a delimiter" is not a road language can take — Chinese is not short of a start codon; even given a starting point, every step after it is still genuinely two-way.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>In 1996 Sproat and colleagues had six native speakers mark word boundaries in the same 100 Chinese sentences; pairs agreed only about 76 percent of the time.</li>
+<li>Disagreement over Chinese word boundaries is not about comprehension but about how far up the unit called a word reaches, which is convention, not fact.</li>
+<li>The first Chinese word segmentation bakeoff in 2003 had to score systems against several institutions' standards separately, so any accuracy figure is relative to one convention.</li>
+<li>Spaces are a typographic habit, not a linguistic fact: English "don't" packs two words into one block, Vietnamese spaces mark syllables, and Thai leaves no spaces between words.</li>
+<li>Byte pair encoding began as Philip Gage's 1994 compression trick: repeatedly replace the most frequent adjacent pair with a new symbol.</li>
+<li>In 2016 Sennrich, Haddow and Birch brought BPE into machine translation, splitting rare words into fragments so nothing falls outside the vocabulary.</li>
+<li>BPE fragments are not morphemes; the algorithm never answers what a word is and swaps in an easier question, which strings tend to occur together.</li>
+<li>The same text can cost up to fifteen times more tokens in one language than another, a fact about the training corpus rather than about the languages.</li>
+<li>Writing numbers with thousands separators aligns each chunk to a fixed place value, and addition accuracy in GPT-3.5 and GPT-4 rose measurably as a result.</li>
+<li>Zipf's law guarantees an endless tail of rare word forms, so every fixed-size vocabulary misses some, which makes subword splitting the only way through.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going Deeper</h3>

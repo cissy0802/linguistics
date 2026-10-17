@@ -39,6 +39,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 
@@ -166,6 +172,21 @@ figure svg{max-width:100%;height:auto}
 </ul>
 </div>
 
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>Speaking is mostly not about making sound but about blocking airflow: where it is blocked, how, and for how long.</li>
+<li>Mandarin ba and ma use identical lip movements; the only difference is whether the velum opens the path into the nasal cavity.</li>
+<li>By manner of blocking, consonants divide into plosives that seal and release, fricatives that hiss through a gap, and affricates that join the two.</li>
+<li>Hindi splits the tongue-tip region into two places with four series each, eight consonants where Mandarin draws only two.</li>
+<li>Every language draws its own grid on a continuous articulatory space; more cells mean no extra expressiveness, the trouble comes from mismatched cell positions.</li>
+<li>Voice onset time is the gap between lip release and the start of vocal-fold vibration, and its sign says which came first.</li>
+<li>Mandarin has no true voiced stops: its b and p differ in aspiration, roughly eighty milliseconds apart in voice onset time.</li>
+<li>Spanish p sits where English b sits, so English listeners often hear a Spanish speaker's pat as bat.</li>
+<li>In Flege's study of 240 Italian immigrants to Canada, the age they began English explained 59% of the variation in accent ratings.</li>
+<li>Equivalence classification files similar foreign sounds into native cells, so the closest sounds are hardest to learn, while listeners adapt to an accent within a minute.</li>
+</ol>
+</div>
 <div class="thinking">
 <h3>Going deeper</h3>
 <details><summary>If each language draws its own boundary, what does "correct pronunciation" mean?</summary><p>Which cell a sound falls into depends on whose line is doing the cutting. So when someone is said to pronounce a word incorrectly, is the claim that they deviate from some community's median, or from an absolute reference? If only the former, the judgement travels with the community — the same person could move city and become "correct" without changing anything.</p></details>

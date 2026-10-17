@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -130,6 +136,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 自己训自己是塌还是长，取决于中间那道闸</b>：现在有一批工作在担心「模型塌缩」——拿模型自己的输出训下一代，几轮之后输出越来越单调。Kirby、Cornish 和 Smith 2008 年把人串成一条链做同一件事，结果是反的：每代只学一门人造语言的一部分，再教给下一代，语言越传越有结构，最后自己长出了零件可重组这种性质，没有任何一代打算设计它。跑的是「第二批不是练得更久，是接得更早」那节的机制：规整化发生在接收端，动力是接收端看到的比整套少——被迫补空，补出来的就是规则。由此推出一个能直接跑的对照：同一条自训链，一支喂全量输出、一支只喂严格子采样并滤掉沟通失败的样本，测每代输出的描述长度和组合性。若机制成立，塌缩只属于前一支——那它就不是「自训」的性质，是喂法的性质。<b>但这里不成立</b>的是瓶颈的来源。实验室的瓶颈是数据少，马那瓜不是：第二批进校时学生已涨到四百多，能对话的人比第一批多得多。人这边的窄口是年龄窗，而模型没有年龄窗——所以这条链跑出什么，都不能当「人身上那个效应需要关键期」的证据。</li>
 <li><b>复杂性科学 · 「凑出一套词」和「凑出一套语法」不是同一台机器</b>：Centola 和 Baronchelli 2015 年让近百人在网上两两配对玩命名游戏：看同一张脸各写一个名字，写一样就得钱。人人都能互相碰上时，全局共识自己就冒出来了，没有中心协调；换成只跟邻居碰的网络，局部约定形成得很顺，全局那个名字却再也定不下来。这一头是纯协商，参与者全是成年人，谁也没在学，产物是共同词汇；Kirby 那条学习者链没有任何协商，产物偏偏是组合结构。对着本期的收窄看，两台机器就分开了：内盖夫那门手语要成，词汇那半靠一个村子反复互相碰，语法那半靠第二代把上一代当输入接下来。由此能预注册一条判据：命名游戏这个范式再放大也长不出语法，因为它把意义空间直接发下来了，一张脸一个名，里头没有可切分的部件。<b>但这里不成立</b>的是反过来那半：学习者链也长不出「空间里那个位置代表哪个人」这类装置——它要在一段话里追踪谁是谁，需要一个当场在听的人，不是一个安静地学的人。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>1977 年前尼加拉瓜的聋童大多各自在家，靠自创的家庭手语和家人沟通。</li>
+<li>马那瓜聋校开办后，几十套互不相同的家庭手语在校车和操场上第一次碰到一起，碰出一门新语言。</li>
+<li>聋童自创的家庭手语有稳定语序，妈妈的伴随手势却没有，土耳其和美国的聋童还给出同样的打包模式。</li>
+<li>家庭手语的天花板在于只有一个使用者、只在一个家里用，没有第二个人把它当成要学的东西。</li>
+<li>描述球边转边滚下坡时，听人和第一批 signers 把转和下坡揉成一个手势，第二、三批拆成两个按顺序打。</li>
+<li>尼加拉瓜手语用空间位置稳定指代同一个人的装置，是在第二批 signers 身上才成了系统。</li>
+<li>Senghas 和 Coppola 按入学年龄分组跨批比较，发现第二批靠的不是练得更久，而是小时候接得更早。</li>
+<li>内盖夫贝都因村落的手语到第二代定成主—宾—动语序，周围的阿拉伯语方言、希伯来语和以色列手语都不是这样。</li>
+<li>Bickerton 认为孩子一代就把皮钦语变成克里奥尔语，Siegel 重查夏威夷后发现形成跨了不止一代、输入也已相当稳定。</li>
+<li>Kirby 的人类传递链里语言越传越有结构，与模型自训塌缩相反，因为接收端只看到部分输入。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="1753aea43974087e">深入思考</h3>

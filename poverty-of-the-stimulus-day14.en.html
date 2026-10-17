@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -117,6 +123,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · Same data, two generalisations, and the gap may not be about how much data</b>: train a network with no preference for hierarchy on child-directed speech and it captures the surface statistics beautifully, then generalises by counting position as soon as it forms questions. What is running is the mechanism from "A question he had never heard, and he got it right the first time": that material is compatible with both rules at once, so which one you land on is fixed by inductive bias, not by the material. From this follows a difference you can actually measure, rather than one more remark about whether models resemble people. If the gap comes from quantity, scaling the corpus should produce an inflection — past some size the model flips to the chunking rule. If it comes from bias, scaling only fits the counting rule better: a monotone curve that never flips. Those two predictions look nothing alike, and one curve separates them. <b>Where it breaks down</b> is the assumption that a model's input equals a child's. Text has had intonation stripped out, and in English the boundary between a main clause and an embedded one often carries a pause and a pitch change — precisely the external marking of which stretch is one chunk. The scene, the other person's gaze, their reaction when you get it wrong: none of that is in the text either. To make the argument stand you would have to put the prosodic marking back and test the same thing; until then the failure only shows that text alone is not enough.</li>
 <li><b>Complexity science · A threshold line: how many exceptions before a rule stops generalising</b>: word frequencies have a long tail — a few words take most of the occurrences, and the vast majority you meet only a handful of times in your life. Under that distribution, "I have never heard it" barely licenses "it is not allowed". What is running is the mechanism from "A child's grammar starts out one verb at a time": rules grow out of particular items, and whether one grows depends on the ratio of rule-followers to exceptions. Charles Yang wrote that as a number: for a category of N words, the rule stops generalising once the exceptions exceed N divided by the natural log of N. What follows is not the platitude that too many exceptions block learning, but a nonlinear consequence — at N of 9 the rule tolerates 4 exceptions, forty-four percent of the class; at N of 1000 it tolerates only 145, under fifteen percent. Bigger categories tolerate exceptions less well, so the same irregular form survives in a small class and eventually gets flattened by the rule in a large one, which points language change in a computable direction. In artificial-language experiments, five- and six-year-olds fall almost dichotomously on the two sides of that line. <b>Where it breaks down</b> is the assumption that N is known. The line requires you to know in advance which words the rule is supposed to cover, but a real vocabulary is open and long-tailed: N keeps moving as you meet new words, and you never get to do the arithmetic in a final state. Using it as a stable critical value assumes more than it looks like it does.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>An English yes/no question can be formed by fronting the first “is” or the “is” outside the subject; the two rules only diverge when the subject contains a relative clause.</li>
+<li>In 1987 Crain and Nakayama had thirty children aged three to five form such questions, and not one produced the position-counting error.</li>
+<li>The poverty-of-the-stimulus argument says children draw grammatical distinctions that the speech they hear cannot by itself support.</li>
+<li>Later corpus counts and a rerun with modal verbs showed that position-counting errors are rare, not impossible.</li>
+<li>Mandarin forms yes/no questions with a sentence-final particle and moves nothing, so the structure-dependence evidence comes from English.</li>
+<li>The usage-based view holds that early grammar is a set of “verb islands”: each verb is learned on its own, and abstract rules are ground out later.</li>
+<li>English-learning 21-month-olds already use word order to tell who did what to whom with a made-up verb, so comprehension runs ahead of production.</li>
+<li>German children trust case marking over word order in conflicts only at seven, because how fast children abstract tracks which cue the language makes reliable.</li>
+<li>An ideal Bayesian learner picks structure dependence out of child-directed speech, while neural networks without a hierarchy bias generalise questions by position.</li>
+<li>Charles Yang’s tolerance principle sets a threshold: the bigger a category, the smaller the share of exceptions it can absorb before a rule stops generalising.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Thinking Further</h3>

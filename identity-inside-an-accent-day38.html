@@ -41,6 +41,12 @@ figure svg{max-width:100%;height:auto}
 .refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
 </style></head><body>
 <div class="container">
@@ -114,6 +120,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 机器听不懂某种口音，缺的是「换个人也带得走」那一步</b>：2020 年 Koenecke 等人测了五家公司的商用语音识别，黑人说话者的词错误率平均 0.35，白人 0.19；两组说同一句话时差距一样大，问题出在听声音的那层模型。跑的是「听不懂的那一半，在听的人那边」那节的机制：听懂与否取决于听者听过多少、多杂的这种口音。于是推得出一个可检验的差异：人跟一个陌生口音聊上几分钟，错误会往下掉；一个上线后权重固定的识别系统，第一分钟和第三十分钟的错误率应该一样平——它是一个永远没机会上那堂训练课的听者。Bradlow 和 Bent 的结果还给了修法的方向：补数据时，增加说话人的数量应当比增加少数人的录音时长更划算。<b>但这里不成立</b>的是人那边的另一层：人的偏差有两层，听不清，和听清了照样打低分（标准语那期讲过的评分偏移）。训练只修第一层。机器只有第一层，所以补数据真能把差距修平；对人，光让他多听，修不平。</li>
 <li><b>演化生物学 · 口音是难伪造的信号，难在学习窗口，不在成本</b>：生物学里，能维持合作的信号得难以伪造，否则占便宜的个体一学就会。Nettle 和 Dunbar 1997 年做过一个模拟：有骗子混在合作者中间时，带「方言标记」、只跟同标记者交换的群体更容易把合作维持下去，而且标记得变得够快，骗子才学不上。跑的是「越不想跟学校站一边的孩子」那节的机制：口音当队服。推得出的结论是：口音难伪造，难在细微的发音是在童年那个窗口里装进去的，成年再学很难学全；所以拿来分敌我的，应当多是发音细节而不是词汇——词一天就能学会。shibboleth 就是一个发音细节；burnouts 领跑最新的元音变化，也符合「标记要变得快」。<b>但这里不成立</b>的是「诚实」指向什么：动物的诚实信号指向个体本身的质量，口音只指向你在哪儿长大，不指向你的忠诚或国籍——难民审查里的那份指南就在纠正这个错位；而且它只在一个方向上诚实：把自己的口音调大很容易（威尔士那个实验），装成别人的很难。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>口音不只是离标准音的距离，它还在宣告「我是谁、我跟谁一伙」，别人也照这个去听。</li>
+<li>Eckert 在底特律郊区高中发现，心向城里的 burnouts 元音推移得比 jocks 更远，元音像一件队服。</li>
+<li>1977 年威尔士实验里，学习者被讥讽在学「垂死语言」后，立刻加重了自己的威尔士口音。</li>
+<li>故意说得跟对方不一样叫分化，往对方说法上靠叫趋同，语码转换因此也是在换「我跟谁站一起」。</li>
+<li>John Baugh 用三种美国口音给湾区房东打同一通电话，标准口音约到看房的比例明显最高。</li>
+<li>口音只凭一个 hello 就能被大约七成听众认出族群，于是「听口音」成了暗中分拣人的语言画像。</li>
+<li>难民审查用口音判断出身时，口音只能说明一个人在哪个说话社群长大，说明不了他持哪国护照。</li>
+<li>费城法院书记员转写非裔美国人英语，整句全对平均只有 59.5%，说话人并不含糊。</li>
+<li>She BEEN married 一句，多数黑人听成「早就结了且仍是」，多数白人听成「结过、现在不是」。</li>
+<li>跟多个带口音说话人练过的听者能听懂新口音，可现实里被要求调整的几乎总是说话一方。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="164d9c771ae74c8c">深入思考</h3>

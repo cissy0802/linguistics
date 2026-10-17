@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -129,6 +135,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Distributed systems and AI · the borrowed land decides what the new tenant can look like</b>: take a vision model pretrained on natural photographs, point it at a new set of symbols, and it learns far faster than one trained from scratch; people call this transfer and stop there. The mechanism in "the shapes of writing were picked out by the eye" is more specific than "transfer": the borrowed plot is not a neutral container, it is already tuned to certain classes of line configuration, so the new content has to grow into a shape it recognises — which is why the junction statistics of a hundred-odd writing systems bend toward those of natural scenes rather than the eye bending toward writing. That yields an experiment you can actually run: give a model pretrained only on natural photographs two artificial scripts, one whose junction proportions match natural scenes and one of equal complexity deliberately mismatched; the pretrained model should learn the first markedly faster, while a from-scratch model should show no difference between them. <b>Where it does not hold</b> is the premise that land is finite. Human cortex has fixed area, so a new tenant moving in makes the old one shuffle over — in Dehaene's late-literate adults, the response to faces at that same location dropped a little and the right hemisphere took up the slack. Models face no such constraint: parameters can be added, and "learning to read" need not cost any other ability. Mapping catastrophic forgetting onto that drop in face response is therefore a mismatch — one is weights being overwritten, the other is competition for finite area.</li>
 <li><b>Society and institutions · a diagnostic threshold that measures the script, not the child</b>: reported dyslexia rates differ several-fold between countries, which is easily read as "some languages are inherently more prone to it". The mechanism in "the same trouble leaves different traces in different scripts" says why that reading fails: in Paulesu's three-country study all three groups fell behind their own national controls by the same amount and showed reduced activation in the same region, yet the Italian group read fast and accurately — tidy spelling rules move the difficulty from "reads it wrong" to "reads it slowly", while the instruments largely grew up in the English tradition and catch error rates. From that follows a conclusion you would not otherwise see: cross-national rate differences are first of all differences between measuring instruments, and under-diagnosis should skew systematically toward languages with tidy spelling rather than being randomly spread — the Italian national study, with close to two thirds of cases previously undiagnosed, points exactly that way. The fix is concrete too: score speed and accuracy separately, each against norms for that language. What to watch for is the slide into "a better instrument is all it takes": whether the underlying thing is one thing is still unsettled, and on the Chinese side two lines of research still reach opposite conclusions.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The Stroop effect shows that reading runs on autopilot: if you look at a word you cannot help reading it, while naming its ink colour takes real effort.</li>
+<li>Writing is only about 6,000 years old and was invented independently just a handful of times, far too recently for evolution to build dedicated reading hardware.</li>
+<li>Whether people read alphabets, Chinese characters, Hebrew or Japanese, the same patch at the left occipitotemporal junction lights up for script; the Chinese and Latin peaks sit only about 6 mm apart.</li>
+<li>Dehaene's neuronal recycling hypothesis holds that reading takes over visual cortex that originally evolved to recognise objects and shapes.</li>
+<li>In people who learned to read as adults, the left-hemisphere script response grows with literacy while its face response dips slightly and the matching right-hemisphere area picks up the slack.</li>
+<li>Across more than 100 writing systems, Changizi found that the mix of L, T, Y and X stroke junctions matches the junctions of object contours in natural photos, so the eye selected the script, not the other way round.</li>
+<li>The visual system treats a mirror image as the same object, so a child writing b for d is not being careless but has not yet switched that default off.</li>
+<li>Tamil has no mirror-image letter pairs, and readers of Tamil alone keep much of their mirror invariance; only those who also learn the Latin alphabet fully lose it.</li>
+<li>Paulesu found Italian, French and English dyslexic readers equally far behind their own controls with the same weak brain region, but regular Italian spelling turned their errors into slowness.</li>
+<li>Because dyslexia tests mostly grew up in the English tradition and count errors, cross-country differences in diagnosis rates mainly reflect the instruments, with under-diagnosis skewed toward regularly spelled languages.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

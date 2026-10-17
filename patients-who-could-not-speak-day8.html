@@ -41,6 +41,12 @@ figure svg{max-width:100%;height:auto}
 .refs li{list-style:none;margin-bottom:9px;font-size:0.88rem;color:#8d95a8}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
 </style></head><body>
 <div class="container">
@@ -117,6 +123,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>分布式系统与 AI · 摘掉一个部件，能推出什么、推不出什么</b>：训练好的神经网络里有一件事和病灶法完全同构：删掉一个单元，看性能掉多少。Morcos 等人 2018 年做了大规模的这类实验，结论有点反直觉——泛化得越好的网络，对任何单个单元的依赖越小，删掉几乎不掉分；死记硬背了噪声标签的网络反倒对单个单元敏感。跑的是「推翻这张图的，是当年那两个脑子」那节的机制：从「拿掉它坏了」推「功能住在它里面」。倒过来读就是一个能检验的预测——如果大脑也这么冗余，小而干净的局部损伤就不该产生干净的综合征，真正干净的分离更该来自切断连接。两条都对上了：Mohr 那批只坏一小块的病人恢复得快，而按纤维束断裂算的图，解释这类症状比按体素算的更准。<b>但这里不成立</b>的是那个干净的反事实：模型里你能把单元装回去、用一模一样的输入重跑；病人不行，他继续活着、继续代偿。急性期和慢性期各做一次病灶与症状的对应，得到的图相似但不相同——你几个月后量到的，已经是重组过的系统。</li>
 <li><b>复杂性科学 · 断点不是功能点</b>：网络科学里有个反复被验证的结果：移走一个节点造成的破坏，主要取决于它在图里的位置——是不是很多条最短路径的必经之地——而几乎跟它本身在算什么无关。经典模型默认的却是「坏在哪，功能就在哪」。接上这条规则能推出两个原本看不出的结论：瓶颈上的白质纤维，一点损伤就该造成与体积严重不成比例的症状；同一种障碍应该能从一条通路上好几个不同位置产生出来，于是「找到这种病的那个点」可能根本没有解。传导性失语正是这么走的：预测它的人指着那条连线，十四例的重叠区却落在皮层上。<b>但这里不成立</b>的是「你可以挑节点下手」这个前提。攻击实验里节点是实验者选的；中风不是，它按血管供血范围一次带走一整片。所以人类病灶数据是一份被血管走向严重偏置的样本：某些组合永远同时出现，某些组合在自然界里根本不发生，靠它推出的功能分区带着一层加大样本也消不掉的偏差。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>1861 年 Broca 的病人 Leborgne 听得懂问话，却只说得出一个音节 tan，病灶在左侧额叶。</li>
+<li>自动化说话（咒骂、背熟的句子）和命题性说话（现场组新句）可以一塌一留，说话至少是两条通道。</li>
+<li>Wernicke 描述的流利型失语病人语速正常、句子像句子，但用词错乱、听不懂别人，也不觉得自己说错。</li>
+<li>双重分离指两类病人互为镜像、你坏的我好，是从病人身上推断大脑功能分工最硬的一种证据。</li>
+<li>Lichtheim 的两区一线图预测出只丢失复述能力的传导性失语，病型后来找到了，病灶却落在皮层而非连线上。</li>
+<li>2007 年用磁共振扫描 Broca 保存的两个大脑，发现损伤远比他当年在表面看到的那一块更大、更深。</li>
+<li>梗死只局限在 Broca 区那一小块的病人会很快恢复、不留持久失语，只坏这块地方并不产生以它命名的病。</li>
+<li>今天的主流框架改问通路：背侧通路把声音接到发音动作且强烈偏左，腹侧通路把声音接到意义且两侧都有。</li>
+<li>说英语的失语病人省掉词尾，说意大利语的病人则填错词尾，同一种损伤在不同语言里显影成不同形状。</li>
+<li>泛化越好的神经网络删掉单个单元越不掉分，所以「拿掉它就坏」推不出「功能就住在它里面」。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="4bb62b09d445c16c">深入思考</h3>

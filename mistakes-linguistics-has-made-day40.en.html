@@ -40,6 +40,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style></head><body>
 <div class="container">
 <header>
@@ -89,6 +95,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>Complexity science · Misprints in citations are tracer dye</b>: In 2003 Simkin and Roychowdhury studied a physics paper cited over four thousand times. Nearly two hundred citations got a detail such as the page number wrong, yet there were only about forty-five distinct errors, and a single error could recur dozens of times. Identical errors mean copying from someone else's reference list. Using a copying model, they estimated that only about one in five citers had read the original. That is the mechanism of "Four snow words grew into a hundred": retellings copying retellings. The conclusion it yields: a myth like the snow words can serve as tracer dye too — group the books by which wrong number they print and the retelling chain rebuilds itself as a family tree, which is what Martin did by hand. <b>But this does not hold</b> for the premise of neutral copying. A copied page-number error passes on unchanged; it does not grow. The snow number moved one way: up. A pure copying model predicts the count stays at four and cannot explain the inflation, so the spread of linguistic myths must involve a selection pressure favoring the more striking version. That is testable: line the versions up by date, and the number should almost never go down.</li>
 <li><b>Distributed systems and AI · Children learn any language on one timetable; models' abilities track the amount of text</b>: A child growing up in a language with two thousand speakers learns it at a pace unaffected by how much written text that language has in the world — the child is not reading the web. Models are the reverse: in 2020 Joshi and colleagues sorted over two thousand languages by available data, and nearly nine in ten fell into the bottom tier with almost no usable data. This is the sampling bias of "Reading science was built on Europe's most irregular spelling", but inside a machine its nature changes: a skewed research sample distorts theory; a skewed training set distorts the ability itself. The testable difference: take a pair of structurally similar languages with very different amounts of online text. Children's acquisition should run nearly level; the model's performance gap should be explained mainly by text volume. And once models become research instruments, the bias flows back into science — as the topic on how a model's surprise predicts your eyes showed, a regularity that held in English failed in Japanese.</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 Ten takeaways</h3>
+<ol class="takeaways">
+<li>The "hundred Eskimo words for snow" began as four snow roots Boas listed in 1911, an ordinary example set beside English words for water.</li>
+<li>The snow number grew as retellings copied retellings, reaching one hundred in a 1984 New York Times editorial without anyone actually counting.</li>
+<li>Inuit languages are polysynthetic, so one word can equal a whole English sentence and "how many snow words" has no countable answer.</li>
+<li>A mild version of the myth survives: across nearly 300 languages, warm-climate languages more often use one word for both snow and ice.</li>
+<li>Forty-five years of child-language research covered only about 1.5% of the world's languages, with English alone in 54% of the papers.</li>
+<li>Among first-graders in 13 European orthographies, children learning to read English developed more than twice as slowly as most others.</li>
+<li>Share argued that English spelling is an outlier, and that reading science mistook its peculiar difficulties for the difficulties of reading itself.</li>
+<li>Nineteenth-century scholars ranked isolating, agglutinating and inflecting languages as evolutionary stages, with inflection on top and Chinese at the bottom.</li>
+<li>Fieldwork and the shedding of English's own case endings dismantled that ladder: grammatical complexity says nothing about civilization.</li>
+<li>Copied citation errors suggest only about one in five citers read the original, but pure copying cannot explain why the snow number only rose.</li>
+</ol>
 </div>
 <div class="thinking">
 <h3>Going deeper</h3>

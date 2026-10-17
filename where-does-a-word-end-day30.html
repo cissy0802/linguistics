@@ -42,6 +42,12 @@ figure svg{max-width:100%;height:auto}
 .refs a{color:#7fb3d5;text-decoration:none;border-bottom:1px dotted #40536e}
 .refs a:hover{color:#e0a458}
 @media(max-width:600px){body{font-size:16px}header h1{font-size:1.5rem}section{padding:20px 17px}}
+.tk{margin-top:44px}
+.tk h3{color:#e0a458;font-size:1.05rem;margin-bottom:14px}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;border:1px solid rgba(224,164,88,0.3);border-radius:8px;background:rgba(224,164,88,0.04)}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid rgba(224,164,88,0.12);font-size:0.95rem;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:"SF Mono",Menlo,monospace;font-size:0.78rem;color:#e0a458}
 </style><body>
 <div class="container">
 <header>
@@ -138,6 +144,21 @@ figure svg{max-width:100%;height:auto}
 <li><b>复杂性科学 · 词表定多大都不够用，这是分布自己保证的，不是工程没做到位</b>：语料里的词频服从齐夫定律（Zipf's law）——按出现次数排名，第二名约是第一名的一半、第三名约三分之一，尾巴又长又薄；配套的希普斯定律（Heaps' law）说：语料越大，见过的不同词形一直在增加，增速越来越慢，但从不封顶。尾巴有多薄可以量：一份 18 亿词的推特语料里，1326 万个不同词形里有约 62% 只出现过一次。跑的正是「1994 年那个压缩算法」那节的机制：BPE 从高频往低频合并，而这条分布的尾巴上永远还有东西。由此能推出一个原本看不出的结论——子词切分不是图省事的近似，而是这条分布下唯一的出路：任何固定大小的词表都必然漏掉无穷多词形。还能推出一个可查的预测：形态变化越丰富的语言词形尾巴越重，同样大的词表下每个词花更多 token——Petrov 那组数据的排序基本如此。<b>但这里不成立</b>的是：齐夫定律是在已经切好的单位上统计出来的——要说「词频服从幂律」，你得先决定什么算一个词，而这恰好是划词边界那节吵了三十年的事。它说得出尾巴有多长，帮不上忙去找边界在哪。</li>
 <li><b>遗传与分子生物学 · 核糖体也得在一条没有分隔符的长串上切，可它的解法语言用不了</b>：DNA 转成蛋白质时，序列是三个碱基一组读的，可链上并没有画格子。1961 年 Crick、Barnett、Brenner、Watts-Tobin 在噬菌体上做过一个很漂亮的实验：往基因里插一个碱基，基因废了；插两个，还是废的；插三个，功能大体回来了——这就证明读取是三个一组，插三个等于整整挪过一格，后面重新对齐。跑的机制和本期同一条：连续串上要切出单位，而切点不在信号里。由此能推出一个平时不会这么想的结论：生命这边真解决了这个问题，办法是往信号里塞一个分隔符——起始密码子把读框钉死一次，后面就全定了。语言里没有这种东西，于是两边错误的形状完全不同，而且能直接量：读框错一位，下游整段全废；分词错一刀，通常只毁那一处，后面照读。<b>但这里不成立</b>的是歧义那一层：读框一旦定下，每个三联体对应哪个氨基酸是唯一的，核糖体从不必在两个都讲得通的读法之间挑一个；而「乒乓球拍卖完了」两种切法都合语法、都有意思。所以「加个分隔符就完事」在语言里走不通——中文不是缺一个起始密码子，是就算给了起点，后面每一步仍然真的两可。</li>
 </ul>
+</div>
+<div class="tk">
+<h3>📝 十条要点</h3>
+<ol class="takeaways">
+<li>1996 年 Sproat 等人请六位母语者给同一百句中文划词边界，两两之间平均只有约 76% 一致。</li>
+<li>汉语划词的分歧不在读没读懂，而在「词」这个单位算到哪一层，这里只有约定，没有对错。</li>
+<li>2003 年第一届中文分词评测只能按几家机构的不同标准分别算分，所以「分词准确率 98%」总是相对某一份约定。</li>
+<li>空格是排印约定而非语言事实：英语 don't 一块装两个词，越南语空格隔的是音节，泰语词之间不写空格。</li>
+<li>字节对编码（BPE）本是 Philip Gage 1994 年的压缩技巧：反复把出现最多的相邻一对并成新符号。</li>
+<li>2016 年 Sennrich 等人把 BPE 搬进机器翻译，把罕见词切成碎片，词表外的「未知词」从此消失。</li>
+<li>BPE 切出的碎片不是语素，它从没回答「词是什么」，只换成了「哪些字符串常连在一起」这个不需答案的问题。</li>
+<li>同样内容在不同语言里的 token 数最多差 15 倍，这反映的是切法所拟合的语料构成，不是语言的高下。</li>
+<li>给数字加千分位逗号让每块对齐固定位值，GPT-3.5 和 GPT-4 的加法正确率随之明显上升。</li>
+<li>齐夫定律保证词频尾巴永远有新词形，任何固定大小的词表都会漏词，子词切分因此是唯一出路。</li>
+</ol>
 </div>
 <div class="thinking">
 <h3 data-tts="6feffe62545a0f44">深入思考</h3>
