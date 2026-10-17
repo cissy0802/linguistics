@@ -15,7 +15,7 @@ import sys, re, glob, html as _html
 
 SINGLETON = ["header", "intro", "crossx", "bigcat", "thinking", "refs"]
 REQUIRED = ["crossx", "thinking", "refs"]
-LO, HI = 2900, 4000  # 硬上限；ENGINE 建议区间 2900–3900
+LO, HI = 2900, 4350  # 硬上限（2026-10-16 为十条要点 +350）；ENGINE 建议区间 3250–4250
 
 
 # 本仓特有：英文页里作为**语言学例子**的汉字是内容本身，不是泄漏（见 CLAUDE.md 白名单）。
